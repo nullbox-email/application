@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="d0d3ab33-fa24-4fea-8502-f7bee0409269">
+  <sourceEnd id="418e56c5-4338-4541-930d-188f4b5649fb" type="Domain Event Origin Association Source End" typeId="2495d3ef-f7a2-441d-b749-b51b2546b45e">
+    <display>published by : Token.Revoke</display>
+    <order>0</order>
+    <typeReference id="aded7995-817a-4a8a-85b7-1fb3679f87f2">
+      <typeId>075e1c21-fe5b-43af-ac0a-6e875d7e0de7</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Security.Tokens.Domain</typePackageName>
+      <typePackageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="d0d3ab33-fa24-4fea-8502-f7bee0409269" type="Domain Event Origin Association Target End" typeId="17046427-14e2-4081-8463-ef16c0fda399">
+    <display>publishes : TokenRevokedDomainEvent</display>
+    <order>0</order>
+    <typeReference id="687058fc-93a4-4bc3-80b1-e9a463f2492c">
+      <typeId>c5a5d03f-ca75-43da-9c7c-fba18b0b0a72</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Security.Tokens.Domain</typePackageName>
+      <typePackageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <mappings>
+      <mapping type="Entity to Domain Event Mapping" typeId="86cb62b5-412d-493b-a901-d6e08cf88059">
+        <source elementId="65fc5a07-cd01-4190-8aeb-596a26de2866" location="[Nullbox.Security].[Domain].[Token]" />
+        <target elementId="c5a5d03f-ca75-43da-9c7c-fba18b0b0a72" location="[Nullbox.Security].[Domain].[TokenRevokedDomainEvent]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>{Token}</expression>
+            <path>
+              <target id="c5a5d03f-ca75-43da-9c7c-fba18b0b0a72" name="TokenRevokedDomainEvent" type="element" specialization="Domain Event" specializationId="0814e459-fb9b-47db-b7eb-32ce30397e8a" />
+              <target id="0937548d-8869-4c2e-b003-67e92eb7e3d3" name="Token" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+            </path>
+            <sources>
+              <source identifier="Token" mappingType="Data Mapping" mappingTypeId="ddfefa35-caf3-48f8-aeed-7beabc8b2f5c">
+                <path>
+                  <target id="65fc5a07-cd01-4190-8aeb-596a26de2866" name="Token" type="element" specialization="Class" specializationId="04e12b51-ed12-42a3-9667-a6aa81bb6d10" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+    </mappings>
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Domain Event Origin Association</associationType>
+  <associationTypeId>4c0cc50b-8a9d-43cd-b731-9f354f69f3c9</associationTypeId>
+  <stereotypes />
+</association>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="417218e4-dab1-4828-bc6f-bf614c6148e5" type="Enum" typeId="85fba0e9-9161-4c85-a603-a229ef312beb">
+  <name>MarkerGroup</name>
+  <display>MarkerGroup</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>f2fa0338-4191-4eae-b42d-a3618a31b2bc</parentFolderId>
+  <packageId>6e18a3dd-9c79-43e7-9d9d-2988f5421754</packageId>
+  <packageName>Nullbox.Fabric.Markers.Domain</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="d2e4d995-e4b6-4d9a-9923-3a9aee29f789" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Traffic</name>
+      <display>Traffic</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>417218e4-dab1-4828-bc6f-bf614c6148e5</parentFolderId>
+      <packageId>6e18a3dd-9c79-43e7-9d9d-2988f5421754</packageId>
+      <packageName>Nullbox.Fabric.Markers.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="75273581-855a-4613-ac6b-c441c72dd38a" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>TopAliases</name>
+      <display>TopAliases</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>417218e4-dab1-4828-bc6f-bf614c6148e5</parentFolderId>
+      <packageId>6e18a3dd-9c79-43e7-9d9d-2988f5421754</packageId>
+      <packageName>Nullbox.Fabric.Markers.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="8eb99f5d-ab6b-4849-9d4d-ab9bdc0f5fdc" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>TopMailboxes</name>
+      <display>TopMailboxes</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>417218e4-dab1-4828-bc6f-bf614c6148e5</parentFolderId>
+      <packageId>6e18a3dd-9c79-43e7-9d9d-2988f5421754</packageId>
+      <packageName>Nullbox.Fabric.Markers.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="f3808d00-1476-4427-b413-86f51a8c0569" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>TopTargetDomains</name>
+      <display>TopTargetDomains</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>417218e4-dab1-4828-bc6f-bf614c6148e5</parentFolderId>
+      <packageId>6e18a3dd-9c79-43e7-9d9d-2988f5421754</packageId>
+      <packageName>Nullbox.Fabric.Markers.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="8b34ec26-db77-46f6-a72b-6f25f887e4f0" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>TopSenderDomains</name>
+      <display>TopSenderDomains</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>417218e4-dab1-4828-bc6f-bf614c6148e5</parentFolderId>
+      <packageId>6e18a3dd-9c79-43e7-9d9d-2988f5421754</packageId>
+      <packageName>Nullbox.Fabric.Markers.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="eb929e8d-6863-457d-82a6-724923d51489" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Activities</name>
+      <display>Activities</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>417218e4-dab1-4828-bc6f-bf614c6148e5</parentFolderId>
+      <packageId>6e18a3dd-9c79-43e7-9d9d-2988f5421754</packageId>
+      <packageName>Nullbox.Fabric.Markers.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

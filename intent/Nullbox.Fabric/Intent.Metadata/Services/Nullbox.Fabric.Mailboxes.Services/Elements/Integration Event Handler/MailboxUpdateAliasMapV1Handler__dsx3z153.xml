@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="595241b9-dccb-458c-888f-e5327e7d6755" type="Integration Event Handler" typeId="c0582230-22f5-4f74-8eb0-ec6fc9364900">
+  <name>MailboxUpdateAliasMapV1Handler</name>
+  <display>MailboxUpdateAliasMapV1Handler</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>f395ee57-e4b7-44f6-9224-fe3b05491df5</parentFolderId>
+  <packageId>b28045cb-bf46-4948-9010-0124b00fa466</packageId>
+  <packageName>Nullbox.Fabric.Mailboxes.Services</packageName>
+  <traits>
+    <trait id="2b6729eb-e2ae-4b5f-86fe-4f611d1f912e" name="[Processing Handler]" />
+  </traits>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

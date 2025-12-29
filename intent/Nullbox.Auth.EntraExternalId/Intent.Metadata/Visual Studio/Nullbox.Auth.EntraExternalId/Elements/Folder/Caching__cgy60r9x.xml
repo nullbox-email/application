@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="907522a6-3195-4749-b8e9-f0002d4b3fd1" type="Folder" typeId="3407a825-1331-4f3f-89a4-901903ed97ce">
+  <name>Caching</name>
+  <display>Caching</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>c7466235-074f-4b93-9e01-2faed0919041</parentFolderId>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="287d9fe4-2f85-4264-b839-a7fc543625db" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
+      <name>Intent.AspNetCore.DistributedCaching.DistributedCacheWithUnitOfWork</name>
+      <display>Intent.AspNetCore.DistributedCaching.DistributedCacheWithUnitOfWork</display>
+      <externalReference>Intent.AspNetCore.DistributedCaching</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>907522a6-3195-4749-b8e9-f0002d4b3fd1</parentFolderId>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

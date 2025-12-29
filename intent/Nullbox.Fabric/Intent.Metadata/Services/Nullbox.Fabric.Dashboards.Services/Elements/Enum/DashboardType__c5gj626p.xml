@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="fc85b6a1-cdf0-496d-9f7a-2275dfd13053" type="Enum" typeId="85fba0e9-9161-4c85-a603-a229ef312beb">
+  <name>DashboardType</name>
+  <display>DashboardType</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>80263fae-6dc6-4c15-aae8-a06df17932ae</parentFolderId>
+  <packageId>228992fb-fae4-4023-bab8-58fc9723eafd</packageId>
+  <packageName>Nullbox.Fabric.Dashboards.Services</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="4ce4964e-2a3e-469c-bd77-000391284d15" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Hourly</name>
+      <display>Hourly</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>fc85b6a1-cdf0-496d-9f7a-2275dfd13053</parentFolderId>
+      <packageId>228992fb-fae4-4023-bab8-58fc9723eafd</packageId>
+      <packageName>Nullbox.Fabric.Dashboards.Services</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="3edfd209-f2a0-4859-a6ca-6ee83e2f87a2" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Daily</name>
+      <display>Daily</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>fc85b6a1-cdf0-496d-9f7a-2275dfd13053</parentFolderId>
+      <packageId>228992fb-fae4-4023-bab8-58fc9723eafd</packageId>
+      <packageName>Nullbox.Fabric.Dashboards.Services</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

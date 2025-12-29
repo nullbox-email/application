@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="5f7acdea-5f11-4c91-8028-6a752e38247c">
+  <sourceEnd id="a65096dd-1cf9-4488-90a2-f2883c61b226" type="Subscribe Integration Command Source End" typeId="cdc0ae0a-1199-4450-8e21-2da80e03bc26">
+    <display>handled by: Aliases.CreateAliasMapV1Handler</display>
+    <order>0</order>
+    <typeReference id="fcab440f-7957-4d9e-83ee-33912d16b315">
+      <typeId>d565fe79-a12b-4a2e-a724-4a7d8e1328c0</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Aliases.Services</typePackageName>
+      <typePackageId>011dff2a-60fc-4ab2-afe4-8b21c38f0fea</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="5f7acdea-5f11-4c91-8028-6a752e38247c" type="Subscribe Integration Command Target End" typeId="efa73bdb-69b7-4f52-aa10-15c19874b394">
+    <name>Handler</name>
+    <display>[handles] CreateAliasMapV1</display>
+    <order>0</order>
+    <traits>
+      <trait id="2b6729eb-e2ae-4b5f-86fe-4f611d1f912e" name="[Processing Handler]" />
+    </traits>
+    <typeReference id="85ef9fcd-3008-42b8-82b7-6f7524e84509">
+      <typeId>9cdb2d35-e692-4a7a-bc31-edecf0f0df11</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Aliases.Eventing.Messages</typePackageName>
+      <typePackageId>715151a5-7967-491b-8f50-bd7e925193d6</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes>
+      <stereotype stereotypeDefinitionId="ced769d7-12d7-4efc-b8e7-4fe013097613" name="Command Consumption">
+        <addedByDefault>true</addedByDefault>
+        <definitionPackageName>Intent.Eventing.MassTransit</definitionPackageName>
+        <definitionPackageId>6502ee82-f515-4007-9635-bade3eb88e72</definitionPackageId>
+        <properties>
+          <property name="219da315-395e-43d1-be25-205098fa8053" display="Queue Name" isActive="true" />
+        </properties>
+      </stereotype>
+    </stereotypes>
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Subscribe Integration Command</associationType>
+  <associationTypeId>f485e4aa-a032-4b9a-aa85-5d2c62d75799</associationTypeId>
+  <stereotypes>
+    <stereotype stereotypeDefinitionId="ced769d7-12d7-4efc-b8e7-4fe013097613" name="Command Consumption">
+      <addedByDefault>true</addedByDefault>
+      <definitionPackageName>Intent.Eventing.MassTransit</definitionPackageName>
+      <definitionPackageId>6502ee82-f515-4007-9635-bade3eb88e72</definitionPackageId>
+      <properties>
+        <property name="219da315-395e-43d1-be25-205098fa8053" display="Queue Name" isActive="true" />
+      </properties>
+    </stereotype>
+  </stereotypes>
+</association>

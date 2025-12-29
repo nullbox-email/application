@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="c11a5a4f-cf5e-4843-a01e-6578bcc6afb6" type="Enum" typeId="85fba0e9-9161-4c85-a603-a229ef312beb">
+  <name>AliasSenderState</name>
+  <display>AliasSenderState</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>80aa2ff0-dbf8-42c1-aa6f-a275a48a2ccd</parentFolderId>
+  <packageId>c9a4b316-132d-4d2d-82fa-33da6532bf41</packageId>
+  <packageName>Nullbox.Fabric.Aliases.Domain</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="33477591-6c7c-4f03-b270-95b5e645bc03" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Trusted</name>
+      <display>Trusted</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>c11a5a4f-cf5e-4843-a01e-6578bcc6afb6</parentFolderId>
+      <packageId>c9a4b316-132d-4d2d-82fa-33da6532bf41</packageId>
+      <packageName>Nullbox.Fabric.Aliases.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="4e7ee057-c80c-43e3-9488-8a50266dfd1a" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Neutral</name>
+      <display>Neutral</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>c11a5a4f-cf5e-4843-a01e-6578bcc6afb6</parentFolderId>
+      <packageId>c9a4b316-132d-4d2d-82fa-33da6532bf41</packageId>
+      <packageName>Nullbox.Fabric.Aliases.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="255bd30c-cf0f-4cea-94d1-97aa4e69e40e" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Blocked</name>
+      <display>Blocked</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>c11a5a4f-cf5e-4843-a01e-6578bcc6afb6</parentFolderId>
+      <packageId>c9a4b316-132d-4d2d-82fa-33da6532bf41</packageId>
+      <packageName>Nullbox.Fabric.Aliases.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

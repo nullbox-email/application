@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="6ecef716-cfdb-44ae-a3b8-51721ca08f22" type="Integration Event Handler" typeId="c0582230-22f5-4f74-8eb0-ec6fc9364900">
+  <name>AccountCreateDefaultUserMailboxV1Handler</name>
+  <display>AccountCreateDefaultUserMailboxV1Handler</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>a634aba5-e234-4704-ade8-dbd9aec7d11e</parentFolderId>
+  <packageId>f2caa09a-8091-440f-b0eb-6f9f571a4b95</packageId>
+  <packageName>Nullbox.Fabric.Accounts.Services</packageName>
+  <traits>
+    <trait id="2b6729eb-e2ae-4b5f-86fe-4f611d1f912e" name="[Processing Handler]" />
+  </traits>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

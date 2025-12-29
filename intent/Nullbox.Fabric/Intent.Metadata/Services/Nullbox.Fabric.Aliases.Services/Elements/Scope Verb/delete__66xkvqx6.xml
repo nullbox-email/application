@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="98ac0b5a-a84d-4487-bb68-30ce32dee5e1" type="Scope Verb" typeId="561f871a-ac3f-4e82-b2ce-4cc129d7f264">
+  <name>delete</name>
+  <display>delete</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>a847263b-c94d-4bdf-b377-12f6d448ed67</parentFolderId>
+  <packageId>011dff2a-60fc-4ab2-afe4-8b21c38f0fea</packageId>
+  <packageName>Nullbox.Fabric.Aliases.Services</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

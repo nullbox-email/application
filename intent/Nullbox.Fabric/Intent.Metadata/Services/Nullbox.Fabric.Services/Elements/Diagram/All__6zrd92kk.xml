@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="97662b65-1ee3-4b65-89fd-c33cb77f6508" type="Diagram" typeId="8c90aca5-86f4-47f1-bd58-116fe79f5c55">
+  <name>All</name>
+  <display>All</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>ff91dc2e-4eff-41be-8bd9-e3364f2d37b3</parentFolderId>
+  <packageId>ff91dc2e-4eff-41be-8bd9-e3364f2d37b3</packageId>
+  <packageName>Nullbox.Fabric.Services</packageName>
+  <diagram>
+    <targetPackageId>97662b65-1ee3-4b65-89fd-c33cb77f6508</targetPackageId>
+  </diagram>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

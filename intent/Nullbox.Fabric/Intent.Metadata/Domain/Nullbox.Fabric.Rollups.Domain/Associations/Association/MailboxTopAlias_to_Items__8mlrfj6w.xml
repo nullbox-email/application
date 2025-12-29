@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="9e5be77c-3c6d-48f6-adcd-1026f2c1fa70">
+  <sourceEnd id="9f2649ab-109a-435a-bfcf-549be223a42a" type="Association Source End" typeId="8d9d2e5b-bd55-4f36-9ae4-2b9e84fd4e58">
+    <name>MailboxTopAlias</name>
+    <display>MailboxTopAlias: TopAlias</display>
+    <order>0</order>
+    <typeReference id="b184a82a-5efe-44e9-a43a-2ada69df8105">
+      <typeId>b9796811-5230-4a91-b320-74c2a83434d7</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Rollups.Domain</typePackageName>
+      <typePackageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="9e5be77c-3c6d-48f6-adcd-1026f2c1fa70" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
+    <name>Items</name>
+    <display>Items: TopAliasItem[*]</display>
+    <order>8</order>
+    <typeReference id="bbd87362-1e82-4c03-bdd0-3d78ba6a20dd">
+      <typeId>7e47572d-c892-4141-a3fe-409836574a78</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>true</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Rollups.Domain</typePackageName>
+      <typePackageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Association</associationType>
+  <associationTypeId>eaf9ed4e-0b61-4ac1-ba88-09f912c12087</associationTypeId>
+  <stereotypes />
+</association>

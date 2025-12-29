@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="d3f16ec1-c60b-4b73-a96c-6fe812f5b348" type="Scope Verb" typeId="561f871a-ac3f-4e82-b2ce-4cc129d7f264">
+  <name>read</name>
+  <display>read</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>a847263b-c94d-4bdf-b377-12f6d448ed67</parentFolderId>
+  <packageId>011dff2a-60fc-4ab2-afe4-8b21c38f0fea</packageId>
+  <packageName>Nullbox.Fabric.Aliases.Services</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

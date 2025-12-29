@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="24fa0588-023c-410d-8c0d-e7b27b088aa5">
+  <sourceEnd id="f7f37c84-4ccb-46e2-a4c5-b76337070940" type="Subscribe Integration Event Source End" typeId="5d8f5c33-f9c9-4629-b637-fad9b0096894">
+    <display>handled by: Statistics.DeliveryActionCompletedV1Handler</display>
+    <order>0</order>
+    <typeReference id="0813ed32-1724-4102-9124-fd1bbd8f11c9">
+      <typeId>a7e0fc91-8577-4929-b278-29eaf2649118</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Deliveries.Services</typePackageName>
+      <typePackageId>7ee06bb8-ef12-47d6-a86a-15d687075463</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="24fa0588-023c-410d-8c0d-e7b27b088aa5" type="Subscribe Integration Event Target End" typeId="16fa2952-79e6-4150-b5ab-45aa4c106de4">
+    <name>Handler</name>
+    <display>[handles] DeliveryActionCompletedV1</display>
+    <order>0</order>
+    <traits>
+      <trait id="2b6729eb-e2ae-4b5f-86fe-4f611d1f912e" name="[Processing Handler]" />
+    </traits>
+    <typeReference id="4b250539-f155-4608-81c2-4773344c84fd">
+      <typeId>e746ebc7-b197-4a4f-b03f-ca59a4f4db1c</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Deliveries.Eventing.Messages</typePackageName>
+      <typePackageId>210799ed-6535-4f17-a8d0-8e60d045f1c5</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Subscribe Integration Event</associationType>
+  <associationTypeId>80aa7f6d-64e5-4d24-a81e-6bc212925ca7</associationTypeId>
+  <stereotypes />
+</association>

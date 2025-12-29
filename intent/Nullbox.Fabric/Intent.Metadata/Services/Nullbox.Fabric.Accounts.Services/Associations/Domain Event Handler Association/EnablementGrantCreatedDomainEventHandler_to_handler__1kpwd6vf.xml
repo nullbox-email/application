@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="38bbbb16-d2c8-47ad-9176-d2ec2c5d744b">
+  <sourceEnd id="7be36e88-20b0-4f03-9996-b760fd3e682b" type="Domain Event Handler Association Source End" typeId="79f048d4-4c09-4405-be8f-95473a981556">
+    <display>: EnablementGrantCreatedDomainEventHandler</display>
+    <order>0</order>
+    <typeReference id="e7a02531-9e77-4145-8cc1-19adbeaceed4">
+      <typeId>937d0944-baad-4133-8b96-cbc81521a80e</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Accounts.Services</typePackageName>
+      <typePackageId>f2caa09a-8091-440f-b0eb-6f9f571a4b95</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="38bbbb16-d2c8-47ad-9176-d2ec2c5d744b" type="Domain Event Handler Association Target End" typeId="f45dfee9-f62b-45ac-bfce-a3878e04b73f">
+    <name>handler</name>
+    <display>[handles] EnablementGrantCreatedDomainEvent</display>
+    <order>0</order>
+    <traits>
+      <trait id="2b6729eb-e2ae-4b5f-86fe-4f611d1f912e" name="[Processing Handler]" />
+    </traits>
+    <typeReference id="41b9608b-3fe1-452c-81a8-63f7eb9543f7">
+      <typeId>db169936-7af1-4dea-a558-9fb5eb6a4e0a</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Accounts.Domain</typePackageName>
+      <typePackageId>b7b0ee71-00bd-467c-a2df-7b8d3248683b</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Domain Event Handler Association</associationType>
+  <associationTypeId>90831494-f069-44eb-b488-ab2dba7518ea</associationTypeId>
+  <stereotypes />
+</association>

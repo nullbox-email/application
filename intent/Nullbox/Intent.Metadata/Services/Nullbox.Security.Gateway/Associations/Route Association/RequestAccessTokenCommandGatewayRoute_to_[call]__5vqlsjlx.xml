@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="014ed254-4002-46eb-bd02-3c55242ea901">
+  <sourceEnd id="40aca023-b3e5-4606-a0bb-905fef1401e2" type="Upstream End" typeId="4143dbe5-12ce-4705-ba69-2683c46b1b96">
+    <display>: RequestAccessTokenCommandGatewayRoute</display>
+    <order>0</order>
+    <typeReference id="441977f8-89e0-4617-a07e-c38840d9dbe7">
+      <typeId>16e028cb-e46a-474d-9044-6b47809804c2</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Security.Gateway</typePackageName>
+      <typePackageId>e1d1f277-0a7f-4c38-a977-38acdb4c7c73</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="014ed254-4002-46eb-bd02-3c55242ea901" type="Downstream End" typeId="17084378-a3d8-4233-b275-c856eea4dd61">
+    <name>[call]</name>
+    <display>[call]: RequestAccessTokenCommand</display>
+    <order>1</order>
+    <typeReference id="491b4489-f647-4dbb-9e45-990259de26ec">
+      <typeId>13a2c24b-1d62-49ac-8c41-7288a2f50a15</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Security.Tokens.Services</typePackageName>
+      <typePackageId>b6434316-7105-4190-8c0b-ce4cc17c54ef</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Route Association</associationType>
+  <associationTypeId>dd35ed32-76bb-4abf-a4e0-370f230765cf</associationTypeId>
+  <stereotypes />
+</association>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="016d2b4e-4f9f-40de-9665-aef78cca04ef" type="Integration Event Handler" typeId="c0582230-22f5-4f74-8eb0-ec6fc9364900">
+  <name>DeliveryActionCreateRollupsV1Handler</name>
+  <display>DeliveryActionCreateRollupsV1Handler</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>95d1b33c-9d3c-440b-be36-a07905c69475</parentFolderId>
+  <packageId>7ee06bb8-ef12-47d6-a86a-15d687075463</packageId>
+  <packageName>Nullbox.Fabric.Deliveries.Services</packageName>
+  <traits>
+    <trait id="2b6729eb-e2ae-4b5f-86fe-4f611d1f912e" name="[Processing Handler]" />
+  </traits>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

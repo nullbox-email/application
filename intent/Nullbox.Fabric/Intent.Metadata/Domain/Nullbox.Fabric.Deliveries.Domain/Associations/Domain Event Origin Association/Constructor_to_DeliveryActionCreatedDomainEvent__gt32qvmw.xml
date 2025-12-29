@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="4e7f48d6-4d82-4227-9434-1ed033c26bb6">
+  <sourceEnd id="b7ade1b2-e913-41e3-a63a-2b99b2f4e73a" type="Domain Event Origin Association Source End" typeId="2495d3ef-f7a2-441d-b749-b51b2546b45e">
+    <display>published by : DeliveryAction.Constructor</display>
+    <order>0</order>
+    <typeReference id="67614aa5-92be-46be-a36b-4e97269ab627">
+      <typeId>46021a3d-af53-49bc-88ef-7d7e00e1ea87</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Deliveries.Domain</typePackageName>
+      <typePackageId>2e5218b4-b505-4e2a-b5bb-77712b952e0b</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="4e7f48d6-4d82-4227-9434-1ed033c26bb6" type="Domain Event Origin Association Target End" typeId="17046427-14e2-4081-8463-ef16c0fda399">
+    <display>publishes : DeliveryActionCreatedDomainEvent</display>
+    <order>19</order>
+    <typeReference id="e2f96ab2-6139-442e-ac94-c36b3706f5d4">
+      <typeId>b3351f2e-6f55-490f-92ce-0b75daa6dc3f</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Deliveries.Domain</typePackageName>
+      <typePackageId>2e5218b4-b505-4e2a-b5bb-77712b952e0b</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <mappings>
+      <mapping type="Entity to Domain Event Mapping" typeId="86cb62b5-412d-493b-a901-d6e08cf88059">
+        <source applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="6ab29b31-27af-4f56-a67c-986d82097d63" elementId="7b596594-0644-4ce0-86e8-6504f99c4146" location="[Nullbox.Fabric].[Domain].[DeliveryAction]" />
+        <target applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="6ab29b31-27af-4f56-a67c-986d82097d63" elementId="b3351f2e-6f55-490f-92ce-0b75daa6dc3f" location="[Nullbox.Fabric].[Domain].[DeliveryActionCreatedDomainEvent]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>{DeliveryAction}</expression>
+            <path>
+              <target id="b3351f2e-6f55-490f-92ce-0b75daa6dc3f" name="DeliveryActionCreatedDomainEvent" type="element" specialization="Domain Event" specializationId="0814e459-fb9b-47db-b7eb-32ce30397e8a" />
+              <target id="3f1748b1-331d-4bb2-9cfc-c3ff6fbf35c7" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction" mappingType="Data Mapping" mappingTypeId="ddfefa35-caf3-48f8-aeed-7beabc8b2f5c">
+                <path>
+                  <target id="7b596594-0644-4ce0-86e8-6504f99c4146" name="DeliveryAction" type="element" specialization="Class" specializationId="04e12b51-ed12-42a3-9667-a6aa81bb6d10" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+    </mappings>
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Domain Event Origin Association</associationType>
+  <associationTypeId>4c0cc50b-8a9d-43cd-b731-9f354f69f3c9</associationTypeId>
+  <stereotypes />
+</association>

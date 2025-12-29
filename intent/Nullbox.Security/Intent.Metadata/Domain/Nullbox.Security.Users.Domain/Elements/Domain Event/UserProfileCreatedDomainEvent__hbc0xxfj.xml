@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="05e7dedd-0102-4a16-be5c-1410bd7f5c39" type="Domain Event" typeId="0814e459-fb9b-47db-b7eb-32ce30397e8a">
+  <name>UserProfileCreatedDomainEvent</name>
+  <display>UserProfileCreatedDomainEvent</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>e6d83de0-c149-4f2c-82b2-1a8d80e07e94</parentFolderId>
+  <packageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</packageId>
+  <packageName>Nullbox.Security.Users.Domain</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="22ceb74f-1ed5-4012-9042-a02e6800c2c2" type="Property" typeId="b4d69073-5abb-4968-b41b-545b2f7408ed">
+      <name>UserProfile</name>
+      <display>UserProfile: UserProfile</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="e5663026-6605-4fee-859e-458e19c76a2a">
+        <typeId>934beda7-0983-4273-8c17-4e6f6848f7c6</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Nullbox.Security.Users.Domain</typePackageName>
+        <typePackageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>05e7dedd-0102-4a16-be5c-1410bd7f5c39</parentFolderId>
+      <packageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</packageId>
+      <packageName>Nullbox.Security.Users.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

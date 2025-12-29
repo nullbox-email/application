@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="5e872b41-4ed6-4443-aa19-2308805d26cb" type="Folder" typeId="4d95d53a-8855-4f35-aa82-e312643f5c5f">
+  <name>Security</name>
+  <display>Security</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>116b850e-577b-4f1a-bbe3-59bfe95b470c</parentFolderId>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="7489bb17-b521-4a2d-9ffd-a38b6b8c5d7b" type="Template Output" typeId="09de2192-2507-41a2-8044-286c7ecadec2">
+      <name>Aryzac.Security.ScopePermissionMap</name>
+      <display>Aryzac.Security.ScopePermissionMap</display>
+      <externalReference>Aryzac.Security</externalReference>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>5e872b41-4ed6-4443-aa19-2308805d26cb</parentFolderId>
+      <stereotypes />
+      <metadata>
+        <entry key="status" value="assigned" />
+      </metadata>
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

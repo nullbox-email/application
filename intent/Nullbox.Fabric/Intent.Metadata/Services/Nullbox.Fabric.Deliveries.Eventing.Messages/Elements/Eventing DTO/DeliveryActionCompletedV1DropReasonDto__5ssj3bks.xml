@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="a2b4ea53-6e7f-4584-acf4-806136e66747" type="Eventing DTO" typeId="544f1d57-27ce-4985-a4ec-cc01568d72b0">
+  <name>DeliveryActionCompletedV1DropReasonDto</name>
+  <display>DeliveryActionCompletedV1DropReasonDto</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>ec17981e-d37c-4206-9015-1e46cc8fedd2</parentFolderId>
+  <packageId>210799ed-6535-4f17-a8d0-8e60d045f1c5</packageId>
+  <packageName>Nullbox.Fabric.Deliveries.Eventing.Messages</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="699a7177-8a6d-4802-a5e0-2420c1bccc32" type="Eventing DTO-Field" typeId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7">
+      <name>Reason</name>
+      <display>Reason: DropReason</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="c940e8d1-ee94-4132-b5cb-2073760b72e3">
+        <typeId>06a3cde9-b527-43f0-9c81-141b9f35dfa6</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Nullbox.Fabric.Deliveries.Domain</typePackageName>
+        <typePackageId>2e5218b4-b505-4e2a-b5bb-77712b952e0b</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>a2b4ea53-6e7f-4584-acf4-806136e66747</parentFolderId>
+      <packageId>210799ed-6535-4f17-a8d0-8e60d045f1c5</packageId>
+      <packageName>Nullbox.Fabric.Deliveries.Eventing.Messages</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="05822f91-b115-4635-817e-b1755406b92b" type="Eventing DTO-Field" typeId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7">
+      <name>Message</name>
+      <display>Message: string?</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="102bd993-f285-466f-a05f-8740969a89a4">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>true</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>a2b4ea53-6e7f-4584-acf4-806136e66747</parentFolderId>
+      <packageId>210799ed-6535-4f17-a8d0-8e60d045f1c5</packageId>
+      <packageName>Nullbox.Fabric.Deliveries.Eventing.Messages</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

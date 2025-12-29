@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="b8602e55-48f0-4838-8886-680a7e9365a0">
+  <sourceEnd id="058f55c1-0db6-4856-84d8-7abf4913ed3e" type="Perform Invocation Source End" typeId="ee56bd48-8eff-4fff-8d3a-87731d002335">
+    <display>called by : CreateAliasMapV1Handler.Handler</display>
+    <order>0</order>
+    <typeReference id="fe957f18-2640-4bd2-bb8d-defbda8fc9cd">
+      <typeId>5f7acdea-5f11-4c91-8028-6a752e38247c</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Aliases.Services</typePackageName>
+      <typePackageId>011dff2a-60fc-4ab2-afe4-8b21c38f0fea</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="b8602e55-48f0-4838-8886-680a7e9365a0" type="Perform Invocation Target End" typeId="093e5909-ffe4-4510-b3ea-532f30212f3c">
+    <display>[call] CreateAliasMapCommand(...): void</display>
+    <order>0</order>
+    <traits>
+      <trait id="d00a2ab0-9a23-4192-b8bb-166798fc7dba" name="[Processing Action]" />
+    </traits>
+    <typeReference id="76122330-87f7-4cff-8dd7-05a26843139b">
+      <typeId>3f54ea8d-5680-4eed-9003-0eb6adebfc2c</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Aliases.Services</typePackageName>
+      <typePackageId>011dff2a-60fc-4ab2-afe4-8b21c38f0fea</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <mappings>
+      <mapping type="Invocation Mapping" typeId="a4c4c5cc-76df-48ed-9d4e-c35caf44b567">
+        <source applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="5f7acdea-5f11-4c91-8028-6a752e38247c" location="[Nullbox.Fabric].[Services].[Handler]" />
+        <target applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="3f54ea8d-5680-4eed-9003-0eb6adebfc2c" location="[Nullbox.Fabric].[Services].[CreateAliasMapCommand]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>{Handler}</expression>
+            <path>
+              <target id="3f54ea8d-5680-4eed-9003-0eb6adebfc2c" name="CreateAliasMapCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+            </path>
+            <sources>
+              <source identifier="Handler" mappingType="Invocation Mapping" mappingTypeId="7ca5c18a-bdbe-434b-a68a-421899a077e7">
+                <path>
+                  <target id="5f7acdea-5f11-4c91-8028-6a752e38247c" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Id}</expression>
+            <path>
+              <target id="3f54ea8d-5680-4eed-9003-0eb6adebfc2c" name="CreateAliasMapCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="0cca7a18-2c6f-4a76-9a93-7873c27b7922" name="Id" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Id" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="5f7acdea-5f11-4c91-8028-6a752e38247c" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="a48f547b-cf0f-4b30-8ef0-dc338c19bbdc" name="Id" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{MailboxId}</expression>
+            <path>
+              <target id="3f54ea8d-5680-4eed-9003-0eb6adebfc2c" name="CreateAliasMapCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="b88f9ed3-a460-4fcb-a9ab-5abf61a26945" name="MailboxId" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="MailboxId" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="5f7acdea-5f11-4c91-8028-6a752e38247c" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="302ea51c-3a40-474f-8b76-d5694a2df151" name="MailboxId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{AccountId}</expression>
+            <path>
+              <target id="3f54ea8d-5680-4eed-9003-0eb6adebfc2c" name="CreateAliasMapCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="a0aabe04-23b7-445d-a5f1-97886b1b6516" name="AccountId" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="AccountId" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="5f7acdea-5f11-4c91-8028-6a752e38247c" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="55f7ee97-0e65-4e17-bfc6-532d4924e132" name="AccountId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Name}</expression>
+            <path>
+              <target id="3f54ea8d-5680-4eed-9003-0eb6adebfc2c" name="CreateAliasMapCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="8bede0e1-9e84-4925-983a-7fd59f52662e" name="Name" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Name" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="5f7acdea-5f11-4c91-8028-6a752e38247c" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="78e54800-f04b-43ef-b71d-e48e99b8ed6d" name="Name" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{LocalPart}</expression>
+            <path>
+              <target id="3f54ea8d-5680-4eed-9003-0eb6adebfc2c" name="CreateAliasMapCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="2ae0e2e6-83f9-484c-a9dc-b62657c11283" name="LocalPart" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="LocalPart" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="5f7acdea-5f11-4c91-8028-6a752e38247c" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="b6dfd3cd-7f63-4bc6-bfe2-3bd04f16bea0" name="LocalPart" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{IsEnabled}</expression>
+            <path>
+              <target id="3f54ea8d-5680-4eed-9003-0eb6adebfc2c" name="CreateAliasMapCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="76fe578d-750f-4cbe-942f-055fc91c1586" name="IsEnabled" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="IsEnabled" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="5f7acdea-5f11-4c91-8028-6a752e38247c" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="aba3cd8a-54fe-469c-b4e1-d80f8f37fb73" name="IsEnabled" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DirectPassthrough}</expression>
+            <path>
+              <target id="3f54ea8d-5680-4eed-9003-0eb6adebfc2c" name="CreateAliasMapCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="0460bec6-2d5f-48e5-8239-3a09bde6ff6a" name="DirectPassthrough" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="DirectPassthrough" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="5f7acdea-5f11-4c91-8028-6a752e38247c" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="173d9e14-e5fc-481f-bb35-2d57d21c7148" name="DirectPassthrough" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{LearningMode}</expression>
+            <path>
+              <target id="3f54ea8d-5680-4eed-9003-0eb6adebfc2c" name="CreateAliasMapCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="ba7d8000-9cbe-45a4-82ff-9662b538257a" name="LearningMode" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="LearningMode" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="5f7acdea-5f11-4c91-8028-6a752e38247c" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="f1e48682-5987-47f8-b091-9acd01663391" name="LearningMode" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+    </mappings>
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Perform Invocation</associationType>
+  <associationTypeId>3e69085c-fa2f-44bd-93eb-41075fd472f8</associationTypeId>
+  <stereotypes />
+</association>

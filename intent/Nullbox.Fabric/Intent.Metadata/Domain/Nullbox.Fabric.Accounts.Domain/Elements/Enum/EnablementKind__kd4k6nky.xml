@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="531fa5fb-f0e9-4b01-b7f3-80e8e574abd8" type="Enum" typeId="85fba0e9-9161-4c85-a603-a229ef312beb">
+  <name>EnablementKind</name>
+  <display>EnablementKind</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>89f3695e-ffd7-4b65-b878-caff8f80b9c1</parentFolderId>
+  <packageId>b7b0ee71-00bd-467c-a2df-7b8d3248683b</packageId>
+  <packageName>Nullbox.Fabric.Accounts.Domain</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="6783fca4-a83d-4e76-b642-1c5c716e6095" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Plan</name>
+      <display>Plan</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>531fa5fb-f0e9-4b01-b7f3-80e8e574abd8</parentFolderId>
+      <packageId>b7b0ee71-00bd-467c-a2df-7b8d3248683b</packageId>
+      <packageName>Nullbox.Fabric.Accounts.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="33d2eb81-f634-4249-8c1d-d7c1786f9b20" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>AddOn</name>
+      <display>AddOn</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>531fa5fb-f0e9-4b01-b7f3-80e8e574abd8</parentFolderId>
+      <packageId>b7b0ee71-00bd-467c-a2df-7b8d3248683b</packageId>
+      <packageName>Nullbox.Fabric.Accounts.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="71a3a931-6205-4e64-98fc-9b4cb7ebc8ee" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Promo</name>
+      <display>Promo</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>531fa5fb-f0e9-4b01-b7f3-80e8e574abd8</parentFolderId>
+      <packageId>b7b0ee71-00bd-467c-a2df-7b8d3248683b</packageId>
+      <packageName>Nullbox.Fabric.Accounts.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="1234424a-37c6-4bd9-aa75-b659b9d46139" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Admin</name>
+      <display>Admin</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>531fa5fb-f0e9-4b01-b7f3-80e8e574abd8</parentFolderId>
+      <packageId>b7b0ee71-00bd-467c-a2df-7b8d3248683b</packageId>
+      <packageName>Nullbox.Fabric.Accounts.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

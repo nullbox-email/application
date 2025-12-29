@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="d9639cab-909e-4940-bd23-80ddc3bd5608" type="Scope" typeId="33256cb2-6ac1-48e5-b3dd-75c8e83f156e">
+  <name>user</name>
+  <display>user</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>e87d12be-4500-4a49-843e-f566e7eb4982</parentFolderId>
+  <packageId>cdc830ca-c14a-4d10-a244-9dd36afb93ee</packageId>
+  <packageName>Nullbox.Security.Users.Services</packageName>
+  <stereotypes>
+    <stereotype stereotypeDefinitionId="effde114-12bd-498a-bf44-42f90df0e1ba" name="Scope Settings">
+      <addedByDefault>true</addedByDefault>
+      <definitionPackageName>Aryzac.Security</definitionPackageName>
+      <definitionPackageId>b03410a6-8af0-4dad-a18c-1f6d5490612c</definitionPackageId>
+      <properties>
+        <property name="62ebeae8-2d85-4c5a-af45-c53986f0518b" display="Bounded Context" value="nullbox" isActive="true" />
+        <property name="dfe633ea-7eb9-4c85-a9f8-dea39cee7dee" display="Resource" value="934beda7-0983-4273-8c17-4e6f6848f7c6" isActive="true" />
+        <property name="e3644a6f-bbba-4634-8311-22f616970988" display="Resource Name" value="User" isActive="true" />
+      </properties>
+    </stereotype>
+  </stereotypes>
+  <metadata />
+  <childElements />
+</class>

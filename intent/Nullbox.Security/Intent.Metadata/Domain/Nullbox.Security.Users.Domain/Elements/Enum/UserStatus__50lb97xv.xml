@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="642a9f48-5e89-42bb-952f-a5e246901bc4" type="Enum" typeId="85fba0e9-9161-4c85-a603-a229ef312beb">
+  <name>UserStatus</name>
+  <display>UserStatus</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>e6d83de0-c149-4f2c-82b2-1a8d80e07e94</parentFolderId>
+  <packageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</packageId>
+  <packageName>Nullbox.Security.Users.Domain</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="a9a73864-e412-49c3-906b-bb3036fb4994" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>New</name>
+      <display>New</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>642a9f48-5e89-42bb-952f-a5e246901bc4</parentFolderId>
+      <packageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</packageId>
+      <packageName>Nullbox.Security.Users.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="bcd273d8-b968-447d-b8dd-7d7341d6bb22" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Active</name>
+      <display>Active</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>642a9f48-5e89-42bb-952f-a5e246901bc4</parentFolderId>
+      <packageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</packageId>
+      <packageName>Nullbox.Security.Users.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="50284f03-70bc-4cff-8a1d-537abc20621f" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Suspended</name>
+      <display>Suspended</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>642a9f48-5e89-42bb-952f-a5e246901bc4</parentFolderId>
+      <packageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</packageId>
+      <packageName>Nullbox.Security.Users.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="1e2c92e7-153b-47eb-82e9-3095137babec" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Deleted</name>
+      <display>Deleted</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>642a9f48-5e89-42bb-952f-a5e246901bc4</parentFolderId>
+      <packageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</packageId>
+      <packageName>Nullbox.Security.Users.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="4bc30308-78d1-4d8a-a029-c17afced4a0d" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Archived</name>
+      <display>Archived</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>642a9f48-5e89-42bb-952f-a5e246901bc4</parentFolderId>
+      <packageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</packageId>
+      <packageName>Nullbox.Security.Users.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

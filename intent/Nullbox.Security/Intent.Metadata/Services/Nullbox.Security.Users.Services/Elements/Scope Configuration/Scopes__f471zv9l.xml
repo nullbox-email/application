@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="e87d12be-4500-4a49-843e-f566e7eb4982" type="Scope Configuration" typeId="9e98940e-f2f5-4431-b8b5-e4c547eefe78">
+  <name>Scopes</name>
+  <display>Scopes</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>cdc830ca-c14a-4d10-a244-9dd36afb93ee</parentFolderId>
+  <packageId>cdc830ca-c14a-4d10-a244-9dd36afb93ee</packageId>
+  <packageName>Nullbox.Security.Users.Services</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

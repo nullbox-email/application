@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="48f3ed89-b0bd-4da4-9e7a-31007c8016c1">
+  <sourceEnd id="32c4bbfc-f5d3-42a3-b95d-20c758d53785" type="Send Integration Command Source End" typeId="c5f4f98f-e464-48de-b202-c0724bacebb7">
+    <display>sent by : AccountCreatedV1Handler.Handler</display>
+    <order>0</order>
+    <typeReference id="7fded414-e823-4d19-999e-480a885d37f3">
+      <typeId>773ead09-0070-494e-951c-282b5d2a517b</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Mailboxes.Services</typePackageName>
+      <typePackageId>b28045cb-bf46-4948-9010-0124b00fa466</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="48f3ed89-b0bd-4da4-9e7a-31007c8016c1" type="Send Integration Command Target End" typeId="35a14f76-71e0-45f2-a17f-f8d1483510f7">
+    <display>[send] AccountCreateEnablementV1</display>
+    <order>2</order>
+    <traits>
+      <trait id="d00a2ab0-9a23-4192-b8bb-166798fc7dba" name="[Processing Action]" />
+    </traits>
+    <typeReference id="227a6f4f-ce36-4cad-8595-32c34916240c">
+      <typeId>55ce57cf-d3a5-4bc7-9961-11c582a4a415</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Accounts.Eventing.Messages</typePackageName>
+      <typePackageId>1a4d7aaa-9bfc-48c1-b943-a1ccce1817b5</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes>
+      <stereotype stereotypeDefinitionId="5cae1c25-cc30-4af8-8955-30af001c981d" name="Command Distribution">
+        <addedByDefault>true</addedByDefault>
+        <definitionPackageName>Intent.Eventing.MassTransit</definitionPackageName>
+        <definitionPackageId>6502ee82-f515-4007-9635-bade3eb88e72</definitionPackageId>
+        <properties>
+          <property name="4126ee48-4a50-41a8-9419-504e7f677bea" display="Destination Queue Name" isActive="true" />
+        </properties>
+      </stereotype>
+    </stereotypes>
+    <mappings>
+      <mapping type="Publish Message Mapping" typeId="7ff48a4c-ee8b-4e66-9dbb-c014eb0542fb">
+        <source applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="773ead09-0070-494e-951c-282b5d2a517b" location="[Nullbox.Fabric].[Services].[Handler]" />
+        <target applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="55ce57cf-d3a5-4bc7-9961-11c582a4a415" location="[Nullbox.Fabric].[Services].[AccountCreateEnablementV1]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>{Id}</expression>
+            <path>
+              <target id="55ce57cf-d3a5-4bc7-9961-11c582a4a415" name="AccountCreateEnablementV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="9fa0a06a-9bc5-4cf6-90e9-fef705283a8a" name="Id" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="Id" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="773ead09-0070-494e-951c-282b5d2a517b" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="baec316d-f3a1-4524-867c-f469b56f9b6c" name="Id" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{UserId}</expression>
+            <path>
+              <target id="55ce57cf-d3a5-4bc7-9961-11c582a4a415" name="AccountCreateEnablementV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="204238c9-4cae-43ed-a5fc-fa50f5e7801c" name="UserId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="UserId" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="773ead09-0070-494e-951c-282b5d2a517b" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="b63c2571-e9bc-4cc5-9c36-cba35105d871" name="UserId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Name}</expression>
+            <path>
+              <target id="55ce57cf-d3a5-4bc7-9961-11c582a4a415" name="AccountCreateEnablementV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="7244f5f4-c9f3-4431-9295-63a16c0d7164" name="Name" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="Name" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="773ead09-0070-494e-951c-282b5d2a517b" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="f981abf0-c14c-47b8-a3f8-d882649fcb22" name="Name" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Users}</expression>
+            <path>
+              <target id="55ce57cf-d3a5-4bc7-9961-11c582a4a415" name="AccountCreateEnablementV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="2fe85298-f06f-4d61-b0ff-a1eb6d0f8be8" name="Users" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="Users" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="773ead09-0070-494e-951c-282b5d2a517b" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="1bd669df-ea15-437d-95e1-bfc243c47c4a" name="Users" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Users.AccountId}</expression>
+            <path>
+              <target id="55ce57cf-d3a5-4bc7-9961-11c582a4a415" name="AccountCreateEnablementV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="2fe85298-f06f-4d61-b0ff-a1eb6d0f8be8" name="Users" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+              <target id="1dcd8d3f-1f03-428e-b120-db1ff1c097d2" name="AccountId" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+            </path>
+            <sources>
+              <source identifier="Users.AccountId" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="773ead09-0070-494e-951c-282b5d2a517b" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="1bd669df-ea15-437d-95e1-bfc243c47c4a" name="Users" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                  <target id="1dcd8d3f-1f03-428e-b120-db1ff1c097d2" name="AccountId" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Users.UserProfileId}</expression>
+            <path>
+              <target id="55ce57cf-d3a5-4bc7-9961-11c582a4a415" name="AccountCreateEnablementV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="2fe85298-f06f-4d61-b0ff-a1eb6d0f8be8" name="Users" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+              <target id="61877ce0-cd09-448f-b315-dad408524cb6" name="UserProfileId" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+            </path>
+            <sources>
+              <source identifier="Users.UserProfileId" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="773ead09-0070-494e-951c-282b5d2a517b" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="1bd669df-ea15-437d-95e1-bfc243c47c4a" name="Users" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                  <target id="61877ce0-cd09-448f-b315-dad408524cb6" name="UserProfileId" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Users.EmailAddress}</expression>
+            <path>
+              <target id="55ce57cf-d3a5-4bc7-9961-11c582a4a415" name="AccountCreateEnablementV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="2fe85298-f06f-4d61-b0ff-a1eb6d0f8be8" name="Users" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+              <target id="eb888a70-7e78-48b2-b5a2-49a873b56f37" name="EmailAddress" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+            </path>
+            <sources>
+              <source identifier="Users.EmailAddress" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="773ead09-0070-494e-951c-282b5d2a517b" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="1bd669df-ea15-437d-95e1-bfc243c47c4a" name="Users" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                  <target id="eb888a70-7e78-48b2-b5a2-49a873b56f37" name="EmailAddress" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Users.RoleId}</expression>
+            <path>
+              <target id="55ce57cf-d3a5-4bc7-9961-11c582a4a415" name="AccountCreateEnablementV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="2fe85298-f06f-4d61-b0ff-a1eb6d0f8be8" name="Users" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+              <target id="f306c0b0-deb3-4cee-bd6c-0ade577c77c6" name="RoleId" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+            </path>
+            <sources>
+              <source identifier="Users.RoleId" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="773ead09-0070-494e-951c-282b5d2a517b" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="1bd669df-ea15-437d-95e1-bfc243c47c4a" name="Users" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                  <target id="f306c0b0-deb3-4cee-bd6c-0ade577c77c6" name="RoleId" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+    </mappings>
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Send Integration Command</associationType>
+  <associationTypeId>389a7478-a8f1-4acc-adff-a73ce4aa7e6d</associationTypeId>
+  <stereotypes>
+    <stereotype stereotypeDefinitionId="5cae1c25-cc30-4af8-8955-30af001c981d" name="Command Distribution">
+      <addedByDefault>true</addedByDefault>
+      <definitionPackageName>Intent.Eventing.MassTransit</definitionPackageName>
+      <definitionPackageId>6502ee82-f515-4007-9635-bade3eb88e72</definitionPackageId>
+      <properties>
+        <property name="4126ee48-4a50-41a8-9419-504e7f677bea" display="Destination Queue Name" isActive="true" />
+      </properties>
+    </stereotype>
+  </stereotypes>
+</association>

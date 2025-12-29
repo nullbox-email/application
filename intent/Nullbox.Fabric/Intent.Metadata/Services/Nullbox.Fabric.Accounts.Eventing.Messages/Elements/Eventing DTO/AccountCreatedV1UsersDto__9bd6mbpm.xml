@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="9edb1287-e46c-4ce4-93bd-4ee798dab3bc" type="Eventing DTO" typeId="544f1d57-27ce-4985-a4ec-cc01568d72b0">
+  <name>AccountCreatedV1UsersDto</name>
+  <display>AccountCreatedV1UsersDto</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>f8b82521-d2ba-40ed-8040-bf7af6111c61</parentFolderId>
+  <packageId>1a4d7aaa-9bfc-48c1-b943-a1ccce1817b5</packageId>
+  <packageName>Nullbox.Fabric.Accounts.Eventing.Messages</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="1dcd8d3f-1f03-428e-b120-db1ff1c097d2" type="Eventing DTO-Field" typeId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7">
+      <name>AccountId</name>
+      <display>AccountId: guid</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="fc538307-c17a-4ec6-b483-44a4cd7c4630">
+        <typeId>6b649125-18ea-48fd-a6ba-0bfff0d8f488</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>9edb1287-e46c-4ce4-93bd-4ee798dab3bc</parentFolderId>
+      <packageId>1a4d7aaa-9bfc-48c1-b943-a1ccce1817b5</packageId>
+      <packageName>Nullbox.Fabric.Accounts.Eventing.Messages</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="61877ce0-cd09-448f-b315-dad408524cb6" type="Eventing DTO-Field" typeId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7">
+      <name>UserProfileId</name>
+      <display>UserProfileId: guid</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="89aeceec-a863-4bff-8b9c-70e901d71dde">
+        <typeId>6b649125-18ea-48fd-a6ba-0bfff0d8f488</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>9edb1287-e46c-4ce4-93bd-4ee798dab3bc</parentFolderId>
+      <packageId>1a4d7aaa-9bfc-48c1-b943-a1ccce1817b5</packageId>
+      <packageName>Nullbox.Fabric.Accounts.Eventing.Messages</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="eb888a70-7e78-48b2-b5a2-49a873b56f37" type="Eventing DTO-Field" typeId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7">
+      <name>EmailAddress</name>
+      <display>EmailAddress: string</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="7f331b03-0026-471d-8d93-b596b1a06b03">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>9edb1287-e46c-4ce4-93bd-4ee798dab3bc</parentFolderId>
+      <packageId>1a4d7aaa-9bfc-48c1-b943-a1ccce1817b5</packageId>
+      <packageName>Nullbox.Fabric.Accounts.Eventing.Messages</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="f306c0b0-deb3-4cee-bd6c-0ade577c77c6" type="Eventing DTO-Field" typeId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7">
+      <name>RoleId</name>
+      <display>RoleId: guid</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="ee2b86e4-c597-497d-b44e-2fc48f5a9d85">
+        <typeId>6b649125-18ea-48fd-a6ba-0bfff0d8f488</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>9edb1287-e46c-4ce4-93bd-4ee798dab3bc</parentFolderId>
+      <packageId>1a4d7aaa-9bfc-48c1-b943-a1ccce1817b5</packageId>
+      <packageName>Nullbox.Fabric.Accounts.Eventing.Messages</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

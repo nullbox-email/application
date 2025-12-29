@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="5ab2ad36-05bc-45fe-b51f-47d40fb8ab78">
+  <sourceEnd id="3e377703-89f1-4c61-b790-0f0ca6e2212f" type="Domain Event Handler Association Source End" typeId="79f048d4-4c09-4405-be8f-95473a981556">
+    <display>: AliasUpdatedDomainEventHandler</display>
+    <order>0</order>
+    <typeReference id="818e6529-f337-458c-ad6a-e7a664dad17c">
+      <typeId>e4c957b8-53d1-4df6-82af-fcc814ba853e</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Aliases.Services</typePackageName>
+      <typePackageId>011dff2a-60fc-4ab2-afe4-8b21c38f0fea</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="5ab2ad36-05bc-45fe-b51f-47d40fb8ab78" type="Domain Event Handler Association Target End" typeId="f45dfee9-f62b-45ac-bfce-a3878e04b73f">
+    <name>handler</name>
+    <display>[handles] AliasUpdatedDomainEvent</display>
+    <order>0</order>
+    <traits>
+      <trait id="2b6729eb-e2ae-4b5f-86fe-4f611d1f912e" name="[Processing Handler]" />
+    </traits>
+    <typeReference id="8b1ffa97-52a7-43a7-97a8-1af0feacdcf7">
+      <typeId>1de9e6f7-57f4-498e-952f-eb55834fa1aa</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Aliases.Domain</typePackageName>
+      <typePackageId>c9a4b316-132d-4d2d-82fa-33da6532bf41</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Domain Event Handler Association</associationType>
+  <associationTypeId>90831494-f069-44eb-b488-ab2dba7518ea</associationTypeId>
+  <stereotypes />
+</association>

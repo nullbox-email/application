@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="771ee112-95e9-4a27-8d16-8bc148811895">
+  <sourceEnd id="b179ed02-a38e-46a2-8df8-c6ba1170f92e" type="Subscribe Integration Event Source End" typeId="5d8f5c33-f9c9-4629-b637-fad9b0096894">
+    <display>handled by: Mailboxes.MailboxUpdatedV1Handler</display>
+    <order>0</order>
+    <typeReference id="48b96ca6-e6dc-444d-9efb-ebab5ab3e79b">
+      <typeId>64bfb96a-0b83-4a0b-b585-2439721fc9d6</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Mailboxes.Services</typePackageName>
+      <typePackageId>b28045cb-bf46-4948-9010-0124b00fa466</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="771ee112-95e9-4a27-8d16-8bc148811895" type="Subscribe Integration Event Target End" typeId="16fa2952-79e6-4150-b5ab-45aa4c106de4">
+    <name>Handler</name>
+    <display>[handles] MailboxUpdatedV1</display>
+    <order>0</order>
+    <traits>
+      <trait id="2b6729eb-e2ae-4b5f-86fe-4f611d1f912e" name="[Processing Handler]" />
+    </traits>
+    <typeReference id="87ec4f3e-dd51-4077-816e-7db6a4f8592b">
+      <typeId>64f60e36-e780-4899-9a86-27b676c04418</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Mailboxes.Eventing.Messages</typePackageName>
+      <typePackageId>d7301438-0953-483e-b767-ea406e610e87</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Subscribe Integration Event</associationType>
+  <associationTypeId>80aa7f6d-64e5-4d24-a81e-6bc212925ca7</associationTypeId>
+  <stereotypes />
+</association>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="e7831575-c8f1-46a8-94ae-3183269cfaa7" type="Message" typeId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e">
+  <name>AliasCreatedV1</name>
+  <display>AliasCreatedV1</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>30677f54-d2ba-4c34-83be-484deeaacfde</parentFolderId>
+  <packageId>715151a5-7967-491b-8f50-bd7e925193d6</packageId>
+  <packageName>Nullbox.Fabric.Aliases.Eventing.Messages</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="4c7c4fac-9ac6-4889-9e08-91929cf3da7c" type="Property" typeId="bde29850-5fb9-4f47-9941-b9e182fd9bdc">
+      <name>Id</name>
+      <display>Id: guid</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="cce566c6-c3e3-4066-81d8-c89a1822310b">
+        <typeId>6b649125-18ea-48fd-a6ba-0bfff0d8f488</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>e7831575-c8f1-46a8-94ae-3183269cfaa7</parentFolderId>
+      <packageId>715151a5-7967-491b-8f50-bd7e925193d6</packageId>
+      <packageName>Nullbox.Fabric.Aliases.Eventing.Messages</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="39829fa0-f819-4142-aeea-02a64f9dd441" type="Property" typeId="bde29850-5fb9-4f47-9941-b9e182fd9bdc">
+      <name>MailboxId</name>
+      <display>MailboxId: guid</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="100e5504-4bb4-4284-8755-0791cd9cf3c5">
+        <typeId>6b649125-18ea-48fd-a6ba-0bfff0d8f488</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>e7831575-c8f1-46a8-94ae-3183269cfaa7</parentFolderId>
+      <packageId>715151a5-7967-491b-8f50-bd7e925193d6</packageId>
+      <packageName>Nullbox.Fabric.Aliases.Eventing.Messages</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="128dd39b-0173-4584-bf04-76f271e6556f" type="Property" typeId="bde29850-5fb9-4f47-9941-b9e182fd9bdc">
+      <name>AccountId</name>
+      <display>AccountId: guid</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="7b278f49-6f9a-4caa-bfa1-4ddea34c4878">
+        <typeId>6b649125-18ea-48fd-a6ba-0bfff0d8f488</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>e7831575-c8f1-46a8-94ae-3183269cfaa7</parentFolderId>
+      <packageId>715151a5-7967-491b-8f50-bd7e925193d6</packageId>
+      <packageName>Nullbox.Fabric.Aliases.Eventing.Messages</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="f4b4f1b7-f419-4c1c-819e-013d2b05d215" type="Property" typeId="bde29850-5fb9-4f47-9941-b9e182fd9bdc">
+      <name>Name</name>
+      <display>Name: string</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="c60ac912-de19-4d64-8525-7961343742c9">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>e7831575-c8f1-46a8-94ae-3183269cfaa7</parentFolderId>
+      <packageId>715151a5-7967-491b-8f50-bd7e925193d6</packageId>
+      <packageName>Nullbox.Fabric.Aliases.Eventing.Messages</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="34d61a1f-4b8f-474c-9490-c3ee1b728f11" type="Property" typeId="bde29850-5fb9-4f47-9941-b9e182fd9bdc">
+      <name>LocalPart</name>
+      <display>LocalPart: string</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="86cd8041-9bcd-4b60-8ac7-291ebc641450">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>e7831575-c8f1-46a8-94ae-3183269cfaa7</parentFolderId>
+      <packageId>715151a5-7967-491b-8f50-bd7e925193d6</packageId>
+      <packageName>Nullbox.Fabric.Aliases.Eventing.Messages</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="e11ca720-2a52-4c41-a027-1b271e140c80" type="Property" typeId="bde29850-5fb9-4f47-9941-b9e182fd9bdc">
+      <name>IsEnabled</name>
+      <display>IsEnabled: bool</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="4eb67c1d-d877-4e00-8653-97ba00a200c4">
+        <typeId>e6f92b09-b2c5-4536-8270-a4d9e5bbd930</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>e7831575-c8f1-46a8-94ae-3183269cfaa7</parentFolderId>
+      <packageId>715151a5-7967-491b-8f50-bd7e925193d6</packageId>
+      <packageName>Nullbox.Fabric.Aliases.Eventing.Messages</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="b7a6b39c-6135-41db-96a7-05b0bc78d138" type="Property" typeId="bde29850-5fb9-4f47-9941-b9e182fd9bdc">
+      <name>DirectPassthrough</name>
+      <display>DirectPassthrough: bool</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="27a71b9c-eae0-4906-8114-26ec342eb217">
+        <typeId>e6f92b09-b2c5-4536-8270-a4d9e5bbd930</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>e7831575-c8f1-46a8-94ae-3183269cfaa7</parentFolderId>
+      <packageId>715151a5-7967-491b-8f50-bd7e925193d6</packageId>
+      <packageName>Nullbox.Fabric.Aliases.Eventing.Messages</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="61ec7532-1973-41bc-b353-04b5a094306f" type="Property" typeId="bde29850-5fb9-4f47-9941-b9e182fd9bdc">
+      <name>LearningMode</name>
+      <display>LearningMode: bool</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="5304c444-6a6b-4bfe-85c0-5abe7f5c7883">
+        <typeId>e6f92b09-b2c5-4536-8270-a4d9e5bbd930</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>e7831575-c8f1-46a8-94ae-3183269cfaa7</parentFolderId>
+      <packageId>715151a5-7967-491b-8f50-bd7e925193d6</packageId>
+      <packageName>Nullbox.Fabric.Aliases.Eventing.Messages</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

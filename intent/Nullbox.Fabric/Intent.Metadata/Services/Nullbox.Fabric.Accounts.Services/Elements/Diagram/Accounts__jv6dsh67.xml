@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="f2ffbcf3-926c-42a4-9963-e1337e221c89" type="Diagram" typeId="8c90aca5-86f4-47f1-bd58-116fe79f5c55">
+  <name>Accounts</name>
+  <display>Accounts</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>a634aba5-e234-4704-ade8-dbd9aec7d11e</parentFolderId>
+  <packageId>f2caa09a-8091-440f-b0eb-6f9f571a4b95</packageId>
+  <packageName>Nullbox.Fabric.Accounts.Services</packageName>
+  <diagram>
+    <targetPackageId>f2ffbcf3-926c-42a4-9963-e1337e221c89</targetPackageId>
+  </diagram>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

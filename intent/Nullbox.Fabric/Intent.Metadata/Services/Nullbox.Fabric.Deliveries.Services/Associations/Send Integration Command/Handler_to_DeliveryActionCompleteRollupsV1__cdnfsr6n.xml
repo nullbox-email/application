@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="02c311a5-acc4-4230-8524-8056c6ed4c7a">
+  <sourceEnd id="3657d27f-4cad-4795-9473-0dd54e5c0079" type="Send Integration Command Source End" typeId="c5f4f98f-e464-48de-b202-c0724bacebb7">
+    <display>sent by : DeliveryActionCompletedV1Handler.Handler</display>
+    <order>0</order>
+    <typeReference id="addc0263-44d8-456b-b958-be5b4ecde84f">
+      <typeId>24fa0588-023c-410d-8c0d-e7b27b088aa5</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Deliveries.Services</typePackageName>
+      <typePackageId>7ee06bb8-ef12-47d6-a86a-15d687075463</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="02c311a5-acc4-4230-8524-8056c6ed4c7a" type="Send Integration Command Target End" typeId="35a14f76-71e0-45f2-a17f-f8d1483510f7">
+    <display>[send] DeliveryActionCompleteRollupsV1</display>
+    <order>1</order>
+    <traits>
+      <trait id="d00a2ab0-9a23-4192-b8bb-166798fc7dba" name="[Processing Action]" />
+    </traits>
+    <typeReference id="7bb3a1ff-b595-4104-9783-2bd0206ac0b8">
+      <typeId>c30c1ed6-d6ab-4d28-8420-638b5d0d4785</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Deliveries.Eventing.Messages</typePackageName>
+      <typePackageId>210799ed-6535-4f17-a8d0-8e60d045f1c5</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes>
+      <stereotype stereotypeDefinitionId="5cae1c25-cc30-4af8-8955-30af001c981d" name="Command Distribution">
+        <addedByDefault>true</addedByDefault>
+        <definitionPackageName>Intent.Eventing.MassTransit</definitionPackageName>
+        <definitionPackageId>6502ee82-f515-4007-9635-bade3eb88e72</definitionPackageId>
+        <properties>
+          <property name="4126ee48-4a50-41a8-9419-504e7f677bea" display="Destination Queue Name" isActive="true" />
+        </properties>
+      </stereotype>
+    </stereotypes>
+    <mappings>
+      <mapping type="Publish Message Mapping" typeId="7ff48a4c-ee8b-4e66-9dbb-c014eb0542fb">
+        <source applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="24fa0588-023c-410d-8c0d-e7b27b088aa5" location="[Nullbox.Fabric].[Services].[Handler]" />
+        <target applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" location="[Nullbox.Fabric].[Services].[DeliveryActionCompleteRollupsV1]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>{Id}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="d16d9d60-fdc8-4eb9-9259-0859e45b559c" name="Id" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="Id" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="0562c6f7-c09c-49e7-830a-67a22a24a956" name="Id" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{PartitionKey}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="f9f74de2-fdad-4e0f-a095-4dcbe832f901" name="PartitionKey" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="PartitionKey" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="a23ba3f1-83db-49ab-8922-b5503fc9ce77" name="PartitionKey" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{AliasId}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="7ac25dd7-133b-4eba-9b82-ba723f3c6198" name="AliasId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="AliasId" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="520ea7dc-61bc-4fff-81b0-2a9eb5ef30ea" name="AliasId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{MailboxId}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="0de767ed-495a-4858-8081-9533de2d3525" name="MailboxId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="MailboxId" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="f25910bb-70bb-4181-9e7c-93493c990b86" name="MailboxId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{AccountId}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="354a6921-43a8-4e37-8970-596a70a5d003" name="AccountId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="AccountId" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="76f954b8-9a98-42f2-b557-04f3c794946a" name="AccountId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Source}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="cee1034a-7b83-44d4-9426-f884a7b9e8ee" name="Source" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="Source" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="92ff139d-d0ab-4d7b-ab2b-880520a25c8b" name="Source" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{CreatedAt}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="cd04ce91-cf88-4e75-95c8-10293bf41f38" name="CreatedAt" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="CreatedAt" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="564fa053-b8af-43e3-bc41-a29555ac2432" name="CreatedAt" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{ReceivedAt}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="d6b38ab0-a104-41bc-9f50-09c1df2bad93" name="ReceivedAt" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="ReceivedAt" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="91874403-6bce-4939-a69d-dd1c10d6505d" name="ReceivedAt" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Alias}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="12a5ed0e-53d6-4a8e-9e9b-019f4eaac163" name="Alias" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="Alias" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="1bf7d309-01a1-4625-997f-97e3f572761e" name="Alias" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{RoutingKey}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="b151acb3-1e64-47c1-8c1d-f5bd35789849" name="RoutingKey" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="RoutingKey" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="a11da038-c6cc-4233-88f6-fc56def97370" name="RoutingKey" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Domain}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="fe9bdc7c-d643-4b87-953e-9baf3aa04b3a" name="Domain" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="Domain" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="c195bcb9-97e2-4e6f-b2a5-280b0ab8de66" name="Domain" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{SenderDisplay}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="2c18d7ba-d8de-47ee-b4ab-aec86030e4a1" name="SenderDisplay" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="SenderDisplay" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="8bbbc775-574a-4eb6-9fca-4bfd9ec9c20b" name="SenderDisplay" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{SenderDomain}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="eab7fad4-d4db-447c-b550-bfecbc38053a" name="SenderDomain" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="SenderDomain" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="9bf71db7-e101-48fa-83ac-0748de3c7740" name="SenderDomain" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{RecipientDisplay}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="70316b74-e4c8-443a-9bab-2f44250204d7" name="RecipientDisplay" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="RecipientDisplay" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="0af9eebb-1d84-4caa-ac67-b31cebca63d3" name="RecipientDisplay" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{RecipientDomain}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="b7f12774-717b-4026-81eb-628799e542fe" name="RecipientDomain" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="RecipientDomain" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="d9ece51e-6fc0-4b79-bf5f-04880952fe57" name="RecipientDomain" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{MessageId}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="f6654318-035f-4e1c-9f7c-27f6de22f951" name="MessageId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="MessageId" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="d3739efe-e2d4-4a79-9993-84421c20627a" name="MessageId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Subject}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="6fe91a94-5039-46e6-95b6-d3ca6aa4f6ad" name="Subject" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="Subject" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="573f2f05-10c5-4c67-8a7c-726cd8a7e0ed" name="Subject" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{SubjectHash}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="62e8793b-78d9-4bac-af60-ac6980be0dc6" name="SubjectHash" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="SubjectHash" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="d06b8874-7cd1-4343-8231-3bb67901c799" name="SubjectHash" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{HasAttachments}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="ed30458d-ef25-451f-b884-db71656bbc6e" name="HasAttachments" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="HasAttachments" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="dcfabfca-8098-48f2-bae2-2d0d2af80a53" name="HasAttachments" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{AttachmentsCount}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="01c431e6-65a5-47b8-b1ea-c4dd502ce58d" name="AttachmentsCount" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="AttachmentsCount" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="3e39cd16-3218-457d-af38-caced61e9b13" name="AttachmentsCount" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Size}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="cdd9be4c-39ce-4e73-91d3-436cab5ebe66" name="Size" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="Size" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="d02b5be2-6d10-45ef-bad2-e68f7407f51f" name="Size" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryDecision}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="b21b6712-28c9-49cd-b00c-d1942c7726f9" name="DeliveryDecision" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryDecision" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="16f865f4-06cd-4713-990b-fc61b3e49c78" name="DeliveryDecision" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DropReason.Reason}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="ea73a00b-a1d3-40c0-b6b0-b831347791cc" name="DropReason" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+              <target id="272683a1-a513-42ce-89e4-2b88fb5c1bbd" name="Reason" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+            </path>
+            <sources>
+              <source identifier="DropReason.Reason" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="1c8bb9be-fdba-4f54-9511-9d8bd05f17f3" name="DropReason" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                  <target id="699a7177-8a6d-4802-a5e0-2420c1bccc32" name="Reason" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DropReason.Message}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="ea73a00b-a1d3-40c0-b6b0-b831347791cc" name="DropReason" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+              <target id="22c6cd7a-cdbe-4f1d-8446-0883d6161b5b" name="Message" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+            </path>
+            <sources>
+              <source identifier="DropReason.Message" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="1c8bb9be-fdba-4f54-9511-9d8bd05f17f3" name="DropReason" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                  <target id="05822f91-b115-4635-817e-b1755406b92b" name="Message" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{QuarantineReason.Reason}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="815bc472-66c6-4a0b-9ccc-133ea165cd41" name="QuarantineReason" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+              <target id="c3de6b74-415c-47a0-bb3c-c7f7f12f7b54" name="Reason" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+            </path>
+            <sources>
+              <source identifier="QuarantineReason.Reason" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="5c342508-4ab4-47dc-aa68-82ba4b016026" name="QuarantineReason" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                  <target id="669a43d6-3165-48bf-8279-912392309b8c" name="Reason" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{QuarantineReason.Message}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="815bc472-66c6-4a0b-9ccc-133ea165cd41" name="QuarantineReason" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+              <target id="f0700ea2-0c96-4882-868d-b30858bf068a" name="Message" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+            </path>
+            <sources>
+              <source identifier="QuarantineReason.Message" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="5c342508-4ab4-47dc-aa68-82ba4b016026" name="QuarantineReason" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                  <target id="2c71842f-b5e9-49ba-b133-d83486641795" name="Message" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{ForwardTo}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="e05b1029-0556-45bb-a1fc-4eb3d64b93bf" name="ForwardTo" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="ForwardTo" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="e0f88579-5c53-4fcc-aaaf-6ecba90311fc" name="ForwardTo" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{ForwardFrom}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="fcdf22d5-f400-4330-b54b-a4c9e919d2f7" name="ForwardFrom" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="ForwardFrom" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="3153bfa2-cb9e-425b-ad6c-c3d40b49cbfc" name="ForwardFrom" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Provider}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="a8065167-e505-4477-8b11-45bca18b8491" name="Provider" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="Provider" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="655333a8-1724-4a02-b8a0-e54e3243d617" name="Provider" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{ProviderStatus}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="64e26fc3-2a1f-4092-8c3b-5854c00535c3" name="ProviderStatus" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="ProviderStatus" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="162e44ee-d351-4fdc-b392-7e5810a91801" name="ProviderStatus" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{ProviderMessageId}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="738b3bd2-217d-416a-9e3a-36df0e9113a2" name="ProviderMessageId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="ProviderMessageId" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="6bf77046-0748-4f7c-a96a-5590ba370ca3" name="ProviderMessageId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{ProviderError}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="38adb0e5-c882-4e1a-8f16-a72fa7ed5699" name="ProviderError" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="ProviderError" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="1bbfa03d-e7db-42ee-bafe-a2b45bb2c49a" name="ProviderError" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{CompletedAt}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="956192e9-4706-417d-a55d-aa54c06080d2" name="CompletedAt" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="CompletedAt" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="ab56ff21-147f-4a1c-a78f-aaf0caa54ce2" name="CompletedAt" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DedupKey}</expression>
+            <path>
+              <target id="c30c1ed6-d6ab-4d28-8420-638b5d0d4785" name="DeliveryActionCompleteRollupsV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
+              <target id="655d5680-d36c-45c5-b5a7-cc5c0c3285fa" name="DedupKey" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DedupKey" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="24fa0588-023c-410d-8c0d-e7b27b088aa5" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="bf888373-837c-4003-9d29-2b5009e13ab1" name="DedupKey" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+    </mappings>
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Send Integration Command</associationType>
+  <associationTypeId>389a7478-a8f1-4acc-adff-a73ce4aa7e6d</associationTypeId>
+  <stereotypes>
+    <stereotype stereotypeDefinitionId="5cae1c25-cc30-4af8-8955-30af001c981d" name="Command Distribution">
+      <addedByDefault>true</addedByDefault>
+      <definitionPackageName>Intent.Eventing.MassTransit</definitionPackageName>
+      <definitionPackageId>6502ee82-f515-4007-9635-bade3eb88e72</definitionPackageId>
+      <properties>
+        <property name="4126ee48-4a50-41a8-9419-504e7f677bea" display="Destination Queue Name" isActive="true" />
+      </properties>
+    </stereotype>
+  </stereotypes>
+</association>

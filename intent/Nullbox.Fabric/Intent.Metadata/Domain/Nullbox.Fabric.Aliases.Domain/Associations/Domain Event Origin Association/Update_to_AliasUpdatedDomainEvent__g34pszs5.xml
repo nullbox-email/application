@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="79010acc-b110-4153-96f7-375c9df8623d">
+  <sourceEnd id="ea0ad54a-981a-44e3-9472-04bd946a970c" type="Domain Event Origin Association Source End" typeId="2495d3ef-f7a2-441d-b749-b51b2546b45e">
+    <display>published by : Alias.Update</display>
+    <order>0</order>
+    <typeReference id="8aef3176-13ea-4854-a89b-6eafab669bb8">
+      <typeId>739a101f-5e2a-4e36-811e-e5491f4ce8d5</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Aliases.Domain</typePackageName>
+      <typePackageId>c9a4b316-132d-4d2d-82fa-33da6532bf41</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="79010acc-b110-4153-96f7-375c9df8623d" type="Domain Event Origin Association Target End" typeId="17046427-14e2-4081-8463-ef16c0fda399">
+    <display>publishes : AliasUpdatedDomainEvent</display>
+    <order>4</order>
+    <typeReference id="fee2933e-bdb4-42ac-b142-a2de03f4c4a5">
+      <typeId>1de9e6f7-57f4-498e-952f-eb55834fa1aa</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Aliases.Domain</typePackageName>
+      <typePackageId>c9a4b316-132d-4d2d-82fa-33da6532bf41</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <mappings>
+      <mapping type="Entity to Domain Event Mapping" typeId="86cb62b5-412d-493b-a901-d6e08cf88059">
+        <source applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="6ab29b31-27af-4f56-a67c-986d82097d63" elementId="a5912e31-7c79-4f96-9519-ecfb170ca84a" location="[Nullbox.Fabric].[Domain].[Alias]" />
+        <target applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="6ab29b31-27af-4f56-a67c-986d82097d63" elementId="1de9e6f7-57f4-498e-952f-eb55834fa1aa" location="[Nullbox.Fabric].[Domain].[AliasUpdatedDomainEvent]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>{Alias}</expression>
+            <path>
+              <target id="1de9e6f7-57f4-498e-952f-eb55834fa1aa" name="AliasUpdatedDomainEvent" type="element" specialization="Domain Event" specializationId="0814e459-fb9b-47db-b7eb-32ce30397e8a" />
+              <target id="7df1dd24-95c0-4e75-8551-64a3d8dcd529" name="Alias" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+            </path>
+            <sources>
+              <source identifier="Alias" mappingType="Data Mapping" mappingTypeId="ddfefa35-caf3-48f8-aeed-7beabc8b2f5c">
+                <path>
+                  <target id="a5912e31-7c79-4f96-9519-ecfb170ca84a" name="Alias" type="element" specialization="Class" specializationId="04e12b51-ed12-42a3-9667-a6aa81bb6d10" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+    </mappings>
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Domain Event Origin Association</associationType>
+  <associationTypeId>4c0cc50b-8a9d-43cd-b731-9f354f69f3c9</associationTypeId>
+  <stereotypes />
+</association>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="1136f93f-aeac-48bc-a6e3-b9d0dbc73a14" type="Data Contract" typeId="4464fabe-c59e-4d90-81fc-c9245bdd1afd">
+  <name>TokenContract</name>
+  <display>TokenContract</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>8c67df03-7a61-43ff-9d64-6e293d8a2059</parentFolderId>
+  <packageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</packageId>
+  <packageName>Nullbox.Security.Tokens.Domain</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="f51189a9-7e73-4e65-8b07-ae6f3b634644" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>IdToken</name>
+      <display>IdToken: string?</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="68779093-d51c-417a-b323-1b959efea717">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>true</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>1136f93f-aeac-48bc-a6e3-b9d0dbc73a14</parentFolderId>
+      <packageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</packageId>
+      <packageName>Nullbox.Security.Tokens.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="fe3ed0af-a457-4196-9c45-69e59230f2f0" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>AccessToken</name>
+      <display>AccessToken: string?</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="614b1e74-8d1e-4dfc-ac9f-6f885dc8d0e0">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>true</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>1136f93f-aeac-48bc-a6e3-b9d0dbc73a14</parentFolderId>
+      <packageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</packageId>
+      <packageName>Nullbox.Security.Tokens.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

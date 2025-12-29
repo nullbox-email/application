@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="64f60e36-e780-4899-9a86-27b676c04418" type="Message" typeId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e">
+  <name>MailboxUpdatedV1</name>
+  <display>MailboxUpdatedV1</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>05818fba-33fb-4560-81b0-3d21b63d9d7e</parentFolderId>
+  <packageId>d7301438-0953-483e-b767-ea406e610e87</packageId>
+  <packageName>Nullbox.Fabric.Mailboxes.Eventing.Messages</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="e13bde65-a867-4d83-941c-3a625fd5304b" type="Property" typeId="bde29850-5fb9-4f47-9941-b9e182fd9bdc">
+      <name>Id</name>
+      <display>Id: guid</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="c77ed950-67d0-4604-84b1-6a5651393daf">
+        <typeId>6b649125-18ea-48fd-a6ba-0bfff0d8f488</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>64f60e36-e780-4899-9a86-27b676c04418</parentFolderId>
+      <packageId>d7301438-0953-483e-b767-ea406e610e87</packageId>
+      <packageName>Nullbox.Fabric.Mailboxes.Eventing.Messages</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="8803afcf-0b8b-4acf-bbfd-11dd2b5ee544" type="Property" typeId="bde29850-5fb9-4f47-9941-b9e182fd9bdc">
+      <name>AccountId</name>
+      <display>AccountId: guid</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="377150f9-d4ed-4877-bfb3-8ac14d26efe2">
+        <typeId>6b649125-18ea-48fd-a6ba-0bfff0d8f488</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>64f60e36-e780-4899-9a86-27b676c04418</parentFolderId>
+      <packageId>d7301438-0953-483e-b767-ea406e610e87</packageId>
+      <packageName>Nullbox.Fabric.Mailboxes.Eventing.Messages</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="5351aa9e-ab40-4ce6-9e92-f210a9a3c926" type="Property" typeId="bde29850-5fb9-4f47-9941-b9e182fd9bdc">
+      <name>RoutingKey</name>
+      <display>RoutingKey: string</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="512adb76-8c08-4fa1-b023-0c63be9690e8">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>64f60e36-e780-4899-9a86-27b676c04418</parentFolderId>
+      <packageId>d7301438-0953-483e-b767-ea406e610e87</packageId>
+      <packageName>Nullbox.Fabric.Mailboxes.Eventing.Messages</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="b84b8ddf-b6b1-43b9-9513-190e4199dc34" type="Property" typeId="bde29850-5fb9-4f47-9941-b9e182fd9bdc">
+      <name>Name</name>
+      <display>Name: string</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="123070e8-72b1-4ec0-942a-97b7718bf7a1">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>64f60e36-e780-4899-9a86-27b676c04418</parentFolderId>
+      <packageId>d7301438-0953-483e-b767-ea406e610e87</packageId>
+      <packageName>Nullbox.Fabric.Mailboxes.Eventing.Messages</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="1341d8ab-d394-46e7-a5d2-3d9adf2289e8" type="Property" typeId="bde29850-5fb9-4f47-9941-b9e182fd9bdc">
+      <name>Domain</name>
+      <display>Domain: string</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="eeec78cd-46dc-410f-b97b-0fb24d1151e1">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>64f60e36-e780-4899-9a86-27b676c04418</parentFolderId>
+      <packageId>d7301438-0953-483e-b767-ea406e610e87</packageId>
+      <packageName>Nullbox.Fabric.Mailboxes.Eventing.Messages</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="10530b7a-d0bb-4f36-b06e-203aba7283fe" type="Property" typeId="bde29850-5fb9-4f47-9941-b9e182fd9bdc">
+      <name>AutoCreateAlias</name>
+      <display>AutoCreateAlias: bool</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="082b34ac-4e20-45c9-b3a1-85ac84d0c0f6">
+        <typeId>e6f92b09-b2c5-4536-8270-a4d9e5bbd930</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>64f60e36-e780-4899-9a86-27b676c04418</parentFolderId>
+      <packageId>d7301438-0953-483e-b767-ea406e610e87</packageId>
+      <packageName>Nullbox.Fabric.Mailboxes.Eventing.Messages</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="ff41864a-8e14-4680-bb77-824899feb447" type="Property" typeId="bde29850-5fb9-4f47-9941-b9e182fd9bdc">
+      <name>EmailAddress</name>
+      <display>EmailAddress: string</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="dfc399da-9f37-4af8-8894-fd3b9ba747ce">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>64f60e36-e780-4899-9a86-27b676c04418</parentFolderId>
+      <packageId>d7301438-0953-483e-b767-ea406e610e87</packageId>
+      <packageName>Nullbox.Fabric.Mailboxes.Eventing.Messages</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

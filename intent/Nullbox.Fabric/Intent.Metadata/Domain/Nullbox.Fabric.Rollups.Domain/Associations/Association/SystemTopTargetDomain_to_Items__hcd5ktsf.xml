@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="39d25ade-fdd7-4377-9023-47e3381d759e">
+  <sourceEnd id="618c9845-c733-4899-ad47-5289da73f2de" type="Association Source End" typeId="8d9d2e5b-bd55-4f36-9ae4-2b9e84fd4e58">
+    <name>SystemTopTargetDomain</name>
+    <display>SystemTopTargetDomain: TopDomain</display>
+    <order>0</order>
+    <typeReference id="9605dd0a-0c70-4d66-8849-5d2fa6c131f0">
+      <typeId>f36950e1-29f5-4912-942c-ce993a805a67</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Rollups.Domain</typePackageName>
+      <typePackageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="39d25ade-fdd7-4377-9023-47e3381d759e" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
+    <name>Items</name>
+    <display>Items: TopDomainItem[*]</display>
+    <order>7</order>
+    <typeReference id="fedb309c-99b1-4a34-abf6-bb4b733644ca">
+      <typeId>b8017110-9b19-40e5-bf58-3cb63f9dc447</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>true</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Rollups.Domain</typePackageName>
+      <typePackageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Association</associationType>
+  <associationTypeId>eaf9ed4e-0b61-4ac1-ba88-09f912c12087</associationTypeId>
+  <stereotypes />
+</association>

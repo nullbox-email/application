@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="b8017110-9b19-40e5-bf58-3cb63f9dc447" type="Class" typeId="04e12b51-ed12-42a3-9667-a6aa81bb6d10">
+  <name>TopDomainItem</name>
+  <display>TopDomainItem</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>0957de1a-a538-41f6-aaf6-b24f66947ab5</parentFolderId>
+  <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+  <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+  <stereotypes />
+  <metadata>
+    <entry key="auto-manage-keys" value="false" />
+  </metadata>
+  <childElements>
+    <childElement id="972d37da-cafa-4d47-86ab-49910a9c880b" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>TopTargetDomainId</name>
+      <display>TopTargetDomainId: string</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="5b9877ef-8d8f-4e8c-a45a-35a45e1e4f54">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>b8017110-9b19-40e5-bf58-3cb63f9dc447</parentFolderId>
+      <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+      <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+      <stereotypes>
+        <stereotype stereotypeDefinitionId="6347286E-A637-44D6-A5D7-D9BE5789CA7A" name="Text Constraints">
+          <addedByDefault>false</addedByDefault>
+          <definitionPackageName>Intent.Metadata.RDBMS</definitionPackageName>
+          <definitionPackageId>AF8F3810-745C-42A2-93C8-798860DC45B1</definitionPackageId>
+          <properties>
+            <property name="1288cfcd-ee51-437e-9713-73b80118f026" display="SQL Data Type" value="DEFAULT" isActive="true" />
+            <property name="A04CC24D-81FB-4EA2-A34A-B3C58E04DCFD" display="MaxLength" isActive="true" />
+            <property name="67EC4CF4-7706-4B39-BC7C-DF539EE2B0AF" display="IsUnicode" value="false" isActive="true" />
+          </properties>
+        </stereotype>
+        <stereotype stereotypeDefinitionId="793a5128-57a1-440b-a206-af5722b752a6" name="Foreign Key">
+          <addedByDefault>false</addedByDefault>
+          <definitionPackageName>Intent.Metadata.RDBMS</definitionPackageName>
+          <definitionPackageId>AF8F3810-745C-42A2-93C8-798860DC45B1</definitionPackageId>
+          <properties>
+            <property name="42e4f9b5-f834-4e5f-86aa-d3a35c505076" display="Association" value="39d25ade-fdd7-4377-9023-47e3381d759e" isActive="true" />
+          </properties>
+        </stereotype>
+      </stereotypes>
+      <metadata>
+        <entry key="fk-original-name" value="SystemTopTargetDomainId" />
+        <entry key="association" value="39d25ade-fdd7-4377-9023-47e3381d759e" />
+        <entry key="is-managed-key" value="true" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="6f96cb63-e041-4bca-a71d-c4156ae817a8" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>Domain</name>
+      <display>Domain: string</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="1a566194-d489-4123-8039-6479007c19b2">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>b8017110-9b19-40e5-bf58-3cb63f9dc447</parentFolderId>
+      <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+      <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+      <stereotypes>
+        <stereotype stereotypeDefinitionId="6347286E-A637-44D6-A5D7-D9BE5789CA7A" name="Text Constraints">
+          <addedByDefault>false</addedByDefault>
+          <definitionPackageName>Intent.Metadata.RDBMS</definitionPackageName>
+          <definitionPackageId>AF8F3810-745C-42A2-93C8-798860DC45B1</definitionPackageId>
+          <properties>
+            <property name="1288cfcd-ee51-437e-9713-73b80118f026" display="SQL Data Type" value="DEFAULT" isActive="true" />
+            <property name="A04CC24D-81FB-4EA2-A34A-B3C58E04DCFD" display="MaxLength" value="312" isActive="true" />
+            <property name="67EC4CF4-7706-4B39-BC7C-DF539EE2B0AF" display="IsUnicode" value="false" isActive="true" />
+          </properties>
+        </stereotype>
+      </stereotypes>
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="c27a16f6-15c5-4bb9-b592-2821d1ac031d" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>Total</name>
+      <display>Total: int</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="8e442697-7bae-498b-bb96-7589c3fded9a">
+        <typeId>fb0a362d-e9e2-40de-b6ff-5ce8167cbe74</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>b8017110-9b19-40e5-bf58-3cb63f9dc447</parentFolderId>
+      <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+      <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="6537d131-53fa-40a7-b21c-2d7643f2ca03" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>Forwarded</name>
+      <display>Forwarded: int</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="c461c588-7cc8-48a4-9301-044523a4094d">
+        <typeId>fb0a362d-e9e2-40de-b6ff-5ce8167cbe74</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>b8017110-9b19-40e5-bf58-3cb63f9dc447</parentFolderId>
+      <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+      <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="e322cbfa-2db9-4ebf-81a4-fcf714f3fbef" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>Dropped</name>
+      <display>Dropped: int</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="33d72962-6f4b-4448-9fe8-cba8234ef825">
+        <typeId>fb0a362d-e9e2-40de-b6ff-5ce8167cbe74</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>b8017110-9b19-40e5-bf58-3cb63f9dc447</parentFolderId>
+      <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+      <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="b9e69721-c3af-48c5-8802-3792693f7700" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>Quarantined</name>
+      <display>Quarantined: int</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="9d3b593a-0a5e-4d37-a58d-0d93569a6760">
+        <typeId>fb0a362d-e9e2-40de-b6ff-5ce8167cbe74</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>b8017110-9b19-40e5-bf58-3cb63f9dc447</parentFolderId>
+      <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+      <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="e98c355c-a7dd-4d37-9e7d-d1690605ffa3" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>Delivered</name>
+      <display>Delivered: int</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="1449b026-f798-44ea-aded-d8491c12cbb9">
+        <typeId>fb0a362d-e9e2-40de-b6ff-5ce8167cbe74</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>b8017110-9b19-40e5-bf58-3cb63f9dc447</parentFolderId>
+      <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+      <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="3cf915df-514a-42e9-b54b-8027c197973f" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>Failed</name>
+      <display>Failed: int</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="c4aa6766-9d3f-4204-84e7-7fd1c1d4cd68">
+        <typeId>fb0a362d-e9e2-40de-b6ff-5ce8167cbe74</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>b8017110-9b19-40e5-bf58-3cb63f9dc447</parentFolderId>
+      <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+      <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="9be23573-a5e0-44ed-ade6-5d826c405391" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>Bandwidth</name>
+      <display>Bandwidth: long</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="d57b1ff4-9a38-4fa8-a463-4e3779e462ab">
+        <typeId>33013006-E404-48C2-AC46-24EF5A5774FD</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>b8017110-9b19-40e5-bf58-3cb63f9dc447</parentFolderId>
+      <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+      <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="4f6491c2-9ad0-4100-b7df-00d1c16d76f6" type="Class Constructor" typeId="dec2bd12-4699-4f45-8ec9-3b62dc692d2b">
+      <name>Constructor</name>
+      <display>TopDomainItem(systemTopTargetDomainId: string, domain: string, total: int, forwarded: int, dropped: int, quarantined: int, delivered: int, failed: int, bandwidth: long)</display>
+      <isAbstract>false</isAbstract>
+      <sort-children>by-type-then-manually</sort-children>
+      <genericTypes />
+      <isMapped>true</isMapped>
+      <mappedClass isRoot="true">
+        <applicationId>1459ff1b-8006-433a-8447-07522ec84efc</applicationId>
+        <metadataId>6ab29b31-27af-4f56-a67c-986d82097d63</metadataId>
+        <mappingSettingsId>d6d0abfd-893c-4bec-92cb-419934ba5ba8</mappingSettingsId>
+        <autoSyncTypeReference>true</autoSyncTypeReference>
+        <mappedPath>
+          <target id="b8017110-9b19-40e5-bf58-3cb63f9dc447" name="TopDomainItem" type="element" specialization="Class" specializationId="04e12b51-ed12-42a3-9667-a6aa81bb6d10" />
+        </mappedPath>
+      </mappedClass>
+      <parentFolderId>b8017110-9b19-40e5-bf58-3cb63f9dc447</parentFolderId>
+      <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+      <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements>
+        <childElement id="72f9816c-12b0-4934-aa8d-c904d213d67a" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>systemTopTargetDomainId</name>
+          <display>in : systemTopTargetDomainId: string</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="1c0921e7-5805-410c-b0eb-930f3b313e67">
+            <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>true</isMapped>
+          <mappedClass>
+            <mappingSettingsId>d6d0abfd-893c-4bec-92cb-419934ba5ba8</mappingSettingsId>
+            <autoSyncTypeReference>true</autoSyncTypeReference>
+            <mappedPath>
+              <target id="972d37da-cafa-4d47-86ab-49910a9c880b" name="TopTargetDomainId" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+            </mappedPath>
+          </mappedClass>
+          <parentFolderId>4f6491c2-9ad0-4100-b7df-00d1c16d76f6</parentFolderId>
+          <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+          <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="17ec2eb8-9b4a-4758-a6ae-63fac5f0f545" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>domain</name>
+          <display>in : domain: string</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="9fd5bd0c-53ad-43a8-92d6-3e1300c669ad">
+            <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>true</isMapped>
+          <mappedClass>
+            <mappingSettingsId>d6d0abfd-893c-4bec-92cb-419934ba5ba8</mappingSettingsId>
+            <autoSyncTypeReference>true</autoSyncTypeReference>
+            <mappedPath>
+              <target id="6f96cb63-e041-4bca-a71d-c4156ae817a8" name="Domain" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+            </mappedPath>
+          </mappedClass>
+          <parentFolderId>4f6491c2-9ad0-4100-b7df-00d1c16d76f6</parentFolderId>
+          <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+          <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="e424bba2-00bf-44fb-9428-cf4696d9b570" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>total</name>
+          <display>in : total: int</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="978db73b-031e-44ce-bd15-6eb02e72784b">
+            <typeId>fb0a362d-e9e2-40de-b6ff-5ce8167cbe74</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>true</isMapped>
+          <mappedClass>
+            <mappingSettingsId>d6d0abfd-893c-4bec-92cb-419934ba5ba8</mappingSettingsId>
+            <autoSyncTypeReference>true</autoSyncTypeReference>
+            <mappedPath>
+              <target id="c27a16f6-15c5-4bb9-b592-2821d1ac031d" name="Total" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+            </mappedPath>
+          </mappedClass>
+          <parentFolderId>4f6491c2-9ad0-4100-b7df-00d1c16d76f6</parentFolderId>
+          <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+          <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="fe164323-abe1-40f0-a8d1-651420333381" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>forwarded</name>
+          <display>in : forwarded: int</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="c569f4ad-7283-4a91-837f-a2a2330bb221">
+            <typeId>fb0a362d-e9e2-40de-b6ff-5ce8167cbe74</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>true</isMapped>
+          <mappedClass>
+            <mappingSettingsId>d6d0abfd-893c-4bec-92cb-419934ba5ba8</mappingSettingsId>
+            <autoSyncTypeReference>true</autoSyncTypeReference>
+            <mappedPath>
+              <target id="6537d131-53fa-40a7-b21c-2d7643f2ca03" name="Forwarded" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+            </mappedPath>
+          </mappedClass>
+          <parentFolderId>4f6491c2-9ad0-4100-b7df-00d1c16d76f6</parentFolderId>
+          <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+          <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="ec4b5e08-9b54-4d21-8c47-a1eabc5e41e9" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>dropped</name>
+          <display>in : dropped: int</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="56b16898-ca55-4069-8354-c0a65edb246e">
+            <typeId>fb0a362d-e9e2-40de-b6ff-5ce8167cbe74</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>true</isMapped>
+          <mappedClass>
+            <mappingSettingsId>d6d0abfd-893c-4bec-92cb-419934ba5ba8</mappingSettingsId>
+            <autoSyncTypeReference>true</autoSyncTypeReference>
+            <mappedPath>
+              <target id="e322cbfa-2db9-4ebf-81a4-fcf714f3fbef" name="Dropped" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+            </mappedPath>
+          </mappedClass>
+          <parentFolderId>4f6491c2-9ad0-4100-b7df-00d1c16d76f6</parentFolderId>
+          <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+          <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="4704fe9f-744b-4ba3-beea-5f556c11bc1c" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>quarantined</name>
+          <display>in : quarantined: int</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="34d280b8-3cf1-4af6-a13f-35ad28c92a9b">
+            <typeId>fb0a362d-e9e2-40de-b6ff-5ce8167cbe74</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>true</isMapped>
+          <mappedClass>
+            <mappingSettingsId>d6d0abfd-893c-4bec-92cb-419934ba5ba8</mappingSettingsId>
+            <autoSyncTypeReference>true</autoSyncTypeReference>
+            <mappedPath>
+              <target id="b9e69721-c3af-48c5-8802-3792693f7700" name="Quarantined" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+            </mappedPath>
+          </mappedClass>
+          <parentFolderId>4f6491c2-9ad0-4100-b7df-00d1c16d76f6</parentFolderId>
+          <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+          <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="bb15df86-c023-4f8a-991e-091536cb540d" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>delivered</name>
+          <display>in : delivered: int</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="09b22861-9e82-4cc7-a281-13c20f7237f4">
+            <typeId>fb0a362d-e9e2-40de-b6ff-5ce8167cbe74</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>true</isMapped>
+          <mappedClass>
+            <mappingSettingsId>d6d0abfd-893c-4bec-92cb-419934ba5ba8</mappingSettingsId>
+            <autoSyncTypeReference>true</autoSyncTypeReference>
+            <mappedPath>
+              <target id="e98c355c-a7dd-4d37-9e7d-d1690605ffa3" name="Delivered" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+            </mappedPath>
+          </mappedClass>
+          <parentFolderId>4f6491c2-9ad0-4100-b7df-00d1c16d76f6</parentFolderId>
+          <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+          <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="59b2ef28-9703-48c5-8072-3da75f33a061" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>failed</name>
+          <display>in : failed: int</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="c1962c4c-00d6-4cb2-88f2-d463a7bfa5d2">
+            <typeId>fb0a362d-e9e2-40de-b6ff-5ce8167cbe74</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>true</isMapped>
+          <mappedClass>
+            <mappingSettingsId>d6d0abfd-893c-4bec-92cb-419934ba5ba8</mappingSettingsId>
+            <autoSyncTypeReference>true</autoSyncTypeReference>
+            <mappedPath>
+              <target id="3cf915df-514a-42e9-b54b-8027c197973f" name="Failed" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+            </mappedPath>
+          </mappedClass>
+          <parentFolderId>4f6491c2-9ad0-4100-b7df-00d1c16d76f6</parentFolderId>
+          <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+          <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="c749ba0e-a989-4aa4-b796-77250a550dbc" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>bandwidth</name>
+          <display>in : bandwidth: long</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="5b7e6a13-99c5-4b78-a331-fc9098bf4cc7">
+            <typeId>33013006-E404-48C2-AC46-24EF5A5774FD</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>true</isMapped>
+          <mappedClass>
+            <mappingSettingsId>d6d0abfd-893c-4bec-92cb-419934ba5ba8</mappingSettingsId>
+            <autoSyncTypeReference>true</autoSyncTypeReference>
+            <mappedPath>
+              <target id="9be23573-a5e0-44ed-ade6-5d826c405391" name="Bandwidth" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+            </mappedPath>
+          </mappedClass>
+          <parentFolderId>4f6491c2-9ad0-4100-b7df-00d1c16d76f6</parentFolderId>
+          <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+          <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+      </childElements>
+    </childElement>
+    <childElement id="c3f2a8ce-ce94-40ab-9491-85747921f21d" type="Operation" typeId="e042bb67-a1df-480c-9935-b26210f78591">
+      <name>Update</name>
+      <display>Update(total: int, forwarded: int, dropped: int, quarantined: int, delivered: int, failed: int, bandwidth: long): void</display>
+      <isAbstract>false</isAbstract>
+      <sort-children>by-type-then-manually</sort-children>
+      <genericTypes />
+      <typeReference id="21a263d4-c92b-4bbc-b12a-6288a3afddda">
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>true</isMapped>
+      <mappedClass isRoot="true">
+        <applicationId>1459ff1b-8006-433a-8447-07522ec84efc</applicationId>
+        <metadataId>6ab29b31-27af-4f56-a67c-986d82097d63</metadataId>
+        <mappingSettingsId>7590bd83-04bc-40fe-8b5c-118277c049d4</mappingSettingsId>
+        <autoSyncTypeReference>true</autoSyncTypeReference>
+        <mappedPath>
+          <target id="b8017110-9b19-40e5-bf58-3cb63f9dc447" name="TopDomainItem" type="element" specialization="Class" specializationId="04e12b51-ed12-42a3-9667-a6aa81bb6d10" />
+        </mappedPath>
+      </mappedClass>
+      <parentFolderId>b8017110-9b19-40e5-bf58-3cb63f9dc447</parentFolderId>
+      <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+      <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements>
+        <childElement id="034456d6-1cbd-4dd2-80a4-6bc4127f115d" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>total</name>
+          <display>in : total: int</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="b9850cfb-92e4-4b38-a761-8684c753b0fe">
+            <typeId>fb0a362d-e9e2-40de-b6ff-5ce8167cbe74</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>true</isMapped>
+          <mappedClass>
+            <mappingSettingsId>7590bd83-04bc-40fe-8b5c-118277c049d4</mappingSettingsId>
+            <autoSyncTypeReference>true</autoSyncTypeReference>
+            <mappedPath>
+              <target id="c27a16f6-15c5-4bb9-b592-2821d1ac031d" name="Total" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+            </mappedPath>
+          </mappedClass>
+          <parentFolderId>c3f2a8ce-ce94-40ab-9491-85747921f21d</parentFolderId>
+          <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+          <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="fe2c2fc1-17ae-4694-9e9f-7e64faf1377d" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>forwarded</name>
+          <display>in : forwarded: int</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="c6b4491d-84f6-4606-aeb9-6d3a68b1d8af">
+            <typeId>fb0a362d-e9e2-40de-b6ff-5ce8167cbe74</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>true</isMapped>
+          <mappedClass>
+            <mappingSettingsId>7590bd83-04bc-40fe-8b5c-118277c049d4</mappingSettingsId>
+            <autoSyncTypeReference>true</autoSyncTypeReference>
+            <mappedPath>
+              <target id="6537d131-53fa-40a7-b21c-2d7643f2ca03" name="Forwarded" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+            </mappedPath>
+          </mappedClass>
+          <parentFolderId>c3f2a8ce-ce94-40ab-9491-85747921f21d</parentFolderId>
+          <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+          <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="c2762f63-2ffa-4928-829c-b8eb0b65c544" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>dropped</name>
+          <display>in : dropped: int</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="fc3b4381-d910-4ebc-af5a-c6067a3bc34b">
+            <typeId>fb0a362d-e9e2-40de-b6ff-5ce8167cbe74</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>true</isMapped>
+          <mappedClass>
+            <mappingSettingsId>7590bd83-04bc-40fe-8b5c-118277c049d4</mappingSettingsId>
+            <autoSyncTypeReference>true</autoSyncTypeReference>
+            <mappedPath>
+              <target id="e322cbfa-2db9-4ebf-81a4-fcf714f3fbef" name="Dropped" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+            </mappedPath>
+          </mappedClass>
+          <parentFolderId>c3f2a8ce-ce94-40ab-9491-85747921f21d</parentFolderId>
+          <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+          <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="4db99a61-e771-4bdb-ba7f-8b8bdd0215cc" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>quarantined</name>
+          <display>in : quarantined: int</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="e3781870-ceeb-47ed-aef7-216f885f2073">
+            <typeId>fb0a362d-e9e2-40de-b6ff-5ce8167cbe74</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>true</isMapped>
+          <mappedClass>
+            <mappingSettingsId>7590bd83-04bc-40fe-8b5c-118277c049d4</mappingSettingsId>
+            <autoSyncTypeReference>true</autoSyncTypeReference>
+            <mappedPath>
+              <target id="b9e69721-c3af-48c5-8802-3792693f7700" name="Quarantined" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+            </mappedPath>
+          </mappedClass>
+          <parentFolderId>c3f2a8ce-ce94-40ab-9491-85747921f21d</parentFolderId>
+          <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+          <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="e2eea835-1dbc-4692-af09-52d475ebcfb6" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>delivered</name>
+          <display>in : delivered: int</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="d70fe3c3-b1b7-486d-a2cc-2988bd96fc5a">
+            <typeId>fb0a362d-e9e2-40de-b6ff-5ce8167cbe74</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>true</isMapped>
+          <mappedClass>
+            <mappingSettingsId>7590bd83-04bc-40fe-8b5c-118277c049d4</mappingSettingsId>
+            <autoSyncTypeReference>true</autoSyncTypeReference>
+            <mappedPath>
+              <target id="e98c355c-a7dd-4d37-9e7d-d1690605ffa3" name="Delivered" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+            </mappedPath>
+          </mappedClass>
+          <parentFolderId>c3f2a8ce-ce94-40ab-9491-85747921f21d</parentFolderId>
+          <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+          <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="e651428a-53f3-4eed-8b44-973307315d68" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>failed</name>
+          <display>in : failed: int</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="e734f9c5-f469-471f-b7d0-e223babb7b6b">
+            <typeId>fb0a362d-e9e2-40de-b6ff-5ce8167cbe74</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>true</isMapped>
+          <mappedClass>
+            <mappingSettingsId>7590bd83-04bc-40fe-8b5c-118277c049d4</mappingSettingsId>
+            <autoSyncTypeReference>true</autoSyncTypeReference>
+            <mappedPath>
+              <target id="3cf915df-514a-42e9-b54b-8027c197973f" name="Failed" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+            </mappedPath>
+          </mappedClass>
+          <parentFolderId>c3f2a8ce-ce94-40ab-9491-85747921f21d</parentFolderId>
+          <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+          <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="26a220d4-aef2-4dab-abe0-084379d9e116" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>bandwidth</name>
+          <display>in : bandwidth: long</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="e3a3e675-92f6-4de8-aa69-0759df7c25e1">
+            <typeId>33013006-E404-48C2-AC46-24EF5A5774FD</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>true</isMapped>
+          <mappedClass>
+            <mappingSettingsId>7590bd83-04bc-40fe-8b5c-118277c049d4</mappingSettingsId>
+            <autoSyncTypeReference>true</autoSyncTypeReference>
+            <mappedPath>
+              <target id="9be23573-a5e0-44ed-ade6-5d826c405391" name="Bandwidth" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+            </mappedPath>
+          </mappedClass>
+          <parentFolderId>c3f2a8ce-ce94-40ab-9491-85747921f21d</parentFolderId>
+          <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+          <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+      </childElements>
+    </childElement>
+  </childElements>
+</class>

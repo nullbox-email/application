@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="08efe486-47c3-4fa2-b00b-0285540f186c" type="Diagram" typeId="4d66fecd-e9b8-436f-aa50-c59040ad0879">
+  <name>Markers</name>
+  <display>Markers</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>f2fa0338-4191-4eae-b42d-a3618a31b2bc</parentFolderId>
+  <packageId>6e18a3dd-9c79-43e7-9d9d-2988f5421754</packageId>
+  <packageName>Nullbox.Fabric.Markers.Domain</packageName>
+  <diagram>
+    <targetPackageId>08efe486-47c3-4fa2-b00b-0285540f186c</targetPackageId>
+  </diagram>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

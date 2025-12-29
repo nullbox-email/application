@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="e1dde255-75e6-4556-bcf7-2549677209ca" type="Scope Configuration" typeId="9e98940e-f2f5-4431-b8b5-e4c547eefe78">
+  <name>Scopes</name>
+  <display>Scopes</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>7ee06bb8-ef12-47d6-a86a-15d687075463</parentFolderId>
+  <packageId>7ee06bb8-ef12-47d6-a86a-15d687075463</packageId>
+  <packageName>Nullbox.Fabric.Deliveries.Services</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

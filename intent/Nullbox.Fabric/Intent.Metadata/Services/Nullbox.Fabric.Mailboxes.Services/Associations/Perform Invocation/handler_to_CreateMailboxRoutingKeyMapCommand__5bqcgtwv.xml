@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="f099594d-38a0-48aa-bd8d-9c9c24bc2f58">
+  <sourceEnd id="08c3b85d-088a-49cb-90a9-ec3be0c6583e" type="Perform Invocation Source End" typeId="ee56bd48-8eff-4fff-8d3a-87731d002335">
+    <display>called by : MailboxRoutingKeyMapDomainEventHandler.handler</display>
+    <order>0</order>
+    <typeReference id="16a3fea2-3df6-4819-9108-42a94e07547b">
+      <typeId>83692124-689d-4bff-a499-93807dd5a2f6</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Mailboxes.Services</typePackageName>
+      <typePackageId>b28045cb-bf46-4948-9010-0124b00fa466</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="f099594d-38a0-48aa-bd8d-9c9c24bc2f58" type="Perform Invocation Target End" typeId="093e5909-ffe4-4510-b3ea-532f30212f3c">
+    <display>[call] CreateMailboxRoutingKeyMapCommand(...): void</display>
+    <order>0</order>
+    <traits>
+      <trait id="d00a2ab0-9a23-4192-b8bb-166798fc7dba" name="[Processing Action]" />
+    </traits>
+    <typeReference id="fab3cd7c-f5df-48b8-ae30-64c49fbf6648">
+      <typeId>f69f6064-e016-4947-8b65-e4cc184789f6</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Mailboxes.Services</typePackageName>
+      <typePackageId>b28045cb-bf46-4948-9010-0124b00fa466</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <mappings>
+      <mapping type="Invocation Mapping" typeId="a4c4c5cc-76df-48ed-9d4e-c35caf44b567">
+        <source applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="83692124-689d-4bff-a499-93807dd5a2f6" location="[Nullbox.Fabric].[Services].[handler]" />
+        <target applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="f69f6064-e016-4947-8b65-e4cc184789f6" location="[Nullbox.Fabric].[Services].[CreateMailboxRoutingKeyMapCommand]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>{handler}</expression>
+            <path>
+              <target id="f69f6064-e016-4947-8b65-e4cc184789f6" name="CreateMailboxRoutingKeyMapCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+            </path>
+            <sources>
+              <source identifier="handler" mappingType="Invocation Mapping" mappingTypeId="7ca5c18a-bdbe-434b-a68a-421899a077e7">
+                <path>
+                  <target id="83692124-689d-4bff-a499-93807dd5a2f6" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Mailbox.RoutingKey}</expression>
+            <path>
+              <target id="f69f6064-e016-4947-8b65-e4cc184789f6" name="CreateMailboxRoutingKeyMapCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="b657b832-ffa1-4e0e-baad-3b897a7ce88b" name="RoutingKey" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Mailbox.RoutingKey" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="83692124-689d-4bff-a499-93807dd5a2f6" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="ccc6409e-9109-4e67-b1c8-e9edd5f9f814" name="Mailbox" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="c4162048-e4ab-44e4-a1e3-5d8955bff649" name="RoutingKey" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Mailbox.Id}</expression>
+            <path>
+              <target id="f69f6064-e016-4947-8b65-e4cc184789f6" name="CreateMailboxRoutingKeyMapCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="f7e00b7b-b353-483d-a4cc-cc20f0470535" name="Id" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Mailbox.Id" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="83692124-689d-4bff-a499-93807dd5a2f6" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="ccc6409e-9109-4e67-b1c8-e9edd5f9f814" name="Mailbox" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="251441e4-5842-49e3-8a4f-40596d6d4047" name="Id" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Mailbox.AccountId}</expression>
+            <path>
+              <target id="f69f6064-e016-4947-8b65-e4cc184789f6" name="CreateMailboxRoutingKeyMapCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="ede3c906-72f1-46d0-b958-77bfed9a110c" name="UserId" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Mailbox.AccountId" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="83692124-689d-4bff-a499-93807dd5a2f6" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="ccc6409e-9109-4e67-b1c8-e9edd5f9f814" name="Mailbox" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="a7af0548-441f-4d1e-adee-65d3021a385d" name="AccountId" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+    </mappings>
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Perform Invocation</associationType>
+  <associationTypeId>3e69085c-fa2f-44bd-93eb-41075fd472f8</associationTypeId>
+  <stereotypes />
+</association>

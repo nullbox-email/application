@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="8b2a56ca-7612-4805-8eff-777d5875435d">
+  <sourceEnd id="3d0e2b4a-585f-4f1f-9f87-554d7d190dfe" type="Domain Event Origin Association Source End" typeId="2495d3ef-f7a2-441d-b749-b51b2546b45e">
+    <display>published by : UserProfile.SetName</display>
+    <order>0</order>
+    <typeReference id="78fb032e-f96d-4000-aa95-b885ae390d25">
+      <typeId>415dcb57-154f-4df7-a387-1b00295e1bc5</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Security.Users.Domain</typePackageName>
+      <typePackageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="8b2a56ca-7612-4805-8eff-777d5875435d" type="Domain Event Origin Association Target End" typeId="17046427-14e2-4081-8463-ef16c0fda399">
+    <display>publishes : UserProfileNameSetDomainEvent</display>
+    <order>1</order>
+    <typeReference id="511378cf-429a-4a35-a5a8-31d075ed141c">
+      <typeId>84665028-d4a0-4905-8507-39e6514c43b5</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Security.Users.Domain</typePackageName>
+      <typePackageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <mappings>
+      <mapping type="Entity to Domain Event Mapping" typeId="86cb62b5-412d-493b-a901-d6e08cf88059">
+        <source applicationId="5b5d61cc-93fe-4dbd-bfc7-1979acae467b" designerId="6ab29b31-27af-4f56-a67c-986d82097d63" elementId="934beda7-0983-4273-8c17-4e6f6848f7c6" location="[Nullbox.Security].[Domain].[UserProfile]" />
+        <target applicationId="5b5d61cc-93fe-4dbd-bfc7-1979acae467b" designerId="6ab29b31-27af-4f56-a67c-986d82097d63" elementId="84665028-d4a0-4905-8507-39e6514c43b5" location="[Nullbox.Security].[Domain].[UserProfileNameSetDomainEvent]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>{UserProfile}</expression>
+            <path>
+              <target id="84665028-d4a0-4905-8507-39e6514c43b5" name="UserProfileNameSetDomainEvent" type="element" specialization="Domain Event" specializationId="0814e459-fb9b-47db-b7eb-32ce30397e8a" />
+              <target id="6d0b9dc6-13e9-4aa9-ae54-f431a35e5ffb" name="UserProfile" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+            </path>
+            <sources>
+              <source identifier="UserProfile" mappingType="Data Mapping" mappingTypeId="ddfefa35-caf3-48f8-aeed-7beabc8b2f5c">
+                <path>
+                  <target id="934beda7-0983-4273-8c17-4e6f6848f7c6" name="UserProfile" type="element" specialization="Class" specializationId="04e12b51-ed12-42a3-9667-a6aa81bb6d10" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+    </mappings>
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Domain Event Origin Association</associationType>
+  <associationTypeId>4c0cc50b-8a9d-43cd-b731-9f354f69f3c9</associationTypeId>
+  <stereotypes />
+</association>

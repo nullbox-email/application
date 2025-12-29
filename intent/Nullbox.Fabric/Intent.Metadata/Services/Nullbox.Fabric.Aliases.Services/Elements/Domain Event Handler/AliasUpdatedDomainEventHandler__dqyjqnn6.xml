@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="e4c957b8-53d1-4df6-82af-fcc814ba853e" type="Domain Event Handler" typeId="d80e61c5-7e4c-4175-9df1-0413f664824c">
+  <name>AliasUpdatedDomainEventHandler</name>
+  <display>AliasUpdatedDomainEventHandler</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>29a348ea-8dbd-4430-9c03-633d76c62ea3</parentFolderId>
+  <packageId>011dff2a-60fc-4ab2-afe4-8b21c38f0fea</packageId>
+  <packageName>Nullbox.Fabric.Aliases.Services</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="42725314-06c8-4d77-bc98-788f2615d160" type="Scope Verb" typeId="561f871a-ac3f-4e82-b2ce-4cc129d7f264">
+  <name>quarantine</name>
+  <display>quarantine</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>e1dde255-75e6-4556-bcf7-2549677209ca</parentFolderId>
+  <packageId>7ee06bb8-ef12-47d6-a86a-15d687075463</packageId>
+  <packageName>Nullbox.Fabric.Deliveries.Services</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

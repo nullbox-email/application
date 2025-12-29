@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="478bca73-434f-4f26-a8a3-b11429121a7c">
+  <sourceEnd id="bbdccc11-b91d-4c48-878d-1d3526ba0a55" type="Domain Event Origin Association Source End" typeId="2495d3ef-f7a2-441d-b749-b51b2546b45e">
+    <display>published by : Account.Constructor</display>
+    <order>0</order>
+    <typeReference id="c525f80b-1666-45b5-b0b7-6cf34955810e">
+      <typeId>4767bff5-b7a7-4745-a240-f4e09695e284</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Accounts.Domain</typePackageName>
+      <typePackageId>b7b0ee71-00bd-467c-a2df-7b8d3248683b</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="478bca73-434f-4f26-a8a3-b11429121a7c" type="Domain Event Origin Association Target End" typeId="17046427-14e2-4081-8463-ef16c0fda399">
+    <display>publishes : AccountCreatedDomainEvent</display>
+    <order>4</order>
+    <typeReference id="fd1546c9-a181-4849-9135-a061ff7f053d">
+      <typeId>b2a6e87c-cde2-4602-ae2f-ae6bb55239c5</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Accounts.Domain</typePackageName>
+      <typePackageId>b7b0ee71-00bd-467c-a2df-7b8d3248683b</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <mappings>
+      <mapping type="Entity to Domain Event Mapping" typeId="86cb62b5-412d-493b-a901-d6e08cf88059">
+        <source applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="6ab29b31-27af-4f56-a67c-986d82097d63" elementId="0575f6e4-4192-45e7-bc7a-e0b1c3ee5630" location="[Nullbox.Fabric].[Domain].[Account]" />
+        <target applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="6ab29b31-27af-4f56-a67c-986d82097d63" elementId="b2a6e87c-cde2-4602-ae2f-ae6bb55239c5" location="[Nullbox.Fabric].[Domain].[AccountCreatedDomainEvent]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>{Account}</expression>
+            <path>
+              <target id="b2a6e87c-cde2-4602-ae2f-ae6bb55239c5" name="AccountCreatedDomainEvent" type="element" specialization="Domain Event" specializationId="0814e459-fb9b-47db-b7eb-32ce30397e8a" />
+              <target id="956d53e7-b482-4c84-97c3-974ad3ff50d4" name="Account" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+            </path>
+            <sources>
+              <source identifier="Account" mappingType="Data Mapping" mappingTypeId="ddfefa35-caf3-48f8-aeed-7beabc8b2f5c">
+                <path>
+                  <target id="0575f6e4-4192-45e7-bc7a-e0b1c3ee5630" name="Account" type="element" specialization="Class" specializationId="04e12b51-ed12-42a3-9667-a6aa81bb6d10" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+    </mappings>
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Domain Event Origin Association</associationType>
+  <associationTypeId>4c0cc50b-8a9d-43cd-b731-9f354f69f3c9</associationTypeId>
+  <stereotypes />
+</association>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="529482d8-5f27-4ef9-a554-915eba412d1e">
+  <sourceEnd id="7a9f21cc-e6a6-47a3-bf64-4f2621e927ab" type="Publish Integration Event Source End" typeId="eab91b3a-9903-40a2-90e8-ddb714883eab">
+    <display>published by : MailboxUpdatedDomainEventHandler.handler</display>
+    <order>0</order>
+    <typeReference id="adb0ee98-0ce2-40ef-aa84-7fa9c47f8b34">
+      <typeId>72cf57fa-6f5a-418b-86de-c1668e428a40</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Mailboxes.Services</typePackageName>
+      <typePackageId>b28045cb-bf46-4948-9010-0124b00fa466</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="529482d8-5f27-4ef9-a554-915eba412d1e" type="Publish Integration Event Target End" typeId="6feb1511-849a-4aa3-85eb-d0c736ac1fec">
+    <display>[publish] MailboxUpdatedV1</display>
+    <order>0</order>
+    <traits>
+      <trait id="d00a2ab0-9a23-4192-b8bb-166798fc7dba" name="[Processing Action]" />
+    </traits>
+    <typeReference id="fb44ebce-8a0f-4408-9e3a-745f0468751c">
+      <typeId>64f60e36-e780-4899-9a86-27b676c04418</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Mailboxes.Eventing.Messages</typePackageName>
+      <typePackageId>d7301438-0953-483e-b767-ea406e610e87</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <mappings>
+      <mapping type="Publish Message Mapping" typeId="7ff48a4c-ee8b-4e66-9dbb-c014eb0542fb">
+        <source applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="72cf57fa-6f5a-418b-86de-c1668e428a40" location="[Nullbox.Fabric].[Services].[handler]" />
+        <target applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="64f60e36-e780-4899-9a86-27b676c04418" location="[Nullbox.Fabric].[Services].[MailboxUpdatedV1]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>{Mailbox.Id}</expression>
+            <path>
+              <target id="64f60e36-e780-4899-9a86-27b676c04418" name="MailboxUpdatedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="e13bde65-a867-4d83-941c-3a625fd5304b" name="Id" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="Mailbox.Id" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="72cf57fa-6f5a-418b-86de-c1668e428a40" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="78c1163f-0354-4a41-a002-fd0bf607e697" name="Mailbox" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="251441e4-5842-49e3-8a4f-40596d6d4047" name="Id" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Mailbox.AccountId}</expression>
+            <path>
+              <target id="64f60e36-e780-4899-9a86-27b676c04418" name="MailboxUpdatedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="8803afcf-0b8b-4acf-bbfd-11dd2b5ee544" name="AccountId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="Mailbox.AccountId" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="72cf57fa-6f5a-418b-86de-c1668e428a40" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="78c1163f-0354-4a41-a002-fd0bf607e697" name="Mailbox" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="a7af0548-441f-4d1e-adee-65d3021a385d" name="AccountId" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Mailbox.RoutingKey}</expression>
+            <path>
+              <target id="64f60e36-e780-4899-9a86-27b676c04418" name="MailboxUpdatedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="5351aa9e-ab40-4ce6-9e92-f210a9a3c926" name="RoutingKey" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="Mailbox.RoutingKey" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="72cf57fa-6f5a-418b-86de-c1668e428a40" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="78c1163f-0354-4a41-a002-fd0bf607e697" name="Mailbox" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="c4162048-e4ab-44e4-a1e3-5d8955bff649" name="RoutingKey" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Mailbox.Name}</expression>
+            <path>
+              <target id="64f60e36-e780-4899-9a86-27b676c04418" name="MailboxUpdatedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="b84b8ddf-b6b1-43b9-9513-190e4199dc34" name="Name" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="Mailbox.Name" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="72cf57fa-6f5a-418b-86de-c1668e428a40" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="78c1163f-0354-4a41-a002-fd0bf607e697" name="Mailbox" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="76639024-5773-4c77-afc0-2691d14514e3" name="Name" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Mailbox.Domain}</expression>
+            <path>
+              <target id="64f60e36-e780-4899-9a86-27b676c04418" name="MailboxUpdatedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="1341d8ab-d394-46e7-a5d2-3d9adf2289e8" name="Domain" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="Mailbox.Domain" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="72cf57fa-6f5a-418b-86de-c1668e428a40" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="78c1163f-0354-4a41-a002-fd0bf607e697" name="Mailbox" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="3af38a8c-1e23-4eb7-bc1a-05fbae7b13b3" name="Domain" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Mailbox.AutoCreateAlias}</expression>
+            <path>
+              <target id="64f60e36-e780-4899-9a86-27b676c04418" name="MailboxUpdatedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="10530b7a-d0bb-4f36-b06e-203aba7283fe" name="AutoCreateAlias" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="Mailbox.AutoCreateAlias" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="72cf57fa-6f5a-418b-86de-c1668e428a40" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="78c1163f-0354-4a41-a002-fd0bf607e697" name="Mailbox" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="8c132566-b6ca-4c7d-b98e-95d0a92aad6d" name="AutoCreateAlias" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Mailbox.EmailAddress}</expression>
+            <path>
+              <target id="64f60e36-e780-4899-9a86-27b676c04418" name="MailboxUpdatedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="ff41864a-8e14-4680-bb77-824899feb447" name="EmailAddress" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="Mailbox.EmailAddress" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="72cf57fa-6f5a-418b-86de-c1668e428a40" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="78c1163f-0354-4a41-a002-fd0bf607e697" name="Mailbox" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="065c5f75-c41d-45ee-8bce-6587b8b3f1ed" name="EmailAddress" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+    </mappings>
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Publish Integration Event</associationType>
+  <associationTypeId>580b6b26-eab5-4602-a408-e76e2d292d2c</associationTypeId>
+  <stereotypes />
+</association>

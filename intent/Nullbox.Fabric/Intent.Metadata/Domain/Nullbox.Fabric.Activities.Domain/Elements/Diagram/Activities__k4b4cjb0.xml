@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="47c1fef7-0616-48c0-8ae7-99de8110a673" type="Diagram" typeId="4d66fecd-e9b8-436f-aa50-c59040ad0879">
+  <name>Activities</name>
+  <display>Activities</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>5be5b7db-4635-42dd-81cd-85e3538edca7</parentFolderId>
+  <packageId>b003d9bc-571a-4eb2-9b5a-295f6f657428</packageId>
+  <packageName>Nullbox.Fabric.Activities.Domain</packageName>
+  <diagram>
+    <targetPackageId>47c1fef7-0616-48c0-8ae7-99de8110a673</targetPackageId>
+  </diagram>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

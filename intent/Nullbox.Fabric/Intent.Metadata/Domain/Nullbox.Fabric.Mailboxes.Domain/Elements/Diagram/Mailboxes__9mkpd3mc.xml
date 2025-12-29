@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="a9595b8b-48c0-4344-845b-106d9bc737d9" type="Diagram" typeId="4d66fecd-e9b8-436f-aa50-c59040ad0879">
+  <name>Mailboxes</name>
+  <display>Mailboxes</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>e5e34b31-c645-4fe2-8475-522f10292cba</parentFolderId>
+  <packageId>8a986c9d-7f59-4a13-b47d-e2386d4354a5</packageId>
+  <packageName>Nullbox.Fabric.Mailboxes.Domain</packageName>
+  <diagram>
+    <targetPackageId>a9595b8b-48c0-4344-845b-106d9bc737d9</targetPackageId>
+  </diagram>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

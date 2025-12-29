@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="9b6612bd-f86e-459d-bc62-59f912967125">
+  <sourceEnd id="7db2f123-9638-4b0b-b540-be584ad9196c" type="Update Entity Action Source End" typeId="6bc95978-6def-4d0c-a4f5-25bdeda8a9f6">
+    <display>updated by : Aliases.UpdateAliasCommand</display>
+    <order>0</order>
+    <typeReference id="56968c6b-da23-456f-94c5-b95ec8d59727">
+      <typeId>5f4003f4-04d2-4d6f-93d7-224ee78072c8</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Aliases.Services</typePackageName>
+      <typePackageId>011dff2a-60fc-4ab2-afe4-8b21c38f0fea</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="9b6612bd-f86e-459d-bc62-59f912967125" type="Update Entity Action Target End" typeId="516069f6-09cc-4de8-8e31-3c71ca823452">
+    <name>alias</name>
+    <display>[update] alias: Update</display>
+    <order>6</order>
+    <traits>
+      <trait id="d00a2ab0-9a23-4192-b8bb-166798fc7dba" name="[Processing Action]" />
+    </traits>
+    <typeReference id="5b870a5b-8971-4d51-a014-bbf99445dea7">
+      <typeId>739a101f-5e2a-4e36-811e-e5491f4ce8d5</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Aliases.Domain</typePackageName>
+      <typePackageId>c9a4b316-132d-4d2d-82fa-33da6532bf41</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <mappings>
+      <mapping type="Query Entity Mapping" typeId="25f25af9-c38b-4053-9474-b0fabe9d7ea7">
+        <source applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="5f4003f4-04d2-4d6f-93d7-224ee78072c8" location="[Nullbox.Fabric].[Services].[UpdateAliasCommand]" />
+        <target applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="6ab29b31-27af-4f56-a67c-986d82097d63" elementId="a5912e31-7c79-4f96-9519-ecfb170ca84a" location="[Nullbox.Fabric].[Services].[Alias]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>{Id}</expression>
+            <path>
+              <target id="a5912e31-7c79-4f96-9519-ecfb170ca84a" name="Alias" type="element" specialization="Class" specializationId="04e12b51-ed12-42a3-9667-a6aa81bb6d10" />
+              <target id="897a5351-c5a9-4df5-9e04-fc8123a2efa2" name="Id" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+            </path>
+            <sources>
+              <source identifier="Id" mappingType="Filter Mapping" mappingTypeId="01d09a7f-0e7c-4670-b7bc-395d7e893ef2">
+                <path>
+                  <target id="5f4003f4-04d2-4d6f-93d7-224ee78072c8" name="UpdateAliasCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+                  <target id="ad40f0d9-874c-46cc-810d-d4ca31b4d03b" name="Id" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{MailboxId}</expression>
+            <path>
+              <target id="a5912e31-7c79-4f96-9519-ecfb170ca84a" name="Alias" type="element" specialization="Class" specializationId="04e12b51-ed12-42a3-9667-a6aa81bb6d10" />
+              <target id="d01eee45-c376-488b-8009-2af13df4d808" name="MailboxId" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+            </path>
+            <sources>
+              <source identifier="MailboxId" mappingType="Filter Mapping" mappingTypeId="01d09a7f-0e7c-4670-b7bc-395d7e893ef2">
+                <path>
+                  <target id="5f4003f4-04d2-4d6f-93d7-224ee78072c8" name="UpdateAliasCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+                  <target id="76100058-e954-4f59-8e93-fdf8c4a1c4b9" name="MailboxId" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+      <mapping type="Update Entity Mapping" typeId="01721b1a-a85d-4320-a5cd-8bd39247196a">
+        <source applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="5f4003f4-04d2-4d6f-93d7-224ee78072c8" location="[Nullbox.Fabric].[Services].[UpdateAliasCommand]" />
+        <target applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="6ab29b31-27af-4f56-a67c-986d82097d63" elementId="a5912e31-7c79-4f96-9519-ecfb170ca84a" location="[Nullbox.Fabric].[Services].[Alias]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>{UpdateAliasCommand}</expression>
+            <path>
+              <target id="a5912e31-7c79-4f96-9519-ecfb170ca84a" name="Alias" type="element" specialization="Class" specializationId="04e12b51-ed12-42a3-9667-a6aa81bb6d10" />
+              <target id="739a101f-5e2a-4e36-811e-e5491f4ce8d5" name="Update" type="element" specialization="Operation" specializationId="e042bb67-a1df-480c-9935-b26210f78591" />
+            </path>
+            <sources>
+              <source identifier="UpdateAliasCommand" mappingType="Invocation Mapping" mappingTypeId="d30bdba1-9c47-4917-b81d-29230fed5d6a">
+                <path>
+                  <target id="5f4003f4-04d2-4d6f-93d7-224ee78072c8" name="UpdateAliasCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Name}</expression>
+            <path>
+              <target id="a5912e31-7c79-4f96-9519-ecfb170ca84a" name="Alias" type="element" specialization="Class" specializationId="04e12b51-ed12-42a3-9667-a6aa81bb6d10" />
+              <target id="739a101f-5e2a-4e36-811e-e5491f4ce8d5" name="Update" type="element" specialization="Operation" specializationId="e042bb67-a1df-480c-9935-b26210f78591" />
+              <target id="d312686e-9ebf-462b-abf2-5953a535c5f6" name="name" type="element" specialization="Parameter" specializationId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b" />
+            </path>
+            <sources>
+              <source identifier="Name" mappingType="Data Mapping" mappingTypeId="ca88649b-f20b-44db-a9c0-017c26155ba8">
+                <path>
+                  <target id="5f4003f4-04d2-4d6f-93d7-224ee78072c8" name="UpdateAliasCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+                  <target id="95ee6cb3-925d-4ddc-a8fd-a338d1cfb846" name="Name" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{IsEnabled}</expression>
+            <path>
+              <target id="a5912e31-7c79-4f96-9519-ecfb170ca84a" name="Alias" type="element" specialization="Class" specializationId="04e12b51-ed12-42a3-9667-a6aa81bb6d10" />
+              <target id="739a101f-5e2a-4e36-811e-e5491f4ce8d5" name="Update" type="element" specialization="Operation" specializationId="e042bb67-a1df-480c-9935-b26210f78591" />
+              <target id="a3d2420a-e9e2-4078-99ac-e7556db26454" name="isEnabled" type="element" specialization="Parameter" specializationId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b" />
+            </path>
+            <sources>
+              <source identifier="IsEnabled" mappingType="Data Mapping" mappingTypeId="ca88649b-f20b-44db-a9c0-017c26155ba8">
+                <path>
+                  <target id="5f4003f4-04d2-4d6f-93d7-224ee78072c8" name="UpdateAliasCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+                  <target id="aac1c8e3-6403-4822-836c-94d6bf060866" name="IsEnabled" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DirectPassthrough}</expression>
+            <path>
+              <target id="a5912e31-7c79-4f96-9519-ecfb170ca84a" name="Alias" type="element" specialization="Class" specializationId="04e12b51-ed12-42a3-9667-a6aa81bb6d10" />
+              <target id="739a101f-5e2a-4e36-811e-e5491f4ce8d5" name="Update" type="element" specialization="Operation" specializationId="e042bb67-a1df-480c-9935-b26210f78591" />
+              <target id="0e38111b-976f-4baf-983f-2699157d31f9" name="directPassthrough" type="element" specialization="Parameter" specializationId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b" />
+            </path>
+            <sources>
+              <source identifier="DirectPassthrough" mappingType="Data Mapping" mappingTypeId="ca88649b-f20b-44db-a9c0-017c26155ba8">
+                <path>
+                  <target id="5f4003f4-04d2-4d6f-93d7-224ee78072c8" name="UpdateAliasCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+                  <target id="e6ee30fb-b0f8-4a0f-a3cf-3f5de661be3d" name="DirectPassthrough" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{LearningMode}</expression>
+            <path>
+              <target id="a5912e31-7c79-4f96-9519-ecfb170ca84a" name="Alias" type="element" specialization="Class" specializationId="04e12b51-ed12-42a3-9667-a6aa81bb6d10" />
+              <target id="739a101f-5e2a-4e36-811e-e5491f4ce8d5" name="Update" type="element" specialization="Operation" specializationId="e042bb67-a1df-480c-9935-b26210f78591" />
+              <target id="96479b5e-965b-42e5-9143-da4715d99a33" name="learningMode" type="element" specialization="Parameter" specializationId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b" />
+            </path>
+            <sources>
+              <source identifier="LearningMode" mappingType="Data Mapping" mappingTypeId="ca88649b-f20b-44db-a9c0-017c26155ba8">
+                <path>
+                  <target id="5f4003f4-04d2-4d6f-93d7-224ee78072c8" name="UpdateAliasCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+                  <target id="5e89faba-2cb6-446e-be79-ba01aad422f9" name="LearningMode" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+    </mappings>
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Update Entity Action</associationType>
+  <associationTypeId>9ea0382a-4617-412a-a8c8-af987bbce226</associationTypeId>
+  <stereotypes />
+</association>

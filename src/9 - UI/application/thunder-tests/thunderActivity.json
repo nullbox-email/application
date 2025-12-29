@@ -1,0 +1,50 @@
+[
+    {
+        "_id": "eb19ca07-f2a4-47b0-b7e2-6e2d0c853230",
+        "colId": "history",
+        "containerId": "",
+        "name": "https://localhost:44350/v1/tokens/exchange",
+        "url": "http://localhost:6500/v1/tokens/exchange",
+        "method": "POST",
+        "sortNum": 0,
+        "created": "2025-12-07T15:15:05.420Z",
+        "modified": "2025-12-07T15:53:33.865Z",
+        "headers": [],
+        "auth": {
+            "type": "bearer",
+            "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im1VRzZ2WW5SbG9mdUx4Y2lacnU3U3B0ZjZOTSJ9.eyJhdWQiOiIzY2Q4ZmI5Mi00NTQ0LTRiYTktODVlZC04MTU5MmU4YWYxY2UiLCJpc3MiOiJodHRwczovL2RlY2U2ZWU4LWYzNGUtNDg5ZC05YTYxLTE5ZmQ3MzExYzUyMS5jaWFtbG9naW4uY29tL2RlY2U2ZWU4LWYzNGUtNDg5ZC05YTYxLTE5ZmQ3MzExYzUyMS92Mi4wIiwiaWF0IjoxNzY1MTIwMDU0LCJuYmYiOjE3NjUxMjAwNTQsImV4cCI6MTc2NTEyMzk1NCwiZW1haWwiOiJzdGVwaGFuQGFyeXphYy5pbyIsIm5hbWUiOiJ1bmtub3duIiwib2lkIjoiZGRkOGRmZjQtYzZlMC00MjJiLWE1Y2QtMGNiMTNiNmUzYTg4IiwicHJlZmVycmVkX3VzZXJuYW1lIjoic3RlcGhhbkBhcnl6YWMuaW8iLCJyaCI6IjEuQWJnQTZHN08zazd6blVpYVlSbjljeEhGSVpMNzJEeEVSYWxMaGUyQldTNks4YzdWQVF1NEFBLiIsInNpZCI6IjAwYjgzNDU5LTg5YTMtMDk1Mi1hNmYxLWQ1YjI3NDFhZGI3YiIsInN1YiI6IkpFaUNiN29MRWR3RDQ4RTQ0X2tfV3poQzdaaExMbFJYbmJUOGcwTXNBUTQiLCJ0aWQiOiJkZWNlNmVlOC1mMzRlLTQ4OWQtOWE2MS0xOWZkNzMxMWM1MjEiLCJ1dGkiOiJTLWRJSXpLQzlrR3dGbkN1OHRFQUFBIiwidmVyIjoiMi4wIn0.JnCCtDEx48754IlR2ctD8kSvCM3jz9ONlix2y2DFhxDBgi-SGdRnjGaLKiGPTBzBB2BoN2EGAMfa6RpnlOGXTFYliIYCpDu3cGQw6FkJ73hHndZsPNnA-UVeQo2MRdaqfWMRW62R9Z3JpdB0sNQ8pd87Rcbn83DmIV30cHlE3Jbb_e-xJr04U0mFDteKA8uZEADEJDx8EuVynlLVOAZGu9Lp3ATNivXrdqcjcoQo9qaKhvjyGkn2sWMr9PZeqZ8nPewJ_9G23GTe_RFL_beK8Tx3qcfQwxvKMqHg6tj9GJwgcWoj7zbXUj0_FL1XgHb3uYLut7JSbZFMNckk14DeaA"
+        }
+    },
+    {
+        "_id": "d944a75e-dd63-404d-aff0-b321c4d5618b",
+        "colId": "history",
+        "containerId": "",
+        "name": "https://gateway.agreeableriver-385d2286.eastus.azurecontainerapps.email/v1/tokens/exchange",
+        "url": "https://gateway.agreeableriver-385d2286.eastus.azurecontainerapps.email/v1/tokens/exchange",
+        "method": "POST",
+        "sortNum": 0,
+        "created": "2025-12-11T10:35:40.672Z",
+        "modified": "2025-12-11T10:35:40.672Z",
+        "headers": [],
+        "auth": {
+            "type": "bearer",
+            "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im1VRzZ2WW5SbG9mdUx4Y2lacnU3U3B0ZjZOTSJ9.eyJhdWQiOiIzY2Q4ZmI5Mi00NTQ0LTRiYTktODVlZC04MTU5MmU4YWYxY2UiLCJpc3MiOiJodHRwczovL2RlY2U2ZWU4LWYzNGUtNDg5ZC05YTYxLTE5ZmQ3MzExYzUyMS5jaWFtbG9naW4uY29tL2RlY2U2ZWU4LWYzNGUtNDg5ZC05YTYxLTE5ZmQ3MzExYzUyMS92Mi4wIiwiaWF0IjoxNzY1MTIwMDU0LCJuYmYiOjE3NjUxMjAwNTQsImV4cCI6MTc2NTEyMzk1NCwiZW1haWwiOiJzdGVwaGFuQGFyeXphYy5pbyIsIm5hbWUiOiJ1bmtub3duIiwib2lkIjoiZGRkOGRmZjQtYzZlMC00MjJiLWE1Y2QtMGNiMTNiNmUzYTg4IiwicHJlZmVycmVkX3VzZXJuYW1lIjoic3RlcGhhbkBhcnl6YWMuaW8iLCJyaCI6IjEuQWJnQTZHN08zazd6blVpYVlSbjljeEhGSVpMNzJEeEVSYWxMaGUyQldTNks4YzdWQVF1NEFBLiIsInNpZCI6IjAwYjgzNDU5LTg5YTMtMDk1Mi1hNmYxLWQ1YjI3NDFhZGI3YiIsInN1YiI6IkpFaUNiN29MRWR3RDQ4RTQ0X2tfV3poQzdaaExMbFJYbmJUOGcwTXNBUTQiLCJ0aWQiOiJkZWNlNmVlOC1mMzRlLTQ4OWQtOWE2MS0xOWZkNzMxMWM1MjEiLCJ1dGkiOiJTLWRJSXpLQzlrR3dGbkN1OHRFQUFBIiwidmVyIjoiMi4wIn0.JnCCtDEx48754IlR2ctD8kSvCM3jz9ONlix2y2DFhxDBgi-SGdRnjGaLKiGPTBzBB2BoN2EGAMfa6RpnlOGXTFYliIYCpDu3cGQw6FkJ73hHndZsPNnA-UVeQo2MRdaqfWMRW62R9Z3JpdB0sNQ8pd87Rcbn83DmIV30cHlE3Jbb_e-xJr04U0mFDteKA8uZEADEJDx8EuVynlLVOAZGu9Lp3ATNivXrdqcjcoQo9qaKhvjyGkn2sWMr9PZeqZ8nPewJ_9G23GTe_RFL_beK8Tx3qcfQwxvKMqHg6tj9GJwgcWoj7zbXUj0_FL1XgHb3uYLut7JSbZFMNckk14DeaA"
+        }
+    },
+    {
+        "_id": "cdda96af-a188-434b-8d30-8213c46194e9",
+        "colId": "history",
+        "containerId": "",
+        "name": "https://api.nullbox.email/v1/tokens/exchange",
+        "url": "https://api.nullbox.email/v1/tokens/exchange",
+        "method": "POST",
+        "sortNum": 0,
+        "created": "2025-12-11T10:47:34.506Z",
+        "modified": "2025-12-11T10:47:34.506Z",
+        "headers": [],
+        "auth": {
+            "type": "bearer",
+            "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im1VRzZ2WW5SbG9mdUx4Y2lacnU3U3B0ZjZOTSJ9.eyJhdWQiOiIzY2Q4ZmI5Mi00NTQ0LTRiYTktODVlZC04MTU5MmU4YWYxY2UiLCJpc3MiOiJodHRwczovL2RlY2U2ZWU4LWYzNGUtNDg5ZC05YTYxLTE5ZmQ3MzExYzUyMS5jaWFtbG9naW4uY29tL2RlY2U2ZWU4LWYzNGUtNDg5ZC05YTYxLTE5ZmQ3MzExYzUyMS92Mi4wIiwiaWF0IjoxNzY1MTIwMDU0LCJuYmYiOjE3NjUxMjAwNTQsImV4cCI6MTc2NTEyMzk1NCwiZW1haWwiOiJzdGVwaGFuQGFyeXphYy5pbyIsIm5hbWUiOiJ1bmtub3duIiwib2lkIjoiZGRkOGRmZjQtYzZlMC00MjJiLWE1Y2QtMGNiMTNiNmUzYTg4IiwicHJlZmVycmVkX3VzZXJuYW1lIjoic3RlcGhhbkBhcnl6YWMuaW8iLCJyaCI6IjEuQWJnQTZHN08zazd6blVpYVlSbjljeEhGSVpMNzJEeEVSYWxMaGUyQldTNks4YzdWQVF1NEFBLiIsInNpZCI6IjAwYjgzNDU5LTg5YTMtMDk1Mi1hNmYxLWQ1YjI3NDFhZGI3YiIsInN1YiI6IkpFaUNiN29MRWR3RDQ4RTQ0X2tfV3poQzdaaExMbFJYbmJUOGcwTXNBUTQiLCJ0aWQiOiJkZWNlNmVlOC1mMzRlLTQ4OWQtOWE2MS0xOWZkNzMxMWM1MjEiLCJ1dGkiOiJTLWRJSXpLQzlrR3dGbkN1OHRFQUFBIiwidmVyIjoiMi4wIn0.JnCCtDEx48754IlR2ctD8kSvCM3jz9ONlix2y2DFhxDBgi-SGdRnjGaLKiGPTBzBB2BoN2EGAMfa6RpnlOGXTFYliIYCpDu3cGQw6FkJ73hHndZsPNnA-UVeQo2MRdaqfWMRW62R9Z3JpdB0sNQ8pd87Rcbn83DmIV30cHlE3Jbb_e-xJr04U0mFDteKA8uZEADEJDx8EuVynlLVOAZGu9Lp3ATNivXrdqcjcoQo9qaKhvjyGkn2sWMr9PZeqZ8nPewJ_9G23GTe_RFL_beK8Tx3qcfQwxvKMqHg6tj9GJwgcWoj7zbXUj0_FL1XgHb3uYLut7JSbZFMNckk14DeaA"
+        }
+    }
+]

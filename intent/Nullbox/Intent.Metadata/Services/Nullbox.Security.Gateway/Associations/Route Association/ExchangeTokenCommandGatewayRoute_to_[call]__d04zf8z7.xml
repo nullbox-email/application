@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="0c6ab4ad-7035-4e71-a4a9-8dba4b4f3d88">
+  <sourceEnd id="ac8e371b-adb6-4d2f-9ccf-62e5e21951f6" type="Upstream End" typeId="4143dbe5-12ce-4705-ba69-2683c46b1b96">
+    <display>: ExchangeTokenCommandGatewayRoute</display>
+    <order>0</order>
+    <typeReference id="6b3ed1d4-3419-4f1a-806f-33c4c3048271">
+      <typeId>8c32a46e-aae0-4757-9e6c-ad6979e8d9b8</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Security.Gateway</typePackageName>
+      <typePackageId>e1d1f277-0a7f-4c38-a977-38acdb4c7c73</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="0c6ab4ad-7035-4e71-a4a9-8dba4b4f3d88" type="Downstream End" typeId="17084378-a3d8-4233-b275-c856eea4dd61">
+    <name>[call]</name>
+    <display>[call]: ExchangeTokenCommand</display>
+    <order>1</order>
+    <typeReference id="5a755bae-1855-48cd-96ea-4bdf769ca8cf">
+      <typeId>c0e9cf07-34e3-47cb-8ee8-fbb3d4bf99b7</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Auth.EntraExternalId.Services</typePackageName>
+      <typePackageId>fbfe09aa-38ad-4b9b-ac4e-387ab034ca0d</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Route Association</associationType>
+  <associationTypeId>dd35ed32-76bb-4abf-a4e0-370f230765cf</associationTypeId>
+  <stereotypes />
+</association>

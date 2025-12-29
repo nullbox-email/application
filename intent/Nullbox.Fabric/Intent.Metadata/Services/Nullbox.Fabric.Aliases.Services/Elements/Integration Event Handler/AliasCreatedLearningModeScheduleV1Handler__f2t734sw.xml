@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="398869bd-e948-4dba-8e94-0336af810e80" type="Integration Event Handler" typeId="c0582230-22f5-4f74-8eb0-ec6fc9364900">
+  <name>AliasCreatedLearningModeScheduleV1Handler</name>
+  <display>AliasCreatedLearningModeScheduleV1Handler</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>29a348ea-8dbd-4430-9c03-633d76c62ea3</parentFolderId>
+  <packageId>011dff2a-60fc-4ab2-afe4-8b21c38f0fea</packageId>
+  <packageName>Nullbox.Fabric.Aliases.Services</packageName>
+  <traits>
+    <trait id="2b6729eb-e2ae-4b5f-86fe-4f611d1f912e" name="[Processing Handler]" />
+  </traits>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

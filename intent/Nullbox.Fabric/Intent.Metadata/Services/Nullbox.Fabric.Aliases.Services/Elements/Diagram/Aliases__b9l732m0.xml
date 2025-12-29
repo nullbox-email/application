@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="52a82a95-2f8b-4909-b3c3-6f6f4d47036e" type="Diagram" typeId="8c90aca5-86f4-47f1-bd58-116fe79f5c55">
+  <name>Aliases</name>
+  <display>Aliases</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>29a348ea-8dbd-4430-9c03-633d76c62ea3</parentFolderId>
+  <packageId>011dff2a-60fc-4ab2-afe4-8b21c38f0fea</packageId>
+  <packageName>Nullbox.Fabric.Aliases.Services</packageName>
+  <diagram>
+    <targetPackageId>52a82a95-2f8b-4909-b3c3-6f6f4d47036e</targetPackageId>
+  </diagram>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

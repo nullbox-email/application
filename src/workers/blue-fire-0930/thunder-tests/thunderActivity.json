@@ -1,0 +1,70 @@
+[
+    {
+        "_id": "a0754a1e-ec51-425a-938e-03d138429330",
+        "colId": "history",
+        "containerId": "",
+        "name": "http://127.0.0.1:8787/cdn-cgi/handler/email?from=sender@example.com&to=netflix@stephan.nullbox.io",
+        "url": "http://127.0.0.1:8787/cdn-cgi/handler/email?from=stephan@aryzac.io&to=netflix@stephan.nullbox.io",
+        "method": "POST",
+        "sortNum": 0,
+        "created": "2025-12-06T10:36:35.676Z",
+        "modified": "2025-12-06T10:54:21.094Z",
+        "headers": [
+            {
+                "name": "Content-Type",
+                "value": "application/json"
+            }
+        ],
+        "params": [
+            {
+                "name": "from",
+                "value": "stephan@aryzac.io",
+                "isPath": false
+            },
+            {
+                "name": "to",
+                "value": "netflix@stephan.nullbox.io",
+                "isPath": false
+            }
+        ],
+        "body": {
+            "type": "text",
+            "raw": "Received: from smtp.example.com (127.0.0.1)\n        by cloudflare-email.com (unknown) id 4fwwffRXOpyR\n        for <netflix@stephan.nullbox.io>; Tue, 27 Aug 2024 15:50:20 +0000\nFrom: \"John\" <stephan@aryzac.io>\nReply-To: stephan@aryzac.io\nTo: netflix@stephan.nullbox.io \nSubject: Testing Email Workers Local Dev\nContent-Type: text/html; charset=\"windows-1252\"\nX-Mailer: Curl\nDate: Tue, 27 Aug 2024 08:49:44 -0700\nMessage-ID: <6114391943504294873000@ZSH-GHOSTTY>\n\nHi there",
+            "form": []
+        }
+    },
+    {
+        "_id": "0b948c57-cda9-4d54-8918-5c7e178cbc7b",
+        "colId": "history",
+        "containerId": "",
+        "name": "http://127.0.0.1:8787/cdn-cgi/handler/email?from=stephan@aryzac.io&to=netflix@stephan.nullbox.io",
+        "url": "http://127.0.0.1:8787/cdn-cgi/handler/email?from=stephan@aryzac.io&to=netflix@stephan.nullbox.io",
+        "method": "POST",
+        "sortNum": 0,
+        "created": "2025-12-06T10:56:20.247Z",
+        "modified": "2025-12-06T10:56:20.247Z",
+        "headers": [
+            {
+                "name": "Content-Type",
+                "value": "application/json"
+            }
+        ],
+        "params": [
+            {
+                "name": "from",
+                "value": "stephan@aryzac.io",
+                "isPath": false
+            },
+            {
+                "name": "to",
+                "value": "netflix@stephan.nullbox.io",
+                "isPath": false
+            }
+        ],
+        "body": {
+            "type": "text",
+            "raw": "Received: from smtp.example.com (127.0.0.1)\n        by cloudflare-email.com (unknown) id 4fwwffRXOpyR\n        for <netflix@stephan.nullbox.io>; Tue, 27 Aug 2024 15:50:20 +0000\nFrom: \"John\" <stephan@aryzac.io>\nReply-To: stephan@aryzac.io\nTo: netflix@stephan.nullbox.io \nSubject: Testing Email Workers Local Dev\nContent-Type: text/html; charset=\"windows-1252\"\nX-Mailer: Curl\nDate: Tue, 27 Aug 2024 08:49:44 -0700\nMessage-ID: <6114391943504294873000@ZSH-GHOSTTY>\n\nHi there",
+            "form": []
+        }
+    }
+]

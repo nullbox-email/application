@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="eb3e1e90-5daa-4953-83aa-26441d437bcf">
+  <sourceEnd id="20c7024f-8b57-4889-a246-d6d3ba9f9cf4" type="Publish Integration Event Source End" typeId="eab91b3a-9903-40a2-90e8-ddb714883eab">
+    <display>published by : DeliveryActionCompletedDomainEventHandler.handler</display>
+    <order>0</order>
+    <typeReference id="13556013-6a9c-4128-8e05-766b29d933d7">
+      <typeId>cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Deliveries.Services</typePackageName>
+      <typePackageId>7ee06bb8-ef12-47d6-a86a-15d687075463</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="eb3e1e90-5daa-4953-83aa-26441d437bcf" type="Publish Integration Event Target End" typeId="6feb1511-849a-4aa3-85eb-d0c736ac1fec">
+    <display>[publish] DeliveryActionCompletedV1</display>
+    <order>0</order>
+    <traits>
+      <trait id="d00a2ab0-9a23-4192-b8bb-166798fc7dba" name="[Processing Action]" />
+    </traits>
+    <typeReference id="39b12072-fe28-4fd3-8bb4-625c75c9c5e2">
+      <typeId>e746ebc7-b197-4a4f-b03f-ca59a4f4db1c</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Deliveries.Eventing.Messages</typePackageName>
+      <typePackageId>210799ed-6535-4f17-a8d0-8e60d045f1c5</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <mappings>
+      <mapping type="Publish Message Mapping" typeId="7ff48a4c-ee8b-4e66-9dbb-c014eb0542fb">
+        <source applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" location="[Nullbox.Fabric].[Services].[handler]" />
+        <target applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" location="[Nullbox.Fabric].[Services].[DeliveryActionCompletedV1]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>{DeliveryAction.Id}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="0562c6f7-c09c-49e7-830a-67a22a24a956" name="Id" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.Id" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="307e7b3a-0e14-46ab-87a6-d548c32f9e44" name="Id" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.PartitionKey}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="a23ba3f1-83db-49ab-8922-b5503fc9ce77" name="PartitionKey" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.PartitionKey" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="d3f62625-7e60-4580-9bf8-9f70493d26b6" name="PartitionKey" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.AliasId}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="520ea7dc-61bc-4fff-81b0-2a9eb5ef30ea" name="AliasId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.AliasId" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="5770bfa9-afe8-44c2-abd7-a579052f5bce" name="AliasId" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.MailboxId}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="f25910bb-70bb-4181-9e7c-93493c990b86" name="MailboxId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.MailboxId" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="1e018849-7319-4d33-8a69-75f5824f2d63" name="MailboxId" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.AccountId}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="76f954b8-9a98-42f2-b557-04f3c794946a" name="AccountId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.AccountId" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="986c6c7c-e4b9-41e0-b4d6-daabb88727f1" name="AccountId" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.Source}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="92ff139d-d0ab-4d7b-ab2b-880520a25c8b" name="Source" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.Source" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="662955ce-f197-4c37-abe4-999fa2c0c9bd" name="Source" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.CreatedAt}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="564fa053-b8af-43e3-bc41-a29555ac2432" name="CreatedAt" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.CreatedAt" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="c9346637-f81b-4596-bb85-f94a5dfca6ed" name="CreatedAt" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.ReceivedAt}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="91874403-6bce-4939-a69d-dd1c10d6505d" name="ReceivedAt" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.ReceivedAt" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="e10ace37-5c68-450b-b0af-849204d92f03" name="ReceivedAt" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.Alias}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="1bf7d309-01a1-4625-997f-97e3f572761e" name="Alias" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.Alias" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="d21e1742-ad16-4228-985f-3f6c7f11ce37" name="Alias" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.RoutingKey}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="a11da038-c6cc-4233-88f6-fc56def97370" name="RoutingKey" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.RoutingKey" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="40f82e28-66b5-4f89-962e-f0b3d93a0e9c" name="RoutingKey" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.Domain}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="c195bcb9-97e2-4e6f-b2a5-280b0ab8de66" name="Domain" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.Domain" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="413b6e67-4c51-4bea-8595-a9174861e705" name="Domain" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.SenderDisplay}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="8bbbc775-574a-4eb6-9fca-4bfd9ec9c20b" name="SenderDisplay" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.SenderDisplay" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="8c91d011-864f-4b9d-9fd2-8ce67313e6f6" name="SenderDisplay" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.SenderDomain}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="9bf71db7-e101-48fa-83ac-0748de3c7740" name="SenderDomain" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.SenderDomain" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="2b2a9784-8777-41ea-9519-1b6c89de5135" name="SenderDomain" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.RecipientDisplay}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="0af9eebb-1d84-4caa-ac67-b31cebca63d3" name="RecipientDisplay" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.RecipientDisplay" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="4038c770-5f17-4f7d-b007-20e9afcba04a" name="RecipientDisplay" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.RecipientDomain}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="d9ece51e-6fc0-4b79-bf5f-04880952fe57" name="RecipientDomain" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.RecipientDomain" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="b40266ad-ef3c-445d-9020-08f5fe7d7309" name="RecipientDomain" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.MessageId}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="d3739efe-e2d4-4a79-9993-84421c20627a" name="MessageId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.MessageId" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="ca83204e-8b4f-467e-ab14-5801835b1f1f" name="MessageId" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.Subject}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="573f2f05-10c5-4c67-8a7c-726cd8a7e0ed" name="Subject" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.Subject" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="84566868-d40d-4bff-82ff-58e8c9396d17" name="Subject" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.SubjectHash}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="d06b8874-7cd1-4343-8231-3bb67901c799" name="SubjectHash" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.SubjectHash" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="c55bf259-bd27-47f3-8fa7-93322b7deec2" name="SubjectHash" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.HasAttachments}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="dcfabfca-8098-48f2-bae2-2d0d2af80a53" name="HasAttachments" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.HasAttachments" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="e7c31cf1-6529-4ccd-bec6-caf87d67bb96" name="HasAttachments" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.AttachmentsCount}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="3e39cd16-3218-457d-af38-caced61e9b13" name="AttachmentsCount" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.AttachmentsCount" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="3b47661c-ce79-4aea-be49-5104d61b9def" name="AttachmentsCount" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.Size}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="d02b5be2-6d10-45ef-bad2-e68f7407f51f" name="Size" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.Size" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="e89c91df-b8a6-4092-b3cd-0f24a2054a9a" name="Size" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.DeliveryDecision}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="16f865f4-06cd-4713-990b-fc61b3e49c78" name="DeliveryDecision" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.DeliveryDecision" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="84303f2c-59d9-4e8e-8361-9c713ad67649" name="DeliveryDecision" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.DropReason.Reason}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="1c8bb9be-fdba-4f54-9511-9d8bd05f17f3" name="DropReason" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+              <target id="699a7177-8a6d-4802-a5e0-2420c1bccc32" name="Reason" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.DropReason.Reason" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="4cf08db2-1c66-4e72-858d-9deeb5127adb" name="DropReason" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                  <target id="5134ca81-db70-42dc-ad58-00a620df9978" name="Reason" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.DropReason.Message}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="1c8bb9be-fdba-4f54-9511-9d8bd05f17f3" name="DropReason" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+              <target id="05822f91-b115-4635-817e-b1755406b92b" name="Message" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.DropReason.Message" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="4cf08db2-1c66-4e72-858d-9deeb5127adb" name="DropReason" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                  <target id="29543710-b7d2-4bc1-a6d0-33637fd471d5" name="Message" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.QuarantineReason.Reason}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="5c342508-4ab4-47dc-aa68-82ba4b016026" name="QuarantineReason" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+              <target id="669a43d6-3165-48bf-8279-912392309b8c" name="Reason" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.QuarantineReason.Reason" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="1100cf8e-2443-4a3f-96e3-171406ebd10d" name="QuarantineReason" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                  <target id="d29a0e95-b7e1-439d-8483-ec0815a6973c" name="Reason" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.QuarantineReason.Message}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="5c342508-4ab4-47dc-aa68-82ba4b016026" name="QuarantineReason" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+              <target id="2c71842f-b5e9-49ba-b133-d83486641795" name="Message" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.QuarantineReason.Message" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="1100cf8e-2443-4a3f-96e3-171406ebd10d" name="QuarantineReason" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                  <target id="70c4494b-769b-4a4a-a52a-a72af3bb74f6" name="Message" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.ForwardTo}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="e0f88579-5c53-4fcc-aaaf-6ecba90311fc" name="ForwardTo" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.ForwardTo" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="0dda9602-1655-4187-98fa-d6439d791d97" name="ForwardTo" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.ForwardFrom}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="3153bfa2-cb9e-425b-ad6c-c3d40b49cbfc" name="ForwardFrom" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.ForwardFrom" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="b44668a3-f3bb-4f6f-ae15-c336b25333ad" name="ForwardFrom" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.Provider}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="655333a8-1724-4a02-b8a0-e54e3243d617" name="Provider" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.Provider" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="4a959626-2d62-42e7-afc0-f8854ce82b0b" name="Provider" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.ProviderStatus}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="162e44ee-d351-4fdc-b392-7e5810a91801" name="ProviderStatus" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.ProviderStatus" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="54fd6618-f254-446c-bd32-f6f5fbc70c7e" name="ProviderStatus" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.ProviderMessageId}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="6bf77046-0748-4f7c-a96a-5590ba370ca3" name="ProviderMessageId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.ProviderMessageId" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="79a37ec9-e22e-4940-99c8-7bc1d3810602" name="ProviderMessageId" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.ProviderError}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="1bbfa03d-e7db-42ee-bafe-a2b45bb2c49a" name="ProviderError" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.ProviderError" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="dc84e0c0-7bdb-449a-bdb2-1d449a3b9b00" name="ProviderError" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.CompletedAt}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="ab56ff21-147f-4a1c-a78f-aaf0caa54ce2" name="CompletedAt" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.CompletedAt" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="4027a6cd-55e5-49f4-a5a0-1e3bec06f2a5" name="CompletedAt" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryAction.DedupKey}</expression>
+            <path>
+              <target id="e746ebc7-b197-4a4f-b03f-ca59a4f4db1c" name="DeliveryActionCompletedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="bf888373-837c-4003-9d29-2b5009e13ab1" name="DedupKey" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="DeliveryAction.DedupKey" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="cb56a47b-34a8-4b6a-b3fb-b05f51cc3eff" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="41b57e6a-2790-4853-8db0-de870683946a" name="DeliveryAction" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="edd7d632-a11c-4312-9e77-657c3023a54c" name="DedupKey" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+    </mappings>
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Publish Integration Event</associationType>
+  <associationTypeId>580b6b26-eab5-4602-a408-e76e2d292d2c</associationTypeId>
+  <stereotypes />
+</association>

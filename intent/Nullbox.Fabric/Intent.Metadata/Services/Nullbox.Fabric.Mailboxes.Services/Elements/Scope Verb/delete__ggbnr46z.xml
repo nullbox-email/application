@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="e55b43d1-e237-49bf-a41b-46e27fcce18d" type="Scope Verb" typeId="561f871a-ac3f-4e82-b2ce-4cc129d7f264">
+  <name>delete</name>
+  <display>delete</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>9d2302b7-e508-4f80-96ef-7c61d949ad1d</parentFolderId>
+  <packageId>b28045cb-bf46-4948-9010-0124b00fa466</packageId>
+  <packageName>Nullbox.Fabric.Mailboxes.Services</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

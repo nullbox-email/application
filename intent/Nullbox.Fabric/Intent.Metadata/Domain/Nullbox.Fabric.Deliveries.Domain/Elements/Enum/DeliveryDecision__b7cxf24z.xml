@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="775a2394-b4d4-426b-91f8-77c69950effb" type="Enum" typeId="85fba0e9-9161-4c85-a603-a229ef312beb">
+  <name>DeliveryDecision</name>
+  <display>DeliveryDecision</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>e2f81272-0d46-42a9-a36e-8e448b483a4b</parentFolderId>
+  <packageId>2e5218b4-b505-4e2a-b5bb-77712b952e0b</packageId>
+  <packageName>Nullbox.Fabric.Deliveries.Domain</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="a5baa96e-47e2-4ac6-a51b-72da818ff469" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Drop</name>
+      <display>Drop</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>775a2394-b4d4-426b-91f8-77c69950effb</parentFolderId>
+      <packageId>2e5218b4-b505-4e2a-b5bb-77712b952e0b</packageId>
+      <packageName>Nullbox.Fabric.Deliveries.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="e78980f0-1ce9-425e-8382-18e5e3faba31" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Forward</name>
+      <display>Forward</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>775a2394-b4d4-426b-91f8-77c69950effb</parentFolderId>
+      <packageId>2e5218b4-b505-4e2a-b5bb-77712b952e0b</packageId>
+      <packageName>Nullbox.Fabric.Deliveries.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="eeb17cb0-a511-4589-8108-97180cd1e973" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Quarantine</name>
+      <display>Quarantine</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>775a2394-b4d4-426b-91f8-77c69950effb</parentFolderId>
+      <packageId>2e5218b4-b505-4e2a-b5bb-77712b952e0b</packageId>
+      <packageName>Nullbox.Fabric.Deliveries.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

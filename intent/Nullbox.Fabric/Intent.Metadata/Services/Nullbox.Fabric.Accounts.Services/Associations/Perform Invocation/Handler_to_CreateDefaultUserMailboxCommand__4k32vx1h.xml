@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="019bdb41-c159-405c-a37d-eee40915b69d">
+  <sourceEnd id="361c3537-c1e3-436e-9fff-e9a5fbbf0a51" type="Perform Invocation Source End" typeId="ee56bd48-8eff-4fff-8d3a-87731d002335">
+    <display>called by : AccountCreateDefaultUserMailboxV1Handler.Handler</display>
+    <order>0</order>
+    <typeReference id="18be6327-04a1-4ac0-ac43-12958735768d">
+      <typeId>94345fb8-3019-4740-819c-6ee570053b87</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Accounts.Services</typePackageName>
+      <typePackageId>f2caa09a-8091-440f-b0eb-6f9f571a4b95</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="019bdb41-c159-405c-a37d-eee40915b69d" type="Perform Invocation Target End" typeId="093e5909-ffe4-4510-b3ea-532f30212f3c">
+    <display>[call] CreateDefaultUserMailboxCommand(...): void</display>
+    <order>0</order>
+    <traits>
+      <trait id="d00a2ab0-9a23-4192-b8bb-166798fc7dba" name="[Processing Action]" />
+    </traits>
+    <typeReference id="243eb8a3-fe41-4b36-8dbc-23865ade3086">
+      <typeId>7a5871b5-94d7-4d91-8833-ed991205abcc</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Mailboxes.Services</typePackageName>
+      <typePackageId>b28045cb-bf46-4948-9010-0124b00fa466</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <mappings>
+      <mapping type="Invocation Mapping" typeId="a4c4c5cc-76df-48ed-9d4e-c35caf44b567">
+        <source applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="94345fb8-3019-4740-819c-6ee570053b87" location="[Nullbox.Fabric].[Services].[Handler]" />
+        <target applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="7a5871b5-94d7-4d91-8833-ed991205abcc" location="[Nullbox.Fabric].[Services].[CreateDefaultUserMailboxCommand]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>{Handler}</expression>
+            <path>
+              <target id="7a5871b5-94d7-4d91-8833-ed991205abcc" name="CreateDefaultUserMailboxCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+            </path>
+            <sources>
+              <source identifier="Handler" mappingType="Invocation Mapping" mappingTypeId="7ca5c18a-bdbe-434b-a68a-421899a077e7">
+                <path>
+                  <target id="94345fb8-3019-4740-819c-6ee570053b87" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Id}</expression>
+            <path>
+              <target id="7a5871b5-94d7-4d91-8833-ed991205abcc" name="CreateDefaultUserMailboxCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="6be0dafd-4246-469a-bc69-0571177203ef" name="Id" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Id" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="94345fb8-3019-4740-819c-6ee570053b87" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="b9da09d4-c51a-42d9-9907-91077a9b8bd2" name="Id" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Name}</expression>
+            <path>
+              <target id="7a5871b5-94d7-4d91-8833-ed991205abcc" name="CreateDefaultUserMailboxCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="65edb8a2-aea9-4de5-80ae-4518771b543d" name="Name" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Name" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="94345fb8-3019-4740-819c-6ee570053b87" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="4c0b2e57-925f-4d5c-971f-12a87fb4ecad" name="Name" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>"nullbox.email"</expression>
+            <path>
+              <target id="7a5871b5-94d7-4d91-8833-ed991205abcc" name="CreateDefaultUserMailboxCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="4be8daa2-ed52-4be3-848e-da96fc986f52" name="Domain" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources />
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Users}</expression>
+            <path>
+              <target id="7a5871b5-94d7-4d91-8833-ed991205abcc" name="CreateDefaultUserMailboxCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="ac24a5ab-85c0-46ab-bdbd-2d4687e7d031" name="Users" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Users" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="94345fb8-3019-4740-819c-6ee570053b87" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="7723ce42-e0d9-4ef3-8bd8-af6b856901f5" name="Users" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Users.AccountId}</expression>
+            <path>
+              <target id="7a5871b5-94d7-4d91-8833-ed991205abcc" name="CreateDefaultUserMailboxCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="ac24a5ab-85c0-46ab-bdbd-2d4687e7d031" name="Users" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+              <target id="8fdf6d06-7d18-46f4-950c-0d053d94b249" name="AccountId" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Users.AccountId" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="94345fb8-3019-4740-819c-6ee570053b87" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="7723ce42-e0d9-4ef3-8bd8-af6b856901f5" name="Users" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                  <target id="1dcd8d3f-1f03-428e-b120-db1ff1c097d2" name="AccountId" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Users.UserProfileId}</expression>
+            <path>
+              <target id="7a5871b5-94d7-4d91-8833-ed991205abcc" name="CreateDefaultUserMailboxCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="ac24a5ab-85c0-46ab-bdbd-2d4687e7d031" name="Users" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+              <target id="a9d43f23-0809-41f5-b4bc-f14433ad040b" name="UserProfileId" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Users.UserProfileId" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="94345fb8-3019-4740-819c-6ee570053b87" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="7723ce42-e0d9-4ef3-8bd8-af6b856901f5" name="Users" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                  <target id="61877ce0-cd09-448f-b315-dad408524cb6" name="UserProfileId" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Users.EmailAddress}</expression>
+            <path>
+              <target id="7a5871b5-94d7-4d91-8833-ed991205abcc" name="CreateDefaultUserMailboxCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="ac24a5ab-85c0-46ab-bdbd-2d4687e7d031" name="Users" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+              <target id="b32798b3-98c9-4047-ba66-eb2a1695cab0" name="EmailAddress" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Users.EmailAddress" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="94345fb8-3019-4740-819c-6ee570053b87" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="7723ce42-e0d9-4ef3-8bd8-af6b856901f5" name="Users" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                  <target id="eb888a70-7e78-48b2-b5a2-49a873b56f37" name="EmailAddress" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Users.RoleId}</expression>
+            <path>
+              <target id="7a5871b5-94d7-4d91-8833-ed991205abcc" name="CreateDefaultUserMailboxCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="ac24a5ab-85c0-46ab-bdbd-2d4687e7d031" name="Users" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+              <target id="6df9c25f-6004-4408-ae7e-fb3d4063b3a9" name="RoleId" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Users.RoleId" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="94345fb8-3019-4740-819c-6ee570053b87" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="7723ce42-e0d9-4ef3-8bd8-af6b856901f5" name="Users" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                  <target id="f306c0b0-deb3-4cee-bd6c-0ade577c77c6" name="RoleId" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+    </mappings>
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Perform Invocation</associationType>
+  <associationTypeId>3e69085c-fa2f-44bd-93eb-41075fd472f8</associationTypeId>
+  <stereotypes />
+</association>

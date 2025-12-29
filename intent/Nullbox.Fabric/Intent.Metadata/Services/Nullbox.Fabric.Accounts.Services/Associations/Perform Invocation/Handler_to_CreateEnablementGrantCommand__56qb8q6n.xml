@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="00817b4b-bbfb-4d14-9c91-a91c8dbe186a">
+  <sourceEnd id="0ae52863-ce16-4ebc-a982-dda5d2029c22" type="Perform Invocation Source End" typeId="ee56bd48-8eff-4fff-8d3a-87731d002335">
+    <display>called by : AccountCreateEnablementV1Handler.Handler</display>
+    <order>0</order>
+    <typeReference id="3e9d3547-566e-4d89-9f5b-1cc08dd01456">
+      <typeId>3fcf6a86-afa1-4e5b-9a86-82ae4215d60e</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Accounts.Services</typePackageName>
+      <typePackageId>f2caa09a-8091-440f-b0eb-6f9f571a4b95</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="00817b4b-bbfb-4d14-9c91-a91c8dbe186a" type="Perform Invocation Target End" typeId="093e5909-ffe4-4510-b3ea-532f30212f3c">
+    <display>[call] CreateEnablementGrantCommand(...): void</display>
+    <order>0</order>
+    <traits>
+      <trait id="d00a2ab0-9a23-4192-b8bb-166798fc7dba" name="[Processing Action]" />
+    </traits>
+    <typeReference id="7f7bf4ce-a670-48bb-87cb-581df91e359f">
+      <typeId>88edbe65-3683-42cd-9d69-7cfc394d222d</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Accounts.Services</typePackageName>
+      <typePackageId>f2caa09a-8091-440f-b0eb-6f9f571a4b95</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <mappings>
+      <mapping type="Invocation Mapping" typeId="a4c4c5cc-76df-48ed-9d4e-c35caf44b567">
+        <source applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="3fcf6a86-afa1-4e5b-9a86-82ae4215d60e" location="[Nullbox.Fabric].[Services].[Handler]" />
+        <target applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="88edbe65-3683-42cd-9d69-7cfc394d222d" location="[Nullbox.Fabric].[Services].[CreateEnablementGrantCommand]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>{Handler}</expression>
+            <path>
+              <target id="88edbe65-3683-42cd-9d69-7cfc394d222d" name="CreateEnablementGrantCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+            </path>
+            <sources>
+              <source identifier="Handler" mappingType="Invocation Mapping" mappingTypeId="7ca5c18a-bdbe-434b-a68a-421899a077e7">
+                <path>
+                  <target id="3fcf6a86-afa1-4e5b-9a86-82ae4215d60e" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Id}</expression>
+            <path>
+              <target id="88edbe65-3683-42cd-9d69-7cfc394d222d" name="CreateEnablementGrantCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="0b775f7d-22a0-4beb-87c1-75ac2f5f7121" name="AccountId" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Id" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="3fcf6a86-afa1-4e5b-9a86-82ae4215d60e" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="9fa0a06a-9bc5-4cf6-90e9-fef705283a8a" name="Id" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+    </mappings>
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Perform Invocation</associationType>
+  <associationTypeId>3e69085c-fa2f-44bd-93eb-41075fd472f8</associationTypeId>
+  <stereotypes />
+</association>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="b4878233-9884-4a53-b032-a5b2a12e7803">
+  <sourceEnd id="f939e922-1e8b-45e4-941d-61882b665380" type="Perform Invocation Source End" typeId="ee56bd48-8eff-4fff-8d3a-87731d002335">
+    <display>called by : EnablementGrantCreatedV1Handler.Handler</display>
+    <order>0</order>
+    <typeReference id="c53c56b2-2b8f-46c3-82c5-a4f588e84922">
+      <typeId>20677772-6ff2-4ad0-8d90-59928a97a044</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Accounts.Services</typePackageName>
+      <typePackageId>f2caa09a-8091-440f-b0eb-6f9f571a4b95</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="b4878233-9884-4a53-b032-a5b2a12e7803" type="Perform Invocation Target End" typeId="093e5909-ffe4-4510-b3ea-532f30212f3c">
+    <name>stri</name>
+    <display>[call] stri = SynchronizeEffectiveAccountEnablementCommand(...): void</display>
+    <order>0</order>
+    <traits>
+      <trait id="d00a2ab0-9a23-4192-b8bb-166798fc7dba" name="[Processing Action]" />
+    </traits>
+    <typeReference id="29532415-aeef-4673-902b-d3574c293e5b">
+      <typeId>83edd0f8-274c-47f8-b381-672970457b5f</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Accounts.Services</typePackageName>
+      <typePackageId>f2caa09a-8091-440f-b0eb-6f9f571a4b95</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <mappings>
+      <mapping type="Invocation Mapping" typeId="a4c4c5cc-76df-48ed-9d4e-c35caf44b567">
+        <source applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="20677772-6ff2-4ad0-8d90-59928a97a044" location="[Nullbox.Fabric].[Services].[Handler]" />
+        <target applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="83edd0f8-274c-47f8-b381-672970457b5f" location="[Nullbox.Fabric].[Services].[SynchronizeEffectiveAccountEnablementCommand]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>{Handler}</expression>
+            <path>
+              <target id="83edd0f8-274c-47f8-b381-672970457b5f" name="SynchronizeEffectiveAccountEnablementCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+            </path>
+            <sources>
+              <source identifier="Handler" mappingType="Invocation Mapping" mappingTypeId="7ca5c18a-bdbe-434b-a68a-421899a077e7">
+                <path>
+                  <target id="20677772-6ff2-4ad0-8d90-59928a97a044" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Id}</expression>
+            <path>
+              <target id="83edd0f8-274c-47f8-b381-672970457b5f" name="SynchronizeEffectiveAccountEnablementCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="0c7cc6e3-55e0-449a-91ab-ba9fe1f11fbf" name="Id" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Id" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="20677772-6ff2-4ad0-8d90-59928a97a044" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="cdc841b2-db7a-4920-9e1b-a43d41539a56" name="Id" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{AccountId}</expression>
+            <path>
+              <target id="83edd0f8-274c-47f8-b381-672970457b5f" name="SynchronizeEffectiveAccountEnablementCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="2ed34025-e5c5-4a4c-8dee-0cca0eb92594" name="AccountId" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="AccountId" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="20677772-6ff2-4ad0-8d90-59928a97a044" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="13af849a-7968-419e-b197-4e49fddaad84" name="AccountId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Kind}</expression>
+            <path>
+              <target id="83edd0f8-274c-47f8-b381-672970457b5f" name="SynchronizeEffectiveAccountEnablementCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="81ee20b2-25c8-42d8-ace8-c6bf10602744" name="Kind" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Kind" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="20677772-6ff2-4ad0-8d90-59928a97a044" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="3e2779c5-a85d-4524-bcec-d91f45e88f14" name="Kind" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{ProductKey}</expression>
+            <path>
+              <target id="83edd0f8-274c-47f8-b381-672970457b5f" name="SynchronizeEffectiveAccountEnablementCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="ec821b5a-48cc-4f97-9952-49bb816658af" name="ProductKey" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="ProductKey" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="20677772-6ff2-4ad0-8d90-59928a97a044" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="e535fdc9-d212-44d4-a847-3f7cc4fcebaf" name="ProductKey" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Priority}</expression>
+            <path>
+              <target id="83edd0f8-274c-47f8-b381-672970457b5f" name="SynchronizeEffectiveAccountEnablementCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="e30df3b4-1711-4bc1-8bf5-5d831928009d" name="Priority" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Priority" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="20677772-6ff2-4ad0-8d90-59928a97a044" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="bcecf0fc-b122-42b7-a8a4-f3332b534bf5" name="Priority" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{StartsAt}</expression>
+            <path>
+              <target id="83edd0f8-274c-47f8-b381-672970457b5f" name="SynchronizeEffectiveAccountEnablementCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="5231a587-e7ee-4269-81b7-14315305f7f4" name="StartsAt" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="StartsAt" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="20677772-6ff2-4ad0-8d90-59928a97a044" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="0579a0f7-45b8-43c3-b28d-3791ce38be82" name="StartsAt" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{EndsAt}</expression>
+            <path>
+              <target id="83edd0f8-274c-47f8-b381-672970457b5f" name="SynchronizeEffectiveAccountEnablementCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="80113d4f-998f-459a-b950-3075181ab228" name="EndsAt" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="EndsAt" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="20677772-6ff2-4ad0-8d90-59928a97a044" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="005e8b3e-a8f4-4ef6-bb67-db5597ec08ec" name="EndsAt" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeltaMaxMailboxes}</expression>
+            <path>
+              <target id="83edd0f8-274c-47f8-b381-672970457b5f" name="SynchronizeEffectiveAccountEnablementCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="3270ab6d-5f8a-459e-a950-d8adab167e85" name="DeltaMaxMailboxes" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="DeltaMaxMailboxes" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="20677772-6ff2-4ad0-8d90-59928a97a044" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="4d801345-9078-455b-b42c-8522145388bd" name="DeltaMaxMailboxes" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeltaMaxAliases}</expression>
+            <path>
+              <target id="83edd0f8-274c-47f8-b381-672970457b5f" name="SynchronizeEffectiveAccountEnablementCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="8f428e6a-0244-41e2-b4f1-f5452d4bf2a5" name="DeltaMaxAliases" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="DeltaMaxAliases" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="20677772-6ff2-4ad0-8d90-59928a97a044" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="a2d947d5-f468-4d1c-a859-afd5251c49f4" name="DeltaMaxAliases" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeltaMaxAliasesPerMailbox}</expression>
+            <path>
+              <target id="83edd0f8-274c-47f8-b381-672970457b5f" name="SynchronizeEffectiveAccountEnablementCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="a4111fd5-39c4-428f-8a81-0e096eed0be1" name="DeltaMaxAliasesPerMailbox" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="DeltaMaxAliasesPerMailbox" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="20677772-6ff2-4ad0-8d90-59928a97a044" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="8635f122-7030-4a1b-86a5-937d8ca650f8" name="DeltaMaxAliasesPerMailbox" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeltaMaxBandwidthBytesPerPeriod}</expression>
+            <path>
+              <target id="83edd0f8-274c-47f8-b381-672970457b5f" name="SynchronizeEffectiveAccountEnablementCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="36166a03-669a-481d-af2e-4f3e7acaa81a" name="DeltaMaxBandwidthBytesPerPeriod" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="DeltaMaxBandwidthBytesPerPeriod" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="20677772-6ff2-4ad0-8d90-59928a97a044" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="c7714780-2dd5-4463-8c51-c678d40215f7" name="DeltaMaxBandwidthBytesPerPeriod" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Flags}</expression>
+            <path>
+              <target id="83edd0f8-274c-47f8-b381-672970457b5f" name="SynchronizeEffectiveAccountEnablementCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="c8ccd190-b41c-4e00-a909-aed4c647dafa" name="Flags" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Flags" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="20677772-6ff2-4ad0-8d90-59928a97a044" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="31f3b5c3-6241-41aa-939d-6555473a7e35" name="Flags" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Source}</expression>
+            <path>
+              <target id="83edd0f8-274c-47f8-b381-672970457b5f" name="SynchronizeEffectiveAccountEnablementCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="0bb8d2d6-123d-4096-b39b-63de367b1b67" name="Source" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Source" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="20677772-6ff2-4ad0-8d90-59928a97a044" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="ae4a976c-5771-417e-a595-9d38cdd78c16" name="Source" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Reason}</expression>
+            <path>
+              <target id="83edd0f8-274c-47f8-b381-672970457b5f" name="SynchronizeEffectiveAccountEnablementCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="21db6c65-38f1-4a48-8e88-26f8086679e8" name="Reason" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Reason" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="20677772-6ff2-4ad0-8d90-59928a97a044" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="4ed31677-569c-4438-9244-a856de467b41" name="Reason" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{IsRevoked}</expression>
+            <path>
+              <target id="83edd0f8-274c-47f8-b381-672970457b5f" name="SynchronizeEffectiveAccountEnablementCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="b4c542a0-aee5-484b-9a1d-5998410937fb" name="IsRevoked" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="IsRevoked" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="20677772-6ff2-4ad0-8d90-59928a97a044" name="Handler" type="association" specialization="Subscribe Integration Event Target End" specializationId="16fa2952-79e6-4150-b5ab-45aa4c106de4" />
+                  <target id="59f41023-2359-499d-a44b-4ce54e1291aa" name="IsRevoked" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+    </mappings>
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Perform Invocation</associationType>
+  <associationTypeId>3e69085c-fa2f-44bd-93eb-41075fd472f8</associationTypeId>
+  <stereotypes />
+</association>

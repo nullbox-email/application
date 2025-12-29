@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="b2cc7398-a9b4-4698-912a-7c7f8beaaaf4" type="Role" typeId="8663c9f9-2852-45e7-aaa1-0883a2e6f1da">
+  <name>Default</name>
+  <display>Default</display>
+  <externalReference>b10b971e-3f41-4aa1-8c9b-3083542526eb</externalReference>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>116b850e-577b-4f1a-bbe3-59bfe95b470c</parentFolderId>
+  <packageId>116b850e-577b-4f1a-bbe3-59bfe95b470c</packageId>
+  <packageName>application</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

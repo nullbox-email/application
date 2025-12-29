@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="c71437ff-5018-487e-8c7d-23a229840e0a" type="Solution Folder" typeId="0dc2b846-c968-49eb-99b7-8776919313a8">
+  <name>Nullbox.Auth.EntraExternalId</name>
+  <display>Nullbox.Auth.EntraExternalId</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>2a4f01e8-bd64-4b87-8b7f-1a71d88c90b4</parentFolderId>
+  <packageId>2d4ca7b4-3ab9-4cec-93ba-f6ac843815af</packageId>
+  <packageName>Nullbox.Auth.EntraExternalId</packageName>
+  <stereotypes>
+    <stereotype stereotypeDefinitionId="bb59d570-80b6-4564-9016-f809d6eacbc5" name="Folder Options">
+      <addedByDefault>false</addedByDefault>
+      <definitionPackageName>Intent.VisualStudio.Projects</definitionPackageName>
+      <definitionPackageId>a0636ab7-d3a1-430b-9609-11a18aa3cc7f</definitionPackageId>
+      <properties>
+        <property name="4bcd7fb5-54e5-4812-b80c-4176114086c4" display="Materialize Folder" value="true" isActive="true" />
+      </properties>
+    </stereotype>
+  </stereotypes>
+  <metadata />
+  <childElements />
+</class>

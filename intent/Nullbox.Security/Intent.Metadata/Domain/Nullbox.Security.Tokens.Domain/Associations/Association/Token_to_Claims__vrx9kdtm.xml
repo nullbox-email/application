@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="42d67e0c-d106-4fb8-bcbd-eb587b7add1a">
+  <sourceEnd id="3479c04c-a946-4920-99f7-55be2a02e552" type="Association Source End" typeId="8d9d2e5b-bd55-4f36-9ae4-2b9e84fd4e58">
+    <name>Token</name>
+    <display>Token: Token</display>
+    <order>0</order>
+    <typeReference id="13ff150a-b43b-4b3a-94ff-71b6385a3299">
+      <typeId>65fc5a07-cd01-4190-8aeb-596a26de2866</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Security.Tokens.Domain</typePackageName>
+      <typePackageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="42d67e0c-d106-4fb8-bcbd-eb587b7add1a" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
+    <name>Claims</name>
+    <display>Claims: Claim[*]</display>
+    <order>12</order>
+    <typeReference id="bd1f43b2-5376-403a-8d4e-b7d9c2e34d5c">
+      <typeId>156dad35-797d-414e-9cca-addca8256892</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>true</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Security.Tokens.Domain</typePackageName>
+      <typePackageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Association</associationType>
+  <associationTypeId>eaf9ed4e-0b61-4ac1-ba88-09f912c12087</associationTypeId>
+  <stereotypes />
+</association>

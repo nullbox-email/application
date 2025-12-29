@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="49bbb757-c933-4bf2-9822-eb7c4f7f68f5">
+  <sourceEnd id="9dc49fae-d4a3-4f7b-a5c9-88cf8fc34cdd" type="Publish Integration Event Source End" typeId="eab91b3a-9903-40a2-90e8-ddb714883eab">
+    <display>published by : EnablementGrantCreatedDomainEventHandler.handler</display>
+    <order>0</order>
+    <typeReference id="d0f45767-7f29-4d48-a977-7a37895e7d8f">
+      <typeId>38bbbb16-d2c8-47ad-9176-d2ec2c5d744b</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Accounts.Services</typePackageName>
+      <typePackageId>f2caa09a-8091-440f-b0eb-6f9f571a4b95</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="49bbb757-c933-4bf2-9822-eb7c4f7f68f5" type="Publish Integration Event Target End" typeId="6feb1511-849a-4aa3-85eb-d0c736ac1fec">
+    <display>[publish] EnablementGrantCreatedV1</display>
+    <order>0</order>
+    <traits>
+      <trait id="d00a2ab0-9a23-4192-b8bb-166798fc7dba" name="[Processing Action]" />
+    </traits>
+    <typeReference id="8a81b654-fc0f-4b6c-8258-a782b3360468">
+      <typeId>f5d127a3-1c2c-4802-a4f5-d72c884a49cd</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Accounts.Eventing.Messages</typePackageName>
+      <typePackageId>1a4d7aaa-9bfc-48c1-b943-a1ccce1817b5</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <mappings>
+      <mapping type="Publish Message Mapping" typeId="7ff48a4c-ee8b-4e66-9dbb-c014eb0542fb">
+        <source applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="38bbbb16-d2c8-47ad-9176-d2ec2c5d744b" location="[Nullbox.Fabric].[Services].[handler]" />
+        <target applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="f5d127a3-1c2c-4802-a4f5-d72c884a49cd" location="[Nullbox.Fabric].[Services].[EnablementGrantCreatedV1]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>{EnablementGrant.Id}</expression>
+            <path>
+              <target id="f5d127a3-1c2c-4802-a4f5-d72c884a49cd" name="EnablementGrantCreatedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="cdc841b2-db7a-4920-9e1b-a43d41539a56" name="Id" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="EnablementGrant.Id" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="38bbbb16-d2c8-47ad-9176-d2ec2c5d744b" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="94331d6b-9779-417b-9711-c2fe01f2a30e" name="EnablementGrant" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="aaac16f8-d3ee-427f-b85a-618fecd4dbcb" name="Id" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{EnablementGrant.AccountId}</expression>
+            <path>
+              <target id="f5d127a3-1c2c-4802-a4f5-d72c884a49cd" name="EnablementGrantCreatedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="13af849a-7968-419e-b197-4e49fddaad84" name="AccountId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="EnablementGrant.AccountId" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="38bbbb16-d2c8-47ad-9176-d2ec2c5d744b" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="94331d6b-9779-417b-9711-c2fe01f2a30e" name="EnablementGrant" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="64e67e66-c1be-420e-ad60-59d0bdc223c8" name="AccountId" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{EnablementGrant.Kind}</expression>
+            <path>
+              <target id="f5d127a3-1c2c-4802-a4f5-d72c884a49cd" name="EnablementGrantCreatedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="3e2779c5-a85d-4524-bcec-d91f45e88f14" name="Kind" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="EnablementGrant.Kind" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="38bbbb16-d2c8-47ad-9176-d2ec2c5d744b" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="94331d6b-9779-417b-9711-c2fe01f2a30e" name="EnablementGrant" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="897bff30-70ce-4ee7-887a-5160d7802b21" name="Kind" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{EnablementGrant.ProductKey}</expression>
+            <path>
+              <target id="f5d127a3-1c2c-4802-a4f5-d72c884a49cd" name="EnablementGrantCreatedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="e535fdc9-d212-44d4-a847-3f7cc4fcebaf" name="ProductKey" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="EnablementGrant.ProductKey" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="38bbbb16-d2c8-47ad-9176-d2ec2c5d744b" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="94331d6b-9779-417b-9711-c2fe01f2a30e" name="EnablementGrant" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="204182a2-97c6-473f-803b-c9fde6360de9" name="ProductKey" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{EnablementGrant.Priority}</expression>
+            <path>
+              <target id="f5d127a3-1c2c-4802-a4f5-d72c884a49cd" name="EnablementGrantCreatedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="bcecf0fc-b122-42b7-a8a4-f3332b534bf5" name="Priority" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="EnablementGrant.Priority" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="38bbbb16-d2c8-47ad-9176-d2ec2c5d744b" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="94331d6b-9779-417b-9711-c2fe01f2a30e" name="EnablementGrant" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="9a815fe5-c972-42f8-a344-2a36631b2a38" name="Priority" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{EnablementGrant.StartsAt}</expression>
+            <path>
+              <target id="f5d127a3-1c2c-4802-a4f5-d72c884a49cd" name="EnablementGrantCreatedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="0579a0f7-45b8-43c3-b28d-3791ce38be82" name="StartsAt" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="EnablementGrant.StartsAt" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="38bbbb16-d2c8-47ad-9176-d2ec2c5d744b" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="94331d6b-9779-417b-9711-c2fe01f2a30e" name="EnablementGrant" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="123559e2-91bc-467b-8932-feecd7c1fff1" name="StartsAt" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{EnablementGrant.EndsAt}</expression>
+            <path>
+              <target id="f5d127a3-1c2c-4802-a4f5-d72c884a49cd" name="EnablementGrantCreatedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="005e8b3e-a8f4-4ef6-bb67-db5597ec08ec" name="EndsAt" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="EnablementGrant.EndsAt" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="38bbbb16-d2c8-47ad-9176-d2ec2c5d744b" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="94331d6b-9779-417b-9711-c2fe01f2a30e" name="EnablementGrant" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="45f70996-0fbb-446d-8ef5-2de975b3edab" name="EndsAt" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{EnablementGrant.DeltaMaxMailboxes}</expression>
+            <path>
+              <target id="f5d127a3-1c2c-4802-a4f5-d72c884a49cd" name="EnablementGrantCreatedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="4d801345-9078-455b-b42c-8522145388bd" name="DeltaMaxMailboxes" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="EnablementGrant.DeltaMaxMailboxes" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="38bbbb16-d2c8-47ad-9176-d2ec2c5d744b" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="94331d6b-9779-417b-9711-c2fe01f2a30e" name="EnablementGrant" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="7313bb7d-d358-42f4-a08f-8994f24eaca5" name="DeltaMaxMailboxes" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{EnablementGrant.DeltaMaxAliases}</expression>
+            <path>
+              <target id="f5d127a3-1c2c-4802-a4f5-d72c884a49cd" name="EnablementGrantCreatedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="a2d947d5-f468-4d1c-a859-afd5251c49f4" name="DeltaMaxAliases" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="EnablementGrant.DeltaMaxAliases" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="38bbbb16-d2c8-47ad-9176-d2ec2c5d744b" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="94331d6b-9779-417b-9711-c2fe01f2a30e" name="EnablementGrant" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="681599c1-11aa-4b8c-b670-5668e3065208" name="DeltaMaxAliases" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{EnablementGrant.DeltaMaxAliasesPerMailbox}</expression>
+            <path>
+              <target id="f5d127a3-1c2c-4802-a4f5-d72c884a49cd" name="EnablementGrantCreatedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="8635f122-7030-4a1b-86a5-937d8ca650f8" name="DeltaMaxAliasesPerMailbox" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="EnablementGrant.DeltaMaxAliasesPerMailbox" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="38bbbb16-d2c8-47ad-9176-d2ec2c5d744b" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="94331d6b-9779-417b-9711-c2fe01f2a30e" name="EnablementGrant" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="4e904619-cfdf-4364-9a5c-ca4d53c588cf" name="DeltaMaxAliasesPerMailbox" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{EnablementGrant.DeltaMaxBandwidthBytesPerPeriod}</expression>
+            <path>
+              <target id="f5d127a3-1c2c-4802-a4f5-d72c884a49cd" name="EnablementGrantCreatedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="c7714780-2dd5-4463-8c51-c678d40215f7" name="DeltaMaxBandwidthBytesPerPeriod" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="EnablementGrant.DeltaMaxBandwidthBytesPerPeriod" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="38bbbb16-d2c8-47ad-9176-d2ec2c5d744b" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="94331d6b-9779-417b-9711-c2fe01f2a30e" name="EnablementGrant" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="2a311fef-a3c4-43a3-81d2-86139d8a6b0c" name="DeltaMaxBandwidthBytesPerPeriod" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{EnablementGrant.Flags}</expression>
+            <path>
+              <target id="f5d127a3-1c2c-4802-a4f5-d72c884a49cd" name="EnablementGrantCreatedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="31f3b5c3-6241-41aa-939d-6555473a7e35" name="Flags" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="EnablementGrant.Flags" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="38bbbb16-d2c8-47ad-9176-d2ec2c5d744b" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="94331d6b-9779-417b-9711-c2fe01f2a30e" name="EnablementGrant" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="ac3a91b3-824e-447e-b360-8059514366f0" name="Flags" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{EnablementGrant.Source}</expression>
+            <path>
+              <target id="f5d127a3-1c2c-4802-a4f5-d72c884a49cd" name="EnablementGrantCreatedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="ae4a976c-5771-417e-a595-9d38cdd78c16" name="Source" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="EnablementGrant.Source" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="38bbbb16-d2c8-47ad-9176-d2ec2c5d744b" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="94331d6b-9779-417b-9711-c2fe01f2a30e" name="EnablementGrant" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="55b3a11e-770e-4b80-ba00-8fde6c85896f" name="Source" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{EnablementGrant.Reason}</expression>
+            <path>
+              <target id="f5d127a3-1c2c-4802-a4f5-d72c884a49cd" name="EnablementGrantCreatedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="4ed31677-569c-4438-9244-a856de467b41" name="Reason" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="EnablementGrant.Reason" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="38bbbb16-d2c8-47ad-9176-d2ec2c5d744b" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="94331d6b-9779-417b-9711-c2fe01f2a30e" name="EnablementGrant" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="0301368f-514b-4f3d-b2a9-06876ec9b8db" name="Reason" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{EnablementGrant.IsRevoked}</expression>
+            <path>
+              <target id="f5d127a3-1c2c-4802-a4f5-d72c884a49cd" name="EnablementGrantCreatedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="59f41023-2359-499d-a44b-4ce54e1291aa" name="IsRevoked" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="EnablementGrant.IsRevoked" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="38bbbb16-d2c8-47ad-9176-d2ec2c5d744b" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="94331d6b-9779-417b-9711-c2fe01f2a30e" name="EnablementGrant" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="06ea9259-7e4d-473b-bb87-2c2ccb4167b3" name="IsRevoked" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+    </mappings>
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Publish Integration Event</associationType>
+  <associationTypeId>580b6b26-eab5-4602-a408-e76e2d292d2c</associationTypeId>
+  <stereotypes />
+</association>

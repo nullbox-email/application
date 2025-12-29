@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="b3351f2e-6f55-490f-92ce-0b75daa6dc3f" type="Domain Event" typeId="0814e459-fb9b-47db-b7eb-32ce30397e8a">
+  <name>DeliveryActionCreatedDomainEvent</name>
+  <display>DeliveryActionCreatedDomainEvent</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>e2f81272-0d46-42a9-a36e-8e448b483a4b</parentFolderId>
+  <packageId>2e5218b4-b505-4e2a-b5bb-77712b952e0b</packageId>
+  <packageName>Nullbox.Fabric.Deliveries.Domain</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="3f1748b1-331d-4bb2-9cfc-c3ff6fbf35c7" type="Property" typeId="b4d69073-5abb-4968-b41b-545b2f7408ed">
+      <name>DeliveryAction</name>
+      <display>DeliveryAction: DeliveryAction</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="26735040-2970-42b3-800d-97c2579f85e3">
+        <typeId>7b596594-0644-4ce0-86e8-6504f99c4146</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Nullbox.Fabric.Deliveries.Domain</typePackageName>
+        <typePackageId>2e5218b4-b505-4e2a-b5bb-77712b952e0b</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>b3351f2e-6f55-490f-92ce-0b75daa6dc3f</parentFolderId>
+      <packageId>2e5218b4-b505-4e2a-b5bb-77712b952e0b</packageId>
+      <packageName>Nullbox.Fabric.Deliveries.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

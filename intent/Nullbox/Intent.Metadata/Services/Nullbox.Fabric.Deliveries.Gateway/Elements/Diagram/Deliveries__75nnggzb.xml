@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="d1c6ed67-7a0c-48b1-a66f-eb53f1b0c2c8" type="Diagram" typeId="8c90aca5-86f4-47f1-bd58-116fe79f5c55">
+  <name>Deliveries</name>
+  <display>Deliveries</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>857d2250-92ca-4e36-98a7-4cefaf557ae6</parentFolderId>
+  <packageId>857d2250-92ca-4e36-98a7-4cefaf557ae6</packageId>
+  <packageName>Nullbox.Fabric.Deliveries.Gateway</packageName>
+  <diagram>
+    <targetPackageId>d1c6ed67-7a0c-48b1-a66f-eb53f1b0c2c8</targetPackageId>
+  </diagram>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

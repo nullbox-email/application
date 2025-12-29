@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="1f220218-6d10-44a9-b260-46fb7236ea3c" type="Diagram" typeId="8c90aca5-86f4-47f1-bd58-116fe79f5c55">
+  <name>Tokens</name>
+  <display>Tokens</display>
+  <externalReference>169f3801-8244-4b9e-ac2f-3eaede785048</externalReference>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>53271210-a5f1-47e9-b666-c84ae2400f41</parentFolderId>
+  <packageId>fbfe09aa-38ad-4b9b-ac4e-387ab034ca0d</packageId>
+  <packageName>Nullbox.Auth.EntraExternalId.Services</packageName>
+  <diagram>
+    <targetPackageId>fbfe09aa-38ad-4b9b-ac4e-387ab034ca0d</targetPackageId>
+  </diagram>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

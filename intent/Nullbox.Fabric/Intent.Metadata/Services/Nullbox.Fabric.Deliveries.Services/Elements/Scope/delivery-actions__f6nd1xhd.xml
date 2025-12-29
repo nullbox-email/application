@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="44d334bf-883a-437e-a2c8-af583a5fb178" type="Scope" typeId="33256cb2-6ac1-48e5-b3dd-75c8e83f156e">
+  <name>delivery-actions</name>
+  <display>delivery-actions</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>e1dde255-75e6-4556-bcf7-2549677209ca</parentFolderId>
+  <packageId>7ee06bb8-ef12-47d6-a86a-15d687075463</packageId>
+  <packageName>Nullbox.Fabric.Deliveries.Services</packageName>
+  <stereotypes>
+    <stereotype stereotypeDefinitionId="effde114-12bd-498a-bf44-42f90df0e1ba" name="Scope Settings">
+      <addedByDefault>true</addedByDefault>
+      <definitionPackageName>Aryzac.Security</definitionPackageName>
+      <definitionPackageId>b03410a6-8af0-4dad-a18c-1f6d5490612c</definitionPackageId>
+      <properties>
+        <property name="62ebeae8-2d85-4c5a-af45-c53986f0518b" display="Bounded Context" value="nullbox" isActive="true" />
+        <property name="dfe633ea-7eb9-4c85-a9f8-dea39cee7dee" display="Resource" value="7b596594-0644-4ce0-86e8-6504f99c4146" isActive="true" />
+        <property name="e3644a6f-bbba-4634-8311-22f616970988" display="Resource Name" value="delivery-action" isActive="true" />
+      </properties>
+    </stereotype>
+  </stereotypes>
+  <metadata />
+  <childElements />
+</class>

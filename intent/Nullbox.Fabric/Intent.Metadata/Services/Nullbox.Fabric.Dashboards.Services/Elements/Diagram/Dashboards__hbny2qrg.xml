@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="cc1705de-61ae-43f9-90c2-c53f8436ad0f" type="Diagram" typeId="8c90aca5-86f4-47f1-bd58-116fe79f5c55">
+  <name>Dashboards</name>
+  <display>Dashboards</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>80263fae-6dc6-4c15-aae8-a06df17932ae</parentFolderId>
+  <packageId>228992fb-fae4-4023-bab8-58fc9723eafd</packageId>
+  <packageName>Nullbox.Fabric.Dashboards.Services</packageName>
+  <diagram>
+    <targetPackageId>cc1705de-61ae-43f9-90c2-c53f8436ad0f</targetPackageId>
+  </diagram>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="865b1e64-108b-428a-83bf-26f31b7378d6" type="Query" typeId="e71b0662-e29d-4db2-868b-8a12464b25d0">
+  <name>GetOpenIdConfigurationQuery</name>
+  <display>GetOpenIdConfigurationQuery: OpenIdConfigurationDto</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <typeReference id="b1d80f89-0187-4015-a49a-f8be8f5f872c">
+    <typeId>493cb089-3eea-491d-ba4f-c3dc599b186f</typeId>
+    <isNavigable>true</isNavigable>
+    <isNullable>false</isNullable>
+    <isCollection>false</isCollection>
+    <isRequired>true</isRequired>
+    <typePackageName>Nullbox.Security.OIDCServices</typePackageName>
+    <typePackageId>a0a2d468-ffb1-4d26-96c3-138896c2e201</typePackageId>
+    <stereotypes />
+    <genericTypeParameters />
+  </typeReference>
+  <isMapped>false</isMapped>
+  <parentFolderId>b0c9d326-fb07-4277-8e86-9f2882d0a811</parentFolderId>
+  <packageId>a0a2d468-ffb1-4d26-96c3-138896c2e201</packageId>
+  <packageName>Nullbox.Security.OIDCServices</packageName>
+  <traits>
+    <trait id="9e587d4d-f317-4ab8-9bbb-9394234d2a88" name="[Allow Comment]" />
+    <trait id="0a932465-ea1f-42e7-b1eb-9f90aa8961fd" name="[Invokable]" />
+    <trait id="2b6729eb-e2ae-4b5f-86fe-4f611d1f912e" name="[Processing Handler]" />
+  </traits>
+  <stereotypes>
+    <stereotype stereotypeDefinitionId="8b65c29e-1448-43ac-a92a-0e0f86efd6c6" name="Unsecured">
+      <addedByDefault>false</addedByDefault>
+      <definitionPackageName>Intent.Metadata.Security</definitionPackageName>
+      <definitionPackageId>a6fa1088-0064-43e3-a7fc-36c97b2b9285</definitionPackageId>
+      <properties />
+    </stereotype>
+    <stereotype stereotypeDefinitionId="b4581ed2-42ec-4ae2-83dd-dcdd5f0837b6" name="Http Settings">
+      <addedByDefault>false</addedByDefault>
+      <definitionPackageName>Intent.Metadata.WebApi</definitionPackageName>
+      <definitionPackageId>0011387a-b122-45d7-9cdb-8e21b315ab9f</definitionPackageId>
+      <properties>
+        <property name="801c3e61-4431-4d81-93fa-7e57d33cb3fa" display="Verb" value="GET" isActive="true" />
+        <property name="5dd3e07d-76eb-45d4-9956-4325fb068acc" display="Route" value=".well-known/openid-configuration" isActive="true" />
+        <property name="4490e212-1e99-43ce-b3dd-048ed2a6bae8" display="Return Type Mediatype" value="application/json" isActive="true" />
+        <property name="e3870725-34b3-4684-85f2-ec4a667207fb" display="Success Response Code" isActive="true" />
+      </properties>
+    </stereotype>
+  </stereotypes>
+  <metadata />
+  <childElements />
+</class>

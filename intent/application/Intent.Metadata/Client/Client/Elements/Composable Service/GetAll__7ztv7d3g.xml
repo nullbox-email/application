@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="d2f1ac73-de9f-425d-86b0-b573f40e0e51" type="Composable Service" typeId="6d32f5fd-9579-4718-8068-1c3a4f12c94d">
+  <name>GetAll</name>
+  <display>GetAll</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>b37df56e-689b-4c93-8b67-654216f85268</parentFolderId>
+  <packageId>26e6787d-3fd1-47a9-a615-8c599158ca91</packageId>
+  <packageName>Client</packageName>
+  <stereotypes>
+    <stereotype stereotypeDefinitionId="ef341a7c-637a-4f79-96b5-b1cf884e68c0" name="Service Settings">
+      <addedByDefault>true</addedByDefault>
+      <definitionPackageName>Endura.Nuxt</definitionPackageName>
+      <definitionPackageId>8b314f4d-d7e9-499f-8501-f6e77ad67a5b</definitionPackageId>
+      <properties>
+        <property name="d6c6d0e9-e973-4fcb-9b14-882e81529971" display="Service" value="46de500e-11d0-46eb-b02e-d2c2a87407ad" isActive="true" />
+      </properties>
+    </stereotype>
+  </stereotypes>
+  <metadata />
+  <childElements />
+</class>

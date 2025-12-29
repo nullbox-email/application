@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="dc499510-546f-45ed-80e3-923f2bd9f6b8" type="Enum" typeId="85fba0e9-9161-4c85-a603-a229ef312beb">
+  <name>MarkerStage</name>
+  <display>MarkerStage</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>f2fa0338-4191-4eae-b42d-a3618a31b2bc</parentFolderId>
+  <packageId>6e18a3dd-9c79-43e7-9d9d-2988f5421754</packageId>
+  <packageName>Nullbox.Fabric.Markers.Domain</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="8f6dc40a-f5d1-4f51-9550-aa3dca5042f3" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Created</name>
+      <display>Created</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>dc499510-546f-45ed-80e3-923f2bd9f6b8</parentFolderId>
+      <packageId>6e18a3dd-9c79-43e7-9d9d-2988f5421754</packageId>
+      <packageName>Nullbox.Fabric.Markers.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="90935397-137c-4638-9952-25a9b5a244aa" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Decisioned</name>
+      <display>Decisioned</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>dc499510-546f-45ed-80e3-923f2bd9f6b8</parentFolderId>
+      <packageId>6e18a3dd-9c79-43e7-9d9d-2988f5421754</packageId>
+      <packageName>Nullbox.Fabric.Markers.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="976d83a1-94ca-4432-8768-f3655aad01d4" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Completed</name>
+      <display>Completed</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>dc499510-546f-45ed-80e3-923f2bd9f6b8</parentFolderId>
+      <packageId>6e18a3dd-9c79-43e7-9d9d-2988f5421754</packageId>
+      <packageName>Nullbox.Fabric.Markers.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="43acad2c-d527-4340-abd7-45c8b5068fbc" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Distinct</name>
+      <display>Distinct</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>dc499510-546f-45ed-80e3-923f2bd9f6b8</parentFolderId>
+      <packageId>6e18a3dd-9c79-43e7-9d9d-2988f5421754</packageId>
+      <packageName>Nullbox.Fabric.Markers.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

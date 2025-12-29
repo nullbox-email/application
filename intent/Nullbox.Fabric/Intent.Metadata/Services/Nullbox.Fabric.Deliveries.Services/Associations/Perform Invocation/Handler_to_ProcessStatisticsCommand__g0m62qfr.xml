@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="0668dbca-2195-423c-aa20-450bb40762a3">
+  <sourceEnd id="855f3895-285c-4c66-af6c-cf17d7bd4672" type="Perform Invocation Source End" typeId="ee56bd48-8eff-4fff-8d3a-87731d002335">
+    <display>called by : DeliveryActionCompleteStatisticsV1Handler.Handler</display>
+    <order>0</order>
+    <typeReference id="863dd200-38cb-48c4-aa9e-6abbb4e0c43a">
+      <typeId>0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Deliveries.Services</typePackageName>
+      <typePackageId>7ee06bb8-ef12-47d6-a86a-15d687075463</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="0668dbca-2195-423c-aa20-450bb40762a3" type="Perform Invocation Target End" typeId="093e5909-ffe4-4510-b3ea-532f30212f3c">
+    <display>[call] ProcessStatisticsCommand(...): void</display>
+    <order>0</order>
+    <traits>
+      <trait id="d00a2ab0-9a23-4192-b8bb-166798fc7dba" name="[Processing Action]" />
+    </traits>
+    <typeReference id="f9102720-f867-499f-9327-f18288c07cdb">
+      <typeId>8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Deliveries.Services</typePackageName>
+      <typePackageId>7ee06bb8-ef12-47d6-a86a-15d687075463</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <mappings>
+      <mapping type="Invocation Mapping" typeId="a4c4c5cc-76df-48ed-9d4e-c35caf44b567">
+        <source applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" location="[Nullbox.Fabric].[Services].[Handler]" />
+        <target applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" location="[Nullbox.Fabric].[Services].[ProcessStatisticsCommand]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>{Handler}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+            </path>
+            <sources>
+              <source identifier="Handler" mappingType="Invocation Mapping" mappingTypeId="7ca5c18a-bdbe-434b-a68a-421899a077e7">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Id}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="359332bc-4cd0-4015-82c1-c62cef2a419d" name="Id" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Id" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="00d9aacc-b3d0-4fde-8d4f-ee7143d2ec01" name="Id" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{PartitionKey}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="f9d32932-2043-4a81-a0d9-1fcb5eddedc4" name="PartitionKey" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="PartitionKey" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="27ffa891-730f-42f9-b124-eb03db3765d4" name="PartitionKey" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{AliasId}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="da0e55b2-2b02-4596-83fb-28e3ab7dfc12" name="AliasId" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="AliasId" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="604432ce-b8d4-49a2-a2da-2c1ab144ff43" name="AliasId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{MailboxId}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="c44bd633-32af-473d-9f65-2801c21bafd6" name="MailboxId" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="MailboxId" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="d35582c3-262e-477b-b5e9-1e2c3e71e68c" name="MailboxId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{AccountId}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="338f8e9e-4c4c-4dd1-8137-02aed62f09e1" name="AccountId" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="AccountId" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="3dd5a35c-eef4-4eaa-9a42-e3c47fbeb47f" name="AccountId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Source}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="8f4c5a4a-ee90-42d0-84cc-da1ec0d95d18" name="Source" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Source" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="a73f31b3-2ba0-490b-9646-850915e2f22e" name="Source" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{CreatedAt}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="784c2d48-2ba9-4571-9079-d36a4c96f828" name="CreatedAt" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="CreatedAt" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="7ca7e3f4-307e-42c9-accc-37d1fb738908" name="CreatedAt" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{ReceivedAt}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="bafedcd3-4d22-4f68-b5b0-064dee04b41b" name="ReceivedAt" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="ReceivedAt" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="22ff34da-b427-4c39-b519-3ccbb5b3458c" name="ReceivedAt" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Alias}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="5e997617-e669-4363-92cc-c142a1b4b766" name="Alias" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Alias" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="75114a49-b2aa-4376-ad56-f11e9e443661" name="Alias" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{RoutingKey}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="0fd514a7-f87e-42ff-ad63-00a5fcebfae2" name="RoutingKey" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="RoutingKey" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="5bef5a83-8a33-4b5c-924f-f6315419cf03" name="RoutingKey" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Domain}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="9ac3f7de-18f1-4fe6-8d64-0ba17023b3ce" name="Domain" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Domain" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="54beb68a-9ba1-4ad3-9bd8-51f79999ffbe" name="Domain" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{SenderDisplay}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="b2507086-6af4-4dc7-8718-3ea892282643" name="SenderDisplay" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="SenderDisplay" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="e2105f4c-48f0-407f-ae8c-3290ace421de" name="SenderDisplay" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{SenderDomain}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="eba8ded3-9cc4-4500-8d24-865d9be72f6a" name="SenderDomain" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="SenderDomain" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="fc693f0d-007d-40d8-bfae-8c6a0a20797b" name="SenderDomain" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{RecipientDisplay}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="a13c93ab-fd1f-4d59-b828-946526bbdb89" name="RecipientDisplay" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="RecipientDisplay" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="a5232464-2416-44d6-98eb-58e0c9567265" name="RecipientDisplay" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{RecipientDomain}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="3e3a0c34-77e6-4ac7-858b-45a157b3535d" name="RecipientDomain" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="RecipientDomain" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="b5113ad8-0861-4442-8fe5-233d5dedcc70" name="RecipientDomain" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{MessageId}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="8c45e266-812a-4fc3-886b-2ee3be9db405" name="MessageId" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="MessageId" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="87ae5de9-7532-4cb3-bade-3d501d5c988f" name="MessageId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Subject}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="42105bc5-0453-495b-b2d4-9d462c1fb32c" name="Subject" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Subject" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="b86dfe42-f244-4feb-beca-5baabde7679e" name="Subject" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{SubjectHash}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="b5b6ed6f-0a1d-4bf2-bb67-30d9db32536a" name="SubjectHash" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="SubjectHash" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="2a150346-e7e6-45f4-aa43-bcc1c310cc47" name="SubjectHash" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{HasAttachments}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="c82376ff-a60e-4eb7-b043-05b57a4325e6" name="HasAttachments" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="HasAttachments" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="a0567763-be64-4dd0-8bb5-caba9e1ed37e" name="HasAttachments" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{AttachmentsCount}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="02911cdc-fb7b-48b2-91f5-5749856cfd25" name="AttachmentsCount" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="AttachmentsCount" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="f8babfc9-7c8d-44c8-8635-b8b03cfdd487" name="AttachmentsCount" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Size}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="590cf24e-20ff-4e17-ae2c-6307461773c6" name="Size" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Size" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="a211a15c-6255-4f2d-af0a-5c2048c08ab0" name="Size" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DeliveryDecision}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="e7d48f00-bcea-4131-a69b-453b008c7f32" name="DeliveryDecision" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="DeliveryDecision" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="78a23604-f494-4f70-b806-93ac5668d38a" name="DeliveryDecision" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DropReason.Reason}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="423fd541-7605-42fd-a11b-d330d2baa234" name="DropReason" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+              <target id="1e40fd1e-2019-4f32-a311-ca4a333dd614" name="Reason" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="DropReason.Reason" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="fb979300-47fb-4ef7-8909-07cbccf16f1e" name="DropReason" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                  <target id="699a7177-8a6d-4802-a5e0-2420c1bccc32" name="Reason" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DropReason.Message}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="423fd541-7605-42fd-a11b-d330d2baa234" name="DropReason" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+              <target id="0e2ccb70-2eb1-48fa-8b17-ed596a83bd7e" name="Message" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="DropReason.Message" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="fb979300-47fb-4ef7-8909-07cbccf16f1e" name="DropReason" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                  <target id="05822f91-b115-4635-817e-b1755406b92b" name="Message" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{QuarantineReason.Reason}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="c652a07a-47ec-435e-a9e1-0f699853f4d3" name="QuarantineReason" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+              <target id="7dbef884-f518-4aa1-81a3-e0db7475a4c8" name="Reason" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="QuarantineReason.Reason" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="6df8d446-c475-4208-97c3-3f22a982825a" name="QuarantineReason" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                  <target id="669a43d6-3165-48bf-8279-912392309b8c" name="Reason" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{QuarantineReason.Message}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="c652a07a-47ec-435e-a9e1-0f699853f4d3" name="QuarantineReason" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+              <target id="35a60e50-b134-4389-8f21-7e5c7045e829" name="Message" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="QuarantineReason.Message" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="6df8d446-c475-4208-97c3-3f22a982825a" name="QuarantineReason" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                  <target id="2c71842f-b5e9-49ba-b133-d83486641795" name="Message" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{ForwardTo}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="bca935d5-ef5a-41aa-970c-db7d16caa305" name="ForwardTo" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="ForwardTo" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="d58828ca-5da9-4615-b517-d6ae30b0f01a" name="ForwardTo" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{ForwardFrom}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="5c75e765-66cd-4872-a2ae-e862fa83ef1c" name="ForwardFrom" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="ForwardFrom" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="7cc0fb2e-6334-4885-98ae-11b048a22211" name="ForwardFrom" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Provider}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="a0a794a0-3578-4af3-af33-b457fa690af6" name="Provider" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Provider" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="2401c98f-b4dd-4c33-b185-e69074fe7063" name="Provider" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{ProviderStatus}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="82e6b267-e298-4f03-9f9a-17570d105ffc" name="ProviderStatus" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="ProviderStatus" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="41b9ef5a-9dcc-448c-888b-5a371ee6fffd" name="ProviderStatus" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{ProviderMessageId}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="7d511eeb-8234-499d-9014-712399316d0f" name="ProviderMessageId" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="ProviderMessageId" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="6ad0f6aa-bbc6-4e7c-bf62-d62462eeffb2" name="ProviderMessageId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{ProviderError}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="dc588caa-c496-4fb8-857f-8fcd6cf2a702" name="ProviderError" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="ProviderError" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="e684222e-48f6-48e4-a855-3094e0b6fe63" name="ProviderError" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{CompletedAt}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="27a932a6-17b4-48b6-98fe-3ba1fd8b7818" name="CompletedAt" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="CompletedAt" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="9d2bec00-cb30-498b-882a-9ecaf2e12f6d" name="CompletedAt" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{DedupKey}</expression>
+            <path>
+              <target id="8f66f4b6-6ab9-4ae9-9e92-5ecc55b65945" name="ProcessStatisticsCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="ef09997f-3173-4e5e-b133-d25f169a8542" name="DedupKey" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="DedupKey" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="0c3a9de5-0101-4f18-bbfc-9a98eb49ecc3" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
+                  <target id="f1c07081-307a-4e38-a1db-c716fb216f6b" name="DedupKey" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+    </mappings>
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Perform Invocation</associationType>
+  <associationTypeId>3e69085c-fa2f-44bd-93eb-41075fd472f8</associationTypeId>
+  <stereotypes />
+</association>

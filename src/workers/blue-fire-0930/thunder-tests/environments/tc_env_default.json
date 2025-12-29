@@ -1,0 +1,22 @@
+{
+    "_id": "c0aad9eb-9c88-47ff-bd6b-05489d166bdc",
+    "name": "Default",
+    "default": true,
+    "sortNum": 10000,
+    "created": "2025-12-14T11:09:20.523Z",
+    "modified": "2025-12-14T11:09:20.523Z",
+    "data": [
+        {
+            "name": "alias",
+            "value": "amazon"
+        },
+        {
+            "name": "routingKey",
+            "value": "m2avgcw3"
+        },
+        {
+            "name": "domain",
+            "value": "nullbox.email"
+        }
+    ]
+}

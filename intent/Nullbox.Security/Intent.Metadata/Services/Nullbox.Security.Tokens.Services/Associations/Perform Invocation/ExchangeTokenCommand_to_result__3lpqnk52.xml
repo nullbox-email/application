@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="18d52234-343e-4204-8527-16a847397fdf">
+  <sourceEnd id="3643c26a-fd6c-41d9-9dd6-f068a19ec1af" type="Perform Invocation Source End" typeId="ee56bd48-8eff-4fff-8d3a-87731d002335">
+    <display>called by : Tokens.ExchangeTokenCommand</display>
+    <order>0</order>
+    <typeReference id="19db9f83-fe0a-43f6-bfb2-accde6886713">
+      <typeId>84bb47c1-30e0-4996-b3df-c491df5efa9f</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Security.Tokens.Services</typePackageName>
+      <typePackageId>b6434316-7105-4190-8c0b-ce4cc17c54ef</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="18d52234-343e-4204-8527-16a847397fdf" type="Perform Invocation Target End" typeId="093e5909-ffe4-4510-b3ea-532f30212f3c">
+    <name>result</name>
+    <display>[call] result = GetIdToken(...): TokenContract</display>
+    <order>0</order>
+    <traits>
+      <trait id="d00a2ab0-9a23-4192-b8bb-166798fc7dba" name="[Processing Action]" />
+    </traits>
+    <typeReference id="29df97b2-3da5-4b00-8260-05eda0740a78">
+      <typeId>787b0000-bf2c-4c02-ba0a-65032e9ed7cb</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Security.Tokens.Domain</typePackageName>
+      <typePackageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <mappings>
+      <mapping type="Invocation Mapping" typeId="a4c4c5cc-76df-48ed-9d4e-c35caf44b567">
+        <source elementId="84bb47c1-30e0-4996-b3df-c491df5efa9f" location="[Nullbox.Security].[Services].[ExchangeTokenCommand]" />
+        <target applicationId="5b5d61cc-93fe-4dbd-bfc7-1979acae467b" designerId="6ab29b31-27af-4f56-a67c-986d82097d63" elementId="787b0000-bf2c-4c02-ba0a-65032e9ed7cb" location="[Nullbox.Security].[Services].[GetIdToken]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>{ExchangeTokenCommand}</expression>
+            <path>
+              <target id="787b0000-bf2c-4c02-ba0a-65032e9ed7cb" name="GetIdToken" type="element" specialization="Operation" specializationId="e042bb67-a1df-480c-9935-b26210f78591" />
+            </path>
+            <sources>
+              <source identifier="ExchangeTokenCommand" mappingType="Invocation Mapping" mappingTypeId="7ca5c18a-bdbe-434b-a68a-421899a077e7">
+                <path>
+                  <target id="84bb47c1-30e0-4996-b3df-c491df5efa9f" name="ExchangeTokenCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+    </mappings>
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Perform Invocation</associationType>
+  <associationTypeId>3e69085c-fa2f-44bd-93eb-41075fd472f8</associationTypeId>
+  <stereotypes />
+</association>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="50805697-3627-4eaf-9052-5f9863ffd8c5" type="Domain Event Handler" typeId="d80e61c5-7e4c-4175-9df1-0413f664824c">
+  <name>UserProfileCreatedDomainEventHandler</name>
+  <display>UserProfileCreatedDomainEventHandler</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>15e1939b-55ca-44ac-81a9-ff8000770a5b</parentFolderId>
+  <packageId>cdc830ca-c14a-4d10-a244-9dd36afb93ee</packageId>
+  <packageName>Nullbox.Security.Users.Services</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

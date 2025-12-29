@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="4d89f78e-d851-4530-beb8-6bb446353083" type="Domain Event" typeId="0814e459-fb9b-47db-b7eb-32ce30397e8a">
+  <name>MailboxUpdatedDomainEvent</name>
+  <display>MailboxUpdatedDomainEvent</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>e5e34b31-c645-4fe2-8475-522f10292cba</parentFolderId>
+  <packageId>8a986c9d-7f59-4a13-b47d-e2386d4354a5</packageId>
+  <packageName>Nullbox.Fabric.Mailboxes.Domain</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="78c1163f-0354-4a41-a002-fd0bf607e697" type="Property" typeId="b4d69073-5abb-4968-b41b-545b2f7408ed">
+      <name>Mailbox</name>
+      <display>Mailbox: Mailbox</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="94d7fef5-a311-48c0-8635-6de1be5a4510">
+        <typeId>9934c548-9d85-487a-ac65-4acfa59f7ab8</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Nullbox.Fabric.Mailboxes.Domain</typePackageName>
+        <typePackageId>8a986c9d-7f59-4a13-b47d-e2386d4354a5</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>4d89f78e-d851-4530-beb8-6bb446353083</parentFolderId>
+      <packageId>8a986c9d-7f59-4a13-b47d-e2386d4354a5</packageId>
+      <packageName>Nullbox.Fabric.Mailboxes.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

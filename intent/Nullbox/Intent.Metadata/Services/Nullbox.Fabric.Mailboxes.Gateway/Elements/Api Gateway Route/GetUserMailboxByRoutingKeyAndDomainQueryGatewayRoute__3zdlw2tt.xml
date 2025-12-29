@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="5d849939-5879-46e6-ba06-5ef3f39fa547" type="Api Gateway Route" typeId="b09d7684-5dde-4d4b-9cb5-0707bfd8578f">
+  <name>GetUserMailboxByRoutingKeyAndDomainQueryGatewayRoute</name>
+  <display>GetUserMailboxByRoutingKeyAndDomainQueryGatewayRoute</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>a1469044-50c0-4aba-ba6a-179d9b77838d</parentFolderId>
+  <packageId>a1469044-50c0-4aba-ba6a-179d9b77838d</packageId>
+  <packageName>Nullbox.Fabric.Mailboxes.Gateway</packageName>
+  <stereotypes>
+    <stereotype stereotypeDefinitionId="b4581ed2-42ec-4ae2-83dd-dcdd5f0837b6" name="Http Settings">
+      <addedByDefault>false</addedByDefault>
+      <definitionPackageName>Intent.Metadata.WebApi</definitionPackageName>
+      <definitionPackageId>0011387a-b122-45d7-9cdb-8e21b315ab9f</definitionPackageId>
+      <properties>
+        <property name="801c3e61-4431-4d81-93fa-7e57d33cb3fa" display="Verb" value="GET" isActive="true" />
+        <property name="5dd3e07d-76eb-45d4-9956-4325fb068acc" display="Route" value="/{version}/mailboxes/{id}" isActive="true" />
+        <property name="4490e212-1e99-43ce-b3dd-048ed2a6bae8" display="Return Type Mediatype" value="Default" isActive="false" />
+        <property name="e3870725-34b3-4684-85f2-ec4a667207fb" display="Success Response Code" isActive="false" />
+      </properties>
+    </stereotype>
+  </stereotypes>
+  <metadata />
+  <childElements>
+    <childElement id="18eb7866-9263-4f75-a21b-b0775ed27461" type="DTO-Field" typeId="7baed1fd-469b-4980-8fd9-4cefb8331eb2">
+      <name>Id</name>
+      <display>Id: string</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="24373d50-3e7e-4e7d-8c47-1aea33e035bd">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>5d849939-5879-46e6-ba06-5ef3f39fa547</parentFolderId>
+      <packageId>a1469044-50c0-4aba-ba6a-179d9b77838d</packageId>
+      <packageName>Nullbox.Fabric.Mailboxes.Gateway</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="routeVar" value="id" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="bbe99db7-9052-44b1-9905-fa40188ebc4a" type="DTO-Field" typeId="7baed1fd-469b-4980-8fd9-4cefb8331eb2">
+      <name>Version</name>
+      <display>Version: string</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="2428dc52-0ce6-4512-a270-84860611ae2e">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>5d849939-5879-46e6-ba06-5ef3f39fa547</parentFolderId>
+      <packageId>a1469044-50c0-4aba-ba6a-179d9b77838d</packageId>
+      <packageName>Nullbox.Fabric.Mailboxes.Gateway</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="routeVar" value="version" />
+      </metadata>
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

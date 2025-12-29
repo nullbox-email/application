@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="b2fc673f-fc39-4d3d-96bc-c6b6755165cb" type="Template Output" typeId="d421c322-7a51-4094-89fa-e5d8a0a97b27">
+  <name>Aryzac.Security.ScopePermissionMap</name>
+  <display>Aryzac.Security.ScopePermissionMap</display>
+  <externalReference>Aryzac.Security</externalReference>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>d67b32a2-cdd0-40aa-9b36-a95974ef4696</parentFolderId>
+  <stereotypes />
+  <metadata>
+    <entry key="status" value="unassigned" />
+  </metadata>
+  <childElements />
+</class>

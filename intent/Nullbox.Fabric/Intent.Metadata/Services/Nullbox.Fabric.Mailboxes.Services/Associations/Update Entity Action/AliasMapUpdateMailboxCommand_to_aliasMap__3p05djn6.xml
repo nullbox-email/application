@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="7d343635-9301-43f9-9a4e-822531144b50">
+  <sourceEnd id="3514e306-45c8-4780-bd98-395f98f69512" type="Update Entity Action Source End" typeId="6bc95978-6def-4d0c-a4f5-25bdeda8a9f6">
+    <display>updated by : Mailboxes.AliasMapUpdateMailboxCommand</display>
+    <order>0</order>
+    <typeReference id="3ec5ff5f-a00f-4cec-9bc8-2a18725d056b">
+      <typeId>4262eb71-90ac-424e-82cb-34111f543e47</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Mailboxes.Services</typePackageName>
+      <typePackageId>b28045cb-bf46-4948-9010-0124b00fa466</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="7d343635-9301-43f9-9a4e-822531144b50" type="Update Entity Action Target End" typeId="516069f6-09cc-4de8-8e31-3c71ca823452">
+    <name>aliasMap</name>
+    <display>[update] aliasMap: UpdateMailbox</display>
+    <order>7</order>
+    <traits>
+      <trait id="d00a2ab0-9a23-4192-b8bb-166798fc7dba" name="[Processing Action]" />
+    </traits>
+    <typeReference id="99febb32-e596-489a-8db9-bd949859e995">
+      <typeId>3a0b9bb5-661e-40b0-8efb-51ff200303eb</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Aliases.Domain</typePackageName>
+      <typePackageId>c9a4b316-132d-4d2d-82fa-33da6532bf41</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <mappings>
+      <mapping type="Query Entity Mapping" typeId="25f25af9-c38b-4053-9474-b0fabe9d7ea7">
+        <source applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="4262eb71-90ac-424e-82cb-34111f543e47" location="[Nullbox.Fabric].[Services].[AliasMapUpdateMailboxCommand]" />
+        <target applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="6ab29b31-27af-4f56-a67c-986d82097d63" elementId="0fc58edd-2110-462b-b81d-26b9489bc2d0" location="[Nullbox.Fabric].[Services].[AliasMap]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>string.Empty</expression>
+            <path>
+              <target id="0fc58edd-2110-462b-b81d-26b9489bc2d0" name="AliasMap" type="element" specialization="Class" specializationId="04e12b51-ed12-42a3-9667-a6aa81bb6d10" />
+              <target id="04fdf9b8-6404-4d8a-8ac6-7b0039624faa" name="Id" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+            </path>
+            <sources />
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+      <mapping type="Update Entity Mapping" typeId="01721b1a-a85d-4320-a5cd-8bd39247196a">
+        <source applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="4262eb71-90ac-424e-82cb-34111f543e47" location="[Nullbox.Fabric].[Services].[AliasMapUpdateMailboxCommand]" />
+        <target applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="6ab29b31-27af-4f56-a67c-986d82097d63" elementId="0fc58edd-2110-462b-b81d-26b9489bc2d0" location="[Nullbox.Fabric].[Services].[AliasMap]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>{AliasMapUpdateMailboxCommand}</expression>
+            <path>
+              <target id="0fc58edd-2110-462b-b81d-26b9489bc2d0" name="AliasMap" type="element" specialization="Class" specializationId="04e12b51-ed12-42a3-9667-a6aa81bb6d10" />
+              <target id="3a0b9bb5-661e-40b0-8efb-51ff200303eb" name="UpdateMailbox" type="element" specialization="Operation" specializationId="e042bb67-a1df-480c-9935-b26210f78591" />
+            </path>
+            <sources>
+              <source identifier="AliasMapUpdateMailboxCommand" mappingType="Invocation Mapping" mappingTypeId="d30bdba1-9c47-4917-b81d-29230fed5d6a">
+                <path>
+                  <target id="4262eb71-90ac-424e-82cb-34111f543e47" name="AliasMapUpdateMailboxCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{AutoCreateAlias}</expression>
+            <path>
+              <target id="0fc58edd-2110-462b-b81d-26b9489bc2d0" name="AliasMap" type="element" specialization="Class" specializationId="04e12b51-ed12-42a3-9667-a6aa81bb6d10" />
+              <target id="3a0b9bb5-661e-40b0-8efb-51ff200303eb" name="UpdateMailbox" type="element" specialization="Operation" specializationId="e042bb67-a1df-480c-9935-b26210f78591" />
+              <target id="2d653e86-33a9-4e85-8025-aba65fe953cc" name="autoCreateAlias" type="element" specialization="Parameter" specializationId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b" />
+            </path>
+            <sources>
+              <source identifier="AutoCreateAlias" mappingType="Data Mapping" mappingTypeId="ca88649b-f20b-44db-a9c0-017c26155ba8">
+                <path>
+                  <target id="4262eb71-90ac-424e-82cb-34111f543e47" name="AliasMapUpdateMailboxCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+                  <target id="3ac874e8-102d-4a67-8d55-ebd5416a158a" name="AutoCreateAlias" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{EmailAddress}</expression>
+            <path>
+              <target id="0fc58edd-2110-462b-b81d-26b9489bc2d0" name="AliasMap" type="element" specialization="Class" specializationId="04e12b51-ed12-42a3-9667-a6aa81bb6d10" />
+              <target id="3a0b9bb5-661e-40b0-8efb-51ff200303eb" name="UpdateMailbox" type="element" specialization="Operation" specializationId="e042bb67-a1df-480c-9935-b26210f78591" />
+              <target id="b62021d8-78e2-4062-9219-428e19118380" name="emailAddress" type="element" specialization="Parameter" specializationId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b" />
+            </path>
+            <sources>
+              <source identifier="EmailAddress" mappingType="Data Mapping" mappingTypeId="ca88649b-f20b-44db-a9c0-017c26155ba8">
+                <path>
+                  <target id="4262eb71-90ac-424e-82cb-34111f543e47" name="AliasMapUpdateMailboxCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+                  <target id="0d1261bf-02d7-4694-ac1f-46be9475b574" name="EmailAddress" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+    </mappings>
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Update Entity Action</associationType>
+  <associationTypeId>9ea0382a-4617-412a-a8c8-af987bbce226</associationTypeId>
+  <stereotypes />
+</association>

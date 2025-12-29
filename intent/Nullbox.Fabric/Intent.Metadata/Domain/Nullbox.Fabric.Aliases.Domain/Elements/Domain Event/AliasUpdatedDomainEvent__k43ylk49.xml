@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="1de9e6f7-57f4-498e-952f-eb55834fa1aa" type="Domain Event" typeId="0814e459-fb9b-47db-b7eb-32ce30397e8a">
+  <name>AliasUpdatedDomainEvent</name>
+  <display>AliasUpdatedDomainEvent</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>80aa2ff0-dbf8-42c1-aa6f-a275a48a2ccd</parentFolderId>
+  <packageId>c9a4b316-132d-4d2d-82fa-33da6532bf41</packageId>
+  <packageName>Nullbox.Fabric.Aliases.Domain</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="7df1dd24-95c0-4e75-8551-64a3d8dcd529" type="Property" typeId="b4d69073-5abb-4968-b41b-545b2f7408ed">
+      <name>Alias</name>
+      <display>Alias: Alias</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="a6c5fe5a-b67e-46a6-a5d5-cb3d7fb9a87d">
+        <typeId>a5912e31-7c79-4f96-9519-ecfb170ca84a</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Nullbox.Fabric.Aliases.Domain</typePackageName>
+        <typePackageId>c9a4b316-132d-4d2d-82fa-33da6532bf41</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>1de9e6f7-57f4-498e-952f-eb55834fa1aa</parentFolderId>
+      <packageId>c9a4b316-132d-4d2d-82fa-33da6532bf41</packageId>
+      <packageName>Nullbox.Fabric.Aliases.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

@@ -1,0 +1,92 @@
+name: Nullbox Production Deployment
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  id-token: write
+  contents: read
+  packages: read
+
+concurrency:
+  group: production
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://nullbox.email
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Cache Aspire deployment state
+        uses: actions/cache@v4
+        with:
+          path: ~/.aspire/deployments
+          key: aspire-deploy-${{ hashFiles('**/AppHost.csproj') }}-${{ github.ref }}
+          restore-keys: |
+            aspire-deploy-${{ hashFiles('**/AppHost.csproj') }}-
+            aspire-deploy-
+
+      - name: Install .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            10.x
+
+      # Install Aspire CLI (dev channel) and add to PATH
+      - name: Install Aspire CLI
+        run: curl -sSL https://aspire.dev/install.sh | bash -s -- -q dev
+
+      - name: Add Aspire CLI to PATH
+        run: echo "$HOME/.aspire/bin" >> $GITHUB_PATH
+
+      - name: Install GitVersion
+        uses: gittools/actions/gitversion/setup@v4.2.0
+        with:
+          versionSpec: "6.4.x"
+          preferLatestVersion: true
+
+      - name: 🔢 Determine Version
+        id: gitversion
+        uses: gittools/actions/gitversion/execute@v4.2.0
+
+      - name: Azure login
+        uses: azure/login@v2
+        with:
+          client-id: ${{ vars.AZURE_CLIENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Deploy with Aspire
+        working-directory: ./src
+        run: aspire deploy --non-interactive --environment ${{ vars.AZURE_ENV_NAME }}
+        env:
+          # Azure provisioning config (IConfiguration-style)
+          Azure__SubscriptionId: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+          Azure__Location: ${{ vars.AZURE_LOCATION }}
+          Azure__ResourceGroup: rg-nullbox-${{ vars.AZURE_ENV_NAME }}
+
+          # Aspire parameters (from AppHost builder.AddParameter(...))
+          PARAMETERS__OAUTHENTRAEXTERNALCLIENTID: ${{ vars.OAUTH_ENTRAEXTERNAL_CLIENT_ID }}
+          PARAMETERS__OAUTHENTRAEXTERNALTENANT: ${{ vars.OAUTH_ENTRAEXTERNAL_TENANT }}
+          PARAMETERS__OAUTHENTRAEXTERNALTENANTID: ${{ vars.OAUTH_ENTRAEXTERNAL_TENANT_ID }}
+          PARAMETERS__TOKENEXPIRYSKEWMS: ${{ vars.TOKEN_EXPIRY_SKEW_MS }}
+          PARAMETERS__PUBLICAPIURL: ${{ vars.PUBLIC_API_URL }}
+
+          # Secrets (Aspire parameters)
+          PARAMETERS__SECURITYBEARERISSUERSIGNINGKEY: ${{ secrets.SECURITY_BEARER_ISSUER_SIGNING_KEY }}
+          PARAMETERS__SECURITYBEARERHMACKEY: ${{ secrets.SECURITY_BEARER_HMAC_KEY }}
+          PARAMETERS__EMAILINGRESSHMACSECRET: ${{ secrets.EMAIL_INGRESS_HMAC_SECRET }}
+          PARAMETERS__NUXTSESSIONPASSWORD: ${{ secrets.NUXT_SESSION_PASSWORD }}
+          PARAMETERS__VERSION: ${{ steps.gitversion.outputs.fullSemVer }}

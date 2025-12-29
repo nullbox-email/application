@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="0ae4b60d-cb23-400b-abb4-a31139c3b0ab" type="Enum" typeId="85fba0e9-9161-4c85-a603-a229ef312beb">
+  <name>MarkerType</name>
+  <display>MarkerType</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>f2fa0338-4191-4eae-b42d-a3618a31b2bc</parentFolderId>
+  <packageId>6e18a3dd-9c79-43e7-9d9d-2988f5421754</packageId>
+  <packageName>Nullbox.Fabric.Markers.Domain</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="8f6806dd-7da4-417a-a1a2-3392c7695082" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Alias</name>
+      <display>Alias</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>0ae4b60d-cb23-400b-abb4-a31139c3b0ab</parentFolderId>
+      <packageId>6e18a3dd-9c79-43e7-9d9d-2988f5421754</packageId>
+      <packageName>Nullbox.Fabric.Markers.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="dea65f1c-1fc3-43f8-8f20-cee2be8a4d70" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Mailbox</name>
+      <display>Mailbox</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>0ae4b60d-cb23-400b-abb4-a31139c3b0ab</parentFolderId>
+      <packageId>6e18a3dd-9c79-43e7-9d9d-2988f5421754</packageId>
+      <packageName>Nullbox.Fabric.Markers.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="775f3882-ac4a-45aa-842d-f7067ac4f575" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Account</name>
+      <display>Account</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>0ae4b60d-cb23-400b-abb4-a31139c3b0ab</parentFolderId>
+      <packageId>6e18a3dd-9c79-43e7-9d9d-2988f5421754</packageId>
+      <packageName>Nullbox.Fabric.Markers.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="c875b950-47d5-43ea-b902-5d1e569766f1" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>System</name>
+      <display>System</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>0ae4b60d-cb23-400b-abb4-a31139c3b0ab</parentFolderId>
+      <packageId>6e18a3dd-9c79-43e7-9d9d-2988f5421754</packageId>
+      <packageName>Nullbox.Fabric.Markers.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

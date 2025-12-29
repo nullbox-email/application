@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="76ca79f5-2221-4662-ad17-c396a856c2ea" type="Diagram" typeId="8c90aca5-86f4-47f1-bd58-116fe79f5c55">
+  <name>Users</name>
+  <display>Users</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>15e1939b-55ca-44ac-81a9-ff8000770a5b</parentFolderId>
+  <packageId>cdc830ca-c14a-4d10-a244-9dd36afb93ee</packageId>
+  <packageName>Nullbox.Security.Users.Services</packageName>
+  <diagram>
+    <targetPackageId>76ca79f5-2221-4662-ad17-c396a856c2ea</targetPackageId>
+  </diagram>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

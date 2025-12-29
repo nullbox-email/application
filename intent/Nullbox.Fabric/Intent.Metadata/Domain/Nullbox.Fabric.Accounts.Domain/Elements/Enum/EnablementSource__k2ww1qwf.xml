@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="5b2054f7-8ee6-469f-be73-ae6ca5e56065" type="Enum" typeId="85fba0e9-9161-4c85-a603-a229ef312beb">
+  <name>EnablementSource</name>
+  <display>EnablementSource</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>89f3695e-ffd7-4b65-b878-caff8f80b9c1</parentFolderId>
+  <packageId>b7b0ee71-00bd-467c-a2df-7b8d3248683b</packageId>
+  <packageName>Nullbox.Fabric.Accounts.Domain</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="b81790b6-b521-4f43-b90a-eb92abd0362a" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>System</name>
+      <display>System</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>5b2054f7-8ee6-469f-be73-ae6ca5e56065</parentFolderId>
+      <packageId>b7b0ee71-00bd-467c-a2df-7b8d3248683b</packageId>
+      <packageName>Nullbox.Fabric.Accounts.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="673b4931-1736-4f3e-b7c9-c9561c837d5f" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Admin</name>
+      <display>Admin</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>5b2054f7-8ee6-469f-be73-ae6ca5e56065</parentFolderId>
+      <packageId>b7b0ee71-00bd-467c-a2df-7b8d3248683b</packageId>
+      <packageName>Nullbox.Fabric.Accounts.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="dcac2da3-80b4-4abb-9b4a-4b09cfb68866" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Rewards</name>
+      <display>Rewards</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>5b2054f7-8ee6-469f-be73-ae6ca5e56065</parentFolderId>
+      <packageId>b7b0ee71-00bd-467c-a2df-7b8d3248683b</packageId>
+      <packageName>Nullbox.Fabric.Accounts.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

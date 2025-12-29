@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="a48dcd6c-7c95-4492-8430-30fe459060e5">
+  <sourceEnd id="7f8e54de-5c8e-487f-a36a-fab725868f96" type="Domain Event Origin Association Source End" typeId="2495d3ef-f7a2-441d-b749-b51b2546b45e">
+    <display>published by : ExternalUser.Constructor</display>
+    <order>0</order>
+    <typeReference id="01334030-0465-41fd-b0e7-017124448e68">
+      <typeId>1028ce4d-7fb9-417d-9323-e82f7259efc2</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Security.Users.Domain</typePackageName>
+      <typePackageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="a48dcd6c-7c95-4492-8430-30fe459060e5" type="Domain Event Origin Association Target End" typeId="17046427-14e2-4081-8463-ef16c0fda399">
+    <display>publishes : ExternalUserCreatedDomainEvent</display>
+    <order>3</order>
+    <typeReference id="c89e907a-912c-476d-87fc-95e51899342d">
+      <typeId>c0720837-32c9-44d3-94f4-3275ef6f87ac</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Security.Users.Domain</typePackageName>
+      <typePackageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <mappings>
+      <mapping type="Entity to Domain Event Mapping" typeId="86cb62b5-412d-493b-a901-d6e08cf88059">
+        <source elementId="154663a1-31f7-4985-a6d0-ccae834846c7" location="[Nullbox.Security].[Domain].[ExternalUser]" />
+        <target elementId="c0720837-32c9-44d3-94f4-3275ef6f87ac" location="[Nullbox.Security].[Domain].[ExternalUserCreatedDomainEvent]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>{ExternalUser}</expression>
+            <path>
+              <target id="c0720837-32c9-44d3-94f4-3275ef6f87ac" name="ExternalUserCreatedDomainEvent" type="element" specialization="Domain Event" specializationId="0814e459-fb9b-47db-b7eb-32ce30397e8a" />
+              <target id="9afca9aa-5a7e-4a9d-819c-edfb10347b2c" name="ExternalUser" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+            </path>
+            <sources>
+              <source identifier="ExternalUser" mappingType="Data Mapping" mappingTypeId="ddfefa35-caf3-48f8-aeed-7beabc8b2f5c">
+                <path>
+                  <target id="154663a1-31f7-4985-a6d0-ccae834846c7" name="ExternalUser" type="element" specialization="Class" specializationId="04e12b51-ed12-42a3-9667-a6aa81bb6d10" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+    </mappings>
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Domain Event Origin Association</associationType>
+  <associationTypeId>4c0cc50b-8a9d-43cd-b731-9f354f69f3c9</associationTypeId>
+  <stereotypes />
+</association>

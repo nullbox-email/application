@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="bc404b3b-dba7-45b6-b171-501d43ca4b8c" type="Diagram" typeId="8c90aca5-86f4-47f1-bd58-116fe79f5c55">
+  <name>OIDC</name>
+  <display>OIDC</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>b0c9d326-fb07-4277-8e86-9f2882d0a811</parentFolderId>
+  <packageId>a0a2d468-ffb1-4d26-96c3-138896c2e201</packageId>
+  <packageName>Nullbox.Security.OIDCServices</packageName>
+  <diagram>
+    <targetPackageId>bc404b3b-dba7-45b6-b171-501d43ca4b8c</targetPackageId>
+  </diagram>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

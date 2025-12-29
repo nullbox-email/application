@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="450c7d77-e6b2-4fdc-8cb1-6436b293344e">
+  <sourceEnd id="85d9df65-9898-4ca3-b322-585085907745" type="Publish Integration Event Source End" typeId="eab91b3a-9903-40a2-90e8-ddb714883eab">
+    <display>published by : UserProfileArchivedDomainEventHandler.handler</display>
+    <order>0</order>
+    <typeReference id="0d49d448-34df-4367-a798-582e3df4c8bc">
+      <typeId>4a93c46b-960a-4a89-93f5-675b0d8e1555</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Security.Users.Services</typePackageName>
+      <typePackageId>cdc830ca-c14a-4d10-a244-9dd36afb93ee</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="450c7d77-e6b2-4fdc-8cb1-6436b293344e" type="Publish Integration Event Target End" typeId="6feb1511-849a-4aa3-85eb-d0c736ac1fec">
+    <display>[publish] UserProfileArchivedV1</display>
+    <order>0</order>
+    <traits>
+      <trait id="d00a2ab0-9a23-4192-b8bb-166798fc7dba" name="[Processing Action]" />
+    </traits>
+    <typeReference id="998df828-94f7-4d6c-b5ea-10b212e1694d">
+      <typeId>cd289cda-4cd8-4f1c-b818-2460a723e367</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Security.Users.Eventing.Messages</typePackageName>
+      <typePackageId>6e6bbf2c-cff9-45bc-a517-156008d49459</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <mappings>
+      <mapping type="Publish Message Mapping" typeId="7ff48a4c-ee8b-4e66-9dbb-c014eb0542fb">
+        <source applicationId="5b5d61cc-93fe-4dbd-bfc7-1979acae467b" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="4a93c46b-960a-4a89-93f5-675b0d8e1555" location="[Nullbox.Security].[Services].[handler]" />
+        <target applicationId="5b5d61cc-93fe-4dbd-bfc7-1979acae467b" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="cd289cda-4cd8-4f1c-b818-2460a723e367" location="[Nullbox.Security].[Services].[UserProfileArchivedV1]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>{UserProfile.Id}</expression>
+            <path>
+              <target id="cd289cda-4cd8-4f1c-b818-2460a723e367" name="UserProfileArchivedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="6544d13b-9cdc-4437-ac04-30700bd23f8a" name="Id" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="UserProfile.Id" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="4a93c46b-960a-4a89-93f5-675b0d8e1555" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="504f3219-c1e0-451c-b221-f2028b0e94cb" name="UserProfile" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="8b62f1ff-a90e-4b72-9896-f20465f9cc7c" name="Id" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{UserProfile.Name}</expression>
+            <path>
+              <target id="cd289cda-4cd8-4f1c-b818-2460a723e367" name="UserProfileArchivedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="5f5fbb58-10bf-483d-b62a-f17a95f0f4d7" name="Name" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="UserProfile.Name" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="4a93c46b-960a-4a89-93f5-675b0d8e1555" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="504f3219-c1e0-451c-b221-f2028b0e94cb" name="UserProfile" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="21673547-7fc1-41c0-a333-b104155073fb" name="Name" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{UserProfile.EmailAddress.Value}</expression>
+            <path>
+              <target id="cd289cda-4cd8-4f1c-b818-2460a723e367" name="UserProfileArchivedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="7e871b16-d146-4dfd-90d7-5b79ef4827f6" name="EmailAddress" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+              <target id="c2ed0b52-c75f-433f-9283-e61a4362e7da" name="Value" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+            </path>
+            <sources>
+              <source identifier="UserProfile.EmailAddress.Value" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="4a93c46b-960a-4a89-93f5-675b0d8e1555" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="504f3219-c1e0-451c-b221-f2028b0e94cb" name="UserProfile" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="d41c7b61-b2de-4585-b67e-e7e2c3d05271" name="EmailAddress" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                  <target id="e0228faf-fd3d-43af-9b43-e9a2154db5b3" name="Value" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{UserProfile.EmailAddress.NormalizedValue}</expression>
+            <path>
+              <target id="cd289cda-4cd8-4f1c-b818-2460a723e367" name="UserProfileArchivedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="7e871b16-d146-4dfd-90d7-5b79ef4827f6" name="EmailAddress" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+              <target id="f9b79693-016f-4a63-8273-8dcae1d7efdb" name="NormalizedValue" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+            </path>
+            <sources>
+              <source identifier="UserProfile.EmailAddress.NormalizedValue" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="4a93c46b-960a-4a89-93f5-675b0d8e1555" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="504f3219-c1e0-451c-b221-f2028b0e94cb" name="UserProfile" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="d41c7b61-b2de-4585-b67e-e7e2c3d05271" name="EmailAddress" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                  <target id="a0744321-e1bb-40cf-89fb-26eb5f98fb8e" name="NormalizedValue" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{UserProfile.Status}</expression>
+            <path>
+              <target id="cd289cda-4cd8-4f1c-b818-2460a723e367" name="UserProfileArchivedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="bb01e5fa-5f3b-4fdf-8ebf-daa211a4117b" name="Status" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="UserProfile.Status" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="4a93c46b-960a-4a89-93f5-675b0d8e1555" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="504f3219-c1e0-451c-b221-f2028b0e94cb" name="UserProfile" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="d3d54d49-b90e-4636-bf95-793489d5b1e4" name="Status" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+    </mappings>
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Publish Integration Event</associationType>
+  <associationTypeId>580b6b26-eab5-4602-a408-e76e2d292d2c</associationTypeId>
+  <stereotypes />
+</association>

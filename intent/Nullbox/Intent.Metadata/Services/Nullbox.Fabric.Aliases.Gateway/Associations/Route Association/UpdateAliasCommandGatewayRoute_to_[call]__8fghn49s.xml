@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="9b0c0a7a-cf44-40e9-8f09-2c3a416c269c">
+  <sourceEnd id="987ebc5c-634c-4656-811c-9f49e6ecfefb" type="Upstream End" typeId="4143dbe5-12ce-4705-ba69-2683c46b1b96">
+    <display>: UpdateAliasCommandGatewayRoute</display>
+    <order>0</order>
+    <typeReference id="b21771c6-bfa8-44c5-9561-1b8660da264b">
+      <typeId>37a8945b-aba9-4c56-9cb4-fbd9648988c1</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Aliases.Gateway</typePackageName>
+      <typePackageId>64fccd19-d09e-42d5-8d36-dcfd955eb5a9</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="9b0c0a7a-cf44-40e9-8f09-2c3a416c269c" type="Downstream End" typeId="17084378-a3d8-4233-b275-c856eea4dd61">
+    <name>[call]</name>
+    <display>[call]: UpdateAliasCommand</display>
+    <order>4</order>
+    <typeReference id="4d5985aa-91f8-4e55-864e-4c4c316f927c">
+      <typeId>5f4003f4-04d2-4d6f-93d7-224ee78072c8</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Aliases.Services</typePackageName>
+      <typePackageId>011dff2a-60fc-4ab2-afe4-8b21c38f0fea</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Route Association</associationType>
+  <associationTypeId>dd35ed32-76bb-4abf-a4e0-370f230765cf</associationTypeId>
+  <stereotypes />
+</association>

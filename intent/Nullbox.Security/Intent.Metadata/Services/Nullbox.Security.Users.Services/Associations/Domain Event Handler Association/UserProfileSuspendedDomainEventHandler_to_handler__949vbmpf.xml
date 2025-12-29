@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="d8d23c84-f150-4543-b375-4eef22f596ae">
+  <sourceEnd id="285d1883-b7d3-438b-b304-881c8e250872" type="Domain Event Handler Association Source End" typeId="79f048d4-4c09-4405-be8f-95473a981556">
+    <display>: UserProfileSuspendedDomainEventHandler</display>
+    <order>0</order>
+    <typeReference id="c3a8b000-2cd4-455f-b3f9-e4b48f4c26a8">
+      <typeId>36b1a62a-cb50-44fe-9cf9-a10806495688</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Security.Users.Services</typePackageName>
+      <typePackageId>cdc830ca-c14a-4d10-a244-9dd36afb93ee</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="d8d23c84-f150-4543-b375-4eef22f596ae" type="Domain Event Handler Association Target End" typeId="f45dfee9-f62b-45ac-bfce-a3878e04b73f">
+    <name>handler</name>
+    <display>[handles] UserProfileSuspendedDomainEvent</display>
+    <order>0</order>
+    <traits>
+      <trait id="2b6729eb-e2ae-4b5f-86fe-4f611d1f912e" name="[Processing Handler]" />
+    </traits>
+    <typeReference id="670a2db7-4d95-4485-b555-0f0efd43d4cf">
+      <typeId>55197010-9745-4040-886d-cbf04e271074</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Security.Users.Domain</typePackageName>
+      <typePackageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Domain Event Handler Association</associationType>
+  <associationTypeId>90831494-f069-44eb-b488-ab2dba7518ea</associationTypeId>
+  <stereotypes />
+</association>

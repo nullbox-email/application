@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="86b95499-b32b-46d2-bcf6-b58a8e157a57">
+  <sourceEnd id="9dbb96a1-6523-4f51-b147-46a08f75703a" type="Domain Event Handler Association Source End" typeId="79f048d4-4c09-4405-be8f-95473a981556">
+    <display>: ExternalUserCreatedDomainEventHandler</display>
+    <order>0</order>
+    <typeReference id="364aea46-4e64-4130-964a-61c65781e119">
+      <typeId>9adb9228-9697-4f12-8fbf-462b9e27fc7f</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Security.Users.Services</typePackageName>
+      <typePackageId>cdc830ca-c14a-4d10-a244-9dd36afb93ee</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="86b95499-b32b-46d2-bcf6-b58a8e157a57" type="Domain Event Handler Association Target End" typeId="f45dfee9-f62b-45ac-bfce-a3878e04b73f">
+    <name>handler</name>
+    <display>[handles] ExternalUserCreatedDomainEvent</display>
+    <order>0</order>
+    <traits>
+      <trait id="2b6729eb-e2ae-4b5f-86fe-4f611d1f912e" name="[Processing Handler]" />
+    </traits>
+    <typeReference id="13616030-ef39-46d9-92af-4d246ab194c3">
+      <typeId>c0720837-32c9-44d3-94f4-3275ef6f87ac</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Security.Users.Domain</typePackageName>
+      <typePackageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Domain Event Handler Association</associationType>
+  <associationTypeId>90831494-f069-44eb-b488-ab2dba7518ea</associationTypeId>
+  <stereotypes />
+</association>

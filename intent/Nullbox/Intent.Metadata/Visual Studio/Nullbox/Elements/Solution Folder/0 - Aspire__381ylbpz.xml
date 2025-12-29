@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="eebb2b2f-7a3d-4334-bc5b-d32de75fc4d8" type="Solution Folder" typeId="0dc2b846-c968-49eb-99b7-8776919313a8">
+  <name>0 - Aspire</name>
+  <display>0 - Aspire</display>
+  <externalReference>91aa05f3-4f08-455f-a5f7-2007545dd69d</externalReference>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>d67b32a2-cdd0-40aa-9b36-a95974ef4696</parentFolderId>
+  <packageId>d67b32a2-cdd0-40aa-9b36-a95974ef4696</packageId>
+  <packageName>Nullbox</packageName>
+  <stereotypes>
+    <stereotype stereotypeDefinitionId="bb59d570-80b6-4564-9016-f809d6eacbc5" name="Folder Options">
+      <addedByDefault>false</addedByDefault>
+      <definitionPackageName>Intent.VisualStudio.Projects</definitionPackageName>
+      <definitionPackageId>a0636ab7-d3a1-430b-9609-11a18aa3cc7f</definitionPackageId>
+      <properties>
+        <property name="4bcd7fb5-54e5-4812-b80c-4176114086c4" display="Materialize Folder" value="true" isActive="true" />
+      </properties>
+    </stereotype>
+  </stereotypes>
+  <metadata />
+  <childElements />
+</class>

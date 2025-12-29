@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<deviationsLog>
+  <files>
+    <file>
+      <correlationId>Intent.Application.Identity.ApplicationSecurityConfiguration#2ea6efff-9326-4616-a060-1838ac648bbc</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Api/Configuration/ApplicationSecurityConfiguration.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-13T15:59:56.2848346Z</updatedAt>
+      <deviationsHash>7CF11F825495CB832822F33043A43F83BA29402223943F7B0EE439DB19EF05FE</deviationsHash>
+      <fileHash>2AC81412DAFCCB13BF87E1FC957D9971B741A3AFCF1E4AAA1B1264B65AF05DD1</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.AspNetCore.HealthChecks.HealthChecksConfiguration#ebcd8990-7510-4776-9fb6-81fa7ef8e86e</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Api/Configuration/HealthChecksConfiguration.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-08T08:52:41.5262075Z</updatedAt>
+      <deviationsHash>3B81318B6A7B4208C7F91962DBB393EACCE793CC11073FBF7E0B065654AF981F</deviationsHash>
+      <fileHash>59B73EDEBE090660CA198F60461F90147C80348269157DE3A5EC393DB21F7F4F</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.AspNetCore.Controllers.Controller#ee7e6818-fa93-43b7-8d3f-d5c806fb657e</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Api/Controllers/DeliveriesController.cs</path>
+      <count>8</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-27T12:13:10.729234Z</updatedAt>
+      <deviationsHash>CB556BDA12340C38A2DE3FB3928DCB573F51E95B627A7DA3E54DCA6AF41AD218</deviationsHash>
+      <fileHash>85C77F002913EEAA55CCD5DF972C4B7ECDC2027AC82F8B57C9AAB19A129436B0</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.AspNetCore.Controllers.ExceptionFilter#9c35ef21-5775-4b46-91b1-941e3837b439</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Api/Filters/ExceptionFilter.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-14T15:04:38.3246243Z</updatedAt>
+      <deviationsHash>F9DEC8FF17B7DCA4D9DDA8A6ACBE8443BCF44F5B2459180B8C5AD5C2AD2D8581</deviationsHash>
+      <fileHash>103FE9BDB8240071F4AE457EF4293C3731CED1513DBFEF256DB32A1F3BCA1B28</fileHash>
+    </file>
+    <file>
+      <correlationId>Aryzac.HostedService#db5e3085-41c1-4481-8432-0c55217c1743</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Api/Services/RegisterProductsHostedService.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-27T14:04:26.1080473Z</updatedAt>
+      <deviationsHash>666BD7A6F503C2162B173766004D3533B546E0493865F69E595F8B70007770E6</deviationsHash>
+      <fileHash>AA117FD7516BA9AF6E14D7FDE4AB411B36C9F7CBCAFF935CDA900DCC8D300A4B</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Application.MediatR.CommandHandler#347e3e65-0cb6-4bd5-9a3a-8b2532380f98</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Application/Accounts/CreateAccount/CreateAccountCommandHandler.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-21T12:36:48.1083497Z</updatedAt>
+      <deviationsHash>5E9CF093F0D1AF6BA850D808F144B8BC029950487CF21A40E37C5BB171A7D560</deviationsHash>
+      <fileHash>C26C7182AA694BBC2BD5B1EC36A5E73F5658914093008348A947D4AA8567A300</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Application.MediatR.CommandHandler#88edbe65-3683-42cd-9d69-7cfc394d222d</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Application/Accounts/CreateEnablementGrant/CreateEnablementGrantCommandHandler.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-27T17:24:44.4093151Z</updatedAt>
+      <deviationsHash>77B3F6E1A4C49E0055F2CB3FC8169BD3A41E99583A7C6D761AFB7C82171C0FCC</deviationsHash>
+      <fileHash>BD163452F07D29B6FE24C8BAF1B4F03A4ED9E38DDA8CCCDC2AF36A19586F1E4D</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Application.MediatR.CommandHandler#7a16663e-1c83-477d-bbd9-d704c348b9cf</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Application/Aliases/CreateAlias/CreateAliasCommandHandler.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-14T09:55:43.7597966Z</updatedAt>
+      <deviationsHash>31F00EFC27C2E4F2C4D7C13A734D1E9B860BF528ECE3F729CFA6F34489475DB5</deviationsHash>
+      <fileHash>B2939911EB07696002FB38E64D68379472A39BB585A145FB3B3F951C8924D6CB</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Application.MediatR.CommandHandler#3f54ea8d-5680-4eed-9003-0eb6adebfc2c</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Application/Aliases/CreateAliasMap/CreateAliasMapCommandHandler.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-08T15:00:03.6702783Z</updatedAt>
+      <deviationsHash>A2343C23C240267CA9D0626702A700AF5D5CE06E58547EAF4B504B56E6A8ED73</deviationsHash>
+      <fileHash>95E9D291532D93C654024A354A850DF6BB2F983743796A347478CE93EC9FD1A2</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Application.MediatR.QueryHandler#c3497175-e2fb-4ba2-8cd7-4f8746f7610f</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Application/Aliases/GetAliasById/GetAliasByIdQueryHandler.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-17T09:21:35.3647401Z</updatedAt>
+      <deviationsHash>059102B5FAB954134ECC33C2FC09122D1DC888987B2CA246F28B11A6F142BB3A</deviationsHash>
+      <fileHash>ABD50AF17BBC2E604A0A47E156B70AD5C0BA4933C4BE5003CB5FF3BEBCE5491E</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Application.MediatR.QueryHandler#c17779ba-da08-41db-8200-faa7dca1baa8</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Application/Aliases/GetAliases/GetAliasesQueryHandler.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-17T16:28:58.6505239Z</updatedAt>
+      <deviationsHash>B33CA4AB937103C2DDF6CB9448E95DAC5D55C74A8D4C5E7A320167FDBCC871AA</deviationsHash>
+      <fileHash>BD7F4D5151CB23D61CC73BED340B622D03252BF702EFB9C7FE9475D3D8A1E8D5</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Application.MediatR.CommandHandler#5f4003f4-04d2-4d6f-93d7-224ee78072c8</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Application/Aliases/UpdateAlias/UpdateAliasCommandHandler.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-14T11:56:52.2654235Z</updatedAt>
+      <deviationsHash>815200492771DE9331AD2228FFC41C399A72702804987F9AC46F07860870EA9C</deviationsHash>
+      <fileHash>E47C6EA0C67C230C6FC891B312C063AE4A2CD3EC44FD1F170F17492E4F2FF305</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Application.MediatR.CommandHandler#b859bb9a-323e-4196-a3d2-00de7513f80c</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Application/Aliases/UpdateAliasMap/UpdateAliasMapCommandHandler.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-14T14:55:00.1745273Z</updatedAt>
+      <deviationsHash>77553586986888A748D6AA7F63F996463A797A694F61600C3DA228834FFC056E</deviationsHash>
+      <fileHash>55EA6777FD28790D6BD78DCE7E64ABB1E93235E00A17286FE3C77138C76035D4</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Application.MediatR.Behaviours.UnitOfWorkBehaviour#a91fe312-e20b-4870-aae4-d71e137cbf71</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Application/Common/Behaviours/UnitOfWorkBehaviour.cs</path>
+      <count>7</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-16T15:43:35.4984396Z</updatedAt>
+      <deviationsHash>C5E3B2C5DB7D142E382C0F1E182B9FC9AA66635D5E19BF204C9CBC75C7B08EA7</deviationsHash>
+      <fileHash>F4C30612B03BD6B18BEF79E4635A8C45C772F5B9BA556E9CA84DE92379D5C5FB</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Eventing.Contracts.IntegrationEventHandler#398869bd-e948-4dba-8e94-0336af810e80</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Application/IntegrationEvents/EventHandlers/Aliases/AliasCreatedLearningModeScheduleV1Handler.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-26T10:20:00.2105514Z</updatedAt>
+      <deviationsHash>68907D555707536094311833F08CF2FF629B807858DFDA9DE17162E82704F046</deviationsHash>
+      <fileHash>D5201C09707C2A40EDF64CD9234FC64B5FD91A4418919FC993C5ECC708C82489</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Application.MediatR.CommandHandler#4262eb71-90ac-424e-82cb-34111f543e47</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Application/Mailboxes/AliasMapUpdateMailbox/AliasMapUpdateMailboxCommandHandler.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-14T15:19:21.5192704Z</updatedAt>
+      <deviationsHash>F1ED08B908A9FAC4FD2A57863A671E07B6C931D535CDF007AF834F2AB5E84391</deviationsHash>
+      <fileHash>7CE42C29824D23970CFB1EF93612CEF45940ABB7E0E226F87772E52FE0B1AC08</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Application.MediatR.CommandHandler#7a5871b5-94d7-4d91-8833-ed991205abcc</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Application/Mailboxes/CreateDefaultUserMailbox/CreateDefaultUserMailboxCommandHandler.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-08T09:30:24.4719592Z</updatedAt>
+      <deviationsHash>6B13151D5B0864D9B6614C12E7F651C7F716A984F73464CF01B2356D64B71B10</deviationsHash>
+      <fileHash>4AECE026BCB6F877487BCC3F199A6BCC12882D27E80A1F767525D0A3CB1E1659</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Application.MediatR.CommandHandler#e5c3d178-af74-4cc7-b8e6-25d3d2b985bb</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Application/Mailboxes/CreateMailbox/CreateMailboxCommandHandler.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-14T10:04:12.8191154Z</updatedAt>
+      <deviationsHash>E0B1A6E24E6A16C845A826E5DB3DBFEEDC61FFB7698704574D3A1AE9FD9DAC1D</deviationsHash>
+      <fileHash>3C33FEC4FEE5315799FE046FC9CF05B4DFD8F3496B9E1DD6263393D15C98FEEE</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Application.MediatR.QueryHandler#8be8008e-7e10-4db7-a015-ed037daaa5f2</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Application/Mailboxes/GetUserMailboxByRoutingKeyAndDomain/GetUserMailboxByRoutingKeyAndDomainQueryHandler.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-13T16:25:15.7893222Z</updatedAt>
+      <deviationsHash>109F4B53895816A8B387C7592CA2D11834A01BD6F1C93CFA7BE99132A414C13F</deviationsHash>
+      <fileHash>3061F440F4596228E04D88258AAF4E25B3502F3A5218CA6B5355044C351F69CA</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Application.MediatR.QueryHandler#c5b1653a-ed14-4d79-a127-3bef34d51f60</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Application/Mailboxes/GetUserMailboxes/GetUserMailboxesQueryHandler.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-09T17:43:31.4658209Z</updatedAt>
+      <deviationsHash>6B47BE773A8E7A4B7EB8F351EF2C395ADE551CAA19B93F42AF6BCA33E0FFB205</deviationsHash>
+      <fileHash>C9625135ED692BEBC28E8F71ECB9169D9BD4C5960638A4BB219626B3CC629E90</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Application.MediatR.CommandHandler#656221fa-0d05-4a05-adf8-085060566a37</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Application/Mailboxes/MailboxMapUpdateMailbox/MailboxMapUpdateMailboxCommandHandler.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-14T18:16:21.1365165Z</updatedAt>
+      <deviationsHash>CDBCB925D285E8FFBAC1399F6B389E5D32A775533B3D7EEB3C7B5020AC2671A6</deviationsHash>
+      <fileHash>EF46224DFF2ABA1754A2C5FBF05AC5F64B062CFCB3B9078181E113859BEC874F</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Application.MediatR.CommandHandler#693a14db-7e3f-4901-bb2c-5e6dba7b9b7d</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Application/Mailboxes/UpdateMailbox/UpdateMailboxCommandHandler.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-13T16:37:38.1261808Z</updatedAt>
+      <deviationsHash>14583AFFECAEC6B5E611276566CAE23602EE8C17D8C65DBB5FECA93C1257341D</deviationsHash>
+      <fileHash>CD98986331F89D2511A671A591145BD02829620C6CB2E3052AF84AF66299126A</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Entities.DomainEntityState#97bbeaee-4ed9-4016-91dc-c46dd58dc7b2</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Domain/Entities/Markers/AppliedMarkerState.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-23T10:23:36.8674853Z</updatedAt>
+      <deviationsHash>77AEFA296C308EF47E77671F9D94413E2183F38F2FC54417CCD89E1072CA7F2A</deviationsHash>
+      <fileHash>6E6E27D4F7804A46964F2564571189BE79737ABD1D933B40E1923A756737DEEF</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Eventing.MassTransit.MassTransitConfiguration#84ee348b-8a61-4923-b40b-fb572952db99</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Infrastructure/Configuration/MassTransitConfiguration.cs</path>
+      <count>2</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-23T06:48:28.2163403Z</updatedAt>
+      <deviationsHash>E3A36D6DF1DEE2810A78A1B269FFB62841D6CFC5E102BE2340096B4F5C1C931A</deviationsHash>
+      <fileHash>7DB6C2C570215A2255413A406B66A40CF1A2D2E60CDBBD94A6F77FE6E695A275</fileHash>
+    </file>
+  </files>
+</deviationsLog>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="ea878439-a279-4c05-a898-09189ea67bfb" type="Diagram" typeId="8c90aca5-86f4-47f1-bd58-116fe79f5c55">
+  <name>Security</name>
+  <display>Security</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>e1d1f277-0a7f-4c38-a977-38acdb4c7c73</parentFolderId>
+  <packageId>e1d1f277-0a7f-4c38-a977-38acdb4c7c73</packageId>
+  <packageName>Nullbox.Security.Gateway</packageName>
+  <diagram>
+    <targetPackageId>ea878439-a279-4c05-a898-09189ea67bfb</targetPackageId>
+  </diagram>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

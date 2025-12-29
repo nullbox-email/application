@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="2413d3be-98ba-4e45-a5a7-ed4169f237bd" type="Domain Service" typeId="07f936ea-3756-48c8-babd-24ac7271daac">
+  <name>TokenDomainService</name>
+  <display>TokenDomainService</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>8c67df03-7a61-43ff-9d64-6e293d8a2059</parentFolderId>
+  <packageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</packageId>
+  <packageName>Nullbox.Security.Tokens.Domain</packageName>
+  <stereotypes>
+    <stereotype stereotypeDefinitionId="6ad19817-2014-464b-a525-409b3a5230d1" name="Service Registration Settings">
+      <addedByDefault>true</addedByDefault>
+      <definitionPackageName>Intent.DomainServices</definitionPackageName>
+      <definitionPackageId>4dd5ea09-bece-4f26-bfeb-2904a26e2895</definitionPackageId>
+      <properties>
+        <property name="6b4d2aef-0f5a-46a1-b443-1d9f3286c128" display="Service Registration Scope" isActive="true" />
+      </properties>
+    </stereotype>
+  </stereotypes>
+  <metadata />
+  <childElements>
+    <childElement id="ee1c338f-5254-4a06-99a0-d37a28e5cccd" type="Operation" typeId="e042bb67-a1df-480c-9935-b26210f78591">
+      <name>CreateToken</name>
+      <display>CreateToken(subject: string, claims: ClaimType[*], audience: string, expiresInMinutes: int = 30): string</display>
+      <isAbstract>false</isAbstract>
+      <sort-children>by-type-then-manually</sort-children>
+      <genericTypes />
+      <typeReference id="add21829-f2ab-4c00-9f54-5b329c8490e9">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>2413d3be-98ba-4e45-a5a7-ed4169f237bd</parentFolderId>
+      <packageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</packageId>
+      <packageName>Nullbox.Security.Tokens.Domain</packageName>
+      <traits>
+        <trait id="0a932465-ea1f-42e7-b1eb-9f90aa8961fd" name="[Invokable]" />
+        <trait id="2b6729eb-e2ae-4b5f-86fe-4f611d1f912e" name="[Processing Handler]" />
+      </traits>
+      <stereotypes />
+      <metadata />
+      <childElements>
+        <childElement id="94dae1b0-26d3-4f2a-bd16-0f864eb1e051" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>subject</name>
+          <display>in : subject: string</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="9346e302-0335-42b5-a608-548e539afbd8">
+            <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <parentFolderId>ee1c338f-5254-4a06-99a0-d37a28e5cccd</parentFolderId>
+          <packageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</packageId>
+          <packageName>Nullbox.Security.Tokens.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="7ce08413-43d4-49f1-95a8-5b6fd6db0739" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>claims</name>
+          <display>in : claims: ClaimType[*]</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="9433a443-e8d2-4025-89bb-d063a1fa9991">
+            <typeId>8aaaed83-e270-4373-be07-466130519f92</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>true</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Nullbox.Security.Tokens.Domain</typePackageName>
+            <typePackageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <parentFolderId>ee1c338f-5254-4a06-99a0-d37a28e5cccd</parentFolderId>
+          <packageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</packageId>
+          <packageName>Nullbox.Security.Tokens.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="3f840928-d0d8-4642-9d27-2f456e1eb2b1" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>audience</name>
+          <display>in : audience: string</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="24e479ee-25e1-4394-b5ec-d16a8b4eb985">
+            <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <parentFolderId>ee1c338f-5254-4a06-99a0-d37a28e5cccd</parentFolderId>
+          <packageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</packageId>
+          <packageName>Nullbox.Security.Tokens.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="aa7fcc20-0614-4210-8d38-114cac429765" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>expiresInMinutes</name>
+          <display>in : expiresInMinutes: int = 30</display>
+          <isAbstract>false</isAbstract>
+          <value>30</value>
+          <genericTypes />
+          <typeReference id="fcbbdf3a-9434-49bc-aee5-87fe7fcfaaa6">
+            <typeId>fb0a362d-e9e2-40de-b6ff-5ce8167cbe74</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <parentFolderId>ee1c338f-5254-4a06-99a0-d37a28e5cccd</parentFolderId>
+          <packageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</packageId>
+          <packageName>Nullbox.Security.Tokens.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+      </childElements>
+    </childElement>
+    <childElement id="787b0000-bf2c-4c02-ba0a-65032e9ed7cb" type="Operation" typeId="e042bb67-a1df-480c-9935-b26210f78591">
+      <name>GetIdToken</name>
+      <display>GetIdToken(userId: guid, claims: ClaimType[*], audience: string, expiresInMinutes: int = 60): TokenContract</display>
+      <isAbstract>false</isAbstract>
+      <sort-children>by-type-then-manually</sort-children>
+      <genericTypes />
+      <typeReference id="e18c5a94-c538-4a13-bfa9-e1e46a1870ed">
+        <typeId>1136f93f-aeac-48bc-a6e3-b9d0dbc73a14</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Nullbox.Security.Tokens.Domain</typePackageName>
+        <typePackageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>2413d3be-98ba-4e45-a5a7-ed4169f237bd</parentFolderId>
+      <packageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</packageId>
+      <packageName>Nullbox.Security.Tokens.Domain</packageName>
+      <traits>
+        <trait id="0a932465-ea1f-42e7-b1eb-9f90aa8961fd" name="[Invokable]" />
+        <trait id="2b6729eb-e2ae-4b5f-86fe-4f611d1f912e" name="[Processing Handler]" />
+      </traits>
+      <stereotypes />
+      <metadata />
+      <childElements>
+        <childElement id="ac70d177-da45-4edf-9cad-f723e978a962" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>userId</name>
+          <display>in : userId: guid</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="08b5288c-c4a7-4503-b32a-761b0a47750d">
+            <typeId>6b649125-18ea-48fd-a6ba-0bfff0d8f488</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <parentFolderId>787b0000-bf2c-4c02-ba0a-65032e9ed7cb</parentFolderId>
+          <packageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</packageId>
+          <packageName>Nullbox.Security.Tokens.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="ef93d2a6-c200-4ceb-bf74-2602f2de97d5" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>claims</name>
+          <display>in : claims: ClaimType[*]</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="4d5fd91e-ca54-4b75-8a30-ee88777352a0">
+            <typeId>8aaaed83-e270-4373-be07-466130519f92</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>true</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Nullbox.Security.Tokens.Domain</typePackageName>
+            <typePackageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <parentFolderId>787b0000-bf2c-4c02-ba0a-65032e9ed7cb</parentFolderId>
+          <packageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</packageId>
+          <packageName>Nullbox.Security.Tokens.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="ba1c2217-5b0b-4d86-8eae-c5d6f05ca38e" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>audience</name>
+          <display>in : audience: string</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="91a78a4b-95aa-445d-935f-637af3916630">
+            <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <parentFolderId>787b0000-bf2c-4c02-ba0a-65032e9ed7cb</parentFolderId>
+          <packageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</packageId>
+          <packageName>Nullbox.Security.Tokens.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="ef519a5d-4467-42e6-873e-0a783d045123" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>expiresInMinutes</name>
+          <display>in : expiresInMinutes: int = 60</display>
+          <isAbstract>false</isAbstract>
+          <value>60</value>
+          <genericTypes />
+          <typeReference id="8899ae34-33d7-4842-842a-5a7b261eef48">
+            <typeId>fb0a362d-e9e2-40de-b6ff-5ce8167cbe74</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <parentFolderId>787b0000-bf2c-4c02-ba0a-65032e9ed7cb</parentFolderId>
+          <packageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</packageId>
+          <packageName>Nullbox.Security.Tokens.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+      </childElements>
+    </childElement>
+    <childElement id="69629d94-03dc-4ac8-980b-05afbddbf7c6" type="Operation" typeId="e042bb67-a1df-480c-9935-b26210f78591">
+      <name>GetAccessToken</name>
+      <display>GetAccessToken(userId: guid, authorizedScopes: string[*], permissions: string[*], claims: ClaimType[*], audience: string, expiresInMinutes: int = 5): TokenContract</display>
+      <isAbstract>false</isAbstract>
+      <sort-children>by-type-then-manually</sort-children>
+      <genericTypes />
+      <typeReference id="8dacc972-8303-487e-9a4a-43572d6ae0c9">
+        <typeId>1136f93f-aeac-48bc-a6e3-b9d0dbc73a14</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Nullbox.Security.Tokens.Domain</typePackageName>
+        <typePackageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>2413d3be-98ba-4e45-a5a7-ed4169f237bd</parentFolderId>
+      <packageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</packageId>
+      <packageName>Nullbox.Security.Tokens.Domain</packageName>
+      <traits>
+        <trait id="0a932465-ea1f-42e7-b1eb-9f90aa8961fd" name="[Invokable]" />
+        <trait id="2b6729eb-e2ae-4b5f-86fe-4f611d1f912e" name="[Processing Handler]" />
+      </traits>
+      <stereotypes />
+      <metadata />
+      <childElements>
+        <childElement id="07928456-9862-4549-ba8e-f25b6e022919" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>userId</name>
+          <display>in : userId: guid</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="3b27c55b-8646-4fc1-a054-56291ab80a04">
+            <typeId>6b649125-18ea-48fd-a6ba-0bfff0d8f488</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <parentFolderId>69629d94-03dc-4ac8-980b-05afbddbf7c6</parentFolderId>
+          <packageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</packageId>
+          <packageName>Nullbox.Security.Tokens.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="a201df8f-e805-4817-8112-c5cf8c5b6905" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>authorizedScopes</name>
+          <display>in : authorizedScopes: string[*]</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="4ae58591-d82a-42a3-97ef-1dc5701370d7">
+            <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>true</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <parentFolderId>69629d94-03dc-4ac8-980b-05afbddbf7c6</parentFolderId>
+          <packageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</packageId>
+          <packageName>Nullbox.Security.Tokens.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="b61370e0-7780-4232-be41-2d9b44cacb33" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>permissions</name>
+          <display>in : permissions: string[*]</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="5941dc7b-63fb-4d6a-9bdd-7d7eac6f3ade">
+            <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>true</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <parentFolderId>69629d94-03dc-4ac8-980b-05afbddbf7c6</parentFolderId>
+          <packageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</packageId>
+          <packageName>Nullbox.Security.Tokens.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="ffe72663-0b0a-4ff4-80d0-e4f266999991" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>claims</name>
+          <display>in : claims: ClaimType[*]</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="050f3da5-6703-4a4f-bdc8-570318f3cb37">
+            <typeId>8aaaed83-e270-4373-be07-466130519f92</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>true</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Nullbox.Security.Tokens.Domain</typePackageName>
+            <typePackageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <parentFolderId>69629d94-03dc-4ac8-980b-05afbddbf7c6</parentFolderId>
+          <packageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</packageId>
+          <packageName>Nullbox.Security.Tokens.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="7dcd4b09-a795-482c-a143-745280b9e561" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>audience</name>
+          <display>in : audience: string</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="2561303d-6904-4880-9a29-48df94537644">
+            <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <parentFolderId>69629d94-03dc-4ac8-980b-05afbddbf7c6</parentFolderId>
+          <packageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</packageId>
+          <packageName>Nullbox.Security.Tokens.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="0ac23288-0824-4a96-860b-8fdfe0edae70" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>expiresInMinutes</name>
+          <display>in : expiresInMinutes: int = 5</display>
+          <isAbstract>false</isAbstract>
+          <value>5</value>
+          <genericTypes />
+          <typeReference id="a287c7c3-3d60-4b7c-8cad-a805503676bc">
+            <typeId>fb0a362d-e9e2-40de-b6ff-5ce8167cbe74</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <parentFolderId>69629d94-03dc-4ac8-980b-05afbddbf7c6</parentFolderId>
+          <packageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</packageId>
+          <packageName>Nullbox.Security.Tokens.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+      </childElements>
+    </childElement>
+  </childElements>
+</class>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="5e666de6-a238-4e37-ba8a-b9bd78464ee3" type="Eventing DTO" typeId="544f1d57-27ce-4985-a4ec-cc01568d72b0">
+  <name>UserProfileDeletedV1EmailAddressDto</name>
+  <display>UserProfileDeletedV1EmailAddressDto</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>c0c2a257-bb02-4ee6-b409-9e8091f8cda9</parentFolderId>
+  <packageId>6e6bbf2c-cff9-45bc-a517-156008d49459</packageId>
+  <packageName>Nullbox.Security.Users.Eventing.Messages</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="31c45ba2-0ebf-41c3-8461-2df7a9299034" type="Eventing DTO-Field" typeId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7">
+      <name>Value</name>
+      <display>Value: string</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="35dd85e2-a0ec-42c6-9181-779e88d543eb">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>5e666de6-a238-4e37-ba8a-b9bd78464ee3</parentFolderId>
+      <packageId>6e6bbf2c-cff9-45bc-a517-156008d49459</packageId>
+      <packageName>Nullbox.Security.Users.Eventing.Messages</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="e03e93a5-d41b-4f39-92b0-b348db45e6e1" type="Eventing DTO-Field" typeId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7">
+      <name>NormalizedValue</name>
+      <display>NormalizedValue: string</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="3b88eb68-60c6-4de8-894e-df080c12c2c0">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>5e666de6-a238-4e37-ba8a-b9bd78464ee3</parentFolderId>
+      <packageId>6e6bbf2c-cff9-45bc-a517-156008d49459</packageId>
+      <packageName>Nullbox.Security.Users.Eventing.Messages</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

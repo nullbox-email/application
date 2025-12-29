@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="db5e3085-41c1-4481-8432-0c55217c1743" type="Hosted Service" typeId="a7448be4-7ee9-45b9-b399-4beb4fad98d8">
+  <name>RegisterProducts</name>
+  <display>RegisterProducts</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>c1413681-4422-4ccc-91ab-2606605baa3a</parentFolderId>
+  <packageId>c1413681-4422-4ccc-91ab-2606605baa3a</packageId>
+  <packageName>Nullbox.Fabric.Products.Services</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

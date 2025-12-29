@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="262d8fb3-1b11-488b-8d85-2eb8092345e6" type="Enum" typeId="85fba0e9-9161-4c85-a603-a229ef312beb">
+  <name>QuarantineReason</name>
+  <display>QuarantineReason</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>e2f81272-0d46-42a9-a36e-8e448b483a4b</parentFolderId>
+  <packageId>2e5218b4-b505-4e2a-b5bb-77712b952e0b</packageId>
+  <packageName>Nullbox.Fabric.Deliveries.Domain</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="42e963db-c38e-4349-a751-d7bffcd45c6e" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>SuspiciousSender</name>
+      <display>SuspiciousSender</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>262d8fb3-1b11-488b-8d85-2eb8092345e6</parentFolderId>
+      <packageId>2e5218b4-b505-4e2a-b5bb-77712b952e0b</packageId>
+      <packageName>Nullbox.Fabric.Deliveries.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="b172169b-d281-4b59-95bf-f630f876fcc1" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>FailedAuthentication</name>
+      <display>FailedAuthentication</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>262d8fb3-1b11-488b-8d85-2eb8092345e6</parentFolderId>
+      <packageId>2e5218b4-b505-4e2a-b5bb-77712b952e0b</packageId>
+      <packageName>Nullbox.Fabric.Deliveries.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="bb91ca72-83c9-49cb-8f5f-ecc5ed982993" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Policy</name>
+      <display>Policy</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>262d8fb3-1b11-488b-8d85-2eb8092345e6</parentFolderId>
+      <packageId>2e5218b4-b505-4e2a-b5bb-77712b952e0b</packageId>
+      <packageName>Nullbox.Fabric.Deliveries.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="8530f29c-098c-4948-aa9c-fc36d718dbb1" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>UserRequested</name>
+      <display>UserRequested</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>262d8fb3-1b11-488b-8d85-2eb8092345e6</parentFolderId>
+      <packageId>2e5218b4-b505-4e2a-b5bb-77712b952e0b</packageId>
+      <packageName>Nullbox.Fabric.Deliveries.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="0dfe1940-0a71-48ad-b35d-81d1fddd7580" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Unknown</name>
+      <display>Unknown</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>262d8fb3-1b11-488b-8d85-2eb8092345e6</parentFolderId>
+      <packageId>2e5218b4-b505-4e2a-b5bb-77712b952e0b</packageId>
+      <packageName>Nullbox.Fabric.Deliveries.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="9eaf349e-2781-4356-9d63-9b2c1028dbcf" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>UnknownSender</name>
+      <display>UnknownSender</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>262d8fb3-1b11-488b-8d85-2eb8092345e6</parentFolderId>
+      <packageId>2e5218b4-b505-4e2a-b5bb-77712b952e0b</packageId>
+      <packageName>Nullbox.Fabric.Deliveries.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

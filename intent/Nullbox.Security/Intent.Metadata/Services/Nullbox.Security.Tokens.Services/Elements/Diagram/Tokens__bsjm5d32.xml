@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="c6c1249c-7c13-4836-8af9-b58f0846d212" type="Diagram" typeId="8c90aca5-86f4-47f1-bd58-116fe79f5c55">
+  <name>Tokens</name>
+  <display>Tokens</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>7932b361-bc92-4a91-b5a7-dcaa5fc6af6e</parentFolderId>
+  <packageId>b6434316-7105-4190-8c0b-ce4cc17c54ef</packageId>
+  <packageName>Nullbox.Security.Tokens.Services</packageName>
+  <diagram>
+    <targetPackageId>c6c1249c-7c13-4836-8af9-b58f0846d212</targetPackageId>
+  </diagram>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

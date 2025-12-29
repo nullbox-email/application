@@ -1,0 +1,25 @@
+{
+    "_id": "807ffef6-caff-4015-b813-c3ccfe0d357a",
+    "colName": "Nullbox Security",
+    "created": "2025-12-07T15:52:45.875Z",
+    "sortNum": 10000,
+    "folders": [],
+    "requests": [
+        {
+            "_id": "1cfcbc41-ef2e-4ea5-930c-ca3468d115d9",
+            "colId": "807ffef6-caff-4015-b813-c3ccfe0d357a",
+            "containerId": "",
+            "name": "Exchange Token",
+            "url": "https://api.nullbox.email/v1/tokens/exchange",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2025-12-07T15:52:45.883Z",
+            "modified": "2025-12-11T10:47:35.404Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Im1VRzZ2WW5SbG9mdUx4Y2lacnU3U3B0ZjZOTSJ9.eyJhdWQiOiIzY2Q4ZmI5Mi00NTQ0LTRiYTktODVlZC04MTU5MmU4YWYxY2UiLCJpc3MiOiJodHRwczovL2RlY2U2ZWU4LWYzNGUtNDg5ZC05YTYxLTE5ZmQ3MzExYzUyMS5jaWFtbG9naW4uY29tL2RlY2U2ZWU4LWYzNGUtNDg5ZC05YTYxLTE5ZmQ3MzExYzUyMS92Mi4wIiwiaWF0IjoxNzY1MTIwMDU0LCJuYmYiOjE3NjUxMjAwNTQsImV4cCI6MTc2NTEyMzk1NCwiZW1haWwiOiJzdGVwaGFuQGFyeXphYy5pbyIsIm5hbWUiOiJ1bmtub3duIiwib2lkIjoiZGRkOGRmZjQtYzZlMC00MjJiLWE1Y2QtMGNiMTNiNmUzYTg4IiwicHJlZmVycmVkX3VzZXJuYW1lIjoic3RlcGhhbkBhcnl6YWMuaW8iLCJyaCI6IjEuQWJnQTZHN08zazd6blVpYVlSbjljeEhGSVpMNzJEeEVSYWxMaGUyQldTNks4YzdWQVF1NEFBLiIsInNpZCI6IjAwYjgzNDU5LTg5YTMtMDk1Mi1hNmYxLWQ1YjI3NDFhZGI3YiIsInN1YiI6IkpFaUNiN29MRWR3RDQ4RTQ0X2tfV3poQzdaaExMbFJYbmJUOGcwTXNBUTQiLCJ0aWQiOiJkZWNlNmVlOC1mMzRlLTQ4OWQtOWE2MS0xOWZkNzMxMWM1MjEiLCJ1dGkiOiJTLWRJSXpLQzlrR3dGbkN1OHRFQUFBIiwidmVyIjoiMi4wIn0.JnCCtDEx48754IlR2ctD8kSvCM3jz9ONlix2y2DFhxDBgi-SGdRnjGaLKiGPTBzBB2BoN2EGAMfa6RpnlOGXTFYliIYCpDu3cGQw6FkJ73hHndZsPNnA-UVeQo2MRdaqfWMRW62R9Z3JpdB0sNQ8pd87Rcbn83DmIV30cHlE3Jbb_e-xJr04U0mFDteKA8uZEADEJDx8EuVynlLVOAZGu9Lp3ATNivXrdqcjcoQo9qaKhvjyGkn2sWMr9PZeqZ8nPewJ_9G23GTe_RFL_beK8Tx3qcfQwxvKMqHg6tj9GJwgcWoj7zbXUj0_FL1XgHb3uYLut7JSbZFMNckk14DeaA"
+            }
+        }
+    ]
+}

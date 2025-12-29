@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="89338d42-52c8-4bb0-b29e-f5eb3b099f6c" type="Enum" typeId="85fba0e9-9161-4c85-a603-a229ef312beb">
+  <name>ProviderStatus</name>
+  <display>ProviderStatus</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>e2f81272-0d46-42a9-a36e-8e448b483a4b</parentFolderId>
+  <packageId>2e5218b4-b505-4e2a-b5bb-77712b952e0b</packageId>
+  <packageName>Nullbox.Fabric.Deliveries.Domain</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="c93c3638-0030-4300-99ed-4ebec85e4be7" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>NotAttempted</name>
+      <display>NotAttempted</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>89338d42-52c8-4bb0-b29e-f5eb3b099f6c</parentFolderId>
+      <packageId>2e5218b4-b505-4e2a-b5bb-77712b952e0b</packageId>
+      <packageName>Nullbox.Fabric.Deliveries.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="6e44d3b1-8c58-434a-8b4d-bb9968255a7e" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Accepted</name>
+      <display>Accepted</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>89338d42-52c8-4bb0-b29e-f5eb3b099f6c</parentFolderId>
+      <packageId>2e5218b4-b505-4e2a-b5bb-77712b952e0b</packageId>
+      <packageName>Nullbox.Fabric.Deliveries.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="486fe415-416f-4e58-bd12-b0e3030c149e" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Failed</name>
+      <display>Failed</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>89338d42-52c8-4bb0-b29e-f5eb3b099f6c</parentFolderId>
+      <packageId>2e5218b4-b505-4e2a-b5bb-77712b952e0b</packageId>
+      <packageName>Nullbox.Fabric.Deliveries.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

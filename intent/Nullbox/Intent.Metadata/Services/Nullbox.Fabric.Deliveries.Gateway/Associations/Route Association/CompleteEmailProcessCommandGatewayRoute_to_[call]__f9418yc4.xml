@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="c0465cc0-8501-4e56-987a-00f248cc5d55">
+  <sourceEnd id="a3d5c416-1727-4423-aadb-c56bc0d04c16" type="Upstream End" typeId="4143dbe5-12ce-4705-ba69-2683c46b1b96">
+    <display>: CompleteEmailProcessCommandGatewayRoute</display>
+    <order>0</order>
+    <typeReference id="56c80503-88af-48e7-9c83-8ddbc4232cc1">
+      <typeId>d8f9fc02-6bcd-464a-8266-dd4eaec55f0f</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Deliveries.Gateway</typePackageName>
+      <typePackageId>857d2250-92ca-4e36-98a7-4cefaf557ae6</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="c0465cc0-8501-4e56-987a-00f248cc5d55" type="Downstream End" typeId="17084378-a3d8-4233-b275-c856eea4dd61">
+    <name>[call]</name>
+    <display>[call]: ProcessEmailCompleteCommand</display>
+    <order>3</order>
+    <typeReference id="54c917f9-a2d1-4794-b8be-0735780207e5">
+      <typeId>9d1a43ff-13a4-4cd6-84a0-2ee38611b545</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Deliveries.Services</typePackageName>
+      <typePackageId>7ee06bb8-ef12-47d6-a86a-15d687075463</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Route Association</associationType>
+  <associationTypeId>dd35ed32-76bb-4abf-a4e0-370f230765cf</associationTypeId>
+  <stereotypes />
+</association>

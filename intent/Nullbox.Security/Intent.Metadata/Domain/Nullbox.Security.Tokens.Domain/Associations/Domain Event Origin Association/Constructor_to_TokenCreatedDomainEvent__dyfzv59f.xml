@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="554860bb-83db-4270-826f-b6e19966c923">
+  <sourceEnd id="04c3ab82-a8bd-47fc-a1d6-c361d1c0f444" type="Domain Event Origin Association Source End" typeId="2495d3ef-f7a2-441d-b749-b51b2546b45e">
+    <display>published by : Token.Constructor</display>
+    <order>0</order>
+    <typeReference id="40fd047b-45ce-47de-93f3-44146bd7d979">
+      <typeId>f37e5caf-0ec7-4c4d-933b-2ec1b810aaeb</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Security.Tokens.Domain</typePackageName>
+      <typePackageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="554860bb-83db-4270-826f-b6e19966c923" type="Domain Event Origin Association Target End" typeId="17046427-14e2-4081-8463-ef16c0fda399">
+    <display>publishes : TokenCreatedDomainEvent</display>
+    <order>8</order>
+    <typeReference id="3e341fba-b202-48c8-93b1-147410528b50">
+      <typeId>064d804b-bc58-4b48-ad66-64531c7a7d0e</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Security.Tokens.Domain</typePackageName>
+      <typePackageId>0244a7ca-7ea8-49a6-be6b-bc3598f86f2e</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <mappings>
+      <mapping type="Entity to Domain Event Mapping" typeId="86cb62b5-412d-493b-a901-d6e08cf88059">
+        <source elementId="65fc5a07-cd01-4190-8aeb-596a26de2866" location="[Nullbox.Security].[Domain].[Token]" />
+        <target elementId="064d804b-bc58-4b48-ad66-64531c7a7d0e" location="[Nullbox.Security].[Domain].[TokenCreatedDomainEvent]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>{Token}</expression>
+            <path>
+              <target id="064d804b-bc58-4b48-ad66-64531c7a7d0e" name="TokenCreatedDomainEvent" type="element" specialization="Domain Event" specializationId="0814e459-fb9b-47db-b7eb-32ce30397e8a" />
+              <target id="5816bb1b-f520-44d5-b499-78a986b485ab" name="Token" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+            </path>
+            <sources>
+              <source identifier="Token" mappingType="Data Mapping" mappingTypeId="ddfefa35-caf3-48f8-aeed-7beabc8b2f5c">
+                <path>
+                  <target id="65fc5a07-cd01-4190-8aeb-596a26de2866" name="Token" type="element" specialization="Class" specializationId="04e12b51-ed12-42a3-9667-a6aa81bb6d10" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+    </mappings>
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Domain Event Origin Association</associationType>
+  <associationTypeId>4c0cc50b-8a9d-43cd-b731-9f354f69f3c9</associationTypeId>
+  <stereotypes />
+</association>

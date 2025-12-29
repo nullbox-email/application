@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="37a8945b-aba9-4c56-9cb4-fbd9648988c1" type="Api Gateway Route" typeId="b09d7684-5dde-4d4b-9cb5-0707bfd8578f">
+  <name>UpdateAliasCommandGatewayRoute</name>
+  <display>UpdateAliasCommandGatewayRoute</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>64fccd19-d09e-42d5-8d36-dcfd955eb5a9</parentFolderId>
+  <packageId>64fccd19-d09e-42d5-8d36-dcfd955eb5a9</packageId>
+  <packageName>Nullbox.Fabric.Aliases.Gateway</packageName>
+  <stereotypes>
+    <stereotype stereotypeDefinitionId="b4581ed2-42ec-4ae2-83dd-dcdd5f0837b6" name="Http Settings">
+      <addedByDefault>false</addedByDefault>
+      <definitionPackageName>Intent.Metadata.WebApi</definitionPackageName>
+      <definitionPackageId>0011387a-b122-45d7-9cdb-8e21b315ab9f</definitionPackageId>
+      <properties>
+        <property name="801c3e61-4431-4d81-93fa-7e57d33cb3fa" display="Verb" value="PATCH" isActive="true" />
+        <property name="5dd3e07d-76eb-45d4-9956-4325fb068acc" display="Route" value="/{version}/mailboxes/{mailboxId}/aliases/{id}" isActive="true" />
+        <property name="4490e212-1e99-43ce-b3dd-048ed2a6bae8" display="Return Type Mediatype" value="Default" isActive="false" />
+        <property name="e3870725-34b3-4684-85f2-ec4a667207fb" display="Success Response Code" isActive="false" />
+      </properties>
+    </stereotype>
+  </stereotypes>
+  <metadata />
+  <childElements>
+    <childElement id="8a97644d-55dc-47f8-bcdb-b6118c4a0a37" type="DTO-Field" typeId="7baed1fd-469b-4980-8fd9-4cefb8331eb2">
+      <name>Id</name>
+      <display>Id: string</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="5c1e34a3-143a-4b7c-aea4-aff1f3ead9ac">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>37a8945b-aba9-4c56-9cb4-fbd9648988c1</parentFolderId>
+      <packageId>64fccd19-d09e-42d5-8d36-dcfd955eb5a9</packageId>
+      <packageName>Nullbox.Fabric.Aliases.Gateway</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="routeVar" value="id" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="300c1288-bba4-4020-8e92-dcd011a6cab3" type="DTO-Field" typeId="7baed1fd-469b-4980-8fd9-4cefb8331eb2">
+      <name>MailboxId</name>
+      <display>MailboxId: string</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="a8fa3fe4-f84f-4053-a91f-806eff4430c0">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>37a8945b-aba9-4c56-9cb4-fbd9648988c1</parentFolderId>
+      <packageId>64fccd19-d09e-42d5-8d36-dcfd955eb5a9</packageId>
+      <packageName>Nullbox.Fabric.Aliases.Gateway</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="routeVar" value="mailboxId" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="e7214d26-4f2d-4bcd-8eb4-4890a8c8c103" type="DTO-Field" typeId="7baed1fd-469b-4980-8fd9-4cefb8331eb2">
+      <name>Version</name>
+      <display>Version: string</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="50f8f6c6-ed25-434a-94d3-b0295c4f2567">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>37a8945b-aba9-4c56-9cb4-fbd9648988c1</parentFolderId>
+      <packageId>64fccd19-d09e-42d5-8d36-dcfd955eb5a9</packageId>
+      <packageName>Nullbox.Fabric.Aliases.Gateway</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="routeVar" value="version" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="b147c782-de3b-4c89-821d-c11cb9f9b978" type="Body Field" typeId="6b201f1e-03e3-4a9d-923f-ca3976c998c5">
+      <name>Body</name>
+      <display>Body: UpdateAliasCommand</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="95927b4a-b48b-4616-a84b-250a55119ee3">
+        <typeId>5f4003f4-04d2-4d6f-93d7-224ee78072c8</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Nullbox.Fabric.Aliases.Services</typePackageName>
+        <typePackageId>011dff2a-60fc-4ab2-afe4-8b21c38f0fea</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>37a8945b-aba9-4c56-9cb4-fbd9648988c1</parentFolderId>
+      <packageId>64fccd19-d09e-42d5-8d36-dcfd955eb5a9</packageId>
+      <packageName>Nullbox.Fabric.Aliases.Gateway</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

@@ -1,0 +1,6 @@
+{
+  "appHostPath": "../0 - Aspire/Nullbox.AppHost/Nullbox.AppHost.csproj",
+  "features": {
+    "publishCommandEnabled": "true"
+  }
+}

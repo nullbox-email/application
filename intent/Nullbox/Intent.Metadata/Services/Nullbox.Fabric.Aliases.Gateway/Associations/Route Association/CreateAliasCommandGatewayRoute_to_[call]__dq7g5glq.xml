@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="76ac02b8-3add-4c7d-bfea-af420c0c3769">
+  <sourceEnd id="7c575797-381a-4bb2-a878-7f34bf6471ce" type="Upstream End" typeId="4143dbe5-12ce-4705-ba69-2683c46b1b96">
+    <display>: CreateAliasCommandGatewayRoute</display>
+    <order>0</order>
+    <typeReference id="4d18ae31-c9e0-4e46-93ee-8a21c39bc3a7">
+      <typeId>914070d5-f777-4ad1-a116-583892e27a0d</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Aliases.Gateway</typePackageName>
+      <typePackageId>64fccd19-d09e-42d5-8d36-dcfd955eb5a9</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="76ac02b8-3add-4c7d-bfea-af420c0c3769" type="Downstream End" typeId="17084378-a3d8-4233-b275-c856eea4dd61">
+    <name>[call]</name>
+    <display>[call]: CreateAliasCommand</display>
+    <order>3</order>
+    <typeReference id="f02f3f58-c913-42c1-8404-f34d33fd07b4">
+      <typeId>7a16663e-1c83-477d-bbd9-d704c348b9cf</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Aliases.Services</typePackageName>
+      <typePackageId>011dff2a-60fc-4ab2-afe4-8b21c38f0fea</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Route Association</associationType>
+  <associationTypeId>dd35ed32-76bb-4abf-a4e0-370f230765cf</associationTypeId>
+  <stereotypes />
+</association>

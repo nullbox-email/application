@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="6f4e28ec-cb26-469e-93d1-d6179d8329d9" type="Scope Verb" typeId="561f871a-ac3f-4e82-b2ce-4cc129d7f264">
+  <name>update</name>
+  <display>update</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>2afee923-5555-4727-b85c-24f7758d52eb</parentFolderId>
+  <packageId>f2caa09a-8091-440f-b0eb-6f9f571a4b95</packageId>
+  <packageName>Nullbox.Fabric.Accounts.Services</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

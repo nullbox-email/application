@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="64214641-442c-4b1a-9828-e3e416da57dd">
+  <sourceEnd id="94c9f541-52c0-4a04-9d57-3ac5b04dff73" type="Publish Integration Event Source End" typeId="eab91b3a-9903-40a2-90e8-ddb714883eab">
+    <display>published by : ExternalUserCreatedDomainEventHandler.handler</display>
+    <order>0</order>
+    <typeReference id="3cfba197-a4c9-4a9f-aab6-d2345aceb952">
+      <typeId>86b95499-b32b-46d2-bcf6-b58a8e157a57</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Security.Users.Services</typePackageName>
+      <typePackageId>cdc830ca-c14a-4d10-a244-9dd36afb93ee</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="64214641-442c-4b1a-9828-e3e416da57dd" type="Publish Integration Event Target End" typeId="6feb1511-849a-4aa3-85eb-d0c736ac1fec">
+    <display>[publish] ExternalUserCreatedV1</display>
+    <order>0</order>
+    <traits>
+      <trait id="d00a2ab0-9a23-4192-b8bb-166798fc7dba" name="[Processing Action]" />
+    </traits>
+    <typeReference id="48d613a4-85f7-4ad7-a5a0-35aa0b10cccd">
+      <typeId>dee69260-88dd-4f3e-be43-43e3da956cfb</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Security.Users.Eventing.Messages</typePackageName>
+      <typePackageId>6e6bbf2c-cff9-45bc-a517-156008d49459</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <mappings>
+      <mapping type="Publish Message Mapping" typeId="7ff48a4c-ee8b-4e66-9dbb-c014eb0542fb">
+        <source applicationId="5b5d61cc-93fe-4dbd-bfc7-1979acae467b" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="86b95499-b32b-46d2-bcf6-b58a8e157a57" location="[Nullbox.Security].[Services].[handler]" />
+        <target applicationId="5b5d61cc-93fe-4dbd-bfc7-1979acae467b" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="dee69260-88dd-4f3e-be43-43e3da956cfb" location="[Nullbox.Security].[Services].[ExternalUserCreatedV1]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>{ExternalUser.Id}</expression>
+            <path>
+              <target id="dee69260-88dd-4f3e-be43-43e3da956cfb" name="ExternalUserCreatedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="993fabf7-84d1-406f-ac8f-508a82a1430b" name="Id" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="ExternalUser.Id" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="86b95499-b32b-46d2-bcf6-b58a8e157a57" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="9afca9aa-5a7e-4a9d-819c-edfb10347b2c" name="ExternalUser" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="a3085754-2e09-4081-ac8e-cf6832b56a28" name="Id" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{ExternalUser.Context}</expression>
+            <path>
+              <target id="dee69260-88dd-4f3e-be43-43e3da956cfb" name="ExternalUserCreatedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="2469de85-7170-41e9-90ec-3c0c8bbc3489" name="Context" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="ExternalUser.Context" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="86b95499-b32b-46d2-bcf6-b58a8e157a57" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="9afca9aa-5a7e-4a9d-819c-edfb10347b2c" name="ExternalUser" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="3fc67300-cbdf-4df6-8a70-32f2d1146fa3" name="Context" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{ExternalUser.UserId}</expression>
+            <path>
+              <target id="dee69260-88dd-4f3e-be43-43e3da956cfb" name="ExternalUserCreatedV1" type="element" specialization="Message" specializationId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e" />
+              <target id="5801eb65-6d24-4442-a5bd-83eb04476e9c" name="UserId" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
+            </path>
+            <sources>
+              <source identifier="ExternalUser.UserId" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
+                <path>
+                  <target id="86b95499-b32b-46d2-bcf6-b58a8e157a57" name="handler" type="association" specialization="Domain Event Handler Association Target End" specializationId="f45dfee9-f62b-45ac-bfce-a3878e04b73f" />
+                  <target id="9afca9aa-5a7e-4a9d-819c-edfb10347b2c" name="ExternalUser" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+                  <target id="8c016f2a-35d3-4069-bd37-971d91fc64ca" name="UserId" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+    </mappings>
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Publish Integration Event</associationType>
+  <associationTypeId>580b6b26-eab5-4602-a408-e76e2d292d2c</associationTypeId>
+  <stereotypes />
+</association>

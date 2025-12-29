@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="418b6cc9-be84-4631-bb66-1221564ae2e4">
+  <sourceEnd id="4d838e4c-57f3-44ee-b3bf-9b10ee78e745" type="Domain Event Origin Association Source End" typeId="2495d3ef-f7a2-441d-b749-b51b2546b45e">
+    <display>published by : EnablementGrant.Constructor</display>
+    <order>0</order>
+    <typeReference id="e3ac4731-1b9b-4ea9-9d0a-58489c1af4f1">
+      <typeId>47b243cc-17ce-4cae-b941-3f2e66ca53ee</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Accounts.Domain</typePackageName>
+      <typePackageId>b7b0ee71-00bd-467c-a2df-7b8d3248683b</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="418b6cc9-be84-4631-bb66-1221564ae2e4" type="Domain Event Origin Association Target End" typeId="17046427-14e2-4081-8463-ef16c0fda399">
+    <display>publishes : EnablementGrantCreatedDomainEvent</display>
+    <order>9</order>
+    <typeReference id="ba496cce-3bb4-4df2-8ad0-e75134596e06">
+      <typeId>db169936-7af1-4dea-a558-9fb5eb6a4e0a</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Fabric.Accounts.Domain</typePackageName>
+      <typePackageId>b7b0ee71-00bd-467c-a2df-7b8d3248683b</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <mappings>
+      <mapping type="Entity to Domain Event Mapping" typeId="86cb62b5-412d-493b-a901-d6e08cf88059">
+        <source applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="6ab29b31-27af-4f56-a67c-986d82097d63" elementId="9990ff10-9495-4e34-8d15-69e19217a713" location="[Nullbox.Fabric].[Domain].[EnablementGrant]" />
+        <target applicationId="1459ff1b-8006-433a-8447-07522ec84efc" designerId="6ab29b31-27af-4f56-a67c-986d82097d63" elementId="db169936-7af1-4dea-a558-9fb5eb6a4e0a" location="[Nullbox.Fabric].[Domain].[EnablementGrantCreatedDomainEvent]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>{EnablementGrant}</expression>
+            <path>
+              <target id="db169936-7af1-4dea-a558-9fb5eb6a4e0a" name="EnablementGrantCreatedDomainEvent" type="element" specialization="Domain Event" specializationId="0814e459-fb9b-47db-b7eb-32ce30397e8a" />
+              <target id="94331d6b-9779-417b-9711-c2fe01f2a30e" name="EnablementGrant" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+            </path>
+            <sources>
+              <source identifier="EnablementGrant" mappingType="Data Mapping" mappingTypeId="ddfefa35-caf3-48f8-aeed-7beabc8b2f5c">
+                <path>
+                  <target id="9990ff10-9495-4e34-8d15-69e19217a713" name="EnablementGrant" type="element" specialization="Class" specializationId="04e12b51-ed12-42a3-9667-a6aa81bb6d10" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+    </mappings>
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Domain Event Origin Association</associationType>
+  <associationTypeId>4c0cc50b-8a9d-43cd-b731-9f354f69f3c9</associationTypeId>
+  <stereotypes />
+</association>

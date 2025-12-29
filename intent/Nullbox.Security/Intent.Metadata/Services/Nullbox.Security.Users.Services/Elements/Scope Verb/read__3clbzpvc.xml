@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="6b68d130-a427-4ff7-a9a3-012251e12101" type="Scope Verb" typeId="561f871a-ac3f-4e82-b2ce-4cc129d7f264">
+  <name>read</name>
+  <display>read</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>e87d12be-4500-4a49-843e-f566e7eb4982</parentFolderId>
+  <packageId>cdc830ca-c14a-4d10-a244-9dd36afb93ee</packageId>
+  <packageName>Nullbox.Security.Users.Services</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

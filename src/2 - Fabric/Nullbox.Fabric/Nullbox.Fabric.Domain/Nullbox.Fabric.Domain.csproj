@@ -1,0 +1,141 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <NoWarn>1701,1702</NoWarn>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Intent.RoslynWeaver.Attributes" />
+    <PackageReference Include="SonarAnalyzer.CSharp">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentFiles; analyzers; buildTransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Entities\Accounts\AccountState.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Account.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Entities\Accounts\AccountRoleState.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AccountRole.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Entities\Accounts\AccountUserState.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AccountUser.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Entities\Accounts\AccountUserMapState.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AccountUserMap.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Entities\Aliases\AliasState.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Alias.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Entities\Aliases\AliasLearningModeScheduleState.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AliasLearningModeSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Entities\Aliases\AliasMapState.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AliasMap.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Entities\Aliases\AliasRuleState.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AliasRule.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Entities\Aliases\AliasSenderState.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AliasSender.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Entities\Aliases\AliasSenderDecisionState.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AliasSenderDecision.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Entities\Markers\AppliedMarkerState.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppliedMarker.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Entities\Deliveries\DeliveryActionState.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DeliveryAction.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Entities\Accounts\EffectiveEnablementState.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>EffectiveEnablement.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Entities\Accounts\EnablementGrantState.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>EnablementGrant.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Entities\Mailboxes\MailboxState.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Mailbox.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Entities\Mailboxes\MailboxMapState.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MailboxMap.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Entities\Mailboxes\MailboxRoutingKeyMapState.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MailboxRoutingKeyMap.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Entities\Products\ProductDefinitionState.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ProductDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Entities\Activities\RecentDeliveryActionState.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>RecentDeliveryAction.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Entities\Rollups\TopAliasState.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TopAlias.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Entities\Rollups\TopAliasItemState.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TopAliasItem.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Entities\Rollups\TopDomainState.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TopDomain.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Entities\Rollups\TopDomainItemState.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TopDomainItem.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Entities\Statistics\TrafficStatisticState.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TrafficStatistic.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>

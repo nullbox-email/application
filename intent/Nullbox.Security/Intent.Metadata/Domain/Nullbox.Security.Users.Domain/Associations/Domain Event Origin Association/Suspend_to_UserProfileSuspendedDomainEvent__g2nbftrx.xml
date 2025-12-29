@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="e5c6cecb-201a-4b44-a796-81404d24a91b">
+  <sourceEnd id="9805d5aa-cd7b-48cd-925b-e4b9f53b158b" type="Domain Event Origin Association Source End" typeId="2495d3ef-f7a2-441d-b749-b51b2546b45e">
+    <display>published by : UserProfile.Suspend</display>
+    <order>0</order>
+    <typeReference id="43a2cf07-b008-48f5-ba69-9a562772ea5c">
+      <typeId>309d220b-4f07-47cb-836c-a1d075bbece8</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Security.Users.Domain</typePackageName>
+      <typePackageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="e5c6cecb-201a-4b44-a796-81404d24a91b" type="Domain Event Origin Association Target End" typeId="17046427-14e2-4081-8463-ef16c0fda399">
+    <display>publishes : UserProfileSuspendedDomainEvent</display>
+    <order>0</order>
+    <typeReference id="4ff8b7b6-129d-489c-a2bb-0bbb6b054130">
+      <typeId>55197010-9745-4040-886d-cbf04e271074</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Security.Users.Domain</typePackageName>
+      <typePackageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <mappings>
+      <mapping type="Entity to Domain Event Mapping" typeId="86cb62b5-412d-493b-a901-d6e08cf88059">
+        <source applicationId="5b5d61cc-93fe-4dbd-bfc7-1979acae467b" designerId="6ab29b31-27af-4f56-a67c-986d82097d63" elementId="934beda7-0983-4273-8c17-4e6f6848f7c6" location="[Nullbox.Security].[Domain].[UserProfile]" />
+        <target applicationId="5b5d61cc-93fe-4dbd-bfc7-1979acae467b" designerId="6ab29b31-27af-4f56-a67c-986d82097d63" elementId="55197010-9745-4040-886d-cbf04e271074" location="[Nullbox.Security].[Domain].[UserProfileSuspendedDomainEvent]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>{UserProfile}</expression>
+            <path>
+              <target id="55197010-9745-4040-886d-cbf04e271074" name="UserProfileSuspendedDomainEvent" type="element" specialization="Domain Event" specializationId="0814e459-fb9b-47db-b7eb-32ce30397e8a" />
+              <target id="e6217897-6ed6-4597-a883-57cc65e01303" name="UserProfile" type="element" specialization="Property" specializationId="b4d69073-5abb-4968-b41b-545b2f7408ed" />
+            </path>
+            <sources>
+              <source identifier="UserProfile" mappingType="Data Mapping" mappingTypeId="ddfefa35-caf3-48f8-aeed-7beabc8b2f5c">
+                <path>
+                  <target id="934beda7-0983-4273-8c17-4e6f6848f7c6" name="UserProfile" type="element" specialization="Class" specializationId="04e12b51-ed12-42a3-9667-a6aa81bb6d10" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+    </mappings>
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Domain Event Origin Association</associationType>
+  <associationTypeId>4c0cc50b-8a9d-43cd-b731-9f354f69f3c9</associationTypeId>
+  <stereotypes />
+</association>

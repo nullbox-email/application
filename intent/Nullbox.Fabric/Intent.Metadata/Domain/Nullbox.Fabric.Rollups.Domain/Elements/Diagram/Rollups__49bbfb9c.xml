@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="30a13b3e-47c2-4a5f-84bb-c89a487dba6f" type="Diagram" typeId="4d66fecd-e9b8-436f-aa50-c59040ad0879">
+  <name>Rollups</name>
+  <display>Rollups</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>0957de1a-a538-41f6-aaf6-b24f66947ab5</parentFolderId>
+  <packageId>a1e889e8-ed2c-4a30-b512-b6d9647053ca</packageId>
+  <packageName>Nullbox.Fabric.Rollups.Domain</packageName>
+  <diagram>
+    <targetPackageId>30a13b3e-47c2-4a5f-84bb-c89a487dba6f</targetPackageId>
+  </diagram>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="43fd8720-c3ba-4d3b-b57d-873e7b63d850" type="Message" typeId="cbe970af-5bad-4d92-a3ed-a24b9fdaa23e">
+  <name>UserProfileActivatedV1</name>
+  <display>UserProfileActivatedV1</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>c0c2a257-bb02-4ee6-b409-9e8091f8cda9</parentFolderId>
+  <packageId>6e6bbf2c-cff9-45bc-a517-156008d49459</packageId>
+  <packageName>Nullbox.Security.Users.Eventing.Messages</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="b408554f-ae93-41bc-95e3-a4a39ea917e8" type="Property" typeId="bde29850-5fb9-4f47-9941-b9e182fd9bdc">
+      <name>Id</name>
+      <display>Id: guid</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="49850a04-98aa-4857-850d-a4222978cf6c">
+        <typeId>6b649125-18ea-48fd-a6ba-0bfff0d8f488</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>43fd8720-c3ba-4d3b-b57d-873e7b63d850</parentFolderId>
+      <packageId>6e6bbf2c-cff9-45bc-a517-156008d49459</packageId>
+      <packageName>Nullbox.Security.Users.Eventing.Messages</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="aed649f0-a095-4b7e-a4de-cd291c234a7e" type="Property" typeId="bde29850-5fb9-4f47-9941-b9e182fd9bdc">
+      <name>Name</name>
+      <display>Name: string</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="4250e1d7-d910-476d-bb74-dc334f28bc69">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>43fd8720-c3ba-4d3b-b57d-873e7b63d850</parentFolderId>
+      <packageId>6e6bbf2c-cff9-45bc-a517-156008d49459</packageId>
+      <packageName>Nullbox.Security.Users.Eventing.Messages</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="768741e0-58fb-4b91-97b1-e136efb7519a" type="Property" typeId="bde29850-5fb9-4f47-9941-b9e182fd9bdc">
+      <name>EmailAddress</name>
+      <display>EmailAddress: UserProfileActivatedV1EmailAddressDto</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="128793db-455f-4aee-9417-e58eb7d0dd2d">
+        <typeId>b33d9091-ec5e-4e6b-b885-eebd924649d7</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Nullbox.Security.Users.Eventing.Messages</typePackageName>
+        <typePackageId>6e6bbf2c-cff9-45bc-a517-156008d49459</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>43fd8720-c3ba-4d3b-b57d-873e7b63d850</parentFolderId>
+      <packageId>6e6bbf2c-cff9-45bc-a517-156008d49459</packageId>
+      <packageName>Nullbox.Security.Users.Eventing.Messages</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="353c11ff-ae0c-4f32-8021-e99d620d6f52" type="Property" typeId="bde29850-5fb9-4f47-9941-b9e182fd9bdc">
+      <name>Status</name>
+      <display>Status: UserStatus</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="eebb9be3-995c-49c8-b067-fe018805ba73">
+        <typeId>642a9f48-5e89-42bb-952f-a5e246901bc4</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Nullbox.Security.Users.Domain</typePackageName>
+        <typePackageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>43fd8720-c3ba-4d3b-b57d-873e7b63d850</parentFolderId>
+      <packageId>6e6bbf2c-cff9-45bc-a517-156008d49459</packageId>
+      <packageName>Nullbox.Security.Users.Eventing.Messages</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

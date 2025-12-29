@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="937d0944-baad-4133-8b96-cbc81521a80e" type="Domain Event Handler" typeId="d80e61c5-7e4c-4175-9df1-0413f664824c">
+  <name>EnablementGrantCreatedDomainEventHandler</name>
+  <display>EnablementGrantCreatedDomainEventHandler</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>a634aba5-e234-4704-ade8-dbd9aec7d11e</parentFolderId>
+  <packageId>f2caa09a-8091-440f-b0eb-6f9f571a4b95</packageId>
+  <packageName>Nullbox.Fabric.Accounts.Services</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

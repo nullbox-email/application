@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<deviationsLog>
+  <files>
+    <file>
+      <correlationId>Intent.Application.Identity.ApplicationSecurityConfiguration#ef80e4d0-21e4-4935-85e8-996ce04522d7</correlationId>
+      <path>1 - Security/Nullbox.Security/Nullbox.Security.Api/Configuration/ApplicationSecurityConfiguration.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-07T15:30:34.2302461Z</updatedAt>
+      <deviationsHash>7CF11F825495CB832822F33043A43F83BA29402223943F7B0EE439DB19EF05FE</deviationsHash>
+      <fileHash>94F2446DA5C28E7BB62414CA430EA39FE04E7DAB3B3BC100D8E0CF9219B44217</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.AspNetCore.HealthChecks.HealthChecksConfiguration#7aba4d06-6fa2-41d6-ac76-d76a3ab47e31</correlationId>
+      <path>1 - Security/Nullbox.Security/Nullbox.Security.Api/Configuration/HealthChecksConfiguration.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-07T15:30:34.2304477Z</updatedAt>
+      <deviationsHash>3B81318B6A7B4208C7F91962DBB393EACCE793CC11073FBF7E0B065654AF981F</deviationsHash>
+      <fileHash>9A07B1C0DD5BB955DAAD1F430FF8791455A29D764361BC1387AC6C5F9E8C9BF8</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Application.Identity.CurrentUserService#99e56969-e6af-4194-876d-af10f9c59d29</correlationId>
+      <path>1 - Security/Nullbox.Security/Nullbox.Security.Api/Services/CurrentUserService.cs</path>
+      <count>5</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-08T08:53:56.295418Z</updatedAt>
+      <deviationsHash>AA1642618D5E2F2EF578CE76EE4FD88FE10E147FA0E95E357EDD893095E9682C</deviationsHash>
+      <fileHash>7CFDA135438DCF69FEF52C3C47B306E82AA1791A835C01D3D80C8C813C586094</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Application.Identity.CurrentUserInterface#745f5f32-e00d-4c59-8216-dc04fe6bd472</correlationId>
+      <path>1 - Security/Nullbox.Security/Nullbox.Security.Application/Common/Interfaces/ICurrentUser.cs</path>
+      <count>3</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-08T08:53:56.2955993Z</updatedAt>
+      <deviationsHash>C63A574639BF23BF2B52220A4FD25F7631CA56CF76DC8EE9C008E23093F9997B</deviationsHash>
+      <fileHash>438C4CEC244C869BC6EC525591BD682A102862B281B478F7B77BC6A8BD7036B0</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Application.MediatR.QueryHandler#70073dc4-b9b2-493b-bb6e-357c0e060a61</correlationId>
+      <path>1 - Security/Nullbox.Security/Nullbox.Security.Application/OIDC/GetJWKS/GetJWKSQueryHandler.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-07T15:30:34.2308304Z</updatedAt>
+      <deviationsHash>48C2BFB0887B609687C8F99EA04AC8F616E4CA28EE5C634EFE608F35B924743E</deviationsHash>
+      <fileHash>61C0E42CCA521F1DE14ACC47C6F669E4E2DE34BC366AFF0935D20F46889944B0</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Application.MediatR.QueryHandler#865b1e64-108b-428a-83bf-26f31b7378d6</correlationId>
+      <path>1 - Security/Nullbox.Security/Nullbox.Security.Application/OIDC/GetOpenIdConfiguration/GetOpenIdConfigurationQueryHandler.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-07T15:30:34.2308685Z</updatedAt>
+      <deviationsHash>C45C26A0C4E21E32DE0B876C96E1D488ADB4AC32F9A1ECFF5E68765C776241BD</deviationsHash>
+      <fileHash>8D18602833C7F071E01D6C3FDB23DFA03374E81F503B3A8009368E0505624AC7</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Application.MediatR.CommandHandler#84bb47c1-30e0-4996-b3df-c491df5efa9f</correlationId>
+      <path>1 - Security/Nullbox.Security/Nullbox.Security.Application/Tokens/ExchangeToken/ExchangeTokenCommandHandler.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-07T15:30:34.2306928Z</updatedAt>
+      <deviationsHash>B85424C816C27F94224C60A604065B5200FA3C415E22CF55B0401A6E59226D20</deviationsHash>
+      <fileHash>7171914C1A693E4BAD7D241BB36148E73FD7150F24118765EF72B5C0CF8401DD</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Application.MediatR.CommandHandler#13a2c24b-1d62-49ac-8c41-7288a2f50a15</correlationId>
+      <path>1 - Security/Nullbox.Security/Nullbox.Security.Application/Tokens/RequestAccessToken/RequestAccessTokenCommandHandler.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-08T04:17:28.8931814Z</updatedAt>
+      <deviationsHash>D483C7B9D7315E080E3CA3416508D124A1A15DF41D3D0DC3FB3E3824C81A3F5D</deviationsHash>
+      <fileHash>41B850BEBA4069CD325E8B65FBBF0B6F72245684E07B8A225E84BF67DCCD173F</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Eventing.MassTransit.MassTransitConfiguration#944bc5ac-a2b1-43cc-a2f5-1943cc59f865</correlationId>
+      <path>1 - Security/Nullbox.Security/Nullbox.Security.Infrastructure/Configuration/MassTransitConfiguration.cs</path>
+      <count>2</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-09T17:20:17.673847Z</updatedAt>
+      <deviationsHash>E3A36D6DF1DEE2810A78A1B269FFB62841D6CFC5E102BE2340096B4F5C1C931A</deviationsHash>
+      <fileHash>65DB4FAB5323FDD9C866CFFA201CE9BBBB96BBDB19043E3CEF3E8CA11FE20782</fileHash>
+    </file>
+  </files>
+</deviationsLog>

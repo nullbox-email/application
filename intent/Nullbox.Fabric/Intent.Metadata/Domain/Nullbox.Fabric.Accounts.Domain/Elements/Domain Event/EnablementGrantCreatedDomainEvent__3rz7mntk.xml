@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="db169936-7af1-4dea-a558-9fb5eb6a4e0a" type="Domain Event" typeId="0814e459-fb9b-47db-b7eb-32ce30397e8a">
+  <name>EnablementGrantCreatedDomainEvent</name>
+  <display>EnablementGrantCreatedDomainEvent</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>89f3695e-ffd7-4b65-b878-caff8f80b9c1</parentFolderId>
+  <packageId>b7b0ee71-00bd-467c-a2df-7b8d3248683b</packageId>
+  <packageName>Nullbox.Fabric.Accounts.Domain</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="94331d6b-9779-417b-9711-c2fe01f2a30e" type="Property" typeId="b4d69073-5abb-4968-b41b-545b2f7408ed">
+      <name>EnablementGrant</name>
+      <display>EnablementGrant: EnablementGrant</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="6c48db18-dead-447b-9554-ec46488ab547">
+        <typeId>9990ff10-9495-4e34-8d15-69e19217a713</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Nullbox.Fabric.Accounts.Domain</typePackageName>
+        <typePackageId>b7b0ee71-00bd-467c-a2df-7b8d3248683b</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>db169936-7af1-4dea-a558-9fb5eb6a4e0a</parentFolderId>
+      <packageId>b7b0ee71-00bd-467c-a2df-7b8d3248683b</packageId>
+      <packageName>Nullbox.Fabric.Accounts.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

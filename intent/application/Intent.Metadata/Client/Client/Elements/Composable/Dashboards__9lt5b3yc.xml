@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="7eb3008b-c21f-467a-a3b9-2e32dc95881f" type="Composable" typeId="d0abb8e4-4257-485f-83e9-7e9de17ab16e">
+  <name>Dashboards</name>
+  <display>Dashboards</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>26e6787d-3fd1-47a9-a615-8c599158ca91</parentFolderId>
+  <packageId>26e6787d-3fd1-47a9-a615-8c599158ca91</packageId>
+  <packageName>Client</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>
