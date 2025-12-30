@@ -12,24 +12,24 @@ When an email arrives at a Nullbox address, Nullbox decides what to do with it b
 
 ## What Nullbox checks
 
-### 1) Is this address valid?
+### Is this address valid?
 
 Nullbox first confirms the message was sent to a real Nullbox address you own.
 
 * If the address doesn’t exist (or the domain isn’t yours), the message is **dropped**.
 
-### 2) Does the alias exist (or should it be created)?
+### Does the alias exist (or should it be created)?
 
 If the domain is yours but the specific alias hasn’t been created yet, Nullbox may create it automatically *if you’ve enabled that*.
 
 * If auto-create is enabled and your account limits allow it, the message can be **forwarded**.
 * If not, the message is **dropped**.
 
-### 3) Is the alias active?
+### Is the alias active?
 
 If the alias exists but has been disabled, the message is **dropped**.
 
-### 4) Is the sender allowed?
+### Is the sender allowed?
 
 If the message is eligible to be forwarded, Nullbox applies your sender protection rules:
 
@@ -39,7 +39,7 @@ If the message is eligible to be forwarded, Nullbox applies your sender protecti
   * Known/approved senders are **forwarded**
   * Unknown or suspicious senders are usually **quarantined** so you can review them
 
-### 5) Are you within usage limits?
+### Are you within usage limits?
 
 Finally, Nullbox checks whether forwarding the message would exceed account limits (for example, monthly bandwidth).
 

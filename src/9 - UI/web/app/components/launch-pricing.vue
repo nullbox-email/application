@@ -1,23 +1,27 @@
 <script setup lang="ts">
-const { t } = useI18n({ useScope: "local" })
+const { t } = useI18n({ useScope: "local" });
 
 const includedFeatures = computed(() => [
-  t("features.mailboxes", 5),
-  t("features.aliases", 50),
-  t("features.bandwidth_gb", { count: 1 }),
-  t("features.support_response_hours", { hours: 48 })
-])
+  t("features.mailboxes_unlimited"),
+  t("features.aliases_unlimited"),
+  t("features.bandwidth_gb", { count: 100 }),
+  t("features.support_response_hours", { hours: 24 }),
+]);
 </script>
 
 <template>
-  <section class="bg-background py-24 sm:py-32">
+  <section id="get-started" class="bg-background py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-4xl sm:text-center">
-        <h2 class="text-5xl font-semibold tracking-tight text-balance text-foreground sm:text-6xl">
+        <h2
+          class="text-5xl font-semibold tracking-tight text-balance text-foreground sm:text-6xl"
+        >
           {{ t("section.title") }}
         </h2>
 
-        <p class="mx-auto mt-6 max-w-2xl text-lg font-medium text-pretty text-muted-foreground sm:text-xl/8">
+        <p
+          class="mx-auto mt-6 max-w-2xl text-lg font-medium text-pretty text-muted-foreground sm:text-xl/8"
+        >
           {{ t("section.subtitle") }}
         </p>
       </div>
@@ -45,27 +49,39 @@ const includedFeatures = computed(() => [
             <div class="h-px flex-auto bg-border" />
           </div>
 
-          <ul role="list" class="mt-8 grid grid-cols-1 gap-4 text-sm/6 text-muted-foreground sm:grid-cols-2 sm:gap-6">
-            <li v-for="feature in includedFeatures" :key="feature" class="flex gap-x-3">
-              <icon name="heroicons:check" class="text-xl flex-none text-primary" aria-hidden="true" />
+          <ul
+            role="list"
+            class="mt-8 grid grid-cols-1 gap-4 text-sm/6 text-muted-foreground sm:grid-cols-2 sm:gap-6"
+          >
+            <li
+              v-for="feature in includedFeatures"
+              :key="feature"
+              class="flex gap-x-3"
+            >
+              <icon
+                name="heroicons:check"
+                class="text-xl flex-none text-primary"
+                aria-hidden="true"
+              />
               {{ feature }}
             </li>
           </ul>
         </div>
 
         <div class="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:shrink-0">
-          <div class="rounded-2xl bg-muted py-10 text-center ring-1 ring-border lg:flex lg:flex-col lg:justify-center lg:py-16">
+          <div
+            class="rounded-2xl bg-muted py-10 text-center ring-1 ring-border lg:flex lg:flex-col lg:justify-center lg:py-16"
+          >
             <div class="mx-auto max-w-xs px-8">
               <p class="text-base font-semibold text-muted-foreground">
                 {{ t("price.tagline") }}
               </p>
 
               <p class="mt-6 flex items-baseline justify-center gap-x-2">
-                <span class="text-5xl font-semibold tracking-tight text-foreground">
+                <span
+                  class="text-5xl font-semibold tracking-tight text-foreground"
+                >
                   {{ t("price.amount") }}
-                </span>
-                <span class="text-sm/6 font-semibold tracking-wide text-muted-foreground">
-                  {{ t("price.currency") }}
                 </span>
               </p>
 
@@ -82,7 +98,9 @@ const includedFeatures = computed(() => [
               </nuxt-link>
 
               <p class="mt-6 text-xs/5 text-muted-foreground">
-                {{ t("price.note") }}
+                {{
+                  t("price.note", { bandwidth: 100 })
+                }}
               </p>
             </div>
           </div>
@@ -95,27 +113,29 @@ const includedFeatures = computed(() => [
 <i18n lang="yaml" scope="local">
 en:
   section:
-    title: "Launch promo"
-    subtitle: "Free for 3 months after launch. Paid plans will be available soon."
+    title: "Early access"
+    subtitle: "Pro features for early adopters. Billing is not available yet."
 
   plan:
-    name: "Launch"
-    tagline: "Limited-time early access"
-    description: "Everything you need to get started during launch."
+    name: "Early access"
+    tagline: "Limited early adopter offer"
+    description: "Full Pro features during early access."
 
   price:
-    tagline: "Launch price"
+    tagline: "Early access"
     amount: "Free"
-    currency: ""
-    suffix: "for 3 months"
-    note: "Includes {mailboxes} mailboxes, {aliases} aliases, and {bandwidth} GB/month bandwidth."
+    suffix: "until billing is available"
+    note: "Includes unlimited mailboxes and aliases, plus {bandwidth} GB/month bandwidth. When billing is available, you get 3 months of Pro included."
 
   cta:
-    get_access: "Get access"
+    get_access: "Get early access"
+
+  labels:
+    whats_included: "What’s included"
 
   features:
-    mailboxes: "{count} mailbox | {count} mailboxes"
-    aliases: "{count} alias | {count} aliases"
+    mailboxes_unlimited: "Unlimited mailboxes"
+    aliases_unlimited: "Unlimited aliases"
     bandwidth_gb: "{count} GB/month bandwidth"
     support_response_hours: "Support response within {hours} hours"
 </i18n>

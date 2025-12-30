@@ -1,5 +1,7 @@
 <script setup lang="ts">
 const { t } = useI18n({ useScope: "local" });
+
+defineProps({learnMoreUrl: {type: String, required: true}})
 </script>
 
 <template>
@@ -12,7 +14,7 @@ const { t } = useI18n({ useScope: "local" });
       >
         {{ t("hero.title.line1") }}
         <br />
-        {{ t("hero.title.line2") }}
+        <span class="text-2xl">{{ t("hero.title.line2") }}</span>
       </h2>
 
       <div class="mt-10 flex items-center gap-x-6 lg:mt-0 lg:shrink-0">
@@ -23,7 +25,7 @@ const { t } = useI18n({ useScope: "local" });
         </Button>
 
         <Button variant="secondary" as-child>
-          <nuxt-link to="#faq">
+          <nuxt-link :to="learnMoreUrl">
             {{ t("cta.secondary") }}
           </nuxt-link>
         </Button>
@@ -36,8 +38,8 @@ const { t } = useI18n({ useScope: "local" });
 en:
   hero:
     title:
-      line1: Ready to dive in?
-      line2: Start your free trial today.
+      line1: Catch the unexpected
+      line2: Quarantine senders that do not match an alias.
   cta:
     primary: Get started
     secondary: Learn more

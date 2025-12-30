@@ -14,7 +14,7 @@ defineProps({learnMoreUrl: {type: String, required: true}})
       >
         {{ t("hero.title.line1") }}
         <br />
-        {{ t("hero.title.line2") }}
+        <span class="text-2xl">{{ t("hero.title.line2") }}</span>
       </h2>
 
       <div class="mt-10 flex items-center gap-x-6 lg:mt-0 lg:shrink-0">
@@ -38,9 +38,9 @@ defineProps({learnMoreUrl: {type: String, required: true}})
 en:
   hero:
     title:
-      line1: Ready to dive in?
-      line2: Start your free trial today.
+      line1: Launch special
+      line2: Get Pro features now. No billing yet.
   cta:
     primary: Get started
-    secondary: Learn more
+    secondary: How it works
 </i18n>

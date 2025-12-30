@@ -67,7 +67,7 @@ const mobileOpen = ref(false);
 
         <div class="mt-10 flex flex-col items-center gap-3 sm:flex-row">
           <Button as-child>
-            <NuxtLink to="/get-started" external>
+            <NuxtLink to="#get-started" external>
               {{ t("cta.primary") }}
             </NuxtLink>
           </Button>
@@ -86,24 +86,24 @@ const mobileOpen = ref(false);
 en:
   title: "Nullbox"
   brand: "Nullbox"
-  description: "Private inboxes with aliases. Keep your real address out of forms, lists, and leaks."
+  description: "Aliases that forward to your inbox. Keep your real address out of forms, lists, and leaks."
   cta:
-    primary: Get started
+    primary: Get launch access
     secondary: Learn more
   quote:
     options:
-      - Privacy isn’t a feature. It’s the foundation.
-      - Your information belongs to you. We keep it that way.
-      - Start privately. Stay private.
-      - Strong privacy, minimal friction.
+      - One alias per site. Shut it down anytime.
+      - Quarantine unexpected senders.
+      - Stop spam at the source, not in the inbox.
+      - Keep your real address off signup forms.
+      - Rotate an address instead of cleaning spam.
+      - See who leaked your address.
       - Stay reachable without being exposed.
-      - Give out an email, not your identity.
-      - Your inbox should answer to you, not advertisers.
-      - Keep your real address off the front lines.
-      - Control what reaches you, and what doesn’t.
-      - Less tracking. Same email.
-      - Block the data grab, keep the messages.
-      - A safer inbox starts with a little distance.
-      - Good tools protect you, even when you’re not looking.
-      - Privacy is freedom in the digital world.
+      - No OAuth access to your inbox.
+      - Minimal data surface by design.
+      - Forwarded mail is not stored as a mailbox.
+      - Less tracking. Same email workflow.
+      - Privacy that does not break your routine.
+      - A safer inbox starts with a buffer.
+
 </i18n>

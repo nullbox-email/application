@@ -1,10 +1,10 @@
 <script setup lang="ts">
-const { t } = useI18n({ useScope: "local" })
+const { t } = useI18n({ useScope: "local" });
 
 type Faq = {
-  question: string
-  answer: string
-}
+  question: string;
+  answer: string;
+};
 
 const faqs = computed<Faq[]>(() => [
   {
@@ -20,18 +20,14 @@ const faqs = computed<Faq[]>(() => [
     answer: t("faq.items.spam.answer"),
   },
   {
-    question: t("faq.items.replies.question"),
-    answer: t("faq.items.replies.answer"),
+    question: t("faq.items.open_source.question"),
+    answer: t("faq.items.open_source.answer"),
   },
   {
     question: t("faq.items.privacy.question"),
     answer: t("faq.items.privacy.answer"),
   },
-  {
-    question: t("faq.items.cost.question"),
-    answer: t("faq.items.cost.answer"),
-  },
-])
+]);
 
 const contactOptions = computed(() => [
   {
@@ -40,19 +36,28 @@ const contactOptions = computed(() => [
     icon: "carbon:logo-github",
   },
   {
+    name: t("faq.contact.open_source"),
+    href: "https://github.com/nullbox-email",
+    icon: "carbon:logo-github",
+  },
+  {
     name: t("faq.contact.discord"),
     href: "https://discord.gg/bRP9xfa7",
     icon: "carbon:logo-discord",
   },
-])
+]);
 </script>
 
 <template>
   <section id="faq" class="bg-background py-24 sm:py-32 lg:py-40">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mx-auto max-w-2xl lg:max-w-none lg:grid lg:grid-cols-12 lg:gap-8">
+      <div
+        class="mx-auto max-w-2xl lg:max-w-none lg:grid lg:grid-cols-12 lg:gap-8"
+      >
         <div class="lg:col-span-5">
-          <h2 class="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+          <h2
+            class="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl"
+          >
             {{ t("faq.title") }}
           </h2>
 
@@ -99,11 +104,9 @@ en:
     lead: "Can’t find the answer you’re looking for? Contact us below and we'll be happy to help."
     contact:
       github: GitHub
+      open_source: Open source
       discord: Discord
     items:
-      cost:
-        question: How much does it cost?
-        answer: "It’s free for now. When we introduce paid plans, pricing is expected to start around $3/month, with Pro at around $5/month. Early users receive one free year of Pro from the start of monetization. We plan to always offer a free tier."
       how:
         question: How does it work?
         answer: "Incoming mail is handled by a Cloudflare Email Worker. The worker checks alias and mailbox metadata with our API to decide whether to forward or drop the message. Only metadata is logged. Messages that are forwarded are sent directly via a mail-forwarding service and do not pass through our system."
@@ -116,7 +119,7 @@ en:
       spam:
         question: Can I stop an alias if it starts getting spam?
         answer: "Yes. You can disable or rotate aliases, so spam stays contained to the address that leaked."
-      replies:
-        question: Will this break replies or verification emails?
-        answer: "Verification and transactional emails should forward as expected. Reply support depends on how you send (we aim to keep common flows working)."
+      open_source:
+        question: Is Nullbox open source?
+        answer: "Yes. Nullbox is fully open source on GitHub. You can audit the code, run it yourself, or contribute. Documentation and deployment guides are actively being expanded"
 </i18n>

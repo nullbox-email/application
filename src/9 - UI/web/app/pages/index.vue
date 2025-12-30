@@ -10,12 +10,13 @@ useHead({
 <template>
   <div class="scroll-smooth">
     <hero />
+    <launch-pricing />
     <features01 />
     <cta-01 learnMoreUrl="#faq" />
     <faq />
-    <cta-01 learnMoreUrl="#features-02" />
+    <cta-02 learnMoreUrl="#features-02" />
     <features02 />
-    <cta-01 learnMoreUrl="#features-03" />
+    <cta-03 learnMoreUrl="#features-03" />
     <features03 />
     <cta-04 />
     <web-footer />
