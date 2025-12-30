@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Nullbox.Security.Application.Users.OnboardUser;
 using Nullbox.Security.Domain.Services.Users;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Model;
 
 [assembly: IntentTemplate("Intent.AspNetCore.Controllers.Controller", Version = "1.0")]
 
@@ -38,7 +39,7 @@ public class UsersController : ControllerBase
     [MapToApiVersion("1.0")]
     public async Task<ActionResult> OnboardUser(
             [FromBody] OnboardUserCommand command,
-            [FromServices] ITurnstileDomainService turnstileDomainService,
+            [IntentIgnore] [FromServices] ITurnstileDomainService turnstileDomainService,
             CancellationToken cancellationToken = default)
     {
         // [IntentIgnore]
@@ -46,11 +47,13 @@ public class UsersController : ControllerBase
             HttpContext.Request.Headers["X-Forwarded-For"].FirstOrDefault() ??
             HttpContext.Connection.RemoteIpAddress?.ToString();
 
+        // [IntentIgnore]
         var turnstileValidation = await turnstileDomainService.ValidateTokenAsync(command.CfTurnstyleResponse, command.RemoteIp, cancellationToken);
-
+        
+        // [IntentIgnore]
         if (!turnstileValidation.Success)
         {
-            return BadRequest(turnstileValidation.ErrorCodes.FirstOrDefault() ?? "Turnstyle validation failed");
+            return BadRequest($"Verification failed: {string.Join(", ", turnstileValidation.ErrorCodes)}");
         }
 
         await _mediator.Send(command, cancellationToken);
