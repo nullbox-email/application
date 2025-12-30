@@ -17,5 +17,4 @@ public record UserProfileCreatedV1Event
     public string Name { get; init; }
     public UserProfileCreatedV1EmailAddressDto EmailAddress { get; init; }
     public UserStatus Status { get; init; }
-    public Guid UserId { get; init; }
 }

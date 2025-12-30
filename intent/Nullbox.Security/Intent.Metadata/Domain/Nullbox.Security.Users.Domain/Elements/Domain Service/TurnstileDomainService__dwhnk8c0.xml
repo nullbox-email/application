@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="cedc0306-6e05-40d6-855f-f3828a7093c3" type="Domain Service" typeId="07f936ea-3756-48c8-babd-24ac7271daac">
+  <name>TurnstileDomainService</name>
+  <display>TurnstileDomainService</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>e6d83de0-c149-4f2c-82b2-1a8d80e07e94</parentFolderId>
+  <packageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</packageId>
+  <packageName>Nullbox.Security.Users.Domain</packageName>
+  <stereotypes>
+    <stereotype stereotypeDefinitionId="6ad19817-2014-464b-a525-409b3a5230d1" name="Service Registration Settings">
+      <addedByDefault>true</addedByDefault>
+      <definitionPackageName>Intent.DomainServices</definitionPackageName>
+      <definitionPackageId>4dd5ea09-bece-4f26-bfeb-2904a26e2895</definitionPackageId>
+      <properties>
+        <property name="6b4d2aef-0f5a-46a1-b443-1d9f3286c128" display="Service Registration Scope" isActive="true" />
+      </properties>
+    </stereotype>
+  </stereotypes>
+  <metadata />
+  <childElements>
+    <childElement id="abec8c28-6108-4caf-9b6b-3a7a0db15c67" type="Operation" typeId="e042bb67-a1df-480c-9935-b26210f78591">
+      <name>ValidateTokenAsync</name>
+      <display>ValidateTokenAsync(token: string, remoteip: string): TurnstileResponse</display>
+      <isAbstract>false</isAbstract>
+      <sort-children>by-type-then-manually</sort-children>
+      <genericTypes />
+      <typeReference id="cfb744e2-721a-4992-b26e-7177a0ef9b69">
+        <typeId>438e9885-8d43-40b8-8468-a867aec99cf8</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Nullbox.Security.Users.Domain</typePackageName>
+        <typePackageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>cedc0306-6e05-40d6-855f-f3828a7093c3</parentFolderId>
+      <packageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</packageId>
+      <packageName>Nullbox.Security.Users.Domain</packageName>
+      <traits>
+        <trait id="0a932465-ea1f-42e7-b1eb-9f90aa8961fd" name="[Invokable]" />
+        <trait id="2b6729eb-e2ae-4b5f-86fe-4f611d1f912e" name="[Processing Handler]" />
+      </traits>
+      <stereotypes />
+      <metadata />
+      <childElements>
+        <childElement id="6d12578d-2c38-47ac-8f4c-d859e2f93983" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>token</name>
+          <display>in : token: string</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="99cd5120-5288-42d1-8eb4-04d3f3dd2897">
+            <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <parentFolderId>abec8c28-6108-4caf-9b6b-3a7a0db15c67</parentFolderId>
+          <packageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</packageId>
+          <packageName>Nullbox.Security.Users.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="ce00682c-e70f-41aa-81a8-4e7165844e4e" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>remoteip</name>
+          <display>in : remoteip: string</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="6b9c6e7c-5529-4f99-ba38-ebe31264d5dc">
+            <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <parentFolderId>abec8c28-6108-4caf-9b6b-3a7a0db15c67</parentFolderId>
+          <packageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</packageId>
+          <packageName>Nullbox.Security.Users.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+      </childElements>
+    </childElement>
+  </childElements>
+</class>

@@ -19,6 +19,12 @@ public class OnboardUserCommandValidator : AbstractValidator<OnboardUserCommand>
             .NotEmpty()
             .Length(3, 64)
             .CustomAsync(ValidateNameAsync);
+
+        RuleFor(v => v.RemoteIp)
+            .NotNull();
+
+        RuleFor(v => v.CfTurnstyleResponse)
+            .NotNull();
     }
 
     private readonly HashSet<string> _blockedNames = new(StringComparer.OrdinalIgnoreCase)

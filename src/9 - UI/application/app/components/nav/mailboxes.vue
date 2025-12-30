@@ -19,7 +19,7 @@ defineProps<{
   <SidebarGroup class="group-data-[collapsible=icon]:hidden">
     <SidebarGroupLabel>{{ name }}</SidebarGroupLabel>
     <SidebarMenu>
-      <SidebarMenuItem>
+      <SidebarMenuItem v-if="aliases && aliases.length > 0">
         <SidebarMenuButton as-child>
           <nuxt-link
             :to="`/mailboxes/${routingKey}.${domain}/getting-started`"
@@ -30,7 +30,7 @@ defineProps<{
           </nuxt-link>
         </SidebarMenuButton>
       </SidebarMenuItem>
-      <SidebarMenuItem>
+      <SidebarMenuItem v-else>
         <SidebarMenuButton as-child>
           <nuxt-link
             :to="`/mailboxes/${routingKey}.${domain}`"

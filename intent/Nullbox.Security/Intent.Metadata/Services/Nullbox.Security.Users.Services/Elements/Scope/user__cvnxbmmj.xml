@@ -16,7 +16,7 @@
       <properties>
         <property name="62ebeae8-2d85-4c5a-af45-c53986f0518b" display="Bounded Context" value="nullbox" isActive="true" />
         <property name="dfe633ea-7eb9-4c85-a9f8-dea39cee7dee" display="Resource" value="934beda7-0983-4273-8c17-4e6f6848f7c6" isActive="true" />
-        <property name="e3644a6f-bbba-4634-8311-22f616970988" display="Resource Name" value="User" isActive="true" />
+        <property name="e3644a6f-bbba-4634-8311-22f616970988" display="Resource Name" value="user" isActive="true" />
       </properties>
     </stereotype>
   </stereotypes>

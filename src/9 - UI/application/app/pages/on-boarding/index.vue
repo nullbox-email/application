@@ -25,6 +25,8 @@ const schema = toTypedSchema(
   })
 );
 
+const token = ref<string | null>(null);
+
 const { handleSubmit } = useForm({
   validationSchema: schema,
 });
@@ -146,6 +148,9 @@ const onSubmit = handleSubmit(async (values) => {
                   <FormMessage />
                 </FormItem>
               </FormField>
+              
+              <NuxtTurnstile v-model="token" />
+
               <Button class="cursor-pointer" type="submit" :disabled="saving">
                 <icon
                   v-if="saving"

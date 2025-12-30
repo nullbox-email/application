@@ -15,5 +15,4 @@ public record ExternalUserCreatedV1Event
     public string Id { get; init; }
     public string Context { get; init; }
     public Guid UserId { get; init; }
-    public Guid UserId1 { get; init; }
 }

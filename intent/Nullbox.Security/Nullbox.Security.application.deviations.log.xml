@@ -9,7 +9,7 @@
       <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
       <updatedAt>2025-12-07T15:30:34.2302461Z</updatedAt>
       <deviationsHash>7CF11F825495CB832822F33043A43F83BA29402223943F7B0EE439DB19EF05FE</deviationsHash>
-      <fileHash>94F2446DA5C28E7BB62414CA430EA39FE04E7DAB3B3BC100D8E0CF9219B44217</fileHash>
+      <fileHash>DEC4464BD1E48E6DFF14EDF58E69ADCDD9FDE4D9F28BD344003F1CEB9A7AD41F</fileHash>
     </file>
     <file>
       <correlationId>Intent.AspNetCore.HealthChecks.HealthChecksConfiguration#7aba4d06-6fa2-41d6-ac76-d76a3ab47e31</correlationId>
@@ -19,7 +19,17 @@
       <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
       <updatedAt>2025-12-07T15:30:34.2304477Z</updatedAt>
       <deviationsHash>3B81318B6A7B4208C7F91962DBB393EACCE793CC11073FBF7E0B065654AF981F</deviationsHash>
-      <fileHash>9A07B1C0DD5BB955DAAD1F430FF8791455A29D764361BC1387AC6C5F9E8C9BF8</fileHash>
+      <fileHash>4C93ABDDF158EF6EB7E99723FCA1B1714BB19B26695CC8AE0A5B887EAE0E4334</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.AspNetCore.Controllers.Controller#15e1939b-55ca-44ac-81a9-ff8000770a5b</correlationId>
+      <path>1 - Security/Nullbox.Security/Nullbox.Security.Api/Controllers/UsersController.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-30T08:23:53.3829145Z</updatedAt>
+      <deviationsHash>09055A5E65C7E923A370E81254192B9306CCAA1141F3DDD2454626254D292FB9</deviationsHash>
+      <fileHash>B75374CB112DF0AB3BF853564427EB4183E1907EAF3A74955E89A8391F485E4C</fileHash>
     </file>
     <file>
       <correlationId>Intent.Application.Identity.CurrentUserService#99e56969-e6af-4194-876d-af10f9c59d29</correlationId>
@@ -29,7 +39,7 @@
       <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
       <updatedAt>2025-12-08T08:53:56.295418Z</updatedAt>
       <deviationsHash>AA1642618D5E2F2EF578CE76EE4FD88FE10E147FA0E95E357EDD893095E9682C</deviationsHash>
-      <fileHash>7CFDA135438DCF69FEF52C3C47B306E82AA1791A835C01D3D80C8C813C586094</fileHash>
+      <fileHash>10AB2AD109D2093EB1BBEF0A4F7FA1333E3B7042C6C42D407CEABC0C2711E8C8</fileHash>
     </file>
     <file>
       <correlationId>Intent.Application.Identity.CurrentUserInterface#745f5f32-e00d-4c59-8216-dc04fe6bd472</correlationId>
@@ -39,7 +49,7 @@
       <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
       <updatedAt>2025-12-08T08:53:56.2955993Z</updatedAt>
       <deviationsHash>C63A574639BF23BF2B52220A4FD25F7631CA56CF76DC8EE9C008E23093F9997B</deviationsHash>
-      <fileHash>438C4CEC244C869BC6EC525591BD682A102862B281B478F7B77BC6A8BD7036B0</fileHash>
+      <fileHash>ACB08DA225D19D6092AB893C43162C6F89A8C8A394E0C5E921A14FE55F4A851D</fileHash>
     </file>
     <file>
       <correlationId>Intent.Application.MediatR.QueryHandler#70073dc4-b9b2-493b-bb6e-357c0e060a61</correlationId>
@@ -49,7 +59,7 @@
       <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
       <updatedAt>2025-12-07T15:30:34.2308304Z</updatedAt>
       <deviationsHash>48C2BFB0887B609687C8F99EA04AC8F616E4CA28EE5C634EFE608F35B924743E</deviationsHash>
-      <fileHash>61C0E42CCA521F1DE14ACC47C6F669E4E2DE34BC366AFF0935D20F46889944B0</fileHash>
+      <fileHash>B39967EF7A07F25547364EE0C6D4019ED528C58A5CA5F62655C26DA92E7840AA</fileHash>
     </file>
     <file>
       <correlationId>Intent.Application.MediatR.QueryHandler#865b1e64-108b-428a-83bf-26f31b7378d6</correlationId>
@@ -59,7 +69,7 @@
       <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
       <updatedAt>2025-12-07T15:30:34.2308685Z</updatedAt>
       <deviationsHash>C45C26A0C4E21E32DE0B876C96E1D488ADB4AC32F9A1ECFF5E68765C776241BD</deviationsHash>
-      <fileHash>8D18602833C7F071E01D6C3FDB23DFA03374E81F503B3A8009368E0505624AC7</fileHash>
+      <fileHash>A317C0EE7CE54D4A7B8BAD9A4B37F19F9123176CE369FBC8376201005AD36D41</fileHash>
     </file>
     <file>
       <correlationId>Intent.Application.MediatR.CommandHandler#84bb47c1-30e0-4996-b3df-c491df5efa9f</correlationId>
@@ -69,7 +79,7 @@
       <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
       <updatedAt>2025-12-07T15:30:34.2306928Z</updatedAt>
       <deviationsHash>B85424C816C27F94224C60A604065B5200FA3C415E22CF55B0401A6E59226D20</deviationsHash>
-      <fileHash>7171914C1A693E4BAD7D241BB36148E73FD7150F24118765EF72B5C0CF8401DD</fileHash>
+      <fileHash>638C9F2C3668F515CEE3291C9A381E8F5ECD0024C732CE3028846C926C235288</fileHash>
     </file>
     <file>
       <correlationId>Intent.Application.MediatR.CommandHandler#13a2c24b-1d62-49ac-8c41-7288a2f50a15</correlationId>
@@ -79,7 +89,7 @@
       <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
       <updatedAt>2025-12-08T04:17:28.8931814Z</updatedAt>
       <deviationsHash>D483C7B9D7315E080E3CA3416508D124A1A15DF41D3D0DC3FB3E3824C81A3F5D</deviationsHash>
-      <fileHash>41B850BEBA4069CD325E8B65FBBF0B6F72245684E07B8A225E84BF67DCCD173F</fileHash>
+      <fileHash>E7950A2A82469A56DFFBC31EE828FFF5288B04CF9A3FE8ECDA81234EA7E0715E</fileHash>
     </file>
     <file>
       <correlationId>Intent.Eventing.MassTransit.MassTransitConfiguration#944bc5ac-a2b1-43cc-a2f5-1943cc59f865</correlationId>
@@ -89,7 +99,17 @@
       <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
       <updatedAt>2025-12-09T17:20:17.673847Z</updatedAt>
       <deviationsHash>E3A36D6DF1DEE2810A78A1B269FFB62841D6CFC5E102BE2340096B4F5C1C931A</deviationsHash>
-      <fileHash>65DB4FAB5323FDD9C866CFFA201CE9BBBB96BBDB19043E3CEF3E8CA11FE20782</fileHash>
+      <fileHash>0CB53602FA8D3E0291F59C12E5B502A967D0C5A2D113170B455EDA80481BA89A</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Infrastructure.DependencyInjection.DependencyInjection#1237dc5c-7800-4808-90ba-30d53f4bb7b1</correlationId>
+      <path>1 - Security/Nullbox.Security/Nullbox.Security.Infrastructure/DependencyInjection.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-30T08:13:19.5797188Z</updatedAt>
+      <deviationsHash>C964CA59B2AE569C4CF74B30E5EFCC0CE179EFA49CC86D5E8584FED18702D2BC</deviationsHash>
+      <fileHash>0499AAB7553227C840D2EB6B3E5FE34D1CB2CC8E4E392ACC3E46BD5BCA5726EA</fileHash>
     </file>
   </files>
 </deviationsLog>

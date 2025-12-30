@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Nullbox.Security.Application.Common.Behaviours;
 using Nullbox.Security.Application.Common.Validation;
 using Nullbox.Security.Domain.Services.Tokens;
+using Nullbox.Security.Domain.Services.Users;
 
 [assembly: IntentTemplate("Intent.Application.DependencyInjection.DependencyInjection", Version = "1.0")]
 
@@ -30,6 +31,7 @@ public static class DependencyInjection
         services.AddScoped<IValidatorProvider, ValidatorProvider>();
         services.AddTransient<IValidationService, ValidationService>();
         services.AddTransient<ITokenDomainService, TokenDomainService>();
+        services.AddTransient<ITurnstileDomainService, TurnstileDomainService>();
         return services;
     }
 }

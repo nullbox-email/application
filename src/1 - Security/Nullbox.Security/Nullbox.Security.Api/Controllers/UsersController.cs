@@ -2,8 +2,10 @@ using Asp.Versioning;
 using Intent.RoslynWeaver.Attributes;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Nullbox.Security.Application.Users.OnboardUser;
+using Nullbox.Security.Domain.Services.Users;
 
 [assembly: IntentTemplate("Intent.AspNetCore.Controllers.Controller", Version = "1.0")]
 
@@ -36,8 +38,21 @@ public class UsersController : ControllerBase
     [MapToApiVersion("1.0")]
     public async Task<ActionResult> OnboardUser(
             [FromBody] OnboardUserCommand command,
+            [FromServices] ITurnstileDomainService turnstileDomainService,
             CancellationToken cancellationToken = default)
     {
+        // [IntentIgnore]
+        command.RemoteIp = HttpContext.Request.Headers["CF-Connecting-IP"].FirstOrDefault() ??
+            HttpContext.Request.Headers["X-Forwarded-For"].FirstOrDefault() ??
+            HttpContext.Connection.RemoteIpAddress?.ToString();
+
+        var turnstileValidation = await turnstileDomainService.ValidateTokenAsync(command.CfTurnstyleResponse, command.RemoteIp, cancellationToken);
+
+        if (!turnstileValidation.Success)
+        {
+            return BadRequest(turnstileValidation.ErrorCodes.FirstOrDefault() ?? "Turnstyle validation failed");
+        }
+
         await _mediator.Send(command, cancellationToken);
         return Created(string.Empty, null);
     }

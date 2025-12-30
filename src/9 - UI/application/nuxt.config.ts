@@ -9,7 +9,12 @@ export default defineNuxtConfig({
       entraExternalTenant: "",
       entraExternalTenantId: "",
       version: "dev",
-    }
+    },
+    turnstile: {
+      // This can be overridden at runtime via the NUXT_TURNSTILE_SECRET_KEY
+      // environment variable.
+      secretKey: "",
+    },
   },
 
   modules: [
@@ -22,6 +27,7 @@ export default defineNuxtConfig({
     "nuxt-auth-utils",
     "nuxt-security",
     "shadcn-nuxt",
+    "@nuxtjs/turnstile",
   ],
 
   app: {
@@ -73,8 +79,9 @@ export default defineNuxtConfig({
   security: {
     corsHandler: {
       // Your public-facing origin
-      origin: 'https://app.nullbox.email',
-    },},
+      origin: "https://app.nullbox.email",
+    },
+  },
 
   // https://nuxt.com/modules/shadcn
   shadcn: {
@@ -82,13 +89,18 @@ export default defineNuxtConfig({
      * Prefix for all the imported component.
      * @default "Ui"
      */
-    prefix: '',
+    prefix: "",
     /**
      * Directory that the component lives in.
      * Will respect the Nuxt aliases.
      * @link https://nuxt.com/docs/api/nuxt-config#alias
      * @default "@/components/ui"
      */
-    componentDir: '@/components/ui'
-  }
+    componentDir: "@/components/ui",
+  },
+
+  // https://nuxt.com/modules/turnstile
+  turnstile: {
+    siteKey: "<your-site-key>",
+  },
 });

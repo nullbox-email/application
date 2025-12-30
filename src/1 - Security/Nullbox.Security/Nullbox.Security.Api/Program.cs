@@ -43,7 +43,6 @@ try
     {
         options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
     });
-    builder.Services.ConfigureHostedServices();
     builder.Services.AddApplication(builder.Configuration);
     builder.Services.ConfigureApplicationSecurity(builder.Configuration);
     builder.Services.ConfigureCors(builder.Configuration);

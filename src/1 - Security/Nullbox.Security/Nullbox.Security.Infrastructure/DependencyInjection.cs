@@ -24,6 +24,7 @@ public static class DependencyInjection
     {
         services.AddDbContext<ApplicationDbContext>((sp, options) =>
         {
+            // [IntentIgnore]
             options.UseCosmos(
                 configuration["ConnectionStrings:cosmos-db"],
                 configuration["Cosmos:DatabaseName"],

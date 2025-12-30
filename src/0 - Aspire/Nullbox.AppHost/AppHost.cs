@@ -97,6 +97,10 @@ var securityBearerHmacKeyParameter = builder.AddParameter("SECURITYBEARERHMACKEY
 // [IntentIgnore]
 var emailIngressHmacSecretParameter = builder.AddParameter("EMAILINGRESSHMACSECRET", secret: true);
 // [IntentIgnore]
+var turnstileSiteKeyParameter = builder.AddParameter("TURNSTILESITEKEY", secret: true);
+// [IntentIgnore]
+var turnstileSecretKeyParameter = builder.AddParameter("TURNSTILESECRETKEY", secret: true);
+// [IntentIgnore]
 var nuxtSessionPasswordParameter = builder.AddParameter("NUXTSESSIONPASSWORD", secret: true);
 // [IntentIgnore]
 var tenantIdValue = await oauthEntraExternalTenantIdParameter.Resource.GetValueAsync(default);
@@ -161,7 +165,9 @@ nullboxSecurityApi
     // [IntentIgnore]
     .WaitFor(rabbitMq)
     // Ensure DB exists before start (local run ordering)
-    .WaitFor(nullboxSecurityDB);
+    .WaitFor(nullboxSecurityDB)
+    .WithEnvironment(name: "Turnstile__SiteKey", turnstileSiteKeyParameter)
+    .WithEnvironment(name: "Turnstile__SecretKey", turnstileSecretKeyParameter);
 
 // ---- Nullbox.Fabric configuration ----
 var nullboxFabricDB = cosmos.AddCosmosDatabase("nullbox-fabric-db", "Nullbox.FabricDB");
@@ -251,6 +257,8 @@ var application = builder.AddViteApp("application", "../../9 - UI/application")
     .WithEnvironment("NUXT_OAUTH_ENTRAEXTERNAL_TENANT", oauthEntraExternalTenantParameter)
     .WithEnvironment("NUXT_OAUTH_ENTRAEXTERNAL_TENANT_ID", oauthEntraExternalTenantIdParameter)
     .WithEnvironment("NUXT_TOKEN_EXPIRY_SKEW_MS", tokenExpirySkewMsParameter)
+    .WithEnvironment("TURNSTILESITEKEY", turnstileSiteKeyParameter)
+    .WithEnvironment("TURNSTILESECRETKEY", turnstileSecretKeyParameter)
     .PublishAsDockerFile()
     .WithExternalHttpEndpoints();
 
