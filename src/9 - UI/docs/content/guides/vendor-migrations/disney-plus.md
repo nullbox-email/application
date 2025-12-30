@@ -1,30 +1,30 @@
 ---
-title: Disney+ → alias
+title: Disney+
 description: Change the email on your Disney+ account to a vendor-specific alias.
-icon: lucide:film
+icon: streamline-logos:disney-plus-logo-solid
 ---
 
 ## Recommended alias
 
-- `disney@your-domain.com` (or `disneyplus@your-domain.com`)
+- `disney@<your-routing-key>.nullbox.email` (or `disneyplus@<your-routing-key>.nullbox.email`)
+
+## Before you start (1 minute)
+
+- Make sure the alias is **enabled** and forwarding to your real inbox.
+- If your alias filters unknown senders, turn on **Learning Mode** for this migration.
 
 ## Steps
 
 ::steps
-### 1) Create (or enable) the alias
-Make sure it forwards to your real mailbox.
+### Open Disney+ account settings
+Disney+: open **Account** settings.
 
-If your aliases filter unknown senders, turn on Learning Mode for the migration.
+### Change your email
+Find **Email** / **Login details** and replace it with your alias.
 
-### 2) Change your Disney+ email
-In Disney+, open **Account** settings and find the **Email** / **Login details** section.
+### Verify
+Complete any verification sent to the new email address.
 
-Replace your old email with the alias.
-
-### 3) Verify
-Complete any verification sent to the new address.
-
-### 4) Confirm device logins still work
-Some devices/apps cache credentials. Re-authenticate if prompted.
+### Re-check other Disney logins (important)
+Disney uses a **MyDisney** login across multiple services. After changing email, confirm you can still sign in where you need to (Disney+, and anything else linked).
 ::
-

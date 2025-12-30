@@ -19,7 +19,7 @@ public class CreateMailboxCommandHandler : IRequestHandler<CreateMailboxCommand,
     private readonly IMailboxRoutingKeyMapRepository _routingKeyMapRepository;
     private readonly IUniqueIdentifierGenerator _uniqueIdentifierGenerator;
     private readonly ICurrentUserService _currentUserService;
-
+    private readonly IAccountRepository _accountRepository;
     private readonly IAccountUserMapRepository _accountUserMapRepository;
     private readonly IEffectiveEnablementRepository _effectiveEnablementRepository;
     private readonly ITrafficStatisticRepository _trafficStatisticRepository;
@@ -29,6 +29,7 @@ public class CreateMailboxCommandHandler : IRequestHandler<CreateMailboxCommand,
         IMailboxRoutingKeyMapRepository routingKeyMapRepository,
         IUniqueIdentifierGenerator uniqueIdentifierGenerator,
         ICurrentUserService currentUserService,
+        IAccountRepository accountRepository,
         IAccountUserMapRepository accountUserMapRepository,
         IEffectiveEnablementRepository effectiveEnablementRepository,
         ITrafficStatisticRepository trafficStatisticRepository)
@@ -37,7 +38,7 @@ public class CreateMailboxCommandHandler : IRequestHandler<CreateMailboxCommand,
         _routingKeyMapRepository = routingKeyMapRepository;
         _uniqueIdentifierGenerator = uniqueIdentifierGenerator;
         _currentUserService = currentUserService;
-
+        _accountRepository = accountRepository;
         _accountUserMapRepository = accountUserMapRepository;
         _effectiveEnablementRepository = effectiveEnablementRepository;
         _trafficStatisticRepository = trafficStatisticRepository;
@@ -82,15 +83,17 @@ public class CreateMailboxCommandHandler : IRequestHandler<CreateMailboxCommand,
             throw new ForbiddenAccessException("Invalid user ID.");
         }
 
-        var account = await _accountUserMapRepository.FindAsync(a => a.PartitionKey == userId, cancellationToken);
-        if (account is null)
+        var accountMap = await _accountUserMapRepository.FindAsync(a => a.PartitionKey == userId, cancellationToken);
+        if (accountMap is null)
         {
             throw new ForbiddenAccessException("User does not have access to any account.");
         }
 
+        var account = await _accountRepository.FindByIdAsync(accountMap.Id, cancellationToken);
+
         // Enforce mailbox limit (null => unlimited)
-        var currentMailboxCount = await GetCurrentMailboxCountForAccountAsync(account.Id, cancellationToken);
-        var maxMailboxes = await GetMaxMailboxesForAccountAsync(account.Id, cancellationToken);
+        var currentMailboxCount = await GetCurrentMailboxCountForAccountAsync(accountMap.Id, cancellationToken);
+        var maxMailboxes = await GetMaxMailboxesForAccountAsync(accountMap.Id, cancellationToken);
 
         if (maxMailboxes is not null && currentMailboxCount >= maxMailboxes.Value)
         {
@@ -106,12 +109,18 @@ public class CreateMailboxCommandHandler : IRequestHandler<CreateMailboxCommand,
             });
 
         var mailbox = new Mailbox(
-            accountId: account.Id,
+            accountId: accountMap.Id,
             routingKey: routingKey.ToLowerInvariant(),
             domain: "nullbox.email",
             name: request.Name,
             autoCreateAlias: request.AutoCreateAlias,
             emailAddress: request.EmailAddress.Trim().ToLowerInvariant());
+
+        var defaultUserProfile = account.Users.First();
+
+        mailbox.AddUser(
+            userProfileId: defaultUserProfile.UserProfileId,
+            roleId: defaultUserProfile.RoleId);
 
         _mailboxRepository.Add(mailbox);
 

@@ -589,5 +589,123 @@
         </childElement>
       </childElements>
     </childElement>
+    <childElement id="a3acc21e-0856-4171-93f7-43f84683cda0" type="Operation" typeId="e042bb67-a1df-480c-9935-b26210f78591">
+      <name>AddUser</name>
+      <display>AddUser(userProfileId: guid, roleId: guid): void</display>
+      <isAbstract>false</isAbstract>
+      <sort-children>by-type-then-manually</sort-children>
+      <genericTypes />
+      <typeReference id="62022ce8-76fc-48e0-94f5-fb81d7ff45e6">
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>9934c548-9d85-487a-ac65-4acfa59f7ab8</parentFolderId>
+      <packageId>8a986c9d-7f59-4a13-b47d-e2386d4354a5</packageId>
+      <packageName>Nullbox.Fabric.Mailboxes.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements>
+        <childElement id="3f139348-ec47-4f57-9b09-7581916a1caf" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>userProfileId</name>
+          <display>in : userProfileId: guid</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="0f76b2b3-db1a-4965-b947-08625c6227c7">
+            <typeId>6b649125-18ea-48fd-a6ba-0bfff0d8f488</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <parentFolderId>a3acc21e-0856-4171-93f7-43f84683cda0</parentFolderId>
+          <packageId>8a986c9d-7f59-4a13-b47d-e2386d4354a5</packageId>
+          <packageName>Nullbox.Fabric.Mailboxes.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="b3670eae-3ba2-493a-a081-060468adc6f5" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>roleId</name>
+          <display>in : roleId: guid</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="0aa49c48-c299-498a-8a49-fe9c438eb3c3">
+            <typeId>6b649125-18ea-48fd-a6ba-0bfff0d8f488</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <parentFolderId>a3acc21e-0856-4171-93f7-43f84683cda0</parentFolderId>
+          <packageId>8a986c9d-7f59-4a13-b47d-e2386d4354a5</packageId>
+          <packageName>Nullbox.Fabric.Mailboxes.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+      </childElements>
+    </childElement>
+    <childElement id="6a6ae3b0-24e6-4e9c-a8dd-a131644d16f9" type="Operation" typeId="e042bb67-a1df-480c-9935-b26210f78591">
+      <name>RemoveUser</name>
+      <display>RemoveUser(userProfileId: guid): void</display>
+      <isAbstract>false</isAbstract>
+      <sort-children>by-type-then-manually</sort-children>
+      <genericTypes />
+      <typeReference id="28824474-06cc-42d9-bc19-54b1348a850a">
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>9934c548-9d85-487a-ac65-4acfa59f7ab8</parentFolderId>
+      <packageId>8a986c9d-7f59-4a13-b47d-e2386d4354a5</packageId>
+      <packageName>Nullbox.Fabric.Mailboxes.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements>
+        <childElement id="79218e3c-df89-4acc-9143-1dbc317fdae7" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>userProfileId</name>
+          <display>in : userProfileId: guid</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="cf5a253b-cc96-4a49-b7e3-bc93ca69e41d">
+            <typeId>6b649125-18ea-48fd-a6ba-0bfff0d8f488</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <parentFolderId>6a6ae3b0-24e6-4e9c-a8dd-a131644d16f9</parentFolderId>
+          <packageId>8a986c9d-7f59-4a13-b47d-e2386d4354a5</packageId>
+          <packageName>Nullbox.Fabric.Mailboxes.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+      </childElements>
+    </childElement>
   </childElements>
 </class>

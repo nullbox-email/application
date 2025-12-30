@@ -59,7 +59,7 @@
       <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
       <updatedAt>2025-12-21T12:36:48.1083497Z</updatedAt>
       <deviationsHash>5E9CF093F0D1AF6BA850D808F144B8BC029950487CF21A40E37C5BB171A7D560</deviationsHash>
-      <fileHash>C26C7182AA694BBC2BD5B1EC36A5E73F5658914093008348A947D4AA8567A300</fileHash>
+      <fileHash>11E2EBF8ADB9C3549F65E8E1378F9971A941A7161EE3C1F30F632728C14B5A32</fileHash>
     </file>
     <file>
       <correlationId>Intent.Application.MediatR.CommandHandler#88edbe65-3683-42cd-9d69-7cfc394d222d</correlationId>
@@ -240,6 +240,16 @@
       <updatedAt>2025-12-23T06:48:28.2163403Z</updatedAt>
       <deviationsHash>E3A36D6DF1DEE2810A78A1B269FFB62841D6CFC5E102BE2340096B4F5C1C931A</deviationsHash>
       <fileHash>B104DA0D5F64A4149C23CBFB077D35120BB72B11319A54CDCFE33555268E515C</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Infrastructure.DependencyInjection.DependencyInjection#7c8c3584-aa2e-4460-bad0-ed03464ea19c</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Infrastructure/DependencyInjection.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2025-12-30T04:54:39.0144075Z</updatedAt>
+      <deviationsHash>C964CA59B2AE569C4CF74B30E5EFCC0CE179EFA49CC86D5E8584FED18702D2BC</deviationsHash>
+      <fileHash>57547E5086DD0FC8141201847B94813F11948503370878DA3A0C556ADA6B2475</fileHash>
     </file>
   </files>
 </deviationsLog>

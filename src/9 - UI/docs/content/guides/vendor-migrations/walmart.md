@@ -1,30 +1,32 @@
 ---
-title: Walmart → alias
+title: Walmart
 description: Change the email on your Walmart account to a vendor-specific alias.
 icon: lucide:store
 ---
 
 ## Recommended alias
 
-- `walmart@your-domain.com`
+- `walmart@<your-routing-key>.nullbox.email`
+
+## Before you start (1 minute)
+
+- Make sure the alias is **enabled** and forwarding to your real inbox.
+- If your alias filters unknown senders, turn on **Learning Mode** for this migration.
 
 ## Steps
 
 ::steps
-### 1) Create (or enable) the alias
-Make sure it forwards to your real mailbox.
+### Open Walmart account settings
+Walmart: **Account** → **Settings** (gear icon)
 
-If your aliases filter unknown senders, turn on Learning Mode for the migration.
+### Edit contact info
+Under **Personal Information**, open **Contact info and password**.
 
-### 2) Change your Walmart email
-In Walmart, go to **Account** and look for **Profile** / **Personal info** → **Email address**.
+Edit your email address and replace it with your alias.
 
-Replace your old email with the alias.
+### Complete the one-time passcode step
+Walmart may send a one-time passcode to the email address on file to confirm changes. Follow the prompt.
 
-### 3) Verify
-Complete any verification (link/code) sent to the new address.
-
-### 4) Confirm order emails arrive
-Place a small order or update a preference to trigger a test email if you want to validate quickly.
+### Confirm order emails arrive
+Your order confirmations and account alerts should now arrive via the alias.
 ::
-

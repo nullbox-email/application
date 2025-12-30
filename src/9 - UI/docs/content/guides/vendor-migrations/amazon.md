@@ -1,35 +1,43 @@
 ---
-title: Amazon → alias
+title: Amazon
 description: Change the email on your Amazon account to a vendor-specific alias.
-icon: lucide:shopping-cart
+icon: streamline-logos:amazon-logo-solid
 ---
 
 ## Recommended alias
 
-- `amazon@your-domain.com`
+- `amazon@<your-routing-key>.nullbox.email`
+
+## Before you start (1 minute)
+
+- Make sure the alias is **enabled** and forwarding to your real inbox.
+- If you use 2FA, keep your phone/authenticator nearby.
+- If your alias filters unknown senders, turn on **Learning Mode** for this migration.
 
 ## Steps
 
 ::steps
-### 1) Create (or enable) the alias
-Make sure it forwards to your real mailbox.
+### Open your Amazon login settings
+Amazon website: **Account & Lists** → **Account** → **Login & security**
 
-If your aliases filter unknown senders, turn on Learning Mode for the migration.
+### Edit your email
+Find **Email** and choose **Edit**.
 
-### 2) Change your Amazon email
-In Amazon, go to **Your Account** → **Login & security** and look for **Email**.
+Enter your alias (example: `amazon@<your-routing-key>.nullbox.email`) and save.
 
-Replace your old email with the alias.
+### Complete any security checks
+Amazon may ask for:
+- your password, and/or
+- a one-time code, and/or
+- a quick security challenge (captcha)
 
-### 3) Verify
-Amazon will usually send a verification message (link or code) to the new address.
+### Verify the email if prompted
+If Amazon sends a verification link/code to the new email, open it and complete the verification.
 
-Complete the verification from your mailbox.
-
-### 4) Watch the next few messages
-Order confirmations and delivery updates should now arrive via the alias.
+### Watch the next few emails
+Order confirmations, delivery updates, and security alerts should now arrive via the alias.
 ::
 
 ::alert{type="info" title="Tip" icon="lucide:info"}
-If you have multiple Amazon regions/accounts, migrate them one at a time so you don’t lose access while verifying.
+If you have multiple Amazon regions/accounts, migrate them one at a time so you don’t get locked out mid-verification.
 ::

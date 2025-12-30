@@ -39,6 +39,22 @@ public class MailboxConfiguration : IEntityTypeConfiguration<Mailbox>
         builder.Property(x => x.EmailAddress)
                 .IsRequired();
 
+        builder.OwnsMany(x => x.Users, ConfigureUsers);
+
         builder.Ignore(e => e.DomainEvents);
+    }
+
+    public static void ConfigureUsers(OwnedNavigationBuilder<Mailbox, MailboxUser> builder)
+    {
+        builder.WithOwner();
+
+        builder.Property(x => x.MailboxId)
+            .IsRequired();
+
+        builder.Property(x => x.UserProfileId)
+            .IsRequired();
+
+        builder.Property(x => x.RoleId)
+            .IsRequired();
     }
 }

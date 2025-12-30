@@ -1,30 +1,34 @@
 ---
-title: Netflix → alias
+title: Netflix
 description: Change the email on your Netflix account to a vendor-specific alias.
-icon: lucide:clapperboard
+icon: streamline-logos:netflix-logo-solid
 ---
 
 ## Recommended alias
 
-- `netflix@your-domain.com`
+- `netflix@<your-routing-key>.nullbox.email`
+
+## Before you start (1 minute)
+
+- Make sure the alias is **enabled** and forwarding to your real inbox.
+- If your alias filters unknown senders, turn on **Learning Mode** for this migration.
 
 ## Steps
 
 ::steps
-### 1) Create (or enable) the alias
-Make sure it forwards to your real mailbox.
+### Open Netflix account settings
+Netflix: open **Account** (from your profile menu).
 
-If your aliases filter unknown senders, turn on Learning Mode for the migration.
+### Change the sign-in email
+Look for **Email** (or **Change email**) and enter your alias (example: `netflix@<your-routing-key>.nullbox.email`).
 
-### 2) Change your Netflix email
-In Netflix, go to **Account** and look for **Email** (often under **Membership & Billing**).
+### Confirm your identity if asked
+Netflix may ask for your password or an extra confirmation step.
 
-Replace your old email with the alias.
-
-### 3) Verify
-Complete any verification Netflix sends to the new address.
-
-### 4) Confirm sign-in works
-Sign out and sign back in using the alias to confirm the change stuck.
+### Confirm sign-in works
+Sign out, then sign back in using the alias to confirm the change stuck.
 ::
 
+::alert{type="warning" title="Kids profile gotcha" icon="lucide:triangle-alert"}
+If you’re in a Kids profile, switch to a non-Kids profile before trying to change account details.
+::

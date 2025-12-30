@@ -54,6 +54,10 @@ public class CreateDefaultUserMailboxCommandHandler : IRequestHandler<CreateDefa
             autoCreateAlias: true,
             emailAddress: defaultUserProfile.EmailAddress);
 
+        mailbox.AddUser(
+            userProfileId: defaultUserProfile.UserProfileId,
+            roleId: defaultUserProfile.RoleId);
+
         _mailboxRepository.Add(mailbox);
     }
 }

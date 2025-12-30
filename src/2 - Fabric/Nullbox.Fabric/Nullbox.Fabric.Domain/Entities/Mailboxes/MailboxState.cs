@@ -7,6 +7,7 @@ namespace Nullbox.Fabric.Domain.Entities.Mailboxes;
 
 public partial class Mailbox : IHasDomainEvent
 {
+    private List<MailboxUser> _users = [];
     /// <summary>
     /// Required by Entity Framework.
     /// </summary>
@@ -31,6 +32,12 @@ public partial class Mailbox : IHasDomainEvent
     public bool AutoCreateAlias { get; private set; } = true;
 
     public string EmailAddress { get; private set; }
+
+    public virtual IReadOnlyCollection<MailboxUser> Users
+    {
+        get => _users.AsReadOnly();
+        private set => _users = new List<MailboxUser>(value);
+    }
 
     public List<DomainEvent> DomainEvents { get; set; } = [];
 }

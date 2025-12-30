@@ -1,30 +1,32 @@
 ---
-title: Hulu → alias
+title: Hulu
 description: Change the email on your Hulu account to a vendor-specific alias.
-icon: lucide:tv
+icon: streamline-logos:hulu-live-tv-logo-solid
 ---
 
 ## Recommended alias
 
-- `hulu@your-domain.com`
+- `hulu@<your-routing-key>.nullbox.email`
+
+## Before you start (1 minute)
+
+- Make sure the alias is **enabled** and forwarding to your real inbox.
+- If your alias filters unknown senders, turn on **Learning Mode** for this migration.
 
 ## Steps
 
 ::steps
-### 1) Create (or enable) the alias
-Make sure it forwards to your real mailbox.
+### Open your Hulu Account page (browser)
+On a web or mobile browser, go to your Hulu **Account** page.
 
-If your aliases filter unknown senders, turn on Learning Mode for the migration.
+### Try to change the email
+Look for **Email** (or **Email & Password**) and update it to your alias.
 
-### 2) Change your Hulu email
-In Hulu, go to **Account** and look for **Email** (often under profile or personal info).
+### If you can’t change it yourself
+Some Hulu accounts require contacting support to change the email. Use Hulu **Contact Us** and request an email change.
 
-Replace your old email with the alias.
+### Verify and re-check logins
+Complete any verification.
 
-### 3) Verify
-Complete any verification Hulu sends to the new address.
-
-### 4) Check billing/security notifications
-Make sure invoices and security alerts arrive via the alias.
+Hulu is tied to a **MyDisney** login, so changing email/password may also affect other Disney-family services. Confirm sign-in still works where you use it.
 ::
-

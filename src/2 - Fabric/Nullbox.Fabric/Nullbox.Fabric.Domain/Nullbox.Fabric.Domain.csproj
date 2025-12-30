@@ -136,6 +136,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>TrafficStatistic.cs</DependentUpon>
     </Compile>
+    <Compile Update="Entities\Mailboxes\MailboxUserState.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MailboxUser.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
 
 </Project>
