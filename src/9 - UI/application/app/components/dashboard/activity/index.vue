@@ -11,6 +11,7 @@ type SeriesSpec = {
 };
 
 type TimeGrain = "Hourly" | "Daily";
+type DashboardScope = "alias" | "mailbox" | "account" | "invalid";
 
 const props = withDefaults(
   defineProps<{
@@ -40,13 +41,63 @@ const error = ref<string | null>(null);
 let loadSeq = 0;
 const loadedKey = ref<string | null>(null);
 
-const requestKey = computed(() => {
-  const mailboxId = props.mailboxId?.trim();
-  if (!mailboxId) return null;
+const normalized = computed(() => {
+  const mailboxId = props.mailboxId?.trim() || null;
+  const aliasId = props.aliasId?.trim() || null;
+  return { mailboxId, aliasId };
+});
 
-  const aliasId = props.aliasId?.trim();
-  const scope = aliasId ? `alias:${aliasId}` : "mailbox";
-  return `${mailboxId}:${scope}:${props.type}:${props.number}`;
+const scope = computed<DashboardScope>(() => {
+  const { mailboxId, aliasId } = normalized.value;
+
+  if (aliasId) return mailboxId ? "alias" : "invalid";
+  if (mailboxId) return "mailbox";
+  return "account";
+});
+
+const requestKey = computed(() => {
+  const { mailboxId, aliasId } = normalized.value;
+
+  switch (scope.value) {
+    case "alias":
+      return `${mailboxId}:alias:${aliasId}:${props.type}:${props.number}`;
+    case "mailbox":
+      return `${mailboxId}:mailbox:${props.type}:${props.number}`;
+    case "account":
+      return `account:${props.type}:${props.number}`;
+    default:
+      return null;
+  }
+});
+
+const requestParams = computed(() => {
+  const { mailboxId, aliasId } = normalized.value;
+
+  if (scope.value === "alias") {
+    return {
+      aliasId: aliasId!,
+      mailboxId: mailboxId!,
+      number: props.number,
+      type: props.type,
+    };
+  }
+
+  if (scope.value === "mailbox") {
+    return {
+      mailboxId: mailboxId!,
+      number: props.number,
+      type: props.type,
+    };
+  }
+
+  if (scope.value === "account") {
+    return {
+      number: props.number,
+      type: props.type,
+    };
+  }
+
+  return null;
 });
 
 const chartGrain = computed<TimeGrain>(() => props.grain ?? props.type);
@@ -62,7 +113,7 @@ const showMessagesSkeleton = computed(
     messages.value.length === 0
 );
 
-async function loadDashboard(key: string) {
+async function loadDashboard(key: string, params: any) {
   const seq = ++loadSeq;
 
   error.value = null;
@@ -72,15 +123,7 @@ async function loadDashboard(key: string) {
   loading.value = true;
 
   try {
-    const aliasId = props.aliasId?.trim();
-    const mailboxId = props.mailboxId?.trim();
-
-    const result = await getDashboard("v1", {
-      aliasId: aliasId || undefined,
-      mailboxId: mailboxId || undefined,
-      number: props.number,
-      type: props.type,
-    });
+    const result = await getDashboard("v1", params);
 
     if (seq !== loadSeq) return;
 
@@ -96,31 +139,39 @@ async function loadDashboard(key: string) {
 }
 
 watch(
-  () => ({ active: props.active, key: requestKey.value }),
-  ({ active, key }) => {
-    if (!active || !key) return;
+  () => ({ active: props.active, key: requestKey.value, params: requestParams.value, scope: scope.value }),
+  ({ active, key, params, scope }) => {
+    if (!active) return;
+
+    if (scope === "invalid") {
+      error.value = "aliasId requires mailboxId.";
+      chart.value = [];
+      messages.value = [];
+      loadedKey.value = null;
+      return;
+    }
+
+    if (!key || !params) return;
     if (loadedKey.value === key) return;
-    void loadDashboard(key);
+
+    void loadDashboard(key, params);
   },
   { immediate: true }
 );
 
-const totalMessages = computed(() => {
-  return messages.value.length;
-});
+const totalMessages = computed(() => messages.value.length);
 
-const droppedMessages = computed(() => {
-  return messages.value.filter((m) => m.messageOutcome === "Dropped").length;
-});
+const droppedMessages = computed(
+  () => messages.value.filter((m) => m.messageOutcome === "Dropped").length
+);
 
-const forwardedMessages = computed(() => {
-  return messages.value.filter((m) => m.messageOutcome === "Forwarded").length;
-});
+const forwardedMessages = computed(
+  () => messages.value.filter((m) => m.messageOutcome === "Forwarded").length
+);
 
-const quarantinedMessages = computed(() => {
-  return messages.value.filter((m) => m.messageOutcome === "Quarantined")
-    .length;
-});
+const quarantinedMessages = computed(
+  () => messages.value.filter((m) => m.messageOutcome === "Quarantined").length
+);
 </script>
 
 <template>

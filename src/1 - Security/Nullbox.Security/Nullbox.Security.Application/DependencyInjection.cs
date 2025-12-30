@@ -5,8 +5,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Nullbox.Security.Application.Common.Behaviours;
 using Nullbox.Security.Application.Common.Validation;
+using Nullbox.Security.Application.Services.Users;
 using Nullbox.Security.Domain.Services.Tokens;
-using Nullbox.Security.Domain.Services.Users;
 
 [assembly: IntentTemplate("Intent.Application.DependencyInjection.DependencyInjection", Version = "1.0")]
 

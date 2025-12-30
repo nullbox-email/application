@@ -30,10 +30,22 @@ const data = {
       icon: "solar:eye-scan-bold-duotone",
     },
     {
-      title: "Get help",
+      title: "Source code",
       to: "https://github.com/nullbox-email",
       external: true,
       icon: "carbon:logo-github",
+    },
+    {
+      title: "Github",
+      to: "https://github.com/nullbox-email/support",
+      external: true,
+      icon: "carbon:logo-github",
+    },
+    {
+      title: "Discord",
+      to: "https://discord.gg/bRP9xfa7",
+      external: true,
+      icon: "carbon:logo-discord",
     },
   ],
 };
@@ -48,7 +60,7 @@ await ensureMailboxes();
       <SidebarMenu>
         <SidebarMenuItem>
           <SidebarMenuButton size="lg" class="p-0" as-child>
-            <nuxt-link to="/" >
+            <nuxt-link to="/">
               <img
                 src="/assets/logo.light.svg"
                 alt="Nullbox Logo"

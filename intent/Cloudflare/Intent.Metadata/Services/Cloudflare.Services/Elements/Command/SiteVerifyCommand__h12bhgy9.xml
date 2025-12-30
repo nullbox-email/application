@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="94048ad9-d4b4-4c29-aeda-03c268130673" type="Command" typeId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9">
+  <name>SiteVerifyCommand</name>
+  <display>SiteVerifyCommand: TurnstileResponseDto</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <typeReference id="fe7cfa51-6732-4db4-b88f-1687f3f23583">
+    <typeId>66682387-6a93-483e-9e37-5069e68a8cdd</typeId>
+    <isNavigable>true</isNavigable>
+    <isNullable>false</isNullable>
+    <isCollection>false</isCollection>
+    <isRequired>true</isRequired>
+    <typePackageName>Cloudflare.Services</typePackageName>
+    <typePackageId>36211eab-ffec-4673-803c-bdf62aed8665</typePackageId>
+    <stereotypes />
+    <genericTypeParameters />
+  </typeReference>
+  <isMapped>false</isMapped>
+  <parentFolderId>36211eab-ffec-4673-803c-bdf62aed8665</parentFolderId>
+  <packageId>36211eab-ffec-4673-803c-bdf62aed8665</packageId>
+  <packageName>Cloudflare.Services</packageName>
+  <traits>
+    <trait id="9e587d4d-f317-4ab8-9bbb-9394234d2a88" name="[Allow Comment]" />
+    <trait id="0a932465-ea1f-42e7-b1eb-9f90aa8961fd" name="[Invokable]" />
+    <trait id="2b6729eb-e2ae-4b5f-86fe-4f611d1f912e" name="[Processing Handler]" />
+  </traits>
+  <stereotypes>
+    <stereotype stereotypeDefinitionId="b4581ed2-42ec-4ae2-83dd-dcdd5f0837b6" name="Http Settings">
+      <addedByDefault>false</addedByDefault>
+      <definitionPackageName>Intent.Metadata.WebApi</definitionPackageName>
+      <definitionPackageId>0011387a-b122-45d7-9cdb-8e21b315ab9f</definitionPackageId>
+      <properties>
+        <property name="801c3e61-4431-4d81-93fa-7e57d33cb3fa" display="Verb" value="POST" isActive="true" />
+        <property name="5dd3e07d-76eb-45d4-9956-4325fb068acc" display="Route" value="turnstile/v0/siteverify" isActive="true" />
+        <property name="4490e212-1e99-43ce-b3dd-048ed2a6bae8" display="Return Type Mediatype" value="Default" isActive="true" />
+        <property name="e3870725-34b3-4684-85f2-ec4a667207fb" display="Success Response Code" isActive="true" />
+      </properties>
+    </stereotype>
+  </stereotypes>
+  <metadata />
+  <childElements>
+    <childElement id="30ab50ef-a47a-4fd5-8bc7-504fc43fa7dc" type="DTO-Field" typeId="7baed1fd-469b-4980-8fd9-4cefb8331eb2">
+      <name>Secret</name>
+      <display>Secret: string</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="f91407e2-73cc-47a8-8cfc-a9be33ed4d1c">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>94048ad9-d4b4-4c29-aeda-03c268130673</parentFolderId>
+      <packageId>36211eab-ffec-4673-803c-bdf62aed8665</packageId>
+      <packageName>Cloudflare.Services</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="e9444382-57c2-40e3-a5c8-e3bf9732597d" type="DTO-Field" typeId="7baed1fd-469b-4980-8fd9-4cefb8331eb2">
+      <name>Response</name>
+      <display>Response: string</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="961674d8-50d2-4d0d-8a9e-892f87bca80a">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>94048ad9-d4b4-4c29-aeda-03c268130673</parentFolderId>
+      <packageId>36211eab-ffec-4673-803c-bdf62aed8665</packageId>
+      <packageName>Cloudflare.Services</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="5b524938-08f8-4fd7-88d7-b902fc5a5610" type="DTO-Field" typeId="7baed1fd-469b-4980-8fd9-4cefb8331eb2">
+      <name>RemoteIp</name>
+      <display>RemoteIp: string?</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="e8ee01e6-b434-450a-901e-c7bb4237a743">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>true</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>94048ad9-d4b4-4c29-aeda-03c268130673</parentFolderId>
+      <packageId>36211eab-ffec-4673-803c-bdf62aed8665</packageId>
+      <packageName>Cloudflare.Services</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="f95cc730-b8a1-45b4-9184-6349be862847" type="DTO-Field" typeId="7baed1fd-469b-4980-8fd9-4cefb8331eb2">
+      <name>IdempotencyKey</name>
+      <display>IdempotencyKey: guid?</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="322a2bf0-5258-4d50-94bc-234b2ae1c80b">
+        <typeId>6b649125-18ea-48fd-a6ba-0bfff0d8f488</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>true</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>94048ad9-d4b4-4c29-aeda-03c268130673</parentFolderId>
+      <packageId>36211eab-ffec-4673-803c-bdf62aed8665</packageId>
+      <packageName>Cloudflare.Services</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

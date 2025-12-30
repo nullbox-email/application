@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<class id="438e9885-8d43-40b8-8468-a867aec99cf8" type="Data Contract" typeId="4464fabe-c59e-4d90-81fc-c9245bdd1afd">
-  <name>TurnstileResponse</name>
-  <display>TurnstileResponse</display>
+<class id="66682387-6a93-483e-9e37-5069e68a8cdd" type="DTO" typeId="fee0edca-4aa0-4f77-a524-6bbd84e78734">
+  <name>TurnstileResponseDto</name>
+  <display>TurnstileResponseDto</display>
   <isAbstract>false</isAbstract>
   <sort-children>by-type-then-manually</sort-children>
   <genericTypes />
   <isMapped>false</isMapped>
-  <parentFolderId>e6d83de0-c149-4f2c-82b2-1a8d80e07e94</parentFolderId>
-  <packageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</packageId>
-  <packageName>Nullbox.Security.Users.Domain</packageName>
+  <parentFolderId>36211eab-ffec-4673-803c-bdf62aed8665</parentFolderId>
+  <packageId>36211eab-ffec-4673-803c-bdf62aed8665</packageId>
+  <packageName>Cloudflare.Services</packageName>
   <stereotypes />
   <metadata />
   <childElements>
-    <childElement id="57eedc1f-465f-47ef-9c78-0f969f6c3de6" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+    <childElement id="ca4a5a7c-a079-442d-99ed-61464f2a92ad" type="DTO-Field" typeId="7baed1fd-469b-4980-8fd9-4cefb8331eb2">
       <name>Success</name>
       <display>Success: bool</display>
       <isAbstract>false</isAbstract>
       <genericTypes />
-      <typeReference id="c814d055-42ff-4b97-9825-a410835a725a">
+      <typeReference id="0d3e602c-6d56-4eb7-aaf6-b5001bff599a">
         <typeId>e6f92b09-b2c5-4536-8270-a4d9e5bbd930</typeId>
         <isNavigable>true</isNavigable>
         <isNullable>false</isNullable>
@@ -29,19 +29,19 @@
         <genericTypeParameters />
       </typeReference>
       <isMapped>false</isMapped>
-      <parentFolderId>438e9885-8d43-40b8-8468-a867aec99cf8</parentFolderId>
-      <packageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</packageId>
-      <packageName>Nullbox.Security.Users.Domain</packageName>
+      <parentFolderId>66682387-6a93-483e-9e37-5069e68a8cdd</parentFolderId>
+      <packageId>36211eab-ffec-4673-803c-bdf62aed8665</packageId>
+      <packageName>Cloudflare.Services</packageName>
       <stereotypes />
       <metadata />
       <childElements />
     </childElement>
-    <childElement id="405d9d9e-e4f1-44ce-a98e-2f4ff39ef974" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+    <childElement id="d381411f-6bf9-4397-b1f9-e2d227ffb34e" type="DTO-Field" typeId="7baed1fd-469b-4980-8fd9-4cefb8331eb2">
       <name>ChallengeTimestamp</name>
       <display>ChallengeTimestamp: datetimeoffset?</display>
       <isAbstract>false</isAbstract>
       <genericTypes />
-      <typeReference id="0278bad3-97c5-4d1e-be34-fc56f092b2b3">
+      <typeReference id="6b02cb5d-fb82-4f0a-9fcb-6ef3ee464abf">
         <typeId>f1ba4df3-a5bc-427e-a591-4f6029f89bd7</typeId>
         <isNavigable>true</isNavigable>
         <isNullable>true</isNullable>
@@ -53,19 +53,19 @@
         <genericTypeParameters />
       </typeReference>
       <isMapped>false</isMapped>
-      <parentFolderId>438e9885-8d43-40b8-8468-a867aec99cf8</parentFolderId>
-      <packageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</packageId>
-      <packageName>Nullbox.Security.Users.Domain</packageName>
+      <parentFolderId>66682387-6a93-483e-9e37-5069e68a8cdd</parentFolderId>
+      <packageId>36211eab-ffec-4673-803c-bdf62aed8665</packageId>
+      <packageName>Cloudflare.Services</packageName>
       <stereotypes />
       <metadata />
       <childElements />
     </childElement>
-    <childElement id="c9cfaf15-872c-43b7-8fc9-fe41824f322f" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+    <childElement id="e7522d30-4ff6-4f3c-ad3f-8cbf9ec08f91" type="DTO-Field" typeId="7baed1fd-469b-4980-8fd9-4cefb8331eb2">
       <name>Hostname</name>
       <display>Hostname: string?</display>
       <isAbstract>false</isAbstract>
       <genericTypes />
-      <typeReference id="4c95834d-7504-4915-8763-0e07f36f63fa">
+      <typeReference id="3aed677a-18fc-4873-b8ff-04f0a631dd9d">
         <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
         <isNavigable>true</isNavigable>
         <isNullable>true</isNullable>
@@ -77,20 +77,68 @@
         <genericTypeParameters />
       </typeReference>
       <isMapped>false</isMapped>
-      <parentFolderId>438e9885-8d43-40b8-8468-a867aec99cf8</parentFolderId>
-      <packageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</packageId>
-      <packageName>Nullbox.Security.Users.Domain</packageName>
+      <parentFolderId>66682387-6a93-483e-9e37-5069e68a8cdd</parentFolderId>
+      <packageId>36211eab-ffec-4673-803c-bdf62aed8665</packageId>
+      <packageName>Cloudflare.Services</packageName>
       <stereotypes />
       <metadata />
       <childElements />
     </childElement>
-    <childElement id="3b65e70a-0983-4a98-b875-7e42991439f0" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+    <childElement id="48a94b6c-9787-4cfb-9cde-b5a628642c21" type="DTO-Field" typeId="7baed1fd-469b-4980-8fd9-4cefb8331eb2">
+      <name>Action</name>
+      <display>Action: string?</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="493cbfa5-9338-4312-959e-5de44e7dccd9">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>true</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>66682387-6a93-483e-9e37-5069e68a8cdd</parentFolderId>
+      <packageId>36211eab-ffec-4673-803c-bdf62aed8665</packageId>
+      <packageName>Cloudflare.Services</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="9e37c9c4-700f-46a0-9837-b80a0e03203e" type="DTO-Field" typeId="7baed1fd-469b-4980-8fd9-4cefb8331eb2">
+      <name>CData</name>
+      <display>CData: string?</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="2520a109-11c0-442f-bae7-62dfa321cb73">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>true</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>66682387-6a93-483e-9e37-5069e68a8cdd</parentFolderId>
+      <packageId>36211eab-ffec-4673-803c-bdf62aed8665</packageId>
+      <packageName>Cloudflare.Services</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="def34e50-0a12-4c00-a496-8f49cdfad006" type="DTO-Field" typeId="7baed1fd-469b-4980-8fd9-4cefb8331eb2">
       <name>ErrorCodes</name>
       <display>ErrorCodes: string[*] = []</display>
       <isAbstract>false</isAbstract>
       <value>[]</value>
       <genericTypes />
-      <typeReference id="9faec57c-4a18-490a-995e-db5c8fa78f9f">
+      <typeReference id="751252e0-ecef-4ae1-823e-61de96605e8e">
         <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
         <isNavigable>true</isNavigable>
         <isNullable>false</isNullable>
@@ -102,78 +150,30 @@
         <genericTypeParameters />
       </typeReference>
       <isMapped>false</isMapped>
-      <parentFolderId>438e9885-8d43-40b8-8468-a867aec99cf8</parentFolderId>
-      <packageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</packageId>
-      <packageName>Nullbox.Security.Users.Domain</packageName>
+      <parentFolderId>66682387-6a93-483e-9e37-5069e68a8cdd</parentFolderId>
+      <packageId>36211eab-ffec-4673-803c-bdf62aed8665</packageId>
+      <packageName>Cloudflare.Services</packageName>
       <stereotypes />
       <metadata />
       <childElements />
     </childElement>
-    <childElement id="405aad53-9b33-477c-9ca8-11eda2d5d8d9" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
-      <name>Action</name>
-      <display>Action: string?</display>
-      <isAbstract>false</isAbstract>
-      <genericTypes />
-      <typeReference id="5eb46329-f894-4193-967c-fe3a9034527f">
-        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
-        <isNavigable>true</isNavigable>
-        <isNullable>true</isNullable>
-        <isCollection>false</isCollection>
-        <isRequired>true</isRequired>
-        <typePackageName>Intent.Common.Types</typePackageName>
-        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
-        <stereotypes />
-        <genericTypeParameters />
-      </typeReference>
-      <isMapped>false</isMapped>
-      <parentFolderId>438e9885-8d43-40b8-8468-a867aec99cf8</parentFolderId>
-      <packageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</packageId>
-      <packageName>Nullbox.Security.Users.Domain</packageName>
-      <stereotypes />
-      <metadata />
-      <childElements />
-    </childElement>
-    <childElement id="92734529-9073-4c59-a69d-93d26a66b9fd" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
-      <name>CData</name>
-      <display>CData: string?</display>
-      <isAbstract>false</isAbstract>
-      <genericTypes />
-      <typeReference id="e5da2f9b-f549-4a2e-869a-2972bfdc9272">
-        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
-        <isNavigable>true</isNavigable>
-        <isNullable>true</isNullable>
-        <isCollection>false</isCollection>
-        <isRequired>true</isRequired>
-        <typePackageName>Intent.Common.Types</typePackageName>
-        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
-        <stereotypes />
-        <genericTypeParameters />
-      </typeReference>
-      <isMapped>false</isMapped>
-      <parentFolderId>438e9885-8d43-40b8-8468-a867aec99cf8</parentFolderId>
-      <packageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</packageId>
-      <packageName>Nullbox.Security.Users.Domain</packageName>
-      <stereotypes />
-      <metadata />
-      <childElements />
-    </childElement>
-    <childElement id="4637ff74-19b8-4272-b4ca-3f911b29a10e" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+    <childElement id="9893a427-74b6-4fb3-bba3-741a378307f7" type="DTO-Field" typeId="7baed1fd-469b-4980-8fd9-4cefb8331eb2">
       <name>Metadata</name>
-      <display>Metadata: Dictionary&lt;string, object&gt;? = []</display>
+      <display>Metadata: Dictionary&lt;string, object&gt; = []</display>
       <isAbstract>false</isAbstract>
       <value>[]</value>
       <genericTypes />
-      <typeReference id="7c21b2f7-ab5d-45fb-8b6a-73650c46a3c7">
+      <typeReference id="c79fdbf0-631a-4434-be18-a7b9c175822a">
         <typeId>ac2b65c3-6a8f-454a-b520-b583350c43ef</typeId>
         <isNavigable>true</isNavigable>
-        <isNullable>true</isNullable>
+        <isNullable>false</isNullable>
         <isCollection>false</isCollection>
         <isRequired>true</isRequired>
         <typePackageName>Intent.Common.CSharp</typePackageName>
         <typePackageId>730e1275-0c32-44f7-991a-9619d07ca68d</typePackageId>
         <stereotypes />
         <genericTypeParameters>
-          <genericTypeParameter id="9ec45a3f-2942-4c9b-9c7b-0f96050f99f8">
+          <genericTypeParameter id="7719a9a3-8879-44a4-8bff-18ed1c11cf21">
             <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
             <isNavigable>true</isNavigable>
             <isNullable>false</isNullable>
@@ -185,7 +185,7 @@
             <stereotypes />
             <genericTypeParameters />
           </genericTypeParameter>
-          <genericTypeParameter id="f9291362-1087-4503-be45-bee3c93ec82e">
+          <genericTypeParameter id="32096071-dc4c-4dd8-bf6a-970ad2920e89">
             <typeId>341DD965-D06C-4A40-9437-9516ADA77FF5</typeId>
             <isNavigable>true</isNavigable>
             <isNullable>false</isNullable>
@@ -200,9 +200,9 @@
         </genericTypeParameters>
       </typeReference>
       <isMapped>false</isMapped>
-      <parentFolderId>438e9885-8d43-40b8-8468-a867aec99cf8</parentFolderId>
-      <packageId>723ddbec-fb6f-49b3-967f-d204ffb0dd84</packageId>
-      <packageName>Nullbox.Security.Users.Domain</packageName>
+      <parentFolderId>66682387-6a93-483e-9e37-5069e68a8cdd</parentFolderId>
+      <packageId>36211eab-ffec-4673-803c-bdf62aed8665</packageId>
+      <packageName>Cloudflare.Services</packageName>
       <stereotypes />
       <metadata />
       <childElements />

@@ -131,7 +131,7 @@ const updateQuarantineAndChecks = async ($event: boolean) => {
 
 <template>
   <div>
-    <page-heading :title="t('page.title', { alias: route.params.alias })">
+    <page-heading :title="t('page.title', { alias: aliasProperty })">
       <div class="flex items-center space-x-4">
         <Button as-child>
           <nuxt-link :to="`${route.fullPath}/edit`">
@@ -389,7 +389,7 @@ const updateQuarantineAndChecks = async ($event: boolean) => {
 <i18n lang="yaml" scope="local">
 en:
   page:
-    title: "{alias} dashboard"
+    title: "{alias} activity"
 
   intro: Use this alias to receive emails.
 

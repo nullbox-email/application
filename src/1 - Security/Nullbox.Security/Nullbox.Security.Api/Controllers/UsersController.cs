@@ -4,8 +4,8 @@ using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Nullbox.Security.Application.Services.Users;
 using Nullbox.Security.Application.Users.OnboardUser;
-using Nullbox.Security.Domain.Services.Users;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Model;
 
 [assembly: IntentTemplate("Intent.AspNetCore.Controllers.Controller", Version = "1.0")]
@@ -48,7 +48,7 @@ public class UsersController : ControllerBase
             HttpContext.Connection.RemoteIpAddress?.ToString();
 
         // [IntentIgnore]
-        var turnstileValidation = await turnstileDomainService.ValidateTokenAsync(command.CfTurnstyleResponse, command.RemoteIp, cancellationToken);
+        var turnstileValidation = await turnstileDomainService.ValidateTokenAsync(command.CfTurnstileResponse, command.RemoteIp, cancellationToken);
         
         // [IntentIgnore]
         if (!turnstileValidation.Success)

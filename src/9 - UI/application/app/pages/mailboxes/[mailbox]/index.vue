@@ -17,7 +17,7 @@ const tab = ref<"hourly" | "daily">("daily");
 
 <template>
   <div>
-    <page-heading :title="t('page.title')" />
+    <page-heading :title="t('page.title', { mailbox: mailbox.name })" />
 
     <Tabs v-model="tab" :unmount-on-hide="true" class="mt-6">
       <TabsList>
@@ -89,7 +89,7 @@ const tab = ref<"hourly" | "daily">("daily");
 <i18n lang="yaml" scope="local">
 en:
   page:
-    title: Getting started with your mailbox
+    title: "{mailbox} activity"
 
   chart:
     series:

@@ -53,6 +53,7 @@ const onSubmit = handleSubmit(async (values) => {
       "v1",
       {
         name: values.name,
+        cfTurnstileResponse: token.value ?? "",
       },
       {
         onResponse: async () => {
@@ -60,7 +61,7 @@ const onSubmit = handleSubmit(async (values) => {
           await navigateTo("/on-boarding/finalize", { replace: true });
         },
         onResponseError: async (ctx) => {
-          toast.error(ctx?.response?._data?.detail ?? t("submit.error"));
+          toast.error(ctx?.response?._data ?? t("submit.error"));
           saving.value = false;
           return;
         },
@@ -151,7 +152,7 @@ const onSubmit = handleSubmit(async (values) => {
               
               <NuxtTurnstile v-model="token" />
 
-              <Button class="cursor-pointer" type="submit" :disabled="saving">
+              <Button class="cursor-pointer" type="submit" :disabled="saving || !token">
                 <icon
                   v-if="saving"
                   name="lucide:loader-circle"

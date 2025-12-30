@@ -1,6 +1,8 @@
 using Intent.RoslynWeaver.Attributes;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Nullbox.Security.Application.IntegrationServices;
+using Nullbox.Security.Infrastructure.HttpClients;
 
 [assembly: IntentTemplate("Intent.Integration.HttpClients.HttpClientConfiguration", Version = "2.0")]
 
@@ -11,6 +13,12 @@ public static class HttpClientConfiguration
     public static void AddHttpClients(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddHttpContextAccessor();
+
+        services
+            .AddHttpClient<ICloudflareDefaultService, CloudflareDefaultServiceHttpClient>(http =>
+            {
+                ApplyAppSettings(http, configuration, "Cloudflare.Services", "CloudflareDefaultService");
+            });
     }
 
     private static void ApplyAppSettings(

@@ -257,8 +257,8 @@ var application = builder.AddViteApp("application", "../../9 - UI/application")
     .WithEnvironment("NUXT_OAUTH_ENTRAEXTERNAL_TENANT", oauthEntraExternalTenantParameter)
     .WithEnvironment("NUXT_OAUTH_ENTRAEXTERNAL_TENANT_ID", oauthEntraExternalTenantIdParameter)
     .WithEnvironment("NUXT_TOKEN_EXPIRY_SKEW_MS", tokenExpirySkewMsParameter)
-    .WithEnvironment("TURNSTILESITEKEY", turnstileSiteKeyParameter)
-    .WithEnvironment("TURNSTILESECRETKEY", turnstileSecretKeyParameter)
+    .WithEnvironment("NUXT_PUBLIC_TURNSTILE_SITE_KEY", turnstileSiteKeyParameter)
+    .WithEnvironment("NUXT_TURNSTILE_SECRET_KEY", turnstileSecretKeyParameter)
     .PublishAsDockerFile()
     .WithExternalHttpEndpoints();
 

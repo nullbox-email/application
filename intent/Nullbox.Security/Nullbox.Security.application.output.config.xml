@@ -2,5 +2,7 @@
 <outputFiles>
   <files>
     <file relativePath="1 - Security/Nullbox.Security/Nullbox.Security.Api/appsettings.json" state="ignored" />
+    <file relativePath="1 - Security/Nullbox.Security/Nullbox.Security.Domain/Services/Users/ITurnstileDomainService.cs" state="ignored" />
+    <file relativePath="1 - Security/Nullbox.Security/Nullbox.Security.Domain/Services/Users/TurnstileDomainService.cs" state="ignored" />
   </files>
 </outputFiles>

@@ -12,7 +12,7 @@ public record TurnstileResponse
         IEnumerable<string> errorCodes,
         string? action,
         string? cData,
-        Dictionary<string, string>? metadata)
+        Dictionary<string, object>? metadata)
     {
         Success = success;
         ChallengeTimestamp = challengeTimestamp;
@@ -36,5 +36,5 @@ public record TurnstileResponse
     public IEnumerable<string> ErrorCodes { get; init; }
     public string? Action { get; init; }
     public string? CData { get; init; }
-    public Dictionary<string, string>? Metadata { get; init; }
+    public Dictionary<string, object>? Metadata { get; init; }
 }

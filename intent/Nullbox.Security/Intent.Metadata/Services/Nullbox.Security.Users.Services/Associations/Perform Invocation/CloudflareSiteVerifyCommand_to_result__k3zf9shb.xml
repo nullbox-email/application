@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<association id="e877d5f7-0599-466e-90a0-9e23c225829b">
+  <sourceEnd id="954f9d74-ea9e-43a7-a9cc-c317173610c8" type="Perform Invocation Source End" typeId="ee56bd48-8eff-4fff-8d3a-87731d002335">
+    <display>called by : Users.CloudflareSiteVerifyCommand</display>
+    <order>0</order>
+    <typeReference id="d6283a7f-c64a-48b1-a920-19b64f587595">
+      <typeId>c261b320-52fc-44a5-a15f-4c81f58f1b5a</typeId>
+      <isNavigable>false</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Nullbox.Security.Users.Services</typePackageName>
+      <typePackageId>cdc830ca-c14a-4d10-a244-9dd36afb93ee</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <metadata />
+    <childElements />
+  </sourceEnd>
+  <targetEnd id="e877d5f7-0599-466e-90a0-9e23c225829b" type="Perform Invocation Target End" typeId="093e5909-ffe4-4510-b3ea-532f30212f3c">
+    <name>result</name>
+    <display>[call] result = SiteVerifyCommand(...): TurnstileResponseDto</display>
+    <order>4</order>
+    <traits>
+      <trait id="d00a2ab0-9a23-4192-b8bb-166798fc7dba" name="[Processing Action]" />
+    </traits>
+    <typeReference id="1036d09e-728b-401a-8f43-2f5860be63cf">
+      <typeId>94048ad9-d4b4-4c29-aeda-03c268130673</typeId>
+      <isNavigable>true</isNavigable>
+      <isNullable>false</isNullable>
+      <isCollection>false</isCollection>
+      <isRequired>true</isRequired>
+      <typePackageName>Cloudflare.Services</typePackageName>
+      <typePackageId>36211eab-ffec-4673-803c-bdf62aed8665</typePackageId>
+      <stereotypes />
+      <genericTypeParameters />
+    </typeReference>
+    <stereotypes />
+    <mappings>
+      <mapping type="Invocation Mapping" typeId="a4c4c5cc-76df-48ed-9d4e-c35caf44b567">
+        <source applicationId="5b5d61cc-93fe-4dbd-bfc7-1979acae467b" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="c261b320-52fc-44a5-a15f-4c81f58f1b5a" location="[Nullbox.Security].[Services].[CloudflareSiteVerifyCommand]" />
+        <target applicationId="e1c043cb-7a69-40ac-946e-08c099143cca" designerId="81104ae6-2bc5-4bae-b05a-f987b0372d81" elementId="94048ad9-d4b4-4c29-aeda-03c268130673" location="[Nullbox.Security].[Services].[SiteVerifyCommand]" />
+        <mappedEnds>
+          <mappedEnd>
+            <expression>{CloudflareSiteVerifyCommand}</expression>
+            <path>
+              <target id="94048ad9-d4b4-4c29-aeda-03c268130673" name="SiteVerifyCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+            </path>
+            <sources>
+              <source identifier="CloudflareSiteVerifyCommand" mappingType="Invocation Mapping" mappingTypeId="7ca5c18a-bdbe-434b-a68a-421899a077e7">
+                <path>
+                  <target id="c261b320-52fc-44a5-a15f-4c81f58f1b5a" name="CloudflareSiteVerifyCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Secret}</expression>
+            <path>
+              <target id="94048ad9-d4b4-4c29-aeda-03c268130673" name="SiteVerifyCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="30ab50ef-a47a-4fd5-8bc7-504fc43fa7dc" name="Secret" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Secret" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="c261b320-52fc-44a5-a15f-4c81f58f1b5a" name="CloudflareSiteVerifyCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+                  <target id="983c9f0f-4b06-4c95-aeda-2ba524eb95d0" name="Secret" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{Response}</expression>
+            <path>
+              <target id="94048ad9-d4b4-4c29-aeda-03c268130673" name="SiteVerifyCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="e9444382-57c2-40e3-a5c8-e3bf9732597d" name="Response" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="Response" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="c261b320-52fc-44a5-a15f-4c81f58f1b5a" name="CloudflareSiteVerifyCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+                  <target id="a3b3f6b9-ff4e-45c3-b6c5-12b7c1df31c1" name="Response" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{RemoteIp}</expression>
+            <path>
+              <target id="94048ad9-d4b4-4c29-aeda-03c268130673" name="SiteVerifyCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="5b524938-08f8-4fd7-88d7-b902fc5a5610" name="RemoteIp" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="RemoteIp" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="c261b320-52fc-44a5-a15f-4c81f58f1b5a" name="CloudflareSiteVerifyCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+                  <target id="678dabe9-2e57-4d35-ae4d-de8f1a58f0d0" name="RemoteIp" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+          <mappedEnd>
+            <expression>{IdempotencyKey}</expression>
+            <path>
+              <target id="94048ad9-d4b4-4c29-aeda-03c268130673" name="SiteVerifyCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+              <target id="f95cc730-b8a1-45b4-9184-6349be862847" name="IdempotencyKey" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+            </path>
+            <sources>
+              <source identifier="IdempotencyKey" mappingType="Data Mapping" mappingTypeId="1ad97d12-2aa8-4f03-8cb0-3a8a4e71b4d9">
+                <path>
+                  <target id="c261b320-52fc-44a5-a15f-4c81f58f1b5a" name="CloudflareSiteVerifyCommand" type="element" specialization="Command" specializationId="ccf14eb6-3a55-4d81-b5b9-d27311c70cb9" />
+                  <target id="39cb199e-2e10-44c1-a174-6f17e27f1460" name="IdempotencyKey" type="element" specialization="DTO-Field" specializationId="7baed1fd-469b-4980-8fd9-4cefb8331eb2" />
+                </path>
+              </source>
+            </sources>
+          </mappedEnd>
+        </mappedEnds>
+      </mapping>
+    </mappings>
+    <metadata />
+    <childElements />
+  </targetEnd>
+  <associationType>Perform Invocation</associationType>
+  <associationTypeId>3e69085c-fa2f-44bd-93eb-41075fd472f8</associationTypeId>
+  <stereotypes />
+</association>

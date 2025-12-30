@@ -20,10 +20,7 @@ public class OnboardUserCommandValidator : AbstractValidator<OnboardUserCommand>
             .Length(3, 64)
             .CustomAsync(ValidateNameAsync);
 
-        RuleFor(v => v.RemoteIp)
-            .NotNull();
-
-        RuleFor(v => v.CfTurnstyleResponse)
+        RuleFor(v => v.CfTurnstileResponse)
             .NotNull();
     }
 

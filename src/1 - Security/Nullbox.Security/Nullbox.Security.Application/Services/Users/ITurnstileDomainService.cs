@@ -3,7 +3,7 @@ using Nullbox.Security.Domain.Contracts.Users;
 
 [assembly: IntentTemplate("Intent.DomainServices.DomainServiceInterface", Version = "1.0")]
 
-namespace Nullbox.Security.Domain.Services.Users;
+namespace Nullbox.Security.Application.Services.Users;
 
 public interface ITurnstileDomainService
 {

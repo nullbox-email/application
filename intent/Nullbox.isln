@@ -6,7 +6,7 @@
   <iconType>UrlImagePath</iconType>
   <metadataRelativePath>Intent.Metadata</metadataRelativePath>
   <modulesCacheRelativePath>.intent/modules</modulesCacheRelativePath>
-  <lastUsedApplicationTemplate id="Intent.ApplicationTemplate.EmptyVisualStudioSolution" version="4.1.14-pre.0" />
+  <lastUsedApplicationTemplate id="Intent.ApplicationTemplate.ExternalApi" version="1.0.9-pre.0" />
   <applications>
     <application id="d9fec239-9a1a-4a3e-a559-c4f3b56978f3" name="Nullbox.Auth.EntraExternalId" solutionFolder="1 - Security" relativePath="Nullbox.Auth.EntraExternalId/Nullbox.Auth.EntraExternalId.application.config" />
     <application id="5b5d61cc-93fe-4dbd-bfc7-1979acae467b" name="Nullbox.Security" solutionFolder="1 - Security" relativePath="Nullbox.Security/Nullbox.Security.application.config" />
@@ -14,5 +14,6 @@
     <application id="b280d3f9-c6d3-423b-88a0-21fa77bf7b9c" name="Nullbox.Shared" solutionFolder="Shared" relativePath="Nullbox.Shared/Nullbox.Shared.application.config" />
     <application id="7212a01b-2fba-4791-b588-514c83f8349a" name="Nullbox" solutionFolder="0 - Aspire" relativePath="Nullbox/Nullbox.application.config" />
     <application id="650a592e-136d-4adc-ad22-5105c36e75c8" name="application" solutionFolder="9 - UI" relativePath="application/application.application.config" />
+    <application id="e1c043cb-7a69-40ac-946e-08c099143cca" name="Cloudflare" solutionFolder="Shared" relativePath="Cloudflare/Cloudflare.application.config" />
   </applications>
 </solution>

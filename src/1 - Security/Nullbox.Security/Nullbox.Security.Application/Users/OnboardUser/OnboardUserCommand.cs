@@ -8,14 +8,14 @@ namespace Nullbox.Security.Application.Users.OnboardUser;
 
 public class OnboardUserCommand : IRequest, ICommand
 {
-    public OnboardUserCommand(string name, string remoteIp, string cfTurnstyleResponse)
+    public OnboardUserCommand(string name, string? remoteIp, string cfTurnstileResponse)
     {
         Name = name;
         RemoteIp = remoteIp;
-        CfTurnstyleResponse = cfTurnstyleResponse;
+        CfTurnstileResponse = cfTurnstileResponse;
     }
 
     public string Name { get; set; }
-    public string RemoteIp { get; set; }
-    public string CfTurnstyleResponse { get; set; }
+    public string? RemoteIp { get; set; }
+    public string CfTurnstileResponse { get; set; }
 }

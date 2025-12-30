@@ -6,7 +6,6 @@ using Nullbox.Security.Application.Common.Interfaces;
 using Nullbox.Security.Domain.Common.Exceptions;
 using Nullbox.Security.Domain.Entities.Users;
 using Nullbox.Security.Domain.Repositories.Users;
-using Nullbox.Security.Domain.Services.Users;
 
 [assembly: IntentTemplate("Intent.Application.MediatR.CommandHandler", Version = "2.0")]
 
