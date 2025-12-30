@@ -542,11 +542,11 @@
     </childElement>
     <childElement id="bf47fd7f-71fa-43aa-a8dc-92b6e459306a" type="Property" typeId="bde29850-5fb9-4f47-9941-b9e182fd9bdc">
       <name>DropReason</name>
-      <display>DropReason: DeliveryActionCreatedV1DropReasonDto?</display>
+      <display>DropReason: DeliveryActionCompletedV1DropReasonDto?</display>
       <isAbstract>false</isAbstract>
       <genericTypes />
       <typeReference id="96bee3a2-d26a-4c00-86c2-cfec745e9be4">
-        <typeId>c603da69-79aa-46e6-bf23-95f9d463f4b2</typeId>
+        <typeId>a2b4ea53-6e7f-4584-acf4-806136e66747</typeId>
         <isNavigable>true</isNavigable>
         <isNullable>true</isNullable>
         <isCollection>false</isCollection>
@@ -566,11 +566,11 @@
     </childElement>
     <childElement id="95427774-1d9b-4ab0-8231-430d1cc96a7d" type="Property" typeId="bde29850-5fb9-4f47-9941-b9e182fd9bdc">
       <name>QuarantineReason</name>
-      <display>QuarantineReason: DeliveryActionCreatedV1QuarantineReasonDto?</display>
+      <display>QuarantineReason: DeliveryActionCompletedV1QuarantineReasonDto?</display>
       <isAbstract>false</isAbstract>
       <genericTypes />
       <typeReference id="fa4c9c3d-6d1c-4526-8105-2a5db1612ea2">
-        <typeId>e119968d-2fad-42aa-8292-3672094f9a98</typeId>
+        <typeId>87459d5c-b896-4565-a9d8-090ffb11f24b</typeId>
         <isNavigable>true</isNavigable>
         <isNullable>true</isNullable>
         <isCollection>false</isCollection>

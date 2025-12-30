@@ -55,14 +55,6 @@ public static class DependencyInjection
         services.AddTransient<IIntegrationEventHandler<DeliveryActionCompletedV1Event>, DeliveryActionCompletedV1Handler>();
         services.AddTransient<IIntegrationEventHandler<DeliveryActionCompleteRollupsV1>, DeliveryActionCompleteRollupsV1Handler>();
         services.AddTransient<IIntegrationEventHandler<DeliveryActionCompleteStatisticsV1>, DeliveryActionCompleteStatisticsV1Handler>();
-        services.AddTransient<IIntegrationEventHandler<DeliveryActionCreateActivitiesV1>, DeliveryActionCreateActivitiesV1Handler>();
-        services.AddTransient<IIntegrationEventHandler<DeliveryActionCreatedV1Event>, DeliveryActionCreatedV1Handler>();
-        services.AddTransient<IIntegrationEventHandler<DeliveryActionCreateRollupsV1>, DeliveryActionCreateRollupsV1Handler>();
-        services.AddTransient<IIntegrationEventHandler<DeliveryActionCreateStatisticsV1>, DeliveryActionCreateStatisticsV1Handler>();
-        services.AddTransient<IIntegrationEventHandler<DeliveryActionDecisionActivitiesV1>, DeliveryActionDecisionActivitiesV1Handler>();
-        services.AddTransient<IIntegrationEventHandler<DeliveryActionDecisionedV1Event>, DeliveryActionDecisionedV1Handler>();
-        services.AddTransient<IIntegrationEventHandler<DeliveryActionDecisionRollupsV1>, DeliveryActionDecisionRollupsV1Handler>();
-        services.AddTransient<IIntegrationEventHandler<DeliveryActionDecisionStatisticsV1>, DeliveryActionDecisionStatisticsV1Handler>();
         return services;
     }
 }

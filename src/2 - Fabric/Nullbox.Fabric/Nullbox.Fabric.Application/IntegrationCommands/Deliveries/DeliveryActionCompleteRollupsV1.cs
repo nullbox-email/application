@@ -41,8 +41,8 @@ public record DeliveryActionCompleteRollupsV1
     public int AttachmentsCount { get; init; }
     public long Size { get; init; }
     public DeliveryDecision DeliveryDecision { get; init; }
-    public DeliveryActionDecisionedV1DropReasonDto? DropReason { get; init; }
-    public DeliveryActionDecisionedV1QuarantineReasonDto? QuarantineReason { get; init; }
+    public DeliveryActionCompletedV1DropReasonDto? DropReason { get; init; }
+    public DeliveryActionCompletedV1QuarantineReasonDto? QuarantineReason { get; init; }
     public string? ForwardTo { get; init; }
     public string? ForwardFrom { get; init; }
     public string? Provider { get; init; }

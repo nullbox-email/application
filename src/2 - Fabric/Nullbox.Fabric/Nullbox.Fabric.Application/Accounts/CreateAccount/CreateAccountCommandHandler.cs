@@ -26,12 +26,19 @@ public class CreateAccountCommandHandler : IRequestHandler<CreateAccountCommand,
     {
         var scopes = new Scopes();
 
-        var defaultRole = new AccountRole("Owner", [
-            .. scopes.All.Select(x => x.Name.ToString())
-        ]);
+        var defaultRoleId = Guid.NewGuid();
 
         var account = new Account(
-            userProfileId: request.Id, name: request.Name, emailAddress: request.EmailAddress, adminRoleId: defaultRole.Id);
+            userProfileId: request.Id, 
+            name: request.Name, 
+            emailAddress: request.EmailAddress, 
+            adminRoleId: defaultRoleId);
+
+        var defaultRole = new AccountRole(
+            id: defaultRoleId,
+            accountId: account.Id,
+            name: "Owner",
+            scopes: [.. scopes.All.Select(x => x.Name.ToString())]);
 
         _accountRepository.Add(account);
         _accountRoleRepository.Add(defaultRole);

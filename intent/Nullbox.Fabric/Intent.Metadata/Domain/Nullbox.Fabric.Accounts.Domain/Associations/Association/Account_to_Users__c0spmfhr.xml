@@ -22,7 +22,7 @@
   <targetEnd id="a74e889f-83e6-4531-bc16-6dba351c0a67" type="Association Target End" typeId="0a66489f-30aa-417b-a75d-b945863366fd">
     <name>Users</name>
     <display>Users: AccountUser[*]</display>
-    <order>5</order>
+    <order>6</order>
     <typeReference id="152782bf-6652-40b0-97c7-f220a29086d6">
       <typeId>f18c6f51-3555-46b1-b9cc-4df22ebf08f8</typeId>
       <isNavigable>true</isNavigable>

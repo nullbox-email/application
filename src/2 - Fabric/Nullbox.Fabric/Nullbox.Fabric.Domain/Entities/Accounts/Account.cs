@@ -10,6 +10,8 @@ public partial class Account
 {
     public Account(Guid userProfileId, string name, string emailAddress, Guid adminRoleId)
     {
+        AccountId = Id;
+
         Name = name;
 
         _users.Add(new AccountUser(userProfileId, emailAddress, adminRoleId));

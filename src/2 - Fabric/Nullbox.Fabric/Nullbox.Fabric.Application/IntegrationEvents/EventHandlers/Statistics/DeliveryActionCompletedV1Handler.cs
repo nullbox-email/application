@@ -43,14 +43,14 @@ public class DeliveryActionCompletedV1Handler : IIntegrationEventHandler<Deliver
             Size = message.Size,
             DeliveryDecision = message.DeliveryDecision,
             DropReason = message.DropReason is not null
-                    ? new DeliveryActionCreatedV1DropReasonDto
+                    ? new DeliveryActionCompletedV1DropReasonDto
                     {
                         Reason = message.DropReason.Reason,
                         Message = message.DropReason?.Message
                     }
                     : null,
             QuarantineReason = message.QuarantineReason is not null
-                    ? new DeliveryActionCreatedV1QuarantineReasonDto
+                    ? new DeliveryActionCompletedV1QuarantineReasonDto
                     {
                         Reason = message.QuarantineReason.Reason,
                         Message = message.QuarantineReason?.Message
@@ -90,14 +90,14 @@ public class DeliveryActionCompletedV1Handler : IIntegrationEventHandler<Deliver
             Size = message.Size,
             DeliveryDecision = message.DeliveryDecision,
             DropReason = message.DropReason is not null
-                    ? new DeliveryActionDecisionedV1DropReasonDto
+                    ? new DeliveryActionCompletedV1DropReasonDto
                     {
                         Reason = message.DropReason.Reason,
                         Message = message.DropReason?.Message
                     }
                     : null,
             QuarantineReason = message.QuarantineReason is not null
-                    ? new DeliveryActionDecisionedV1QuarantineReasonDto
+                    ? new DeliveryActionCompletedV1QuarantineReasonDto
                     {
                         Reason = message.QuarantineReason.Reason,
                         Message = message.QuarantineReason?.Message

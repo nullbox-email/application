@@ -41,10 +41,10 @@ public static class DependencyInjection
         services.AddDbContext<ApplicationDbContext>((sp, options) =>
         {
             options.UseCosmos(
-                configuration["ConnectionStrings:cosmos-db"],
-                configuration["Cosmos:DatabaseName"],
-                cosmosOptions =>
-                {
+                    configuration["ConnectionStrings:cosmos-db"],
+                    configuration["Cosmos:DatabaseName"],
+                    cosmosOptions =>
+                    {
 #if DEBUG
                         // Required for emulator
                         cosmosOptions.HttpClientFactory(() =>
@@ -56,7 +56,7 @@ public static class DependencyInjection
                         cosmosOptions.ConnectionMode(connectionMode: ConnectionMode.Gateway);
                         cosmosOptions.LimitToEndpoint();
 #endif
-                });
+                    });
             options.UseLazyLoadingProxies();
         });
         services.AddDistributedMemoryCache();

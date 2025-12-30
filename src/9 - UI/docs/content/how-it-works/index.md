@@ -5,7 +5,7 @@ icon: lucide:settings
 ---
 
 ::card-group{cols="2"}
-  ::card{title="Inbound email processing (ProcessEmail)" icon="lucide:mail" to="/how-it-works/process-email" description="Decision pipeline for Forward / Drop / Quarantine."}
+  ::card{title="Inbound email" icon="lucide:mail" to="/how-it-works/process-email" description="Decision pipeline for Forward / Drop / Quarantine."}
   ::
 ::
 

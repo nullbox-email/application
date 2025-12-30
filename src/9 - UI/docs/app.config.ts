@@ -1,17 +1,17 @@
 export default defineAppConfig({
   shadcnDocs: {
     site: {
-      name: 'Nullbox Email',
-      description: 'Documentation for Nullbox Email: aliasing, delivery decisions, and operational guides.',
+      name: 'Nullbox',
+      description: 'Documentation for Nullbox: aliasing, delivery decisions, and operational guides.',
     },
     theme: {
-      customizable: true,
+      customizable: false,
       color: 'zinc',
       radius: 0.5,
     },
     header: {
-      title: 'Nullbox Email',
-      showTitle: true,
+      title: 'Nullbox',
+      showTitle: false,
       darkModeToggle: true,
       languageSwitcher: {
         enable: false,
@@ -19,8 +19,8 @@ export default defineAppConfig({
         dropdownType: 'select',
       },
       logo: {
-        light: '/logo.svg',
-        dark: '/logo-dark.svg',
+        light: '/logo.light.svg',
+        dark: '/logo.dark.svg',
       },
       nav: [],
       links: [{
@@ -38,7 +38,7 @@ export default defineAppConfig({
       showTitle: true,
     },
     footer: {
-      credits: 'Copyright © 2025',
+      credits: 'Copyright © 2026',
       links: [{
         icon: 'lucide:github',
         to: 'https://github.com/nullbox-email/application',
@@ -55,7 +55,7 @@ export default defineAppConfig({
       }, {
         title: 'Create Issues',
         icon: 'lucide:circle-dot',
-        to: 'https://github.com/nullbox-email/application/issues',
+        to: 'https://github.com/nullbox-email/support/issues',
         target: '_blank',
       }],
     },

@@ -42,6 +42,33 @@
             <property name="a7a5e921-18b9-43b4-8078-b4ac4e5dae6f" display="Data source" value="User supplied" isActive="true" />
           </properties>
         </stereotype>
+      </stereotypes>
+      <metadata>
+        <entry key="is-managed-key" value="true" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="fcdd9094-023c-47cb-816d-0746cbff3aab" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>AccountId</name>
+      <display>AccountId: guid</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="836d212e-35cb-4d71-9738-9610ae286914">
+        <typeId>6b649125-18ea-48fd-a6ba-0bfff0d8f488</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>0575f6e4-4192-45e7-bc7a-e0b1c3ee5630</parentFolderId>
+      <packageId>b7b0ee71-00bd-467c-a2df-7b8d3248683b</packageId>
+      <packageName>Nullbox.Fabric.Accounts.Domain</packageName>
+      <stereotypes>
         <stereotype stereotypeDefinitionId="3a203a3e-116e-4a7c-b375-e690570efc3f" name="Partition Key">
           <addedByDefault>false</addedByDefault>
           <definitionPackageName>Intent.EntityFrameworkCore</definitionPackageName>
@@ -49,9 +76,7 @@
           <properties />
         </stereotype>
       </stereotypes>
-      <metadata>
-        <entry key="is-managed-key" value="true" />
-      </metadata>
+      <metadata />
       <childElements />
     </childElement>
     <childElement id="06d52243-7592-4a9b-94f0-ee416a933763" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">

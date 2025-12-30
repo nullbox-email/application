@@ -6,8 +6,10 @@ namespace Nullbox.Fabric.Domain.Entities.Accounts;
 
 public partial class AccountRole
 {
-    public AccountRole(string name, IEnumerable<string> scopes)
+    public AccountRole(Guid id, Guid accountId, string name, IEnumerable<string> scopes)
     {
+        Id = id;
+        AccountId = accountId;
         Name = name;
         _scopes = new List<string>(scopes);
     }

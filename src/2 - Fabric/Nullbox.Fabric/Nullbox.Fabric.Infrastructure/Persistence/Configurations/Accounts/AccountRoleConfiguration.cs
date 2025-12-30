@@ -13,7 +13,7 @@ public class AccountRoleConfiguration : IEntityTypeConfiguration<AccountRole>
     {
         builder.ToContainer("Accounts");
 
-        builder.HasPartitionKey(x => x.Id);
+        builder.HasPartitionKey(x => x.AccountId);
 
         builder.HasKey(x => x.Id);
 
@@ -21,11 +21,14 @@ public class AccountRoleConfiguration : IEntityTypeConfiguration<AccountRole>
             .HasColumnOrder(0)
                 .ValueGeneratedNever();
 
+        builder.Property(x => x.AccountId)
+            .IsRequired();
+
         builder.Property(x => x.Name)
             .IsRequired();
 
         builder.Property(x => x.Scopes)
-            .IsRequired();
+                .IsRequired();
 
         builder.Ignore(e => e.DomainEvents);
     }

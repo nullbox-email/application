@@ -13,13 +13,16 @@ public class AccountConfiguration : IEntityTypeConfiguration<Account>
     {
         builder.ToContainer("Accounts");
 
-        builder.HasPartitionKey(x => x.Id);
+        builder.HasPartitionKey(x => x.AccountId);
 
         builder.HasKey(x => x.Id);
 
         builder.Property(x => x.Id)
             .HasColumnOrder(0)
                 .ValueGeneratedNever();
+
+        builder.Property(x => x.AccountId)
+                .IsRequired();
 
         builder.Property(x => x.Name)
                 .IsRequired();

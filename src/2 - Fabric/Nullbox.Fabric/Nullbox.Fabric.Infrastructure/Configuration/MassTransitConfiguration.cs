@@ -62,10 +62,6 @@ public static class MassTransitConfiguration
         cfg.AddConsumer<IntegrationEventConsumer<IIntegrationEventHandler<AliasCreatedV1Event>, AliasCreatedV1Event>>(typeof(IntegrationEventConsumerDefinition<IIntegrationEventHandler<AliasCreatedV1Event>, AliasCreatedV1Event>)).Endpoint(config => config.InstanceId = "Nullbox-Fabric");
 
         cfg.AddConsumer<IntegrationEventConsumer<IIntegrationEventHandler<DeliveryActionCompletedV1Event>, DeliveryActionCompletedV1Event>>(typeof(IntegrationEventConsumerDefinition<IIntegrationEventHandler<DeliveryActionCompletedV1Event>, DeliveryActionCompletedV1Event>)).Endpoint(config => config.InstanceId = "Nullbox-Fabric");
-
-        cfg.AddConsumer<IntegrationEventConsumer<IIntegrationEventHandler<DeliveryActionCreatedV1Event>, DeliveryActionCreatedV1Event>>(typeof(IntegrationEventConsumerDefinition<IIntegrationEventHandler<DeliveryActionCreatedV1Event>, DeliveryActionCreatedV1Event>)).Endpoint(config => config.InstanceId = "Nullbox-Fabric");
-
-        cfg.AddConsumer<IntegrationEventConsumer<IIntegrationEventHandler<DeliveryActionDecisionedV1Event>, DeliveryActionDecisionedV1Event>>(typeof(IntegrationEventConsumerDefinition<IIntegrationEventHandler<DeliveryActionDecisionedV1Event>, DeliveryActionDecisionedV1Event>)).Endpoint(config => config.InstanceId = "Nullbox-Fabric");
         cfg.AddConsumer<IntegrationEventConsumer<IIntegrationEventHandler<EnablementGrantCreatedV1Event>, EnablementGrantCreatedV1Event>>(typeof(IntegrationEventConsumerDefinition<IIntegrationEventHandler<EnablementGrantCreatedV1Event>, EnablementGrantCreatedV1Event>)).Endpoint(config => config.InstanceId = "Nullbox-Fabric");
 
         cfg.AddConsumer<IntegrationEventConsumer<IIntegrationEventHandler<MailboxUpdatedV1Event>, MailboxUpdatedV1Event>>(typeof(IntegrationEventConsumerDefinition<IIntegrationEventHandler<MailboxUpdatedV1Event>, MailboxUpdatedV1Event>)).Endpoint(config => config.InstanceId = "Nullbox-Fabric");
@@ -79,12 +75,6 @@ public static class MassTransitConfiguration
         cfg.AddConsumer<IntegrationEventConsumer<IIntegrationEventHandler<DeliveryActionCompleteActivitiesV1>, DeliveryActionCompleteActivitiesV1>>(typeof(IntegrationEventConsumerDefinition<IIntegrationEventHandler<DeliveryActionCompleteActivitiesV1>, DeliveryActionCompleteActivitiesV1>)).ExcludeFromConfigureEndpoints();
         cfg.AddConsumer<IntegrationEventConsumer<IIntegrationEventHandler<DeliveryActionCompleteRollupsV1>, DeliveryActionCompleteRollupsV1>>(typeof(IntegrationEventConsumerDefinition<IIntegrationEventHandler<DeliveryActionCompleteRollupsV1>, DeliveryActionCompleteRollupsV1>)).ExcludeFromConfigureEndpoints();
         cfg.AddConsumer<IntegrationEventConsumer<IIntegrationEventHandler<DeliveryActionCompleteStatisticsV1>, DeliveryActionCompleteStatisticsV1>>(typeof(IntegrationEventConsumerDefinition<IIntegrationEventHandler<DeliveryActionCompleteStatisticsV1>, DeliveryActionCompleteStatisticsV1>)).ExcludeFromConfigureEndpoints();
-        cfg.AddConsumer<IntegrationEventConsumer<IIntegrationEventHandler<DeliveryActionCreateActivitiesV1>, DeliveryActionCreateActivitiesV1>>(typeof(IntegrationEventConsumerDefinition<IIntegrationEventHandler<DeliveryActionCreateActivitiesV1>, DeliveryActionCreateActivitiesV1>)).ExcludeFromConfigureEndpoints();
-        cfg.AddConsumer<IntegrationEventConsumer<IIntegrationEventHandler<DeliveryActionCreateRollupsV1>, DeliveryActionCreateRollupsV1>>(typeof(IntegrationEventConsumerDefinition<IIntegrationEventHandler<DeliveryActionCreateRollupsV1>, DeliveryActionCreateRollupsV1>)).ExcludeFromConfigureEndpoints();
-        cfg.AddConsumer<IntegrationEventConsumer<IIntegrationEventHandler<DeliveryActionCreateStatisticsV1>, DeliveryActionCreateStatisticsV1>>(typeof(IntegrationEventConsumerDefinition<IIntegrationEventHandler<DeliveryActionCreateStatisticsV1>, DeliveryActionCreateStatisticsV1>)).ExcludeFromConfigureEndpoints();
-        cfg.AddConsumer<IntegrationEventConsumer<IIntegrationEventHandler<DeliveryActionDecisionActivitiesV1>, DeliveryActionDecisionActivitiesV1>>(typeof(IntegrationEventConsumerDefinition<IIntegrationEventHandler<DeliveryActionDecisionActivitiesV1>, DeliveryActionDecisionActivitiesV1>)).ExcludeFromConfigureEndpoints();
-        cfg.AddConsumer<IntegrationEventConsumer<IIntegrationEventHandler<DeliveryActionDecisionRollupsV1>, DeliveryActionDecisionRollupsV1>>(typeof(IntegrationEventConsumerDefinition<IIntegrationEventHandler<DeliveryActionDecisionRollupsV1>, DeliveryActionDecisionRollupsV1>)).ExcludeFromConfigureEndpoints();
-        cfg.AddConsumer<IntegrationEventConsumer<IIntegrationEventHandler<DeliveryActionDecisionStatisticsV1>, DeliveryActionDecisionStatisticsV1>>(typeof(IntegrationEventConsumerDefinition<IIntegrationEventHandler<DeliveryActionDecisionStatisticsV1>, DeliveryActionDecisionStatisticsV1>)).ExcludeFromConfigureEndpoints();
         cfg.AddConsumer<IntegrationEventConsumer<IIntegrationEventHandler<MailboxUpdateAliasMapV1>, MailboxUpdateAliasMapV1>>(typeof(IntegrationEventConsumerDefinition<IIntegrationEventHandler<MailboxUpdateAliasMapV1>, MailboxUpdateAliasMapV1>)).ExcludeFromConfigureEndpoints();
         cfg.AddConsumer<IntegrationEventConsumer<IIntegrationEventHandler<MailboxUpdateMailboxMapV1>, MailboxUpdateMailboxMapV1>>(typeof(IntegrationEventConsumerDefinition<IIntegrationEventHandler<MailboxUpdateMailboxMapV1>, MailboxUpdateMailboxMapV1>)).ExcludeFromConfigureEndpoints();
     }
@@ -131,36 +121,6 @@ public static class MassTransitConfiguration
                 e.ConfigureConsumeTopology = false;
                 e.Consumer<IntegrationEventConsumer<IIntegrationEventHandler<DeliveryActionCompleteStatisticsV1>, DeliveryActionCompleteStatisticsV1>>(context);
             });
-        cfg.ReceiveEndpoint("nullbox.fabric.deliveries.eventing.messages.deliveries.delivery-action-create-activities-v1", e =>
-            {
-                e.ConfigureConsumeTopology = false;
-                e.Consumer<IntegrationEventConsumer<IIntegrationEventHandler<DeliveryActionCreateActivitiesV1>, DeliveryActionCreateActivitiesV1>>(context);
-            });
-        cfg.ReceiveEndpoint("nullbox.fabric.deliveries.eventing.messages.deliveries.delivery-action-create-rollups-v1", e =>
-            {
-                e.ConfigureConsumeTopology = false;
-                e.Consumer<IntegrationEventConsumer<IIntegrationEventHandler<DeliveryActionCreateRollupsV1>, DeliveryActionCreateRollupsV1>>(context);
-            });
-        cfg.ReceiveEndpoint("nullbox.fabric.deliveries.eventing.messages.deliveries.delivery-action-create-statistics-v1", e =>
-            {
-                e.ConfigureConsumeTopology = false;
-                e.Consumer<IntegrationEventConsumer<IIntegrationEventHandler<DeliveryActionCreateStatisticsV1>, DeliveryActionCreateStatisticsV1>>(context);
-            });
-        cfg.ReceiveEndpoint("nullbox.fabric.deliveries.eventing.messages.deliveries.delivery-action-decision-activities-v1", e =>
-            {
-                e.ConfigureConsumeTopology = false;
-                e.Consumer<IntegrationEventConsumer<IIntegrationEventHandler<DeliveryActionDecisionActivitiesV1>, DeliveryActionDecisionActivitiesV1>>(context);
-            });
-        cfg.ReceiveEndpoint("nullbox.fabric.deliveries.eventing.messages.deliveries.delivery-action-decision-rollups-v1", e =>
-            {
-                e.ConfigureConsumeTopology = false;
-                e.Consumer<IntegrationEventConsumer<IIntegrationEventHandler<DeliveryActionDecisionRollupsV1>, DeliveryActionDecisionRollupsV1>>(context);
-            });
-        cfg.ReceiveEndpoint("nullbox.fabric.deliveries.eventing.messages.deliveries.delivery-action-decision-statistics-v1", e =>
-            {
-                e.ConfigureConsumeTopology = false;
-                e.Consumer<IntegrationEventConsumer<IIntegrationEventHandler<DeliveryActionDecisionStatisticsV1>, DeliveryActionDecisionStatisticsV1>>(context);
-            });
         cfg.ReceiveEndpoint("nullbox.fabric.mailboxes.eventing.messages.mailboxes.mailbox-update-alias-map-v1", e =>
             {
                 e.ConfigureConsumeTopology = false;
@@ -177,19 +137,13 @@ public static class MassTransitConfiguration
     {
         EndpointConvention.Map<Nullbox.Fabric.Deliveries.Eventing.Messages.Deliveries.DeliveryActionCompleteRollupsV1>(new Uri("queue:nullbox.fabric.deliveries.eventing.messages.deliveries.delivery-action-complete-rollups-v1"));
         EndpointConvention.Map<Nullbox.Fabric.Accounts.Eventing.Messages.Accounts.AccountCreateAccountUserMapV1>(new Uri("queue:nullbox.fabric.accounts.eventing.messages.accounts.account-create-account-user-map-v1"));
-        EndpointConvention.Map<Nullbox.Fabric.Deliveries.Eventing.Messages.Deliveries.DeliveryActionDecisionActivitiesV1>(new Uri("queue:nullbox.fabric.deliveries.eventing.messages.deliveries.delivery-action-decision-activities-v1"));
         EndpointConvention.Map<Nullbox.Fabric.Accounts.Eventing.Messages.Accounts.AccountCreateDefaultUserMailboxV1>(new Uri("queue:nullbox.fabric.accounts.eventing.messages.accounts.account-create-default-user-mailbox-v1"));
         EndpointConvention.Map<Nullbox.Fabric.Deliveries.Eventing.Messages.Deliveries.DeliveryActionCompleteActivitiesV1>(new Uri("queue:nullbox.fabric.deliveries.eventing.messages.deliveries.delivery-action-complete-activities-v1"));
         EndpointConvention.Map<Nullbox.Fabric.Accounts.Eventing.Messages.Accounts.AccountCreateEnablementV1>(new Uri("queue:nullbox.fabric.accounts.eventing.messages.accounts.account-create-enablement-v1"));
-        EndpointConvention.Map<Nullbox.Fabric.Deliveries.Eventing.Messages.Deliveries.DeliveryActionCreateRollupsV1>(new Uri("queue:nullbox.fabric.deliveries.eventing.messages.deliveries.delivery-action-create-rollups-v1"));
         EndpointConvention.Map<Nullbox.Fabric.Mailboxes.Eventing.Messages.Mailboxes.MailboxUpdateAliasMapV1>(new Uri("queue:nullbox.fabric.mailboxes.eventing.messages.mailboxes.mailbox-update-alias-map-v1"));
-        EndpointConvention.Map<Nullbox.Fabric.Deliveries.Eventing.Messages.Deliveries.DeliveryActionCreateStatisticsV1>(new Uri("queue:nullbox.fabric.deliveries.eventing.messages.deliveries.delivery-action-create-statistics-v1"));
         EndpointConvention.Map<Nullbox.Fabric.Deliveries.Eventing.Messages.Deliveries.DeliveryActionCompleteStatisticsV1>(new Uri("queue:nullbox.fabric.deliveries.eventing.messages.deliveries.delivery-action-complete-statistics-v1"));
         EndpointConvention.Map<Nullbox.Fabric.Mailboxes.Eventing.Messages.Mailboxes.MailboxUpdateMailboxMapV1>(new Uri("queue:nullbox.fabric.mailboxes.eventing.messages.mailboxes.mailbox-update-mailbox-map-v1"));
-        EndpointConvention.Map<Nullbox.Fabric.Deliveries.Eventing.Messages.Deliveries.DeliveryActionCreateActivitiesV1>(new Uri("queue:nullbox.fabric.deliveries.eventing.messages.deliveries.delivery-action-create-activities-v1"));
         EndpointConvention.Map<Nullbox.Fabric.Aliases.Eventing.Messages.Aliases.AliasCreatedLearningModeScheduleV1>(new Uri("queue:nullbox.fabric.aliases.eventing.messages.aliases.alias-created-learning-mode-schedule-v1"));
-        EndpointConvention.Map<Nullbox.Fabric.Deliveries.Eventing.Messages.Deliveries.DeliveryActionDecisionRollupsV1>(new Uri("queue:nullbox.fabric.deliveries.eventing.messages.deliveries.delivery-action-decision-rollups-v1"));
-        EndpointConvention.Map<Nullbox.Fabric.Deliveries.Eventing.Messages.Deliveries.DeliveryActionDecisionStatisticsV1>(new Uri("queue:nullbox.fabric.deliveries.eventing.messages.deliveries.delivery-action-decision-statistics-v1"));
         EndpointConvention.Map<Nullbox.Fabric.Aliases.Eventing.Messages.Aliases.CreateAliasMapV1>(new Uri("queue:nullbox.fabric.aliases.eventing.messages.aliases.create-alias-map-v1"));
     }
 

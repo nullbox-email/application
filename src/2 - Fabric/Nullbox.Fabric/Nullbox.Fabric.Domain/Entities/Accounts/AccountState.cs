@@ -19,6 +19,8 @@ public partial class Account : IHasDomainEvent
 
     public Guid Id { get; private set; } = Guid.CreateVersion7();
 
+    public Guid AccountId { get; private set; }
+
     public string Name { get; private set; }
 
     public virtual IReadOnlyCollection<AccountUser> Users

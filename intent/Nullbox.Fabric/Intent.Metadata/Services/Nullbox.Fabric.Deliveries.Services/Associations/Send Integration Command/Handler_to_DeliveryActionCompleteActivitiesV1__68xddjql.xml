@@ -385,7 +385,7 @@
             <path>
               <target id="9d2dd4da-1614-4904-bb86-8d28ea5ae22d" name="DeliveryActionCompleteActivitiesV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
               <target id="bf47fd7f-71fa-43aa-a8dc-92b6e459306a" name="DropReason" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
-              <target id="d86d3d8f-9c76-48c2-a446-9064dd3295f9" name="Reason" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+              <target id="699a7177-8a6d-4802-a5e0-2420c1bccc32" name="Reason" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
             </path>
             <sources>
               <source identifier="DropReason.Reason" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
@@ -402,7 +402,7 @@
             <path>
               <target id="9d2dd4da-1614-4904-bb86-8d28ea5ae22d" name="DeliveryActionCompleteActivitiesV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
               <target id="bf47fd7f-71fa-43aa-a8dc-92b6e459306a" name="DropReason" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
-              <target id="c426539f-cc90-4cbe-b0bd-c0c8ec9da67e" name="Message" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+              <target id="05822f91-b115-4635-817e-b1755406b92b" name="Message" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
             </path>
             <sources>
               <source identifier="DropReason.Message" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
@@ -419,7 +419,7 @@
             <path>
               <target id="9d2dd4da-1614-4904-bb86-8d28ea5ae22d" name="DeliveryActionCompleteActivitiesV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
               <target id="95427774-1d9b-4ab0-8231-430d1cc96a7d" name="QuarantineReason" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
-              <target id="b193f2be-2bec-4d34-9390-76538cfc2ea1" name="Reason" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+              <target id="669a43d6-3165-48bf-8279-912392309b8c" name="Reason" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
             </path>
             <sources>
               <source identifier="QuarantineReason.Reason" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">
@@ -436,7 +436,7 @@
             <path>
               <target id="9d2dd4da-1614-4904-bb86-8d28ea5ae22d" name="DeliveryActionCompleteActivitiesV1" type="element" specialization="Integration Command" specializationId="7f01ca8e-0e3c-4735-ae23-a45169f71625" />
               <target id="95427774-1d9b-4ab0-8231-430d1cc96a7d" name="QuarantineReason" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
-              <target id="3e0948a7-47cb-4160-843a-3df2df740eb8" name="Message" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+              <target id="2c71842f-b5e9-49ba-b133-d83486641795" name="Message" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
             </path>
             <sources>
               <source identifier="QuarantineReason.Message" mappingType="Data Mapping" mappingTypeId="d12e5102-45f3-4dde-8f63-f6a630e75771">

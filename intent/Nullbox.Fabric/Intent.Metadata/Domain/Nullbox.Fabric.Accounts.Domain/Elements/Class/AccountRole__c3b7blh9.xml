@@ -42,6 +42,33 @@
             <property name="a7a5e921-18b9-43b4-8078-b4ac4e5dae6f" display="Data source" value="User supplied" isActive="true" />
           </properties>
         </stereotype>
+      </stereotypes>
+      <metadata>
+        <entry key="is-managed-key" value="true" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="8f50cdb7-13da-4c9d-9483-41dd29ba7dce" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
+      <name>AccountId</name>
+      <display>AccountId: guid</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="dd0921fa-a8b9-4130-a7ca-d41362e09449">
+        <typeId>6b649125-18ea-48fd-a6ba-0bfff0d8f488</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>d207b7a0-e076-40ce-89e5-6515e8b036d5</parentFolderId>
+      <packageId>b7b0ee71-00bd-467c-a2df-7b8d3248683b</packageId>
+      <packageName>Nullbox.Fabric.Accounts.Domain</packageName>
+      <stereotypes>
         <stereotype stereotypeDefinitionId="3a203a3e-116e-4a7c-b375-e690570efc3f" name="Partition Key">
           <addedByDefault>false</addedByDefault>
           <definitionPackageName>Intent.EntityFrameworkCore</definitionPackageName>
@@ -49,9 +76,7 @@
           <properties />
         </stereotype>
       </stereotypes>
-      <metadata>
-        <entry key="is-managed-key" value="true" />
-      </metadata>
+      <metadata />
       <childElements />
     </childElement>
     <childElement id="60728266-5b51-4697-b53e-f50018c7facc" type="Attribute" typeId="0090fb93-483e-41af-a11d-5ad2dc796adf">
@@ -126,7 +151,7 @@
     </childElement>
     <childElement id="4ff0bd2e-2626-417c-ab20-0139c13309ea" type="Class Constructor" typeId="dec2bd12-4699-4f45-8ec9-3b62dc692d2b">
       <name>Constructor</name>
-      <display>AccountRole(name: string, scopes: string[*])</display>
+      <display>AccountRole(id: guid, accountId: guid, name: string, scopes: string[*])</display>
       <isAbstract>false</isAbstract>
       <sort-children>by-type-then-manually</sort-children>
       <genericTypes />
@@ -146,6 +171,68 @@
       <stereotypes />
       <metadata />
       <childElements>
+        <childElement id="b54079d7-d366-47f3-a346-b11c1bc4f54c" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>id</name>
+          <display>in : id: guid</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="03470466-5757-484b-b98f-0492fefaf8b3">
+            <typeId>6b649125-18ea-48fd-a6ba-0bfff0d8f488</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>true</isMapped>
+          <mappedClass>
+            <mappingSettingsId>d6d0abfd-893c-4bec-92cb-419934ba5ba8</mappingSettingsId>
+            <autoSyncTypeReference>true</autoSyncTypeReference>
+            <mappedPath>
+              <target id="1aa16640-2fa8-41b1-abd8-9692cc0953e5" name="Id" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+            </mappedPath>
+          </mappedClass>
+          <parentFolderId>4ff0bd2e-2626-417c-ab20-0139c13309ea</parentFolderId>
+          <packageId>b7b0ee71-00bd-467c-a2df-7b8d3248683b</packageId>
+          <packageName>Nullbox.Fabric.Accounts.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
+        <childElement id="3071c26c-aea7-48d0-a62a-671ce9464dfd" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
+          <name>accountId</name>
+          <display>in : accountId: guid</display>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="667d64bc-4a47-4a87-aee8-b12d3fbf9fa0">
+            <typeId>6b649125-18ea-48fd-a6ba-0bfff0d8f488</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <isRequired>true</isRequired>
+            <typePackageName>Intent.Common.Types</typePackageName>
+            <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>true</isMapped>
+          <mappedClass>
+            <mappingSettingsId>d6d0abfd-893c-4bec-92cb-419934ba5ba8</mappingSettingsId>
+            <autoSyncTypeReference>true</autoSyncTypeReference>
+            <mappedPath>
+              <target id="8f50cdb7-13da-4c9d-9483-41dd29ba7dce" name="AccountId" type="element" specialization="Attribute" specializationId="0090fb93-483e-41af-a11d-5ad2dc796adf" />
+            </mappedPath>
+          </mappedClass>
+          <parentFolderId>4ff0bd2e-2626-417c-ab20-0139c13309ea</parentFolderId>
+          <packageId>b7b0ee71-00bd-467c-a2df-7b8d3248683b</packageId>
+          <packageName>Nullbox.Fabric.Accounts.Domain</packageName>
+          <stereotypes />
+          <metadata />
+          <childElements />
+        </childElement>
         <childElement id="19108465-1bde-45c7-84cc-c18e0cc172fa" type="Parameter" typeId="c26d8d0a-a26b-4b5f-b449-e9bdb60b3a4b">
           <name>name</name>
           <display>in : name: string</display>

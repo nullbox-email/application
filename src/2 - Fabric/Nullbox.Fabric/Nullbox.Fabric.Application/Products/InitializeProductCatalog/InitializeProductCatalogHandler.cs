@@ -24,7 +24,7 @@ public class InitializeProductCatalogHandler : IRequestHandler<InitializeProduct
     {
         await CreateOrUpdateProductAsync(
             id: "BETA-001",
-            name: "Beta Product",
+            name: "Beta License",
             isActive: true,
             maxMailboxes: 5,
             maxAliases: 50,
@@ -37,8 +37,22 @@ public class InitializeProductCatalogHandler : IRequestHandler<InitializeProduct
             cancellationToken);
 
         await CreateOrUpdateProductAsync(
+            id: "DEVELOPER-001",
+            name: "Developer",
+            isActive: true,
+            maxMailboxes: null,
+            maxAliases: null,
+            maxAliasesPerMailbox: null,
+            maxBandwidthBytesPerPeriod: 100 * OneGigabyteInBytes,
+            flags: new Dictionary<string, string>
+            {
+                { "IsBeta", "true" }
+            },
+            cancellationToken);
+
+        await CreateOrUpdateProductAsync(
             id: "FREE",
-            name: "Free Product",
+            name: "Free License",
             isActive: true,
             maxMailboxes: 1,
             maxAliases: 10,
@@ -51,7 +65,7 @@ public class InitializeProductCatalogHandler : IRequestHandler<InitializeProduct
 
         await CreateOrUpdateProductAsync(
             id: "PLUS",
-            name: "Plus Product",
+            name: "Plus License",
             isActive: true,
             maxMailboxes: 5,
             maxAliases: 50,
@@ -64,7 +78,7 @@ public class InitializeProductCatalogHandler : IRequestHandler<InitializeProduct
 
         await CreateOrUpdateProductAsync(
             id: "PRO",
-            name: "Pro Product",
+            name: "Pro License",
             isActive: true,
             maxMailboxes: null,
             maxAliases: null,

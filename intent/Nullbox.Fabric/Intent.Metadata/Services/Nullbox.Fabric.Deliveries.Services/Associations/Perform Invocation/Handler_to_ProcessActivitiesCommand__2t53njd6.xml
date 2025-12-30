@@ -396,7 +396,7 @@
                 <path>
                   <target id="6df2bd05-2caf-4617-9ee3-5337433ee07e" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
                   <target id="bf47fd7f-71fa-43aa-a8dc-92b6e459306a" name="DropReason" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
-                  <target id="d86d3d8f-9c76-48c2-a446-9064dd3295f9" name="Reason" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+                  <target id="699a7177-8a6d-4802-a5e0-2420c1bccc32" name="Reason" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
                 </path>
               </source>
             </sources>
@@ -413,7 +413,7 @@
                 <path>
                   <target id="6df2bd05-2caf-4617-9ee3-5337433ee07e" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
                   <target id="bf47fd7f-71fa-43aa-a8dc-92b6e459306a" name="DropReason" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
-                  <target id="c426539f-cc90-4cbe-b0bd-c0c8ec9da67e" name="Message" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+                  <target id="05822f91-b115-4635-817e-b1755406b92b" name="Message" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
                 </path>
               </source>
             </sources>
@@ -430,7 +430,7 @@
                 <path>
                   <target id="6df2bd05-2caf-4617-9ee3-5337433ee07e" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
                   <target id="95427774-1d9b-4ab0-8231-430d1cc96a7d" name="QuarantineReason" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
-                  <target id="b193f2be-2bec-4d34-9390-76538cfc2ea1" name="Reason" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+                  <target id="669a43d6-3165-48bf-8279-912392309b8c" name="Reason" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
                 </path>
               </source>
             </sources>
@@ -447,7 +447,7 @@
                 <path>
                   <target id="6df2bd05-2caf-4617-9ee3-5337433ee07e" name="Handler" type="association" specialization="Subscribe Integration Command Target End" specializationId="efa73bdb-69b7-4f52-aa10-15c19874b394" />
                   <target id="95427774-1d9b-4ab0-8231-430d1cc96a7d" name="QuarantineReason" type="element" specialization="Property" specializationId="bde29850-5fb9-4f47-9941-b9e182fd9bdc" />
-                  <target id="3e0948a7-47cb-4160-843a-3df2df740eb8" name="Message" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
+                  <target id="2c71842f-b5e9-49ba-b133-d83486641795" name="Message" type="element" specialization="Eventing DTO-Field" specializationId="93eea5d7-a6a6-4fb8-9c87-d2e4c913fbe7" />
                 </path>
               </source>
             </sources>
