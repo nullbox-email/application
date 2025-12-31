@@ -13,7 +13,7 @@ interface Env {
 	LOG_LEVEL?: string; // "debug" | "info" | "warn" | "error" | "none"
 }
 
-type LogLevel = 'debug' | 'info' | 'warn' | 'error' | 'none';
+type LogLevel = "debug" | "info" | "warn" | "error" | "none";
 
 const LOG_RANK: Record<LogLevel, number> = {
 	debug: 10,
@@ -24,9 +24,9 @@ const LOG_RANK: Record<LogLevel, number> = {
 };
 
 function parseLogLevel(v: unknown): LogLevel {
-	const s = (typeof v === 'string' ? v : '').trim().toLowerCase();
-	if (s === 'debug' || s === 'info' || s === 'warn' || s === 'error' || s === 'none') return s;
-	return 'info';
+	const s = (typeof v === "string" ? v : "").trim().toLowerCase();
+	if (s === "debug" || s === "info" || s === "warn" || s === "error" || s === "none") return s;
+	return "info";
 }
 
 function shouldLog(env: Env, level: LogLevel): boolean {
@@ -45,26 +45,33 @@ function log(env: Env, level: LogLevel, event: string, data?: Record<string, unk
 		...(data ?? {}),
 	};
 
-	if (level === 'error') console.error(payload);
-	else if (level === 'warn') console.warn(payload);
+	if (level === "error") console.error(payload);
+	else if (level === "warn") console.warn(payload);
 	else console.log(payload);
 }
 
 function mailgunBase(region: string) {
-	return region?.toLowerCase() === 'eu' ? 'https://api.eu.mailgun.net' : 'https://api.mailgun.net';
+	return region?.toLowerCase() === "eu" ? "https://api.eu.mailgun.net" : "https://api.mailgun.net";
 }
 
 function safeHeader(v: unknown): string {
-	if (typeof v !== 'string') return '';
-	return v.replace(/[\r\n]+/g, ' ').trim();
+	if (typeof v !== "string") return "";
+	return v.replace(/[\r\n]+/g, " ").trim();
+}
+
+/** Extracts addr-spec from something like: Display Name <addr@domain> */
+function extractEmailAddress(v: string): string {
+	const s = safeHeader(v);
+	const m = s.match(/<([^>]+)>/);
+	return (m ? m[1] : s).trim();
 }
 
 function sanitizeLocalPart(v: string) {
 	return v
 		.trim()
 		.toLowerCase()
-		.replace(/[^a-z0-9.!#$%&'*+/=?^_`{|}~-]+/g, '-')
-		.replace(/^-+|-+$/g, '');
+		.replace(/[^a-z0-9.!#$%&'*+/=?^_`{|}~-]+/g, "-")
+		.replace(/^-+|-+$/g, "");
 }
 
 function yyyyMmDdUtc(d = new Date()) {
@@ -73,33 +80,37 @@ function yyyyMmDdUtc(d = new Date()) {
 
 function toHexLower(bytes: ArrayBuffer): string {
 	const u8 = new Uint8Array(bytes);
-	let out = '';
-	for (let i = 0; i < u8.length; i++) out += u8[i].toString(16).padStart(2, '0');
+	let out = "";
+	for (let i = 0; i < u8.length; i++) out += u8[i].toString(16).padStart(2, "0");
 	return out;
 }
 
 function toBase64(bytes: ArrayBuffer): string {
-	let bin = '';
+	let bin = "";
 	const u8 = new Uint8Array(bytes);
 	for (let i = 0; i < u8.length; i++) bin += String.fromCharCode(u8[i]);
 	return btoa(bin);
 }
 
+function toExactArrayBuffer(u8: Uint8Array): ArrayBuffer {
+	return u8.buffer.slice(u8.byteOffset, u8.byteOffset + u8.byteLength);
+}
+
 async function sha256HexUtf8(input: string): Promise<string> {
 	const data = new TextEncoder().encode(input);
-	const hash = await crypto.subtle.digest('SHA-256', data);
+	const hash = await crypto.subtle.digest("SHA-256", data);
 	return toHexLower(hash);
 }
 
 async function sha256HexBytes(input: ArrayBuffer): Promise<string> {
-	const hash = await crypto.subtle.digest('SHA-256', input);
+	const hash = await crypto.subtle.digest("SHA-256", input);
 	return toHexLower(hash);
 }
 
 async function hmacSha256Base64(secret: string, message: string): Promise<string> {
 	const keyBytes = new TextEncoder().encode(secret);
-	const key = await crypto.subtle.importKey('raw', keyBytes, { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
-	const sig = await crypto.subtle.sign('HMAC', key, new TextEncoder().encode(message));
+	const key = await crypto.subtle.importKey("raw", keyBytes, { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
+	const sig = await crypto.subtle.sign("HMAC", key, new TextEncoder().encode(message));
 	return toBase64(sig);
 }
 
@@ -124,15 +135,15 @@ function extractRfc822Header(raw: Uint8Array, headerName: string): string | null
 
 	const headerBytes = raw.slice(0, sep.index);
 
-	// RFC822 headers are byte-ish; ISO-8859-1 preserves 0–255.
-	const dec = new TextDecoder('iso-8859-1');
+	// RFC822 headers are byte-ish; ISO-8859-1 preserves 0-255.
+	const dec = new TextDecoder("iso-8859-1");
 	const headerText = dec.decode(headerBytes);
 
 	// Unfold continuation lines.
-	const unfolded = headerText.replace(/\r?\n[ \t]+/g, ' ');
+	const unfolded = headerText.replace(/\r?\n[ \t]+/g, " ");
 	const lines = unfolded.split(/\r?\n/);
 
-	const target = headerName.toLowerCase() + ':';
+	const target = headerName.toLowerCase() + ":";
 	for (const line of lines) {
 		if (line.toLowerCase().startsWith(target)) return line.slice(target.length).trim();
 	}
@@ -154,7 +165,7 @@ function rewriteRfc822Headers(
 	const headerBytes = raw.slice(0, sep.index);
 	const bodyBytes = raw.slice(sep.index + sep.len); // body WITHOUT the original separator
 
-	const dec = new TextDecoder('iso-8859-1');
+	const dec = new TextDecoder("iso-8859-1");
 	const enc = new TextEncoder();
 
 	const headerText = dec.decode(headerBytes);
@@ -164,7 +175,7 @@ function rewriteRfc822Headers(
 	let i = 0;
 
 	function isContinuation(line: string) {
-		return line.startsWith(' ') || line.startsWith('\t');
+		return line.startsWith(" ") || line.startsWith("\t");
 	}
 
 	while (i < lines.length) {
@@ -181,12 +192,12 @@ function rewriteRfc822Headers(
 			i++;
 		}
 
-		const fieldName = start.split(':')[0]?.trim().toLowerCase();
+		const fieldName = start.split(":")[0]?.trim().toLowerCase();
 
-		if (fieldName === 'from') continue;
-		if (fieldName === 'to') continue;
-		if (fieldName === 'reply-to') continue;
-		if (fieldName === 'return-path') continue;
+		if (fieldName === "from") continue;
+		if (fieldName === "to") continue;
+		if (fieldName === "reply-to") continue;
+		if (fieldName === "return-path") continue;
 
 		outLines.push(...block);
 	}
@@ -198,7 +209,7 @@ function rewriteRfc822Headers(
 
 	if (rewrite.addHeaders) {
 		for (const [k, v] of Object.entries(rewrite.addHeaders)) {
-			const kk = safeHeader(k).replace(/:$/, '');
+			const kk = safeHeader(k).replace(/:$/, "");
 			const vv = safeHeader(v);
 			if (!kk) continue;
 			outLines.push(`${kk}: ${vv}`);
@@ -206,7 +217,7 @@ function rewriteRfc822Headers(
 	}
 
 	// Always rebuild with CRLF + CRLF separator (canonical for SMTP).
-	const rebuiltHeader = outLines.join('\r\n') + '\r\n\r\n';
+	const rebuiltHeader = outLines.join("\r\n") + "\r\n\r\n";
 	const rebuiltHeaderBytes = enc.encode(rebuiltHeader);
 
 	const merged = new Uint8Array(rebuiltHeaderBytes.length + bodyBytes.length);
@@ -219,7 +230,7 @@ function asMailgunFrom(forwardFrom: string, fallbackLocal: string, mailgunDomain
 	const parsed = safeHeader(forwardFrom);
 	const m = parsed.match(/<([^>]+)>/);
 	const addr = m ? m[1] : parsed;
-	const at = addr.lastIndexOf('@');
+	const at = addr.lastIndexOf("@");
 	const local = at > 0 ? addr.slice(0, at) : addr;
 	const safeLocal = sanitizeLocalPart(local) || fallbackLocal;
 	return `${safeLocal}@${mailgunDomain}`;
@@ -232,15 +243,15 @@ async function postSignedJson<TResponse = unknown>(env: Env, path: string, paylo
 	const xDate = yyyyMmDdUtc();
 
 	const bodyHash = await sha256HexUtf8(body);
-	const canonical = ['POST', path, xDate, bodyHash].join('\n');
+	const canonical = ["POST", path, xDate, bodyHash].join("\n");
 	const xSignature = await hmacSha256Base64(env.EMAIL_HMAC_SECRET, canonical);
 
 	const res = await fetch(url, {
-		method: 'POST',
+		method: "POST",
 		headers: {
-			'Content-Type': 'application/json',
-			'x-date': xDate,
-			'x-signature': xSignature,
+			"Content-Type": "application/json",
+			"x-date": xDate,
+			"x-signature": xSignature,
 		},
 		body,
 	});
@@ -272,27 +283,27 @@ async function postSignedBinary(
 		opts.query && Object.keys(opts.query).length
 			? `?${Object.entries(opts.query)
 					.map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v)}`)
-					.join('&')}`
-			: '';
+					.join("&")}`
+			: "";
 
 	const url = `${env.API_BASE_URL}${opts.path}${qs}`;
 
 	const xDate = yyyyMmDdUtc();
-	const bodyHash = await sha256HexBytes(opts.bodyBytes.buffer);
-	const canonical = ['POST', opts.path, xDate, bodyHash].join('\n');
+	const bodyHash = await sha256HexBytes(toExactArrayBuffer(opts.bodyBytes));
+	const canonical = ["POST", opts.path, xDate, bodyHash].join("\n");
 	const xSignature = await hmacSha256Base64(env.EMAIL_HMAC_SECRET, canonical);
 
 	const headers: Record<string, string> = {
-		'x-date': xDate,
-		'x-signature': xSignature,
-		'Content-Type': opts.contentType,
-		'Content-Length': String(opts.bodyBytes.byteLength),
+		"x-date": xDate,
+		"x-signature": xSignature,
+		"Content-Type": opts.contentType,
+		"Content-Length": String(opts.bodyBytes.byteLength),
 	};
 
-	if (opts.contentDisposition) headers['Content-Disposition'] = opts.contentDisposition;
+	if (opts.contentDisposition) headers["Content-Disposition"] = opts.contentDisposition;
 
 	const res = await fetch(url, {
-		method: 'POST',
+		method: "POST",
 		headers,
 		body: opts.bodyBytes,
 	});
@@ -301,7 +312,7 @@ async function postSignedBinary(
 }
 
 async function postToApi(env: Env, payload: any): Promise<ApiDecision | null> {
-	log(env, 'info', 'api_post_start', {
+	log(env, "info", "api_post_start", {
 		source: payload?.source,
 		alias: payload?.alias,
 		routingKey: payload?.routingKey,
@@ -309,9 +320,9 @@ async function postToApi(env: Env, payload: any): Promise<ApiDecision | null> {
 		messageId: payload?.messageId,
 	});
 
-	const response = await postSignedJson<ApiDecision>(env, '/v1/email', payload);
+	const response = await postSignedJson<ApiDecision>(env, "/v1/email", payload);
 
-	log(env, 'info', 'api_post_done', {
+	log(env, "info", "api_post_done", {
 		action: response?.action ?? null,
 		deliveryActionId: response?.deliveryActionId ?? null,
 		partitionKey: response?.partitionKey ?? null,
@@ -322,7 +333,7 @@ async function postToApi(env: Env, payload: any): Promise<ApiDecision | null> {
 	return response;
 }
 
-type CompleteOutcome = 'Dropped' | 'Quarantined' | 'Forwarded' | 'ForwardFailed';
+type CompleteOutcome = "Dropped" | "Quarantined" | "Forwarded" | "ForwardFailed";
 
 async function postComplete(
 	env: Env,
@@ -340,14 +351,14 @@ async function postComplete(
 		recipient?: string;
 		forwardTo?: string;
 
-		provider?: 'mailgun';
+		provider?: "mailgun";
 		providerMessageId?: string;
 		error?: string;
 
 		source?: string;
 	}
 ): Promise<void> {
-	log(env, 'info', 'complete_post_start', {
+	log(env, "info", "complete_post_start", {
 		deliveryActionId,
 		partitionKey: payload.partitionKey,
 		outcome: payload.outcome,
@@ -357,7 +368,7 @@ async function postComplete(
 
 	await postSignedJson(env, `/v1/email/${deliveryActionId}/complete`, payload);
 
-	log(env, 'info', 'complete_post_done', {
+	log(env, "info", "complete_post_done", {
 		deliveryActionId,
 		partitionKey: payload.partitionKey,
 		outcome: payload.outcome,
@@ -365,8 +376,8 @@ async function postComplete(
 }
 
 function domainOf(addr: string) {
-	const at = addr.lastIndexOf('@');
-	return at > -1 ? addr.slice(at + 1).toLowerCase() : '';
+	const at = addr.lastIndexOf("@");
+	return at > -1 ? addr.slice(at + 1).toLowerCase() : "";
 }
 
 function firstN(s: string, n: number) {
@@ -392,19 +403,19 @@ async function sendViaMailgunMime(
 	const auth = btoa(`api:${env.MAILGUN_API_KEY}`);
 
 	const form = new FormData();
-	form.append('to', safeHeader(opts.to));
+	form.append("to", safeHeader(opts.to));
 
-	const eml = new File([opts.rawMime], 'message.eml', { type: 'message/rfc822' });
-	form.append('message', eml);
+	const eml = new File([opts.rawMime], "message.eml", { type: "message/rfc822" });
+	form.append("message", eml);
 
-	log(env, 'info', 'mailgun_send_attempt', {
+	log(env, "info", "mailgun_send_attempt", {
 		...opts.logCtx,
 		mailgunRegion: env.MAILGUN_REGION,
 		mailgunDomain: env.MAILGUN_DOMAIN,
 	});
 
 	const res = await fetch(url, {
-		method: 'POST',
+		method: "POST",
 		headers: { Authorization: `Basic ${auth}` },
 		body: form,
 	});
@@ -412,7 +423,7 @@ async function sendViaMailgunMime(
 	const text = await res.text();
 
 	if (!res.ok) {
-		log(env, 'error', 'mailgun_send_failed', {
+		log(env, "error", "mailgun_send_failed", {
 			...opts.logCtx,
 			status: res.status,
 			body: firstN(text, 2000),
@@ -434,7 +445,7 @@ async function sendViaMailgunMime(
 		providerResponseMessage: parsed?.message ?? undefined,
 	};
 
-	log(env, 'info', 'mailgun_send_ok', {
+	log(env, "info", "mailgun_send_ok", {
 		...opts.logCtx,
 		status: res.status,
 		mailgunId: result.providerMessageId ?? null,
@@ -454,24 +465,24 @@ async function sendViaMailgunMime(
  * - If you want exact enum reasons, change the API to return `quarantineReason` as an enum name.
  */
 type ApiDecision =
-	| { action: 'Drop'; deliveryActionId: string; partitionKey: string; reason?: string }
+	| { action: "Drop"; deliveryActionId: string; partitionKey: string; reason?: string }
 	| {
-			action: 'Quarantine';
+			action: "Quarantine";
 			deliveryActionId: string;
 			partitionKey: string;
 			reason?: string; // human message (kept)
 			quarantineReason?: string; // enum name if your API provides it (optional)
 	  }
-	| { action: 'Forward'; deliveryActionId: string; partitionKey: string; forwardTo: string; forwardFrom?: string };
+	| { action: "Forward"; deliveryActionId: string; partitionKey: string; forwardTo: string; forwardFrom?: string };
 
 export default {
 	async email(message: any, env: Env, ctx: ExecutionContext) {
 		try {
 			const rawRecipient = safeHeader(message.to as string);
-			const [localPart, domainPart] = rawRecipient.split('@');
+			const [localPart, domainPart] = rawRecipient.split("@");
 			if (!localPart || !domainPart) return;
 
-			const [routingKey] = domainPart.split('.');
+			const [routingKey] = domainPart.split(".");
 			if (!routingKey) return;
 
 			const alias = safeHeader(localPart);
@@ -479,14 +490,23 @@ export default {
 
 			const receivedAtUtc = new Date().toISOString();
 
-			const sender = safeHeader(message.from);
-			const senderDomain = domainOf(sender);
+			// Cloudflare provides SMTP envelope addresses on message.from/message.to
+			const envelopeFrom = safeHeader(message.from);
+
+			// RFC5322 headers (what users expect to see)
+			const headerFromRaw = safeHeader(message.headers?.get?.("from") ?? "");
+			const headerReplyToRaw = safeHeader(message.headers?.get?.("reply-to") ?? "");
+
+			const sender = headerFromRaw || envelopeFrom;
+			const replyTo = headerReplyToRaw || sender;
+
+			const senderDomain = domainOf(extractEmailAddress(sender));
 
 			const recipient = rawRecipient;
 			const recipientDomain = domainOf(recipient);
 
-			const messageId = safeHeader(message.headers?.get?.('message-id') ?? '');
-			const subject = safeHeader(message.headers?.get?.('subject') ?? '');
+			const messageId = safeHeader(message.headers?.get?.("message-id") ?? "");
+			const subject = safeHeader(message.headers?.get?.("subject") ?? "");
 			const subjectPreview = subject ? firstN(subject, 200) : undefined;
 			const subjectHash = subject ? await hmacSha256Base64(env.EMAIL_HMAC_SECRET, subject) : undefined;
 
@@ -494,7 +514,7 @@ export default {
 			const attachmentsCount = message.attachments?.length ?? 0;
 			const size = message.rawSize ?? 0;
 
-			log(env, 'debug', 'log_level_effective', { level: parseLogLevel(env.LOG_LEVEL) });
+			log(env, "debug", "log_level_effective", { level: parseLogLevel(env.LOG_LEVEL) });
 
 			const payload = {
 				receivedAtUtc,
@@ -504,10 +524,16 @@ export default {
 				routingKey,
 				domain: fullDomain,
 
+				// Important: sender/replyTo are from RFC5322 headers (fallback to envelope if missing)
 				sender,
+				replyTo,
 				senderDomain,
+
 				recipient,
 				recipientDomain,
+
+				// Optional diagnostics (safe to remove if your API is strict)
+				envelopeFrom,
 
 				subject: subjectPreview,
 				subjectHash,
@@ -516,14 +542,14 @@ export default {
 				attachmentsCount,
 				size,
 
-				source: 'cloudflare-email-routing',
+				source: "cloudflare-email-routing",
 			};
 
 			let decision: ApiDecision | null;
 			try {
 				decision = await postToApi(env, payload);
 			} catch (e: any) {
-				log(env, 'error', 'api_post_error', { error: safeHeader(e?.message ?? String(e)) });
+				log(env, "error", "api_post_error", { error: safeHeader(e?.message ?? String(e)) });
 				return;
 			}
 
@@ -536,20 +562,25 @@ export default {
 				routingKey,
 				domain: fullDomain,
 				recipient: rawRecipient,
-				originalFrom: sender,
+
+				// Keep both for troubleshooting
+				headerFrom: sender,
+				headerReplyTo: replyTo,
+				envelopeFrom,
+
 				messageId: messageId || null,
 			};
 
 			// Drop: unchanged (no upload)
-			if (decision.action === 'Drop') {
-				log(env, 'info', 'decision_terminal', { ...baseCtx, action: decision.action, reason: decision.reason ?? null });
+			if (decision.action === "Drop") {
+				log(env, "info", "decision_terminal", { ...baseCtx, action: decision.action, reason: decision.reason ?? null });
 
 				ctx.waitUntil(
 					postComplete(env, decision.deliveryActionId, {
 						deliveryActionId: decision.deliveryActionId,
 						partitionKey: decision.partitionKey,
 						completedAtUtc: new Date().toISOString(),
-						outcome: 'Dropped',
+						outcome: "Dropped",
 						reason: decision.reason,
 
 						alias,
@@ -557,31 +588,31 @@ export default {
 						domain: fullDomain,
 						recipient: rawRecipient,
 
-						source: 'cloudflare-email-routing',
-					}).catch((err) => log(env, 'error', 'complete_post_error', { ...baseCtx, error: safeHeader(err?.message ?? String(err)) }))
+						source: "cloudflare-email-routing",
+					}).catch((err) => log(env, "error", "complete_post_error", { ...baseCtx, error: safeHeader(err?.message ?? String(err)) }))
 				);
 				return;
 			}
 
-			// Quarantine: NEW - upload .eml to quarantine endpoint
-			if (decision.action === 'Quarantine') {
-				log(env, 'info', 'decision_terminal', { ...baseCtx, action: decision.action, reason: decision.reason ?? null });
+			// Quarantine: upload .eml to quarantine endpoint
+			if (decision.action === "Quarantine") {
+				log(env, "info", "decision_terminal", { ...baseCtx, action: decision.action, reason: decision.reason ?? null });
 
 				ctx.waitUntil(
 					(async () => {
 						try {
-							if (!message.raw) throw new Error('Missing raw MIME (message.raw)');
+							if (!message.raw) throw new Error("Missing raw MIME (message.raw)");
 
 							const rawBytes = new Uint8Array(await new Response(message.raw).arrayBuffer());
 
 							// Best-effort filename (safe enough; server parses Content-Disposition if present)
-							const fileName = 'message.eml';
+							const fileName = "message.eml";
 
 							// Map to your API query contract:
 							//   reason (enum) + message (string)
 							// If your API returns `quarantineReason` as an enum name, use it; else default.
-							const quarantineReason = safeHeader((decision as any).quarantineReason ?? 'Policy');
-							const quarantineMessage = safeHeader(decision.reason ?? 'Quarantined by policy');
+							const quarantineReason = safeHeader((decision as any).quarantineReason ?? "Policy");
+							const quarantineMessage = safeHeader(decision.reason ?? "Quarantined by policy");
 
 							await postSignedBinary(env, {
 								path: `/v1/email/${decision.deliveryActionId}/quarantine`,
@@ -591,7 +622,7 @@ export default {
 									message: quarantineMessage,
 								},
 								bodyBytes: rawBytes,
-								contentType: 'message/rfc822',
+								contentType: "message/rfc822",
 								contentDisposition: `attachment; filename="${fileName}"`,
 							});
 
@@ -599,7 +630,7 @@ export default {
 								deliveryActionId: decision.deliveryActionId,
 								partitionKey: decision.partitionKey,
 								completedAtUtc: new Date().toISOString(),
-								outcome: 'Quarantined',
+								outcome: "Quarantined",
 								reason: decision.reason,
 
 								alias,
@@ -607,10 +638,10 @@ export default {
 								domain: fullDomain,
 								recipient: rawRecipient,
 
-								source: 'cloudflare-email-routing',
+								source: "cloudflare-email-routing",
 							});
 						} catch (err: any) {
-							log(env, 'error', 'quarantine_upload_error', { ...baseCtx, error: safeHeader(err?.message ?? String(err)) });
+							log(env, "error", "quarantine_upload_error", { ...baseCtx, error: safeHeader(err?.message ?? String(err)) });
 
 							// Still mark completed (failed path) so the system can surface it
 							try {
@@ -618,7 +649,7 @@ export default {
 									deliveryActionId: decision.deliveryActionId,
 									partitionKey: decision.partitionKey,
 									completedAtUtc: new Date().toISOString(),
-									outcome: 'Quarantined',
+									outcome: "Quarantined",
 									reason: decision.reason,
 
 									alias,
@@ -627,10 +658,10 @@ export default {
 									recipient: rawRecipient,
 
 									error: safeHeader(err?.message ?? String(err)),
-									source: 'cloudflare-email-routing',
+									source: "cloudflare-email-routing",
 								});
 							} catch (e: any) {
-								log(env, 'error', 'complete_post_error_after_quarantine_upload_error', {
+								log(env, "error", "complete_post_error_after_quarantine_upload_error", {
 									...baseCtx,
 									error: safeHeader(e?.message ?? String(e)),
 								});
@@ -642,7 +673,7 @@ export default {
 				return;
 			}
 
-			// Forward: unchanged
+			// Forward
 			const forwardTo = safeHeader((decision as any).forwardTo);
 			if (!forwardTo) return;
 			if (!message.raw) return;
@@ -654,7 +685,7 @@ export default {
 				? asMailgunFrom((decision as any).forwardFrom, fallbackLocal, env.MAILGUN_DOMAIN)
 				: `${fallbackLocal}@${env.MAILGUN_DOMAIN}`;
 
-			log(env, 'info', 'forward_prepare', {
+			log(env, "info", "forward_prepare", {
 				...baseCtx,
 				forwardTo,
 				decisionForwardFrom: (decision as any).forwardFrom ?? null,
@@ -665,27 +696,37 @@ export default {
 			const rewritten = rewriteRfc822Headers(rawBytes, {
 				from: desiredFrom,
 				to: forwardTo,
-				replyTo: sender,
+
+				// Important: Reply-To should come from RFC5322 Reply-To (fallback to RFC5322 From),
+				// not the SMTP envelope-from.
+				replyTo,
+
 				addHeaders: {
-					'X-Nullbox-Alias': alias,
-					'X-Nullbox-RoutingKey': routingKey,
-					'X-Nullbox-Original-To': rawRecipient,
-					'X-Nullbox-Original-From': sender,
+					"X-Nullbox-Alias": alias,
+					"X-Nullbox-RoutingKey": routingKey,
+					"X-Nullbox-Original-To": rawRecipient,
+
+					// Backward-compatible meaning: preserve envelope-from as "original"
+					"X-Nullbox-Original-From": envelopeFrom,
+
+					// Extra clarity (useful for debugging)
+					"X-Nullbox-Header-From": sender,
+					"X-Nullbox-Header-Reply-To": replyTo,
 				},
 			});
 
-			const mimeFrom = extractRfc822Header(rewritten, 'From');
-			const mimeTo = extractRfc822Header(rewritten, 'To');
-			const mimeReplyTo = extractRfc822Header(rewritten, 'Reply-To');
+			const mimeFrom = extractRfc822Header(rewritten, "From");
+			const mimeTo = extractRfc822Header(rewritten, "To");
+			const mimeReplyTo = extractRfc822Header(rewritten, "Reply-To");
 
-			log(env, 'info', 'forward_mime_headers', {
+			log(env, "info", "forward_mime_headers", {
 				...baseCtx,
 				forwardTo,
 				desiredFrom,
 				mimeFrom: mimeFrom ?? null,
 				mimeTo: mimeTo ?? null,
 				mimeReplyTo: mimeReplyTo ?? null,
-				fromMatchesDesired: (mimeFrom ?? '') === desiredFrom,
+				fromMatchesDesired: (mimeFrom ?? "") === desiredFrom,
 			});
 
 			ctx.waitUntil(
@@ -699,7 +740,7 @@ export default {
 								forwardTo,
 								desiredFrom,
 								mimeFrom: mimeFrom ?? null,
-								fromMatchesDesired: (mimeFrom ?? '') === desiredFrom,
+								fromMatchesDesired: (mimeFrom ?? "") === desiredFrom,
 							},
 						});
 
@@ -707,7 +748,7 @@ export default {
 							deliveryActionId: (decision as any).deliveryActionId,
 							partitionKey: (decision as any).partitionKey,
 							completedAtUtc: new Date().toISOString(),
-							outcome: 'Forwarded',
+							outcome: "Forwarded",
 
 							alias,
 							routingKey,
@@ -715,19 +756,19 @@ export default {
 							recipient: rawRecipient,
 							forwardTo,
 
-							provider: 'mailgun',
+							provider: "mailgun",
 							providerMessageId: mg.providerMessageId ?? undefined,
-							source: 'cloudflare-email-routing',
+							source: "cloudflare-email-routing",
 						});
 					} catch (err: any) {
-						log(env, 'error', 'forward_pipeline_error', { ...baseCtx, forwardTo, error: safeHeader(err?.message ?? String(err)) });
+						log(env, "error", "forward_pipeline_error", { ...baseCtx, forwardTo, error: safeHeader(err?.message ?? String(err)) });
 
 						try {
 							await postComplete(env, (decision as any).deliveryActionId, {
 								deliveryActionId: (decision as any).deliveryActionId,
 								partitionKey: (decision as any).partitionKey,
 								completedAtUtc: new Date().toISOString(),
-								outcome: 'ForwardFailed',
+								outcome: "ForwardFailed",
 
 								alias,
 								routingKey,
@@ -735,12 +776,12 @@ export default {
 								recipient: rawRecipient,
 								forwardTo,
 
-								provider: 'mailgun',
+								provider: "mailgun",
 								error: safeHeader(err?.message ?? String(err)),
-								source: 'cloudflare-email-routing',
+								source: "cloudflare-email-routing",
 							});
 						} catch (e: any) {
-							log(env, 'error', 'complete_post_error_after_failure', {
+							log(env, "error", "complete_post_error_after_failure", {
 								...baseCtx,
 								forwardTo,
 								error: safeHeader(e?.message ?? String(e)),
@@ -750,7 +791,7 @@ export default {
 				})()
 			);
 		} catch (err: any) {
-			log(env, 'error', 'worker_error', { error: safeHeader(err?.message ?? String(err)) });
+			log(env, "error", "worker_error", { error: safeHeader(err?.message ?? String(err)) });
 			return;
 		}
 	},

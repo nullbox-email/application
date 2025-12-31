@@ -20,7 +20,8 @@ const schema = toTypedSchema(
   z.object({
     name: z
       .string({ required_error: t("name.validation.required") })
-      .min(1)
+      .min(3)
+      .max(64)
       .trim(),
   })
 );
@@ -72,6 +73,10 @@ const onSubmit = handleSubmit(async (values) => {
     saving.value = false;
   }
 });
+
+const buttonLabel = computed(() =>
+  token.value ? t("submit.label") : t("submit.validating")
+);
 </script>
 
 <template>
@@ -149,17 +154,30 @@ const onSubmit = handleSubmit(async (values) => {
                   <FormMessage />
                 </FormItem>
               </FormField>
-              
-              <NuxtTurnstile v-model="token" />
 
-              <Button class="cursor-pointer" type="submit" :disabled="saving || !token">
-                <icon
-                  v-if="saving"
-                  name="lucide:loader-circle"
-                  class="animate-spin"
-                />
+              <NuxtTurnstile v-model="token" class="h-0" />
+
+              <Button
+                class="cursor-pointer"
+                type="submit"
+                :disabled="saving || !token"
+              >
+                <div
+                  v-if="!token"
+                  class="flex items-center space-x-2"
+                >
+                  <icon name="lucide:loader-circle" class="animate-spin" />
+                  <span> {{ buttonLabel }} </span>
+                </div>
                 <div v-else>
-                  {{ t("submit.label") }}
+                  <icon
+                    v-if="saving"
+                    name="lucide:loader-circle"
+                    class="animate-spin"
+                  />
+                  <div v-else>
+                    {{ buttonLabel }}
+                  </div>
                 </div>
               </Button>
             </form>
@@ -218,6 +236,7 @@ en:
       required: Please tell us what to call you.
   submit:
     label: Next
+    validating: Proving you’re human...
     success: Your profile has been created successfully.
     error: Something went wrong while creating your profile.
   legal:
