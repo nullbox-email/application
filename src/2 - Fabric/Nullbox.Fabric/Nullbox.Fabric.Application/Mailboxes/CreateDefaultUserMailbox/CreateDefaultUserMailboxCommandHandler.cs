@@ -15,20 +15,17 @@ public class CreateDefaultUserMailboxCommandHandler : IRequestHandler<CreateDefa
 {
     private readonly IMailboxRepository _mailboxRepository;
     private readonly IMailboxRoutingKeyMapRepository _routingKeyMapRepository;
-    private readonly ICurrentUserService _currentUserService;
     private readonly IUniqueIdentifierGenerator _uniqueIdentifierGenerator;
     private readonly IPartitionKeyScope _partitionKeyScope;
 
     public CreateDefaultUserMailboxCommandHandler(
         IMailboxRepository mailboxRepository,
         IMailboxRoutingKeyMapRepository routingKeyMapRepository,
-        ICurrentUserService currentUserService,
         IUniqueIdentifierGenerator uniqueIdentifierGenerator,
         IPartitionKeyScope partitionKeyScope)
     {
         _mailboxRepository = mailboxRepository;
         _routingKeyMapRepository = routingKeyMapRepository;
-        _currentUserService = currentUserService;
         _uniqueIdentifierGenerator = uniqueIdentifierGenerator;
         _partitionKeyScope = partitionKeyScope;
     }

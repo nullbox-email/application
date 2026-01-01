@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Nullbox.Fabric.Application.Common.Exceptions;
 using Nullbox.Fabric.Application.Common.Interfaces;
+using Nullbox.Fabric.Application.Common.Partitioning;
 using Nullbox.Fabric.Domain.Audit;
 using Nullbox.Fabric.Domain.Common.Interfaces;
 using Nullbox.Fabric.Domain.Entities.Audit;
@@ -40,6 +41,7 @@ public class AuditLogBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest
 
     private readonly IUnitOfWork _uow;
     private readonly ICurrentUserService _currentUserService;
+    private readonly IPartitionKeyScope _partitionKeyScope;
     private readonly ILogger<AuditLogBehaviour<TRequest, TResponse>> _logger;
 
     private readonly bool _enabled;
@@ -51,11 +53,13 @@ public class AuditLogBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest
     public AuditLogBehaviour(
         IUnitOfWork uow,
         ICurrentUserService currentUserService,
+        IPartitionKeyScope partitionKeyScope,
         ILogger<AuditLogBehaviour<TRequest, TResponse>> logger,
         IConfiguration configuration)
     {
         _uow = uow ?? throw new ArgumentNullException(nameof(uow));
         _currentUserService = currentUserService ?? throw new ArgumentNullException(nameof(currentUserService));
+        _partitionKeyScope = partitionKeyScope;
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
 
         // Defaults chosen to be safe; adjust as you prefer.
@@ -105,7 +109,7 @@ public class AuditLogBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest
             userId = _userId;
         }
 
-        var partitionKey = ResolvePartitionKey(request, userId);
+        var partitionKey = _partitionKeyScope.Current ?? ResolvePartitionKey(request, userId);
 
         var started = Stopwatch.GetTimestamp();
 
