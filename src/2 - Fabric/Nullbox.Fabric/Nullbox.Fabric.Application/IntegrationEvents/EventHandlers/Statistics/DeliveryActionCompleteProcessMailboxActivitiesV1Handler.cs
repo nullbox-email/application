@@ -19,11 +19,12 @@ public class DeliveryActionCompleteProcessMailboxActivitiesV1Handler : IIntegrat
     }
 
     public async Task HandleAsync(
-DeliveryActionCompleteProcessMailboxActivitiesV1 message,
-CancellationToken cancellationToken = default)
+            DeliveryActionCompleteProcessMailboxActivitiesV1 message,
+            CancellationToken cancellationToken = default)
     {
         var command = new ProcessActivitiesCommand(
             id: message.Id,
+            // [IntentIgnore]
             partitionKey: message.MailboxId ?? Guid.Empty,
             aliasId: message.AliasId,
             mailboxId: message.MailboxId,
@@ -46,19 +47,19 @@ CancellationToken cancellationToken = default)
             size: message.Size,
             deliveryDecision: message.DeliveryDecision,
             dropReason: message.DropReason is not null
-                ? new ProcessActivitiesCommandDropReasonDto
-                {
-                    Reason = message.DropReason.Reason,
-                    Message = message.DropReason?.Message
-                }
-                : null,
+                    ? new ProcessActivitiesCommandDropReasonDto
+                    {
+                        Reason = message.DropReason.Reason,
+                        Message = message.DropReason?.Message
+                    }
+                    : null,
             quarantineReason: message.QuarantineReason is not null
-                ? new ProcessActivitiesCommandQuarantineReasonDto
-                {
-                    Reason = message.QuarantineReason.Reason,
-                    Message = message.QuarantineReason?.Message
-                }
-                : null,
+                    ? new ProcessActivitiesCommandQuarantineReasonDto
+                    {
+                        Reason = message.QuarantineReason.Reason,
+                        Message = message.QuarantineReason?.Message
+                    }
+                    : null,
             forwardTo: message.ForwardTo,
             forwardFrom: message.ForwardFrom,
             provider: message.Provider,

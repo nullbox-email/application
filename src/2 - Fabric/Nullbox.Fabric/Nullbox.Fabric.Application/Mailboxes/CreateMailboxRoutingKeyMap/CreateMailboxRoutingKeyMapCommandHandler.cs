@@ -23,6 +23,7 @@ public class CreateMailboxRoutingKeyMapCommandHandler : IRequestHandler<CreateMa
 
     public async Task Handle(CreateMailboxRoutingKeyMapCommand request, CancellationToken cancellationToken)
     {
+        // [IntentIgnore]
         using var _ = _partitionKeyScope.Push(request.RoutingKey);
 
         var mailboxRoutingKeyMap = new MailboxRoutingKeyMap(

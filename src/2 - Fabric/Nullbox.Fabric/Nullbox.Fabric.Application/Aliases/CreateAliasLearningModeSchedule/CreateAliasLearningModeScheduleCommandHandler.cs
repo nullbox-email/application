@@ -23,6 +23,7 @@ public class CreateAliasLearningModeScheduleCommandHandler : IRequestHandler<Cre
 
     public async Task Handle(CreateAliasLearningModeScheduleCommand request, CancellationToken cancellationToken)
     {
+        // [IntentIgnore]
         using var _ = _partitionKeyScope.Push(request.Window);
 
         var aliasLearningModeSchedule = new AliasLearningModeSchedule(

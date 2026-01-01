@@ -17,6 +17,7 @@ public class TrafficStatisticDto
     public int Quarantined { get; set; }
     public int Delivered { get; set; }
     public int Failed { get; set; }
+    public long Bandwidth { get; set; }
 
     public static TrafficStatisticDto Create(
         DateTimeOffset timestamp,
@@ -25,7 +26,8 @@ public class TrafficStatisticDto
         int dropped,
         int quarantined,
         int delivered,
-        int failed)
+        int failed,
+        long bandwidth)
     {
         return new TrafficStatisticDto
         {
@@ -35,7 +37,8 @@ public class TrafficStatisticDto
             Dropped = dropped,
             Quarantined = quarantined,
             Delivered = delivered,
-            Failed = failed
+            Failed = failed,
+            Bandwidth = bandwidth
         };
     }
 }

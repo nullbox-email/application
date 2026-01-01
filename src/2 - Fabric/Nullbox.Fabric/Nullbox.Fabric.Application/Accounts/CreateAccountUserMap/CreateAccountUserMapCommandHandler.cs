@@ -1,9 +1,9 @@
+using System.Security.Principal;
 using Intent.RoslynWeaver.Attributes;
 using MediatR;
 using Nullbox.Fabric.Application.Common.Partitioning;
 using Nullbox.Fabric.Domain.Entities.Accounts;
 using Nullbox.Fabric.Domain.Repositories.Accounts;
-using System.Security.Principal;
 
 [assembly: IntentTemplate("Intent.Application.MediatR.CommandHandler", Version = "2.0")]
 
@@ -24,6 +24,7 @@ public class CreateAccountUserMapCommandHandler : IRequestHandler<CreateAccountU
 
     public async Task Handle(CreateAccountUserMapCommand request, CancellationToken cancellationToken)
     {
+        // [IntentIgnore]
         using var _ = _partitionKeyScope.Push(request.PartitionKey.ToString());
 
         var accountUserMap = new AccountUserMap(

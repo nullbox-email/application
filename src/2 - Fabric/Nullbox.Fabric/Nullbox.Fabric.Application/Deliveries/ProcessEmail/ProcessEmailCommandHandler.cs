@@ -1,3 +1,5 @@
+using System.Diagnostics;
+using System.Diagnostics.Metrics;
 using AutoMapper;
 using Intent.RoslynWeaver.Attributes;
 using MediatR;
@@ -14,8 +16,6 @@ using Nullbox.Fabric.Domain.Repositories.Aliases;
 using Nullbox.Fabric.Domain.Repositories.Deliveries;
 using Nullbox.Fabric.Domain.Repositories.Mailboxes;
 using Nullbox.Fabric.Domain.Repositories.Statistics;
-using System.Diagnostics;
-using System.Diagnostics.Metrics;
 
 [assembly: IntentTemplate("Intent.Application.MediatR.CommandHandler", Version = "2.0")]
 

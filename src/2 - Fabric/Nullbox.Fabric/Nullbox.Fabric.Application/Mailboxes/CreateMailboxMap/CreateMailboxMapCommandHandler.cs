@@ -23,6 +23,7 @@ public class CreateMailboxMapCommandHandler : IRequestHandler<CreateMailboxMapCo
 
     public async Task Handle(CreateMailboxMapCommand request, CancellationToken cancellationToken)
     {
+        // [IntentIgnore]
         using var _ = _partitionKeyScope.Push(request.Id.ToString());
 
         var mailboxMap = new MailboxMap(

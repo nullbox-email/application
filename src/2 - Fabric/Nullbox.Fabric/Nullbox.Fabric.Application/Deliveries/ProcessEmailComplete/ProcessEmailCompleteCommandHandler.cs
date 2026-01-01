@@ -1,11 +1,11 @@
+using System.Diagnostics;
+using System.Diagnostics.Metrics;
 using Intent.RoslynWeaver.Attributes;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using Nullbox.Fabric.Application.Common.Partitioning;
 using Nullbox.Fabric.Domain.Deliveries;
 using Nullbox.Fabric.Domain.Repositories.Deliveries;
-using System.Diagnostics;
-using System.Diagnostics.Metrics;
 
 [assembly: IntentTemplate("Intent.Application.MediatR.CommandHandler", Version = "2.0")]
 

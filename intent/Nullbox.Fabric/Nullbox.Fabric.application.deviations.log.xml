@@ -59,7 +59,17 @@
       <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
       <updatedAt>2025-12-21T12:36:48.1083497Z</updatedAt>
       <deviationsHash>5E9CF093F0D1AF6BA850D808F144B8BC029950487CF21A40E37C5BB171A7D560</deviationsHash>
-      <fileHash>11E2EBF8ADB9C3549F65E8E1378F9971A941A7161EE3C1F30F632728C14B5A32</fileHash>
+      <fileHash>FC3260051255B809BF267B29269999EFFEAF84CA777D4152160560FD5DDE5DC7</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Application.MediatR.CommandHandler#37319b0e-a6d3-40f7-925d-df86e25b3db4</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Application/Accounts/CreateAccountUserMap/CreateAccountUserMapCommandHandler.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2026-01-01T12:03:49.3169171Z</updatedAt>
+      <deviationsHash>6113426DAD27FBB4EFCD71D2F14407C9C24E6606F893864EE5A8B05798EA15AE</deviationsHash>
+      <fileHash>DD631EDAA99B2C7F10398E801F4B276B458B0F18B571E0D2C5BFCD1C268089F9</fileHash>
     </file>
     <file>
       <correlationId>Intent.Application.MediatR.CommandHandler#88edbe65-3683-42cd-9d69-7cfc394d222d</correlationId>
@@ -69,7 +79,7 @@
       <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
       <updatedAt>2025-12-27T17:24:44.4093151Z</updatedAt>
       <deviationsHash>77B3F6E1A4C49E0055F2CB3FC8169BD3A41E99583A7C6D761AFB7C82171C0FCC</deviationsHash>
-      <fileHash>BD163452F07D29B6FE24C8BAF1B4F03A4ED9E38DDA8CCCDC2AF36A19586F1E4D</fileHash>
+      <fileHash>723AA2D634B38FDEB02BDAEDF294F51D4E34641389B13DB1B992CCF906E38F68</fileHash>
     </file>
     <file>
       <correlationId>Intent.Application.MediatR.CommandHandler#7a16663e-1c83-477d-bbd9-d704c348b9cf</correlationId>
@@ -79,7 +89,17 @@
       <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
       <updatedAt>2025-12-14T09:55:43.7597966Z</updatedAt>
       <deviationsHash>31F00EFC27C2E4F2C4D7C13A734D1E9B860BF528ECE3F729CFA6F34489475DB5</deviationsHash>
-      <fileHash>B2939911EB07696002FB38E64D68379472A39BB585A145FB3B3F951C8924D6CB</fileHash>
+      <fileHash>4DAD2F81A86491ADCB77164DAF1D30B718232016F9984094897F2E71E1A5BF66</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Application.MediatR.CommandHandler#e74d2e30-4cd4-4b46-9857-529e38028071</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Application/Aliases/CreateAliasLearningModeSchedule/CreateAliasLearningModeScheduleCommandHandler.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2026-01-01T12:03:49.3170125Z</updatedAt>
+      <deviationsHash>282F203909545682F5349A155F4163E52FBAE6549172D5E002712965F4C86776</deviationsHash>
+      <fileHash>DB292622AC23E77F4C02D43EAAC34A0ABBD30EDBBFE49F32F6610C2CB897F3DA</fileHash>
     </file>
     <file>
       <correlationId>Intent.Application.MediatR.CommandHandler#3f54ea8d-5680-4eed-9003-0eb6adebfc2c</correlationId>
@@ -89,7 +109,7 @@
       <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
       <updatedAt>2025-12-08T15:00:03.6702783Z</updatedAt>
       <deviationsHash>A2343C23C240267CA9D0626702A700AF5D5CE06E58547EAF4B504B56E6A8ED73</deviationsHash>
-      <fileHash>95E9D291532D93C654024A354A850DF6BB2F983743796A347478CE93EC9FD1A2</fileHash>
+      <fileHash>58A3FAB9EE65900227F9A3476E8D948B1655A0060E6B876D05248C4D843E7F71</fileHash>
     </file>
     <file>
       <correlationId>Intent.Application.MediatR.QueryHandler#c3497175-e2fb-4ba2-8cd7-4f8746f7610f</correlationId>
@@ -119,7 +139,7 @@
       <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
       <updatedAt>2025-12-14T11:56:52.2654235Z</updatedAt>
       <deviationsHash>815200492771DE9331AD2228FFC41C399A72702804987F9AC46F07860870EA9C</deviationsHash>
-      <fileHash>E47C6EA0C67C230C6FC891B312C063AE4A2CD3EC44FD1F170F17492E4F2FF305</fileHash>
+      <fileHash>56A1B5EFE4169A3427DA7F236D5F05A3EE2DEEA10F6DCCA73059ED0AF368E28D</fileHash>
     </file>
     <file>
       <correlationId>Intent.Application.MediatR.CommandHandler#b859bb9a-323e-4196-a3d2-00de7513f80c</correlationId>
@@ -129,7 +149,7 @@
       <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
       <updatedAt>2025-12-14T14:55:00.1745273Z</updatedAt>
       <deviationsHash>77553586986888A748D6AA7F63F996463A797A694F61600C3DA228834FFC056E</deviationsHash>
-      <fileHash>55EA6777FD28790D6BD78DCE7E64ABB1E93235E00A17286FE3C77138C76035D4</fileHash>
+      <fileHash>C8EEB9495B9DC15F2CF8237D5D29CE72B0F0D638C1E971F6275A83E775D26AA3</fileHash>
     </file>
     <file>
       <correlationId>Intent.Application.MediatR.Behaviours.UnitOfWorkBehaviour#a91fe312-e20b-4870-aae4-d71e137cbf71</correlationId>
@@ -159,7 +179,7 @@
       <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
       <updatedAt>2025-12-14T15:19:21.5192704Z</updatedAt>
       <deviationsHash>F1ED08B908A9FAC4FD2A57863A671E07B6C931D535CDF007AF834F2AB5E84391</deviationsHash>
-      <fileHash>7CE42C29824D23970CFB1EF93612CEF45940ABB7E0E226F87772E52FE0B1AC08</fileHash>
+      <fileHash>664F9E8DD9A341F0E1E155AB59598ECE09D2FFAF43C36C4AEF9A707CC946D3A2</fileHash>
     </file>
     <file>
       <correlationId>Intent.Application.MediatR.CommandHandler#7a5871b5-94d7-4d91-8833-ed991205abcc</correlationId>
@@ -169,7 +189,7 @@
       <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
       <updatedAt>2025-12-08T09:30:24.4719592Z</updatedAt>
       <deviationsHash>6B13151D5B0864D9B6614C12E7F651C7F716A984F73464CF01B2356D64B71B10</deviationsHash>
-      <fileHash>D632754A828C33667DFAA92D5EE38F3DE5A8819F54BA724BA2874A17F870747A</fileHash>
+      <fileHash>D2AD45E5BCCC86AA84E423607DD986441DAB2604324BFA8A7B86F637DCC4106B</fileHash>
     </file>
     <file>
       <correlationId>Intent.Application.MediatR.CommandHandler#e5c3d178-af74-4cc7-b8e6-25d3d2b985bb</correlationId>
@@ -179,7 +199,27 @@
       <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
       <updatedAt>2025-12-14T10:04:12.8191154Z</updatedAt>
       <deviationsHash>E0B1A6E24E6A16C845A826E5DB3DBFEEDC61FFB7698704574D3A1AE9FD9DAC1D</deviationsHash>
-      <fileHash>FF894260F2B6E25159C18F2EC90E213DE3C0B49F059661C63C1B3BCE8C5ED258</fileHash>
+      <fileHash>D95DB76FA29815BD64B69BD79D44408B48936AEC518F7232D1412EC3D0DE024B</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Application.MediatR.CommandHandler#0642ca80-dee2-4402-9688-b266501d515b</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Application/Mailboxes/CreateMailboxMap/CreateMailboxMapCommandHandler.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2026-01-01T12:03:49.3173987Z</updatedAt>
+      <deviationsHash>AD19823B95FEC9E678F5CE25562041BBC7DEFCB99C37CE4F8B3FBF0270222828</deviationsHash>
+      <fileHash>060BCB975F5411832B07202152E94C7F1CB63ECF81EDE1FC7409A286EC3ACD59</fileHash>
+    </file>
+    <file>
+      <correlationId>Intent.Application.MediatR.CommandHandler#f69f6064-e016-4947-8b65-e4cc184789f6</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Application/Mailboxes/CreateMailboxRoutingKeyMap/CreateMailboxRoutingKeyMapCommandHandler.cs</path>
+      <count>1</count>
+      <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
+      <updatedAt>2026-01-01T12:03:49.3174999Z</updatedAt>
+      <deviationsHash>8846E77E71C9B255B8F6BE7BC130ADD9329DF85ACD709EE9AF80B60669FC0059</deviationsHash>
+      <fileHash>7F0B313189F97BB01A6DF3A880207544150BF9EDFE0AE6D367FFD56600BC8A2B</fileHash>
     </file>
     <file>
       <correlationId>Intent.Application.MediatR.QueryHandler#8be8008e-7e10-4db7-a015-ed037daaa5f2</correlationId>
@@ -209,7 +249,7 @@
       <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
       <updatedAt>2025-12-14T18:16:21.1365165Z</updatedAt>
       <deviationsHash>CDBCB925D285E8FFBAC1399F6B389E5D32A775533B3D7EEB3C7B5020AC2671A6</deviationsHash>
-      <fileHash>EF46224DFF2ABA1754A2C5FBF05AC5F64B062CFCB3B9078181E113859BEC874F</fileHash>
+      <fileHash>207014F1771E483C5E36855827F831102870391D7CD807F2262B3881D6B0FA5C</fileHash>
     </file>
     <file>
       <correlationId>Intent.Application.MediatR.CommandHandler#693a14db-7e3f-4901-bb2c-5e6dba7b9b7d</correlationId>
@@ -219,7 +259,7 @@
       <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
       <updatedAt>2025-12-13T16:37:38.1261808Z</updatedAt>
       <deviationsHash>14583AFFECAEC6B5E611276566CAE23602EE8C17D8C65DBB5FECA93C1257341D</deviationsHash>
-      <fileHash>CD98986331F89D2511A671A591145BD02829620C6CB2E3052AF84AF66299126A</fileHash>
+      <fileHash>B1129E7E9D934528FA7528E39CCDFB6873C455F158E8F885AB231ACBC2253885</fileHash>
     </file>
     <file>
       <correlationId>Intent.Entities.DomainEntityState#97bbeaee-4ed9-4016-91dc-c46dd58dc7b2</correlationId>
@@ -244,12 +284,12 @@
     <file>
       <correlationId>Intent.Infrastructure.DependencyInjection.DependencyInjection#7c8c3584-aa2e-4460-bad0-ed03464ea19c</correlationId>
       <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Infrastructure/DependencyInjection.cs</path>
-      <count>1</count>
+      <count>2</count>
       <updatedByAccountName>stephan@aryzac.io</updatedByAccountName>
       <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
-      <updatedAt>2025-12-30T04:54:39.0144075Z</updatedAt>
-      <deviationsHash>C964CA59B2AE569C4CF74B30E5EFCC0CE179EFA49CC86D5E8584FED18702D2BC</deviationsHash>
-      <fileHash>19AB7498ACA232C08487382E760791F35D92C7C83D604DBAA19FFB809F498185</fileHash>
+      <updatedAt>2026-01-01T12:03:49.3193371Z</updatedAt>
+      <deviationsHash>603AB02B8EBA6736F4FBCF192F54F1076B468A79F4B7AB64F36CC66CDA86580C</deviationsHash>
+      <fileHash>27E83839BAEE104C1E2837D36B743853403D2A221518839DCFD2A42BE1009E08</fileHash>
     </file>
   </files>
 </deviationsLog>
