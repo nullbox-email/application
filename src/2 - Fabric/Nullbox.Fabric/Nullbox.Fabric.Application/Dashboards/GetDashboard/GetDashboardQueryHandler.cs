@@ -166,7 +166,8 @@ public class GetDashboardQueryHandler : IRequestHandler<GetDashboardQuery, Dashb
                         dropped: s.Dropped,
                         quarantined: s.Quarantined,
                         delivered: s.Delivered,
-                        failed: s.Failed);
+                        failed: s.Failed,
+                        bandwidth: s.Bandwidth);
                 }
 
                 return TrafficStatisticDto.Create(
@@ -176,7 +177,8 @@ public class GetDashboardQueryHandler : IRequestHandler<GetDashboardQuery, Dashb
                     dropped: 0,
                     quarantined: 0,
                     delivered: 0,
-                    failed: 0);
+                    failed: 0,
+                    bandwidth: 0);
             })
             .OrderByDescending(x => x.Timestamp)
             .ToList();
