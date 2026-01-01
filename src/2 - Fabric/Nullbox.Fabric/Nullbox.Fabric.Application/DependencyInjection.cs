@@ -36,6 +36,9 @@ public static class DependencyInjection
             cfg.AddOpenBehavior(typeof(MessageBusPublishBehaviour<,>));
             cfg.AddOpenBehavior(typeof(ValidationBehaviour<,>));
             cfg.AddOpenBehavior(typeof(UnitOfWorkBehaviour<,>));
+
+            // [IntentIgnore]
+            cfg.AddOpenBehavior(typeof(AuditLogBehaviour<,>));
         });
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
         services.AddScoped<IValidatorProvider, ValidatorProvider>();

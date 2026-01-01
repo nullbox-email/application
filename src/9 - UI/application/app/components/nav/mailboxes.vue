@@ -19,7 +19,7 @@ defineProps<{
   <SidebarGroup class="group-data-[collapsible=icon]:hidden">
     <SidebarGroupLabel>{{ name }}</SidebarGroupLabel>
     <SidebarMenu>
-      <SidebarMenuItem v-if="!aliases || aliases.length === 0">
+      <SidebarMenuItem>
         <SidebarMenuButton as-child>
           <nuxt-link
             :to="`/mailboxes/${routingKey}.${domain}/getting-started`"
@@ -30,24 +30,13 @@ defineProps<{
           </nuxt-link>
         </SidebarMenuButton>
       </SidebarMenuItem>
-      <SidebarMenuItem v-else>
+      <SidebarMenuItem v-if="aliases && aliases.length > 0">
         <SidebarMenuButton as-child>
           <nuxt-link
             :to="`/mailboxes/${routingKey}.${domain}`"
             class="flex items-center justify-between gap-2"
           >
             <span>Dashboard</span>
-          </nuxt-link>
-        </SidebarMenuButton>
-      </SidebarMenuItem>
-      <SidebarMenuItem>
-        <SidebarMenuButton as-child>
-          <nuxt-link
-            :to="`/mailboxes/${routingKey}.${domain}/settings`"
-            class="flex items-center justify-between gap-2"
-          >
-            <span>Settings</span>
-            <icon name="solar:settings-bold-duotone" class="text-xl" />
           </nuxt-link>
         </SidebarMenuButton>
       </SidebarMenuItem>

@@ -30,6 +30,12 @@ const data = {
       icon: "solar:eye-scan-bold-duotone",
     },
     {
+      title: "Documentation",
+      to: "https://docs.nullbox.email",
+      external: true,
+      icon: "carbon:document-multiple-01",
+    },
+    {
       title: "Source code",
       to: "https://github.com/nullbox-email",
       external: true,

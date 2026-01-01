@@ -75,26 +75,19 @@ public class AuditLogBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest
     }
 
     public async Task<TResponse> Handle(
-        TRequest request,
-        RequestHandlerDelegate<TResponse> next,
-        CancellationToken cancellationToken)
+    TRequest request,
+    RequestHandlerDelegate<TResponse> next,
+    CancellationToken cancellationToken)
     {
         if (!_enabled)
-        {
             return await next(cancellationToken);
-        }
 
         var isCommand = request is ICommand;
         if (!isCommand && !_auditQueries)
-        {
             return await next(cancellationToken);
-        }
 
         if (_uow is not DbContext db)
-        {
-            // If your IUnitOfWork is not a DbContext, you need a repository/DbContext dedicated to audit writes.
             return await next(cancellationToken);
-        }
 
         var activity = Activity.Current;
         var traceId = activity?.TraceId.ToString() ?? Guid.NewGuid().ToString("N");
@@ -102,20 +95,19 @@ public class AuditLogBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest
         var requestName = typeof(TRequest).FullName ?? $"Unknown{kind}";
 
         var currentUser = await _currentUserService.GetAsync();
-        Guid? userId = null;
-
-        if (Guid.TryParse(currentUser?.Id, out var _userId))
-        {
-            userId = _userId;
-        }
-
-        var partitionKey = _partitionKeyScope.Current ?? ResolvePartitionKey(request, userId);
+        Guid? userId = Guid.TryParse(currentUser?.Id, out var parsed) ? parsed : null;
 
         var started = Stopwatch.GetTimestamp();
 
         try
         {
             var response = await next(cancellationToken);
+
+            // Prefer response.PartitionKey (fixes ProcessEmail), then scope, then heuristic.
+            var partitionKey =
+                TryGetStringProperty(response!, "PartitionKey") ??
+                _partitionKeyScope.Current ??
+                ResolvePartitionKey(request, userId);
 
             var durationMs = ElapsedMs(started);
             var payload = BuildPayload(request);
@@ -135,21 +127,21 @@ public class AuditLogBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest
                 userId: userId));
 
             if (!isCommand)
-            {
-                // Queries have no UnitOfWorkBehaviour; persist immediately.
                 await _uow.SaveChangesAsync(cancellationToken);
-            }
 
             return response;
         }
         catch (Exception ex)
         {
-            var durationMs = ElapsedMs(started);
-
             if (!isCommand && _persistFailedQueries)
             {
                 try
                 {
+                    var partitionKey =
+                        _partitionKeyScope.Current ??
+                        ResolvePartitionKey(request, userId);
+
+                    var durationMs = ElapsedMs(started);
                     var payload = BuildPayload(request);
                     var payloadHash = Sha256Hex(payload);
 
@@ -170,12 +162,12 @@ public class AuditLogBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest
                 }
                 catch (Exception persistEx)
                 {
-                    _logger.LogWarning(persistEx, "AuditLog failed to persist failed query audit entry for {RequestName}", requestName);
+                    _logger.LogWarning(persistEx,
+                        "AuditLog failed to persist failed query audit entry for {RequestName}",
+                        requestName);
                 }
             }
 
-            // For commands: do not attempt to persist a Failed audit entry here, because it breaks the
-            // transactional-consistency goal (and UnitOfWorkBehaviour will not SaveChanges on failure).
             throw;
         }
     }
@@ -233,13 +225,6 @@ public class AuditLogBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest
 
     private static string ResolvePartitionKey(TRequest request, Guid? userId)
     {
-        // Goal: match your existing transactional boundary (usually account/tenant partition key).
-        // Heuristics (in order):
-        // 1) request.PartitionKey (string)
-        // 2) request.AccountId / MailboxId / AliasId (Guid or string)
-        // 3) userId
-        // 4) "global" fallback
-
         var pk =
             TryGetStringProperty(request, "PartitionKey") ??
             ToStringOrNull(TryGetProperty(request, "AccountId")) ??
@@ -248,10 +233,7 @@ public class AuditLogBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest
             (userId?.ToString());
 
         pk ??= "global";
-
-        // Enforce max length 64 (your domain constraint).
         if (pk.Length > 64) pk = pk[..64];
-
         return pk;
     }
 
@@ -264,7 +246,7 @@ public class AuditLogBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest
     private static string? TryGetStringProperty(object obj, string name)
     {
         var val = TryGetProperty(obj, name);
-        return val as string;
+        return val is string s && !string.IsNullOrWhiteSpace(s) ? s : null;
     }
 
     private static string? ToStringOrNull(object? val)

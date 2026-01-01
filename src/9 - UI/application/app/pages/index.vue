@@ -22,7 +22,7 @@ const tab = ref<"hourly" | "daily">("daily");
       class="mt-6"
     />
 
-    <Tabs v-else v-model="tab" :unmount-on-hide="true" class="mt-6">
+    <Tabs v-else v-model="tab" :unmount-on-hide="false" class="mt-6">
       <TabsList>
         <TabsTrigger value="daily"> Last 30 days </TabsTrigger>
         <TabsTrigger value="hourly"> Last 24 hours </TabsTrigger>

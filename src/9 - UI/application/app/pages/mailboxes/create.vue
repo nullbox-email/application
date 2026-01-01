@@ -15,8 +15,8 @@ const { refreshMailboxes } = useGlobalMailboxes();
 
 const formSchema = toTypedSchema(
   z.object({
-    name: z.string().min(2, t("validation.name_min")),
-    forwarding_email: z.string().email(t("validation.forwarding_email")),
+    name: z.string().trim().min(2, t("validation.name_min")),
+    forwarding_email: z.string().trim().email(t("validation.forwarding_email")),
     auto_create_alias: z.boolean().default(true),
   })
 );
@@ -92,7 +92,7 @@ const onSubmit = handleSubmit(async (formValues) => {
           <FormItem>
             <FormLabel>{{ t("fields.forwarding_email.label") }}</FormLabel>
             <FormControl>
-              <Input type="text" v-bind="componentField" />
+              <Input type="text" v-bind="componentField" disabled />
             </FormControl>
             <FormDescription>
               {{ t("fields.forwarding_email.description") }}

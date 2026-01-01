@@ -17,9 +17,17 @@ const tab = ref<"hourly" | "daily">("daily");
 
 <template>
   <div>
-    <page-heading :title="t('page.title', { mailbox: mailbox.name })" />
+    <page-heading :title="t('page.title', { mailbox: mailbox.name })">
+      <div class="flex items-center space-x-4">
+        <Button as-child>
+          <nuxt-link :to="`${route.fullPath}/settings`">
+            {{ t("actions.edit") }}
+          </nuxt-link>
+        </Button>
+      </div>
+    </page-heading>
 
-    <Tabs v-model="tab" :unmount-on-hide="true" class="mt-6">
+    <Tabs v-model="tab" :unmount-on-hide="false" class="mt-6">
       <TabsList>
         <TabsTrigger value="daily"> Last 30 days </TabsTrigger>
         <TabsTrigger value="hourly"> Last 24 hours </TabsTrigger>
@@ -90,6 +98,9 @@ const tab = ref<"hourly" | "daily">("daily");
 en:
   page:
     title: "{mailbox} activity"
+
+  actions:
+    edit: Edit
 
   chart:
     series:

@@ -109,7 +109,7 @@ async function copyRoutingHost() {
           <FormItem>
             <FormLabel>{{ t("fields.forwarding_email.label") }}</FormLabel>
             <FormControl>
-              <Input type="text" v-bind="componentField" autocomplete="off" />
+              <Input type="text" v-bind="componentField" autocomplete="off" disabled />
             </FormControl>
             <FormDescription>
               {{ t("fields.forwarding_email.description") }}
