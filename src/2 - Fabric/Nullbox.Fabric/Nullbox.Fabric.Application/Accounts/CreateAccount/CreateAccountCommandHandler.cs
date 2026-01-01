@@ -1,5 +1,6 @@
 using Intent.RoslynWeaver.Attributes;
 using MediatR;
+using Nullbox.Fabric.Application.Common.Partitioning;
 using Nullbox.Fabric.Application.Security;
 using Nullbox.Fabric.Domain.Entities.Accounts;
 using Nullbox.Fabric.Domain.Repositories.Accounts;
@@ -12,18 +13,22 @@ public class CreateAccountCommandHandler : IRequestHandler<CreateAccountCommand,
 {
     private readonly IAccountRepository _accountRepository;
     private readonly IAccountRoleRepository _accountRoleRepository;
+    private readonly IPartitionKeyScope _partitionKeyScope;
 
     public CreateAccountCommandHandler(
         IAccountRepository accountRepository,
-        IAccountRoleRepository accountRoleRepository)
+        IAccountRoleRepository accountRoleRepository,
+        IPartitionKeyScope partitionKeyScope)
     {
         _accountRepository = accountRepository;
         _accountRoleRepository = accountRoleRepository;
+        _partitionKeyScope = partitionKeyScope;
     }
 
     [IntentIgnore]
     public async Task<Guid> Handle(CreateAccountCommand request, CancellationToken cancellationToken)
     {
+
         var scopes = new Scopes();
 
         var defaultRoleId = Guid.NewGuid();
@@ -33,6 +38,8 @@ public class CreateAccountCommandHandler : IRequestHandler<CreateAccountCommand,
             name: request.Name, 
             emailAddress: request.EmailAddress, 
             adminRoleId: defaultRoleId);
+
+        using var _ = _partitionKeyScope.Push(account.AccountId.ToString());
 
         var defaultRole = new AccountRole(
             id: defaultRoleId,

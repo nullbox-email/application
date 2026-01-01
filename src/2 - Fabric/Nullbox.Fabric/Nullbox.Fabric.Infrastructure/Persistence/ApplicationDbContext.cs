@@ -6,6 +6,7 @@ using Nullbox.Fabric.Domain.Common.Interfaces;
 using Nullbox.Fabric.Domain.Entities.Accounts;
 using Nullbox.Fabric.Domain.Entities.Activities;
 using Nullbox.Fabric.Domain.Entities.Aliases;
+using Nullbox.Fabric.Domain.Entities.Audit;
 using Nullbox.Fabric.Domain.Entities.Deliveries;
 using Nullbox.Fabric.Domain.Entities.Mailboxes;
 using Nullbox.Fabric.Domain.Entities.Markers;
@@ -15,6 +16,7 @@ using Nullbox.Fabric.Domain.Entities.Statistics;
 using Nullbox.Fabric.Infrastructure.Persistence.Configurations.Accounts;
 using Nullbox.Fabric.Infrastructure.Persistence.Configurations.Activities;
 using Nullbox.Fabric.Infrastructure.Persistence.Configurations.Aliases;
+using Nullbox.Fabric.Infrastructure.Persistence.Configurations.Audit;
 using Nullbox.Fabric.Infrastructure.Persistence.Configurations.Deliveries;
 using Nullbox.Fabric.Infrastructure.Persistence.Configurations.Mailboxes;
 using Nullbox.Fabric.Infrastructure.Persistence.Configurations.Markers;
@@ -48,6 +50,7 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext, IUnitOfWor
     public DbSet<AliasRule> AliasRules { get; set; }
     public DbSet<AliasSender> AliasSenders { get; set; }
     public DbSet<AliasSenderDecision> AliasSenderDecisions { get; set; }
+    public DbSet<AuditLogEntry> AuditLogEntries { get; set; }
     public DbSet<DeliveryAction> DeliveryActions { get; set; }
 
     public DbSet<Mailbox> Mailboxes { get; set; }
@@ -99,6 +102,7 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext, IUnitOfWor
         modelBuilder.ApplyConfiguration(new AliasRuleConfiguration());
         modelBuilder.ApplyConfiguration(new AliasSenderConfiguration());
         modelBuilder.ApplyConfiguration(new AliasSenderDecisionConfiguration());
+        modelBuilder.ApplyConfiguration(new AuditLogEntryConfiguration());
         modelBuilder.ApplyConfiguration(new DeliveryActionConfiguration());
         modelBuilder.ApplyConfiguration(new MailboxConfiguration());
         modelBuilder.ApplyConfiguration(new MailboxMapConfiguration());

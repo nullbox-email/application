@@ -28,9 +28,11 @@ public static class DependencyInjection
         services.AddMediatR(cfg =>
         {
             cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
+
             cfg.AddOpenBehavior(typeof(UnhandledExceptionBehaviour<,>));
             cfg.AddOpenBehavior(typeof(PerformanceBehaviour<,>));
             cfg.AddOpenBehavior(typeof(AuthorizationBehaviour<,>));
+
             cfg.AddOpenBehavior(typeof(MessageBusPublishBehaviour<,>));
             cfg.AddOpenBehavior(typeof(ValidationBehaviour<,>));
             cfg.AddOpenBehavior(typeof(UnitOfWorkBehaviour<,>));
@@ -53,6 +55,9 @@ public static class DependencyInjection
         services.AddTransient<IIntegrationEventHandler<MailboxUpdateMailboxMapV1>, MailboxUpdateMailboxMapV1Handler>();
         services.AddTransient<IIntegrationEventHandler<DeliveryActionCompleteActivitiesV1>, DeliveryActionCompleteActivitiesV1Handler>();
         services.AddTransient<IIntegrationEventHandler<DeliveryActionCompletedV1Event>, DeliveryActionCompletedV1Handler>();
+        services.AddTransient<IIntegrationEventHandler<DeliveryActionCompleteProcessAccountActivitiesV1>, DeliveryActionCompleteProcessAccountActivitiesV1Handler>();
+        services.AddTransient<IIntegrationEventHandler<DeliveryActionCompleteProcessAliasActivitiesV1>, DeliveryActionCompleteProcessAliasActivitiesV1Handler>();
+        services.AddTransient<IIntegrationEventHandler<DeliveryActionCompleteProcessMailboxActivitiesV1>, DeliveryActionCompleteProcessMailboxActivitiesV1Handler>();
         services.AddTransient<IIntegrationEventHandler<DeliveryActionCompleteRollupsV1>, DeliveryActionCompleteRollupsV1Handler>();
         services.AddTransient<IIntegrationEventHandler<DeliveryActionCompleteStatisticsV1>, DeliveryActionCompleteStatisticsV1Handler>();
         return services;

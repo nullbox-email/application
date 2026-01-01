@@ -2,6 +2,7 @@ using Intent.RoslynWeaver.Attributes;
 using MediatR;
 using Nullbox.Fabric.Application.Common.Exceptions;
 using Nullbox.Fabric.Application.Common.Interfaces;
+using Nullbox.Fabric.Application.Common.Partitioning;
 using Nullbox.Fabric.Domain.Common.Exceptions;
 using Nullbox.Fabric.Domain.Entities.Mailboxes;
 using Nullbox.Fabric.Domain.Repositories.Accounts;
@@ -17,20 +18,25 @@ public class AliasMapUpdateMailboxCommandHandler : IRequestHandler<AliasMapUpdat
     private readonly IAliasRepository _aliasRepository;
     private readonly IMailboxRepository _mailboxRepository;
     private readonly IAliasMapRepository _aliasMapRepository;
+    private readonly IPartitionKeyScope _partitionKeyScope;
 
     public AliasMapUpdateMailboxCommandHandler(
         IAliasRepository aliasRepository,
         IMailboxRepository mailboxRepository,
-        IAliasMapRepository aliasMapRepository)
+        IAliasMapRepository aliasMapRepository,
+        IPartitionKeyScope partitionKeyScope)
     {
         _aliasRepository = aliasRepository;
         _mailboxRepository = mailboxRepository;
         _aliasMapRepository = aliasMapRepository;
+        _partitionKeyScope = partitionKeyScope;
     }
 
     [IntentIgnore]
     public async Task Handle(AliasMapUpdateMailboxCommand request, CancellationToken cancellationToken)
     {
+        using var _ = _partitionKeyScope.Push(request.AccountId.ToString());
+
         var mailboxes = await _mailboxRepository.FindAllAsync(m => m.AccountId == request.AccountId, cancellationToken);
         var mailboxIds = mailboxes.Select(m => m.Id).ToList();
 

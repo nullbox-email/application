@@ -1,5 +1,7 @@
 using Intent.RoslynWeaver.Attributes;
 using MediatR;
+using Nullbox.Fabric.Application.Common.Partitioning;
+using Nullbox.Fabric.Domain.Entities.Products;
 using Nullbox.Fabric.Domain.Repositories.Accounts;
 
 [assembly: IntentTemplate("Intent.Application.MediatR.CommandHandler", Version = "2.0")]
@@ -10,17 +12,22 @@ public class SynchronizeEffectiveAccountEnablementCommandHandler : IRequestHandl
 {
     private readonly IEnablementGrantRepository _enablementGrantRepository;
     private readonly IEffectiveEnablementRepository _effectiveEnablementRepository;
+    private readonly IPartitionKeyScope _partitionKeyScope;
 
     public SynchronizeEffectiveAccountEnablementCommandHandler(
         IEnablementGrantRepository enablementGrantRepository,
-        IEffectiveEnablementRepository effectiveEnablementRepository)
+        IEffectiveEnablementRepository effectiveEnablementRepository,
+        IPartitionKeyScope partitionKeyScope)
     {
         _enablementGrantRepository = enablementGrantRepository;
         _effectiveEnablementRepository = effectiveEnablementRepository;
+        _partitionKeyScope = partitionKeyScope;
     }
 
     public async Task Handle(SynchronizeEffectiveAccountEnablementCommand request, CancellationToken cancellationToken)
     {
+        using var _ = _partitionKeyScope.Push(request.AccountId.ToString());
+
         var now = DateTimeOffset.UtcNow;
 
         // Load all non-revoked grants for the account, then apply "active window" filtering in-memory.

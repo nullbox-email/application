@@ -1,10 +1,11 @@
-using System.Diagnostics;
-using System.Diagnostics.Metrics;
 using Intent.RoslynWeaver.Attributes;
 using MediatR;
 using Microsoft.Extensions.Logging;
+using Nullbox.Fabric.Application.Common.Partitioning;
 using Nullbox.Fabric.Domain.Deliveries;
 using Nullbox.Fabric.Domain.Repositories.Deliveries;
+using System.Diagnostics;
+using System.Diagnostics.Metrics;
 
 [assembly: IntentTemplate("Intent.Application.MediatR.CommandHandler", Version = "2.0")]
 
@@ -29,13 +30,16 @@ public class ProcessEmailCompleteCommandHandler : IRequestHandler<ProcessEmailCo
         Meter.CreateHistogram<double>("email.complete.duration", unit: "ms", description: "ProcessEmailComplete handler duration");
 
     private readonly IDeliveryActionRepository _deliveryActionRepository;
+    private readonly IPartitionKeyScope _partitionKeyScope;
     private readonly ILogger<ProcessEmailCompleteCommandHandler> _logger;
 
     public ProcessEmailCompleteCommandHandler(
         IDeliveryActionRepository deliveryActionRepository,
+        IPartitionKeyScope partitionKeyScope,
         ILogger<ProcessEmailCompleteCommandHandler> logger)
     {
         _deliveryActionRepository = deliveryActionRepository;
+        _partitionKeyScope = partitionKeyScope;
         _logger = logger;
     }
 
@@ -44,6 +48,8 @@ public class ProcessEmailCompleteCommandHandler : IRequestHandler<ProcessEmailCo
 
     public async Task Handle(ProcessEmailCompleteCommand request, CancellationToken cancellationToken)
     {
+        using var _ = _partitionKeyScope.Push(request.PartitionKey);
+
         var sw = Stopwatch.StartNew();
 
         // Normalize inputs (store normalized values in the log/trace)

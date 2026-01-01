@@ -2,6 +2,7 @@ using Intent.RoslynWeaver.Attributes;
 using MediatR;
 using Nullbox.Fabric.Application.Common.Extensions;
 using Nullbox.Fabric.Application.Common.Interfaces;
+using Nullbox.Fabric.Application.Common.Partitioning;
 using Nullbox.Fabric.Domain.Entities.Mailboxes;
 using Nullbox.Fabric.Domain.Repositories.Mailboxes;
 using Nullbox.Fabric.Domain.Services.NumberGenerator;
@@ -16,22 +17,27 @@ public class CreateDefaultUserMailboxCommandHandler : IRequestHandler<CreateDefa
     private readonly IMailboxRoutingKeyMapRepository _routingKeyMapRepository;
     private readonly ICurrentUserService _currentUserService;
     private readonly IUniqueIdentifierGenerator _uniqueIdentifierGenerator;
+    private readonly IPartitionKeyScope _partitionKeyScope;
 
     public CreateDefaultUserMailboxCommandHandler(
         IMailboxRepository mailboxRepository,
         IMailboxRoutingKeyMapRepository routingKeyMapRepository,
         ICurrentUserService currentUserService,
-        IUniqueIdentifierGenerator uniqueIdentifierGenerator)
+        IUniqueIdentifierGenerator uniqueIdentifierGenerator,
+        IPartitionKeyScope partitionKeyScope)
     {
         _mailboxRepository = mailboxRepository;
         _routingKeyMapRepository = routingKeyMapRepository;
         _currentUserService = currentUserService;
         _uniqueIdentifierGenerator = uniqueIdentifierGenerator;
+        _partitionKeyScope = partitionKeyScope;
     }
 
     [IntentIgnore]
     public async Task Handle(CreateDefaultUserMailboxCommand request, CancellationToken cancellationToken)
     {
+        using var _ = _partitionKeyScope.Push(request.Id.ToString());
+
         var routingKey = await _uniqueIdentifierGenerator.GenerateAsync(
             new UniqueIdentifierGeneratorSettings()
             {

@@ -1,5 +1,6 @@
 using Intent.RoslynWeaver.Attributes;
 using MediatR;
+using Nullbox.Fabric.Application.Common.Partitioning;
 using Nullbox.Fabric.Domain.Entities.Accounts;
 using Nullbox.Fabric.Domain.Repositories.Accounts;
 using Nullbox.Fabric.Domain.Repositories.Products;
@@ -12,13 +13,16 @@ public class CreateEnablementGrantCommandHandler : IRequestHandler<CreateEnablem
 {
     private readonly IEnablementGrantRepository _enablementGrantRepository;
     private readonly IProductDefinitionRepository _productDefinitionRepository;
+    private readonly IPartitionKeyScope _partitionKeyScope;
 
     public CreateEnablementGrantCommandHandler(
         IEnablementGrantRepository enablementGrantRepository,
-        IProductDefinitionRepository productDefinitionRepository)
+        IProductDefinitionRepository productDefinitionRepository,
+        IPartitionKeyScope partitionKeyScope)
     {
         _enablementGrantRepository = enablementGrantRepository;
         _productDefinitionRepository = productDefinitionRepository;
+        _partitionKeyScope = partitionKeyScope;
     }
 
     [IntentIgnore]
@@ -30,6 +34,8 @@ public class CreateEnablementGrantCommandHandler : IRequestHandler<CreateEnablem
         {
             throw new InvalidOperationException("Product definition not found.");
         }
+
+        using var _ = _partitionKeyScope.Push(productDefinition.Id);
 
         var enablementGrant = new EnablementGrant(
             accountId: request.AccountId,

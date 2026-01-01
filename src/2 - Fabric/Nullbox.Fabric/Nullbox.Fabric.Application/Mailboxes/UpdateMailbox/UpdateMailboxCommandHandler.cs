@@ -2,7 +2,9 @@ using Intent.RoslynWeaver.Attributes;
 using MediatR;
 using Nullbox.Fabric.Application.Common.Exceptions;
 using Nullbox.Fabric.Application.Common.Interfaces;
+using Nullbox.Fabric.Application.Common.Partitioning;
 using Nullbox.Fabric.Domain.Common.Exceptions;
+using Nullbox.Fabric.Domain.Entities.Mailboxes;
 using Nullbox.Fabric.Domain.Repositories.Accounts;
 using Nullbox.Fabric.Domain.Repositories.Mailboxes;
 
@@ -15,15 +17,18 @@ public class UpdateMailboxCommandHandler : IRequestHandler<UpdateMailboxCommand>
     private readonly IMailboxRepository _mailboxRepository;
     private readonly IAccountUserMapRepository _accountUserMapRepository;
     private readonly ICurrentUserService _currentUserService;
+    private readonly IPartitionKeyScope _partitionKeyScope;
 
     public UpdateMailboxCommandHandler(
         IMailboxRepository mailboxRepository,
         IAccountUserMapRepository accountUserMapRepository,
-        ICurrentUserService currentUserService)
+        ICurrentUserService currentUserService,
+        IPartitionKeyScope partitionKeyScope)
     {
         _mailboxRepository = mailboxRepository;
         _accountUserMapRepository = accountUserMapRepository;
         _currentUserService = currentUserService;
+        _partitionKeyScope = partitionKeyScope;
     }
 
     [IntentIgnore]
@@ -52,6 +57,8 @@ public class UpdateMailboxCommandHandler : IRequestHandler<UpdateMailboxCommand>
         {
             throw new NotFoundException($"Could not find Mailbox '{request.Id}'");
         }
+
+        using var _ = _partitionKeyScope.Push(account.Id.ToString());
 
         mailbox.Update(request.Name, request.AutoCreateAlias, request.EmailAddress);
     }

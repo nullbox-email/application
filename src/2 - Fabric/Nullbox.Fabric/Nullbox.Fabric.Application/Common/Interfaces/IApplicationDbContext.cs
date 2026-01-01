@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Nullbox.Fabric.Domain.Entities.Accounts;
 using Nullbox.Fabric.Domain.Entities.Activities;
 using Nullbox.Fabric.Domain.Entities.Aliases;
+using Nullbox.Fabric.Domain.Entities.Audit;
 using Nullbox.Fabric.Domain.Entities.Deliveries;
 using Nullbox.Fabric.Domain.Entities.Mailboxes;
 using Nullbox.Fabric.Domain.Entities.Markers;
@@ -28,6 +29,7 @@ public interface IApplicationDbContext
     DbSet<AliasRule> AliasRules { get; }
     DbSet<AliasSender> AliasSenders { get; }
     DbSet<AliasSenderDecision> AliasSenderDecisions { get; }
+    DbSet<AuditLogEntry> AuditLogEntries { get; }
     DbSet<DeliveryAction> DeliveryActions { get; }
     DbSet<Mailbox> Mailboxes { get; }
     DbSet<MailboxMap> MailboxMaps { get; }

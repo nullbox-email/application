@@ -16,8 +16,6 @@ public class ProcessActivitiesCommandValidator : AbstractValidator<ProcessActivi
 
     private void ConfigureValidationRules(IValidatorProvider provider)
     {
-        RuleFor(v => v.PartitionKey)
-            .NotNull();
 
         RuleFor(v => v.Source)
             .NotNull();

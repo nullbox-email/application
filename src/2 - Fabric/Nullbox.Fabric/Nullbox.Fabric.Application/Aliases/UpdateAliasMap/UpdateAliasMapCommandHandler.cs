@@ -2,6 +2,7 @@ using Intent.RoslynWeaver.Attributes;
 using MediatR;
 using Nullbox.Fabric.Application.Common.Exceptions;
 using Nullbox.Fabric.Application.Common.Interfaces;
+using Nullbox.Fabric.Application.Common.Partitioning;
 using Nullbox.Fabric.Domain.Common.Exceptions;
 using Nullbox.Fabric.Domain.Repositories.Accounts;
 using Nullbox.Fabric.Domain.Repositories.Aliases;
@@ -18,19 +19,22 @@ public class UpdateAliasMapCommandHandler : IRequestHandler<UpdateAliasMapComman
     private readonly IAliasMapRepository _aliasMapRepository;
     private readonly IAccountUserMapRepository _accountUserMapRepository;
     private readonly ICurrentUserService _currentUserService;
+    private readonly IPartitionKeyScope _partitionKeyScope;
 
     public UpdateAliasMapCommandHandler(
         IAliasRepository aliasRepository,
         IMailboxRepository mailboxRepository, 
         IAliasMapRepository aliasMapRepository,
         IAccountUserMapRepository accountUserMapRepository,
-        ICurrentUserService currentUserService)
+        ICurrentUserService currentUserService,
+        IPartitionKeyScope partitionKeyScope)
     {
         _aliasRepository = aliasRepository;
         _mailboxRepository = mailboxRepository;
         _aliasMapRepository = aliasMapRepository;
         _accountUserMapRepository = accountUserMapRepository;
         _currentUserService = currentUserService;
+        _partitionKeyScope = partitionKeyScope;
     }
 
     [IntentIgnore]
@@ -44,6 +48,8 @@ public class UpdateAliasMapCommandHandler : IRequestHandler<UpdateAliasMapComman
         var _domain = mailbox.Domain.Trim().ToLowerInvariant();
 
         var fullyQualifiedAlias = $"{_alias}@{_routingKey}.{_domain}";
+
+        using var _ = _partitionKeyScope.Push(fullyQualifiedAlias);
 
         var aliasMap = await _aliasMapRepository.FindAsync(x => x.Id == fullyQualifiedAlias && x.MailboxId == request.MailboxId, cancellationToken);
         if (aliasMap is null)

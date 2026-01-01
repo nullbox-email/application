@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="d60ae038-b6d8-480b-bfb9-2084f7db93c8" type="Diagram" typeId="4d66fecd-e9b8-436f-aa50-c59040ad0879">
+  <name>Audit</name>
+  <display>Audit</display>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>4c2f127b-c2c2-421e-bf5e-2f7de9a5fac8</parentFolderId>
+  <packageId>78e531db-59b9-4055-944e-0af8b1de87ff</packageId>
+  <packageName>Nullbox.Fabric.Audit.Domain</packageName>
+  <diagram>
+    <targetPackageId>d60ae038-b6d8-480b-bfb9-2084f7db93c8</targetPackageId>
+  </diagram>
+  <stereotypes />
+  <metadata />
+  <childElements />
+</class>

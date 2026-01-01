@@ -1,5 +1,7 @@
 using Intent.RoslynWeaver.Attributes;
 using MediatR;
+using Nullbox.Fabric.Application.Common.Partitioning;
+using Nullbox.Fabric.Domain.Entities.Accounts;
 using Nullbox.Fabric.Domain.Repositories.Products;
 
 [assembly: IntentTemplate("Intent.Application.MediatR.CommandHandler", Version = "2.0")]
@@ -9,15 +11,17 @@ namespace Nullbox.Fabric.Application.Products.InitializeProductCatalog;
 public class InitializeProductCatalogHandler : IRequestHandler<InitializeProductCatalog>
 {
     private readonly IProductDefinitionRepository _productDefinitionRepository;
-
+    private readonly IPartitionKeyScope _partitionKeyScope;
     private const long OneKilobyteInBytes = 1024;
     private const long OneMegabyteInBytes = 1024 * OneKilobyteInBytes;
     private const long OneGigabyteInBytes = 1024 * OneMegabyteInBytes;
 
     public InitializeProductCatalogHandler(
-        IProductDefinitionRepository productDefinitionRepository)
+        IProductDefinitionRepository productDefinitionRepository,
+        IPartitionKeyScope partitionKeyScope)
     {
         _productDefinitionRepository = productDefinitionRepository;
+        _partitionKeyScope = partitionKeyScope;
     }
 
     public async Task Handle(InitializeProductCatalog request, CancellationToken cancellationToken)
@@ -101,6 +105,8 @@ public class InitializeProductCatalogHandler : IRequestHandler<InitializeProduct
         Dictionary<string, string> flags,
         CancellationToken cancellationToken)
     {
+        using var _ = _partitionKeyScope.Push(id);
+
         var existingProductDefinition = await _productDefinitionRepository.FindAsync(x => x.Id == id, cancellationToken);
 
         if (existingProductDefinition is null)

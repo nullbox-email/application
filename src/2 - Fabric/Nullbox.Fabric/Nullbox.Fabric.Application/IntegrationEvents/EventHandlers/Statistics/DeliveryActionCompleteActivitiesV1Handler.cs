@@ -1,8 +1,5 @@
 using Intent.RoslynWeaver.Attributes;
-using MediatR;
 using Nullbox.Fabric.Application.Common.Eventing;
-using Nullbox.Fabric.Application.Deliveries;
-using Nullbox.Fabric.Application.Statistics.ProcessActivities;
 using Nullbox.Fabric.Deliveries.Eventing.Messages.Deliveries;
 
 [assembly: IntentTemplate("Intent.Eventing.Contracts.IntegrationEventHandler", Version = "1.0")]
@@ -11,63 +8,157 @@ namespace Nullbox.Fabric.Application.IntegrationEvents.EventHandlers.Statistics;
 
 public class DeliveryActionCompleteActivitiesV1Handler : IIntegrationEventHandler<DeliveryActionCompleteActivitiesV1>
 {
-    private readonly ISender _mediator;
+    private readonly IMessageBus _messageBus;
 
-    public DeliveryActionCompleteActivitiesV1Handler(ISender mediator)
+    public DeliveryActionCompleteActivitiesV1Handler(IMessageBus messageBus)
     {
-        _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
+        _messageBus = messageBus;
     }
 
     public async Task HandleAsync(
-DeliveryActionCompleteActivitiesV1 message,
-CancellationToken cancellationToken = default)
+            DeliveryActionCompleteActivitiesV1 message,
+            CancellationToken cancellationToken = default)
     {
-        var command = new ProcessActivitiesCommand(
-            id: message.Id,
-            partitionKey: message.PartitionKey,
-            aliasId: message.AliasId,
-            mailboxId: message.MailboxId,
-            accountId: message.AccountId,
-            source: message.Source,
-            createdAt: message.CreatedAt,
-            receivedAt: message.ReceivedAt,
-            alias: message.Alias,
-            routingKey: message.RoutingKey,
-            domain: message.Domain,
-            senderDisplay: message.SenderDisplay,
-            senderDomain: message.SenderDomain,
-            recipientDisplay: message.RecipientDisplay,
-            recipientDomain: message.RecipientDomain,
-            messageId: message.MessageId,
-            subject: message.Subject,
-            subjectHash: message.SubjectHash,
-            hasAttachments: message.HasAttachments,
-            attachmentsCount: message.AttachmentsCount,
-            size: message.Size,
-            deliveryDecision: message.DeliveryDecision,
-            dropReason: message.DropReason is not null
-                ? new ProcessActivitiesCommandDropReasonDto
+        _messageBus.Send(new DeliveryActionCompleteProcessAccountActivitiesV1
+        {
+            Id = message.Id,
+            PartitionKey = message.PartitionKey,
+            AliasId = message.AliasId,
+            MailboxId = message.MailboxId,
+            AccountId = message.AccountId,
+            Source = message.Source,
+            CreatedAt = message.CreatedAt,
+            ReceivedAt = message.ReceivedAt,
+            Alias = message.Alias,
+            RoutingKey = message.RoutingKey,
+            Domain = message.Domain,
+            SenderDisplay = message.SenderDisplay,
+            SenderDomain = message.SenderDomain,
+            RecipientDisplay = message.RecipientDisplay,
+            RecipientDomain = message.RecipientDomain,
+            MessageId = message.MessageId,
+            Subject = message.Subject,
+            SubjectHash = message.SubjectHash,
+            HasAttachments = message.HasAttachments,
+            AttachmentsCount = message.AttachmentsCount,
+            Size = message.Size,
+            DeliveryDecision = message.DeliveryDecision,
+            DropReason = message.DropReason is not null
+                ? new DeliveryActionCompletedV1DropReasonDto
                 {
                     Reason = message.DropReason.Reason,
                     Message = message.DropReason?.Message
                 }
                 : null,
-            quarantineReason: message.QuarantineReason is not null
-                ? new ProcessActivitiesCommandQuarantineReasonDto
+            QuarantineReason = message.QuarantineReason is not null
+                ? new DeliveryActionCompletedV1QuarantineReasonDto
                 {
                     Reason = message.QuarantineReason.Reason,
                     Message = message.QuarantineReason?.Message
                 }
                 : null,
-            forwardTo: message.ForwardTo,
-            forwardFrom: message.ForwardFrom,
-            provider: message.Provider,
-            providerStatus: message.ProviderStatus,
-            providerMessageId: message.ProviderMessageId,
-            providerError: message.ProviderError,
-            completedAt: message.CompletedAt,
-            dedupKey: message.DedupKey,
-            wait: 10000);
-        await _mediator.Send(command, cancellationToken);
+            ForwardTo = message.ForwardTo,
+            ForwardFrom = message.ForwardFrom,
+            Provider = message.Provider,
+            ProviderStatus = message.ProviderStatus,
+            ProviderMessageId = message.ProviderMessageId,
+            ProviderError = message.ProviderError,
+            CompletedAt = message.CompletedAt,
+            DedupKey = message.DedupKey
+        });
+        _messageBus.Send(new DeliveryActionCompleteProcessAliasActivitiesV1
+        {
+            Id = message.Id,
+            PartitionKey = message.PartitionKey,
+            AliasId = message.AliasId,
+            MailboxId = message.MailboxId,
+            AccountId = message.AccountId,
+            Source = message.Source,
+            CreatedAt = message.CreatedAt,
+            ReceivedAt = message.ReceivedAt,
+            Alias = message.Alias,
+            RoutingKey = message.RoutingKey,
+            Domain = message.Domain,
+            SenderDisplay = message.SenderDisplay,
+            SenderDomain = message.SenderDomain,
+            RecipientDisplay = message.RecipientDisplay,
+            RecipientDomain = message.RecipientDomain,
+            MessageId = message.MessageId,
+            Subject = message.Subject,
+            SubjectHash = message.SubjectHash,
+            HasAttachments = message.HasAttachments,
+            AttachmentsCount = message.AttachmentsCount,
+            Size = message.Size,
+            DeliveryDecision = message.DeliveryDecision,
+            DropReason = message.DropReason is not null
+                ? new DeliveryActionCompletedV1DropReasonDto
+                {
+                    Reason = message.DropReason.Reason,
+                    Message = message.DropReason?.Message
+                }
+                : null,
+            QuarantineReason = message.QuarantineReason is not null
+                ? new DeliveryActionCompletedV1QuarantineReasonDto
+                {
+                    Reason = message.QuarantineReason.Reason,
+                    Message = message.QuarantineReason?.Message
+                }
+                : null,
+            ForwardTo = message.ForwardTo,
+            ForwardFrom = message.ForwardFrom,
+            Provider = message.Provider,
+            ProviderStatus = message.ProviderStatus,
+            ProviderMessageId = message.ProviderMessageId,
+            ProviderError = message.ProviderError,
+            CompletedAt = message.CompletedAt,
+            DedupKey = message.DedupKey
+        });
+        _messageBus.Send(new DeliveryActionCompleteProcessMailboxActivitiesV1
+        {
+            Id = message.Id,
+            PartitionKey = message.PartitionKey,
+            AliasId = message.AliasId,
+            MailboxId = message.MailboxId,
+            AccountId = message.AccountId,
+            Source = message.Source,
+            CreatedAt = message.CreatedAt,
+            ReceivedAt = message.ReceivedAt,
+            Alias = message.Alias,
+            RoutingKey = message.RoutingKey,
+            Domain = message.Domain,
+            SenderDisplay = message.SenderDisplay,
+            SenderDomain = message.SenderDomain,
+            RecipientDisplay = message.RecipientDisplay,
+            RecipientDomain = message.RecipientDomain,
+            MessageId = message.MessageId,
+            Subject = message.Subject,
+            SubjectHash = message.SubjectHash,
+            HasAttachments = message.HasAttachments,
+            AttachmentsCount = message.AttachmentsCount,
+            Size = message.Size,
+            DeliveryDecision = message.DeliveryDecision,
+            DropReason = message.DropReason is not null
+                ? new DeliveryActionCompletedV1DropReasonDto
+                {
+                    Reason = message.DropReason.Reason,
+                    Message = message.DropReason?.Message
+                }
+                : null,
+            QuarantineReason = message.QuarantineReason is not null
+                ? new DeliveryActionCompletedV1QuarantineReasonDto
+                {
+                    Reason = message.QuarantineReason.Reason,
+                    Message = message.QuarantineReason?.Message
+                }
+                : null,
+            ForwardTo = message.ForwardTo,
+            ForwardFrom = message.ForwardFrom,
+            Provider = message.Provider,
+            ProviderStatus = message.ProviderStatus,
+            ProviderMessageId = message.ProviderMessageId,
+            ProviderError = message.ProviderError,
+            CompletedAt = message.CompletedAt,
+            DedupKey = message.DedupKey
+        });
     }
 }

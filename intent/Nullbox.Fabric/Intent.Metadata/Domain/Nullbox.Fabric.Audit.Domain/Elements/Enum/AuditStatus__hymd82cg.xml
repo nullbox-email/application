@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="da66dde6-9b1d-43a5-9e89-f50dff758f1d" type="Enum" typeId="85fba0e9-9161-4c85-a603-a229ef312beb">
+  <name>AuditStatus</name>
+  <display>AuditStatus</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>4c2f127b-c2c2-421e-bf5e-2f7de9a5fac8</parentFolderId>
+  <packageId>78e531db-59b9-4055-944e-0af8b1de87ff</packageId>
+  <packageName>Nullbox.Fabric.Audit.Domain</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="433d6c66-4c07-4d40-badf-c7ef4ea956ad" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Succeeded</name>
+      <display>Succeeded</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>da66dde6-9b1d-43a5-9e89-f50dff758f1d</parentFolderId>
+      <packageId>78e531db-59b9-4055-944e-0af8b1de87ff</packageId>
+      <packageName>Nullbox.Fabric.Audit.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="eef72bc3-2635-4e26-b856-6755db7b7ef3" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Failed</name>
+      <display>Failed</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>da66dde6-9b1d-43a5-9e89-f50dff758f1d</parentFolderId>
+      <packageId>78e531db-59b9-4055-944e-0af8b1de87ff</packageId>
+      <packageName>Nullbox.Fabric.Audit.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

@@ -2,6 +2,7 @@ using Intent.RoslynWeaver.Attributes;
 using MediatR;
 using Nullbox.Fabric.Application.Common.Exceptions;
 using Nullbox.Fabric.Application.Common.Interfaces;
+using Nullbox.Fabric.Application.Common.Partitioning;
 using Nullbox.Fabric.Domain.Common.Exceptions;
 using Nullbox.Fabric.Domain.Entities.Aliases;
 using Nullbox.Fabric.Domain.Markers;
@@ -24,6 +25,7 @@ public class CreateAliasCommandHandler : IRequestHandler<CreateAliasCommand, str
 
     private readonly IEffectiveEnablementRepository _effectiveEnablementRepository;
     private readonly ITrafficStatisticRepository _trafficStatisticRepository;
+    private readonly IPartitionKeyScope _partitionKeyScope;
 
     public CreateAliasCommandHandler(
         IAliasRepository aliasRepository,
@@ -32,7 +34,8 @@ public class CreateAliasCommandHandler : IRequestHandler<CreateAliasCommand, str
         IAccountUserMapRepository accountUserMapRepository,
         ICurrentUserService currentUserService,
         IEffectiveEnablementRepository effectiveEnablementRepository,
-        ITrafficStatisticRepository trafficStatisticRepository)
+        ITrafficStatisticRepository trafficStatisticRepository,
+        IPartitionKeyScope partitionKeyScope)
     {
         _aliasRepository = aliasRepository;
         _aliasMapRepository = aliasMapRepository;
@@ -42,6 +45,7 @@ public class CreateAliasCommandHandler : IRequestHandler<CreateAliasCommand, str
 
         _effectiveEnablementRepository = effectiveEnablementRepository;
         _trafficStatisticRepository = trafficStatisticRepository;
+        _partitionKeyScope = partitionKeyScope;
     }
 
     // Matches ProcessStatistics.Keys: BucketKey(MarkerType.Mailbox, "a:all") => $"t:{markerType}|{timeBucketKey}"
@@ -71,6 +75,8 @@ public class CreateAliasCommandHandler : IRequestHandler<CreateAliasCommand, str
     [IntentIgnore]
     public async Task<string> Handle(CreateAliasCommand request, CancellationToken cancellationToken)
     {
+        using var _ = _partitionKeyScope.Push(request.MailboxId.ToString());
+
         var currentUser = await _currentUserService.GetAsync();
 
         if (currentUser is null)

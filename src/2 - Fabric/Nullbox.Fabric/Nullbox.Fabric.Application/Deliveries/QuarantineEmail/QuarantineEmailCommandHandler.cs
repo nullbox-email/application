@@ -1,5 +1,6 @@
 using Intent.RoslynWeaver.Attributes;
 using MediatR;
+using Nullbox.Fabric.Application.Common.Partitioning;
 using Nullbox.Fabric.Application.Common.Storage;
 using Nullbox.Fabric.Domain.Repositories.Deliveries;
 
@@ -11,17 +12,22 @@ public class QuarantineEmailCommandHandler : IRequestHandler<QuarantineEmailComm
 {
     private readonly IDeliveryActionRepository _deliveryActionRepository;
     private readonly IBlobStorage _blobStorage;
+    private readonly IPartitionKeyScope _partitionKeyScope;
 
     public QuarantineEmailCommandHandler(
         IDeliveryActionRepository deliveryActionRepository,
-        IBlobStorage blobStorage)
+        IBlobStorage blobStorage,
+        IPartitionKeyScope partitionKeyScope)
     {
         _deliveryActionRepository = deliveryActionRepository;
         _blobStorage = blobStorage;
+        _partitionKeyScope = partitionKeyScope;
     }
 
     public async Task Handle(QuarantineEmailCommand request, CancellationToken cancellationToken)
     {
+        using var _ = _partitionKeyScope.Push(request.PartitionKey);
+
         var deliveryAction = await _deliveryActionRepository.FindAsync(da => da.Id == request.DeliveryActionId && da.PartitionKey == request.PartitionKey, cancellationToken);
 
         if (deliveryAction is null)

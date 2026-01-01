@@ -2,6 +2,7 @@ using Intent.RoslynWeaver.Attributes;
 using MediatR;
 using Nullbox.Fabric.Application.Common.Exceptions;
 using Nullbox.Fabric.Application.Common.Interfaces;
+using Nullbox.Fabric.Application.Common.Partitioning;
 using Nullbox.Fabric.Domain.Common.Exceptions;
 using Nullbox.Fabric.Domain.Repositories.Accounts;
 using Nullbox.Fabric.Domain.Repositories.Aliases;
@@ -18,24 +19,29 @@ public class UpdateAliasCommandHandler : IRequestHandler<UpdateAliasCommand>
     private readonly IMailboxRepository _mailboxRepository;
     private readonly IAccountUserMapRepository _accountUserMapRepository;
     private readonly ICurrentUserService _currentUserService;
+    private readonly IPartitionKeyScope _partitionKeyScope;
 
     public UpdateAliasCommandHandler(
         IAliasRepository aliasRepository,
         IAliasMapRepository aliasMapRepository,
         IMailboxRepository mailboxRepository,
         IAccountUserMapRepository accountUserMapRepository,
-        ICurrentUserService currentUserService)
+        ICurrentUserService currentUserService,
+        IPartitionKeyScope partitionKeyScope)
     {
         _aliasRepository = aliasRepository;
         _aliasMapRepository = aliasMapRepository;
         _mailboxRepository = mailboxRepository;
         _accountUserMapRepository = accountUserMapRepository;
         _currentUserService = currentUserService;
+        _partitionKeyScope = partitionKeyScope;
     }
 
     [IntentIgnore]
     public async Task Handle(UpdateAliasCommand request, CancellationToken cancellationToken)
     {
+        using var _ = _partitionKeyScope.Push(request.MailboxId.ToString());
+
         var currentUser = await _currentUserService.GetAsync();
 
         if (currentUser is null)

@@ -1,6 +1,7 @@
 using System.Globalization;
 using Intent.RoslynWeaver.Attributes;
 using MediatR;
+using Nullbox.Fabric.Application.Common.Partitioning;
 using Nullbox.Fabric.Domain.Entities.Activities;
 using Nullbox.Fabric.Domain.Entities.Markers;
 using Nullbox.Fabric.Domain.Markers;
@@ -16,62 +17,35 @@ public class ProcessActivitiesCommandHandler : IRequestHandler<ProcessActivities
 {
     private readonly IRecentDeliveryActionRepository _recentDeliveryActionRepository;
     private readonly IAppliedMarkerRepository _appliedMarkerRepository;
+    private readonly IPartitionKeyScope _partitionKeyScope;
 
     public ProcessActivitiesCommandHandler(
         IRecentDeliveryActionRepository recentDeliveryActionRepository,
-        IAppliedMarkerRepository appliedMarkerRepository)
+        IAppliedMarkerRepository appliedMarkerRepository,
+        IPartitionKeyScope partitionKeyScope)
     {
         _recentDeliveryActionRepository = recentDeliveryActionRepository;
         _appliedMarkerRepository = appliedMarkerRepository;
+        _partitionKeyScope = partitionKeyScope;
     }
 
     public async Task Handle(ProcessActivitiesCommand request, CancellationToken cancellationToken)
     {
+        using var _ = _partitionKeyScope.Push(request.PartitionKey.ToString());
+
         var receivedAtUtc = request.ReceivedAt.ToUniversalTime();
         var sortKey = Keys.RecentSortKey(receivedAtUtc);
         var rowId = $"{sortKey}|da:{request.Id:D}";
 
-        if (request.AliasId is Guid aliasId)
-        {
-            await TryApplyRecentDeliveryActionAsync(
-                request: request,
-                markerType: MarkerType.Alias,
-                scopePartitionGuid: aliasId,
-                projectionId: Keys.ActivityProjectionId(MarkerType.Alias, rowId),
-                sortKey: sortKey,
-                receivedAtUtc: receivedAtUtc,
-                requireMailboxAndAlias: false,
-                cancellationToken: cancellationToken);
-        }
-
-        if (request.MailboxId is Guid mailboxId)
-        {
-            await TryApplyRecentDeliveryActionAsync(
-                request: request,
-                markerType: MarkerType.Mailbox,
-                scopePartitionGuid: mailboxId,
-                projectionId: Keys.ActivityProjectionId(MarkerType.Mailbox, rowId),
-                sortKey: sortKey,
-                receivedAtUtc: receivedAtUtc,
-                requireMailboxAndAlias: false,
-                cancellationToken: cancellationToken);
-        }
-
-        if (request.AccountId is Guid accountId)
-        {
-            await TryApplyRecentDeliveryActionAsync(
-                request: request,
-                markerType: MarkerType.Account,
-                scopePartitionGuid: accountId,
-                projectionId: Keys.ActivityProjectionId(MarkerType.Account, rowId),
-                sortKey: sortKey,
-                receivedAtUtc: receivedAtUtc,
-                requireMailboxAndAlias: true,
-                cancellationToken: cancellationToken);
-        }
-
-        // No SaveChanges for projections here; pipeline commits once.
-        // Marker commits are immediate (gate).
+        await TryApplyRecentDeliveryActionAsync(
+            request: request,
+            markerType: MarkerType.Alias,
+            scopePartitionGuid: request.PartitionKey,
+            projectionId: Keys.ActivityProjectionId(MarkerType.Alias, rowId),
+            sortKey: sortKey,
+            receivedAtUtc: receivedAtUtc,
+            requireMailboxAndAlias: false,
+            cancellationToken: cancellationToken);
     }
 
     private async Task TryApplyRecentDeliveryActionAsync(

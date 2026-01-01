@@ -11,7 +11,7 @@ namespace Nullbox.Fabric.Application.Statistics.ProcessActivities;
 public class ProcessActivitiesCommand : IRequest, ICommand
 {
     public ProcessActivitiesCommand(Guid id,
-        string partitionKey,
+        Guid partitionKey,
         Guid? aliasId,
         Guid? mailboxId,
         Guid? accountId,
@@ -41,8 +41,7 @@ public class ProcessActivitiesCommand : IRequest, ICommand
         string? providerMessageId,
         string? providerError,
         DateTimeOffset? completedAt,
-        string? dedupKey,
-        int wait = 0)
+        string? dedupKey)
     {
         Id = id;
         PartitionKey = partitionKey;
@@ -76,11 +75,10 @@ public class ProcessActivitiesCommand : IRequest, ICommand
         ProviderError = providerError;
         CompletedAt = completedAt;
         DedupKey = dedupKey;
-        Wait = wait;
     }
 
     public Guid Id { get; set; }
-    public string PartitionKey { get; set; }
+    public Guid PartitionKey { get; set; }
     public Guid? AliasId { get; set; }
     public Guid? MailboxId { get; set; }
     public Guid? AccountId { get; set; }
@@ -111,5 +109,4 @@ public class ProcessActivitiesCommand : IRequest, ICommand
     public string? ProviderError { get; set; }
     public DateTimeOffset? CompletedAt { get; set; }
     public string? DedupKey { get; set; }
-    public int Wait { get; set; }
 }

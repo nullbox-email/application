@@ -2,6 +2,7 @@ using Intent.RoslynWeaver.Attributes;
 using MediatR;
 using Nullbox.Fabric.Application.Common.Exceptions;
 using Nullbox.Fabric.Application.Common.Interfaces;
+using Nullbox.Fabric.Application.Common.Partitioning;
 using Nullbox.Fabric.Domain.Common.Exceptions;
 using Nullbox.Fabric.Domain.Entities.Mailboxes;
 using Nullbox.Fabric.Domain.Repositories.Accounts;
@@ -23,6 +24,7 @@ public class CreateMailboxCommandHandler : IRequestHandler<CreateMailboxCommand,
     private readonly IAccountUserMapRepository _accountUserMapRepository;
     private readonly IEffectiveEnablementRepository _effectiveEnablementRepository;
     private readonly ITrafficStatisticRepository _trafficStatisticRepository;
+    private readonly IPartitionKeyScope _partitionKeyScope;
 
     public CreateMailboxCommandHandler(
         IMailboxRepository mailboxRepository,
@@ -32,7 +34,8 @@ public class CreateMailboxCommandHandler : IRequestHandler<CreateMailboxCommand,
         IAccountRepository accountRepository,
         IAccountUserMapRepository accountUserMapRepository,
         IEffectiveEnablementRepository effectiveEnablementRepository,
-        ITrafficStatisticRepository trafficStatisticRepository)
+        ITrafficStatisticRepository trafficStatisticRepository,
+        IPartitionKeyScope partitionKeyScope)
     {
         _mailboxRepository = mailboxRepository;
         _routingKeyMapRepository = routingKeyMapRepository;
@@ -42,6 +45,7 @@ public class CreateMailboxCommandHandler : IRequestHandler<CreateMailboxCommand,
         _accountUserMapRepository = accountUserMapRepository;
         _effectiveEnablementRepository = effectiveEnablementRepository;
         _trafficStatisticRepository = trafficStatisticRepository;
+        _partitionKeyScope = partitionKeyScope;
     }
 
     // Matches ProcessStatistics.Keys: BucketKey(MarkerType.Account, "a:all") => $"t:{markerType}|{timeBucketKey}"
@@ -100,8 +104,14 @@ public class CreateMailboxCommandHandler : IRequestHandler<CreateMailboxCommand,
             throw new LimitReachedException("Mailbox limit reached.");
         }
 
+        using var _ = _partitionKeyScope.Push(accountMap.Id.ToString());
+
         var routingKey = await _uniqueIdentifierGenerator.GenerateAsync(
-            new UniqueIdentifierGeneratorSettings(),
+            new UniqueIdentifierGeneratorSettings()
+            {
+                Length = 6,
+                Chars = "ABCDEFHJKMNPQRSTUVWXYZ23456789"
+            },
             async (key) =>
             {
                 var existing = await _routingKeyMapRepository.FindByIdAsync(key, cancellationToken);

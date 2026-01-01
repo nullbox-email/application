@@ -1,9 +1,8 @@
-using System.Diagnostics;
-using System.Diagnostics.Metrics;
 using AutoMapper;
 using Intent.RoslynWeaver.Attributes;
 using MediatR;
 using Microsoft.Extensions.Logging;
+using Nullbox.Fabric.Application.Common.Partitioning;
 using Nullbox.Fabric.Domain.Aliases;
 using Nullbox.Fabric.Domain.Common.Exceptions;
 using Nullbox.Fabric.Domain.Deliveries;
@@ -15,6 +14,8 @@ using Nullbox.Fabric.Domain.Repositories.Aliases;
 using Nullbox.Fabric.Domain.Repositories.Deliveries;
 using Nullbox.Fabric.Domain.Repositories.Mailboxes;
 using Nullbox.Fabric.Domain.Repositories.Statistics;
+using System.Diagnostics;
+using System.Diagnostics.Metrics;
 
 [assembly: IntentTemplate("Intent.Application.MediatR.CommandHandler", Version = "2.0")]
 
@@ -49,6 +50,7 @@ public class ProcessEmailCommandHandler : IRequestHandler<ProcessEmailCommand, D
     private readonly IAliasSenderRepository _aliasSenderRepository;
     private readonly ITrafficStatisticRepository _trafficStatisticRepository;
     private readonly IEffectiveEnablementRepository _effectiveEnablementRepository;
+    private readonly IPartitionKeyScope _partitionKeyScope;
     private readonly ILogger<ProcessEmailCommandHandler> _logger;
 
     public ProcessEmailCommandHandler(
@@ -60,6 +62,7 @@ public class ProcessEmailCommandHandler : IRequestHandler<ProcessEmailCommand, D
         IAliasSenderRepository aliasSenderRepository,
         ITrafficStatisticRepository trafficStatisticRepository,
         IEffectiveEnablementRepository effectiveEnablementRepository,
+        IPartitionKeyScope partitionKeyScope,
         ILogger<ProcessEmailCommandHandler> logger)
     {
         _mailboxMapRepository = mailboxMapRepository;
@@ -70,6 +73,7 @@ public class ProcessEmailCommandHandler : IRequestHandler<ProcessEmailCommand, D
         _aliasSenderRepository = aliasSenderRepository;
         _trafficStatisticRepository = trafficStatisticRepository;
         _effectiveEnablementRepository = effectiveEnablementRepository;
+        _partitionKeyScope = partitionKeyScope;
         _logger = logger;
     }
 
@@ -572,6 +576,8 @@ public class ProcessEmailCommandHandler : IRequestHandler<ProcessEmailCommand, D
             // ALWAYS log: build delivery action after final decision
             // ------------------------------------------------------------
             var partitionKey = BuildPartitionKey(aliasId, mailboxId, domain, receivedAtUtc);
+
+            using var _ = _partitionKeyScope.Push(partitionKey);
 
             var deliveryAction = new DeliveryAction(
                 partitionKey: partitionKey,

@@ -141,6 +141,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>MailboxUser.cs</DependentUpon>
     </Compile>
+    <Compile Update="Entities\Audit\AuditLogEntryState.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AuditLogEntry.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
 
 </Project>

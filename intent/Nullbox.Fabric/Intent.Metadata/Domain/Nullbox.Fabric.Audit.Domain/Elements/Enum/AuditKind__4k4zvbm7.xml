@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="67f0e241-7016-4637-a1a5-e60c2cfd8c4e" type="Enum" typeId="85fba0e9-9161-4c85-a603-a229ef312beb">
+  <name>AuditKind</name>
+  <display>AuditKind</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-manually</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>4c2f127b-c2c2-421e-bf5e-2f7de9a5fac8</parentFolderId>
+  <packageId>78e531db-59b9-4055-944e-0af8b1de87ff</packageId>
+  <packageName>Nullbox.Fabric.Audit.Domain</packageName>
+  <stereotypes />
+  <metadata />
+  <childElements>
+    <childElement id="859ef5fd-77bc-4a0b-9172-f2661dcf5730" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Command</name>
+      <display>Command</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>67f0e241-7016-4637-a1a5-e60c2cfd8c4e</parentFolderId>
+      <packageId>78e531db-59b9-4055-944e-0af8b1de87ff</packageId>
+      <packageName>Nullbox.Fabric.Audit.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+    <childElement id="e331549e-1058-4793-983d-3cbb0a6ce6df" type="Enum-Literal" typeId="4215f417-25d2-4509-9309-5076a1452eaa">
+      <name>Query</name>
+      <display>Query</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <parentFolderId>67f0e241-7016-4637-a1a5-e60c2cfd8c4e</parentFolderId>
+      <packageId>78e531db-59b9-4055-944e-0af8b1de87ff</packageId>
+      <packageName>Nullbox.Fabric.Audit.Domain</packageName>
+      <stereotypes />
+      <metadata />
+      <childElements />
+    </childElement>
+  </childElements>
+</class>
