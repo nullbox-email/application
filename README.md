@@ -8,8 +8,6 @@ Nullbox does not replace your inbox. It sits in front of it.
 
 The entire system is source available and self hostable.
 
----
-
 ## What Nullbox is for
 
 Use Nullbox whenever a site asks for your email address but you do not want to share your primary inbox.
@@ -23,8 +21,6 @@ Common examples:
 
 Each service gets its own address. If an address leaks or starts receiving spam, it can be disabled or rotated without affecting anything else.
 
----
-
 ## How it works
 
 At a high level:
@@ -35,8 +31,6 @@ At a high level:
 4. Forwarded messages are sent directly to your existing inbox
 
 Only minimal metadata is processed, and only when required. Message content is not stored long term, and Nullbox does not act as a mailbox provider.
-
----
 
 ## Key features
 
@@ -54,8 +48,6 @@ Only minimal metadata is processed, and only when required. Message content is n
 
 - **Minimal data surface**  
   Designed to collect and retain as little data as possible.
-
----
 
 ## Repository overview
 
