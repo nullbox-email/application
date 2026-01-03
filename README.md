@@ -1,70 +1,70 @@
-# Nullbox application
+# Nullbox
 
-This repo contains multiple services/apps (Aspire AppHost, .NET APIs, Nuxt apps, and a Cloudflare Email Worker).
+**Email aliases that protect your inbox without replacing it.**
 
-## Secrets & configuration
+Nullbox is an email aliasing and relay system designed to reduce inbox noise and limit email address exposure. It lets you create unique addresses per service, forward mail into your existing inbox, and shut off spam at the alias level without changing your real email.
 
-### 1) Rotate leaked secrets
-If this repo has ever been pushed publicly, assume the following values are compromised and rotate them anywhere they were used:
-- `NUXT_SESSION_PASSWORD` (Nuxt session encryption)
-- `EmailIngress:HmacSecret` / `EMAIL_HMAC_SECRET` (email ingress request signing)
-- `Security.Bearer:IssuerSigningKey` (JWT signing secret)
-- `MAILGUN_API_KEY` (Mailgun API key)
+Nullbox does not replace your inbox. It sits in front of it.
 
-### 2) Local development
+The entire system is source available and self hostable.
 
-**Nuxt (`src/9 - UI/application` and `src/9 - UI/web`)**
-- Copy `.env.development` to `.env.development.local` and set:
-  - `NUXT_SESSION_PASSWORD` (required; 32+ random characters)
+---
 
-**.NET APIs**
-Use `.NET user-secrets` (recommended) or environment variables.
+## What Nullbox is for
 
-- Security API (`src/1 - Security/Nullbox.Security/Nullbox.Security.Api`)
-  - `Security.Bearer:IssuerSigningKey` (required; JWT signing secret)
-  - `Security.Bearer:HmacKey` (required; key id / rotation identifier)
-- Fabric API (`src/2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Api`)
-  - `EmailIngress:HmacSecret` (required; must match the Cloudflare worker `EMAIL_HMAC_SECRET`)
+Use Nullbox whenever a site asks for your email address but you do not want to share your primary inbox.
 
-Example (PowerShell):
-```
-dotnet user-secrets set "Security.Bearer:IssuerSigningKey" "<random-secret>" --project "src/1 - Security/Nullbox.Security/Nullbox.Security.Api/Nullbox.Security.Api.csproj"
-dotnet user-secrets set "Security.Bearer:HmacKey" "<kid-guid>" --project "src/1 - Security/Nullbox.Security/Nullbox.Security.Api/Nullbox.Security.Api.csproj"
-dotnet user-secrets set "EmailIngress:HmacSecret" "<random-secret>" --project "src/2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Api/Nullbox.Fabric.Api.csproj"
-```
+Common examples:
+- Shopping and online accounts
+- Newsletters and mailing lists
+- SaaS tools and trials
+- Forums and community sites
+- Travel, food delivery, and subscriptions
 
-### 3) Cloudflare Email Worker secrets
-Worker env vars are defined in `src/workers/blue-fire-0930/src/index.ts`:
-- `EMAIL_HMAC_SECRET` (required; must match `EmailIngress:HmacSecret`)
-- `MAILGUN_API_KEY` (required)
-- `MAILGUN_DOMAIN` (required)
-- `MAILGUN_REGION` (required; `us` or `eu`)
+Each service gets its own address. If an address leaks or starts receiving spam, it can be disabled or rotated without affecting anything else.
 
-Local dev: copy `src/workers/blue-fire-0930/.env.example` to `src/workers/blue-fire-0930/.env`.
+---
 
-Deploy: set secrets with Wrangler (example):
-```
-cd "src/workers/blue-fire-0930"
-wrangler secret put EMAIL_HMAC_SECRET
-wrangler secret put MAILGUN_API_KEY
-```
+## How it works
 
-### 4) GitHub Actions (production deploy)
-Workflow: `.github/workflows/production.yml`
+At a high level:
 
-Create a GitHub Environment named `production` and set these **Variables**:
-- `AZURE_CLIENT_ID`, `AZURE_TENANT_ID`, `AZURE_SUBSCRIPTION_ID`
-- `AZURE_ENV_NAME`, `AZURE_LOCATION`
-- `PUBLIC_API_URL`
-- `OAUTH_ENTRAEXTERNAL_CLIENT_ID`, `OAUTH_ENTRAEXTERNAL_TENANT`, `OAUTH_ENTRAEXTERNAL_TENANT_ID`
-- `TOKEN_EXPIRY_SKEW_MS`
+1. Incoming mail is received by a Cloudflare Email Worker
+2. The worker checks alias and mailbox metadata via the Nullbox API
+3. Messages are forwarded, quarantined, or dropped
+4. Forwarded messages are sent directly to your existing inbox
 
-Set these **Secrets** (used as Aspire parameters by `.github/workflows/production.yml`):
-- `SECURITY_BEARER_ISSUER_SIGNING_KEY`
-- `SECURITY_BEARER_HMAC_KEY`
-- `EMAIL_INGRESS_HMAC_SECRET`
-- `NUXT_SESSION_PASSWORD`
+Only minimal metadata is processed, and only when required. Message content is not stored long term, and Nullbox does not act as a mailbox provider.
 
-You can also store sensitive runtime values (JWT signing secret, email ingress HMAC secret, connection strings, etc.) in Azure Key Vault and load them via the app’s `KeyVault:*` configuration.
+---
 
-Key Vault secret naming uses `--` to represent `:` (example: `EmailIngress--HmacSecret`). Note: this repo uses `Security.Bearer:*` keys (dot in the section name), so prefer supplying those via Aspire parameters/env vars unless you’ve standardized your Key Vault naming/mapping.
+## Key features
+
+- **Private mailbox domains**  
+  Each mailbox has its own domain used exclusively for aliases.
+
+- **Alias per service**  
+  Create, disable, and rotate aliases independently.
+
+- **Forwarding to your real inbox**  
+  Mail is forwarded to Gmail, Outlook, Proton, or any other provider you already use.
+
+- **Unexpected sender quarantine**  
+  Messages from new or suspicious senders can be held instead of forwarded.
+
+- **Minimal data surface**  
+  Designed to collect and retain as little data as possible.
+
+---
+
+## Repository overview
+
+This repository contains the full Nullbox application, including:
+
+- Aspire AppHost for service orchestration
+- .NET APIs for core services
+- Nuxt applications for the web UI and authenticated app
+- Cloudflare Email Worker for email ingress
+- Documentation and supporting tooling
+
+Everything required to run Nullbox is included here.
