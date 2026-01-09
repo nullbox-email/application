@@ -5,7 +5,7 @@ strategies:
   - MergeMessage
   - Fallback
 
-tag-prefix: '[vV]'
+tag-prefix: '[vV]?'
 
 commit-message-incrementing: MergeMessageOnly
 major-version-bump-message: '\+semver:\s?(breaking|major)'
