@@ -4,14 +4,12 @@ next-version: 1.0.0
 
 strategies:
   - ConfiguredNextVersion
-  - Mainline
   - Fallback
 
 branches:
   main:
     regex: ^main$
     increment: Patch
-    is-main-branch: true
     label: ""
 
   feature:
