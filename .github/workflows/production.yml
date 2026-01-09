@@ -70,7 +70,7 @@ jobs:
 
       - name: Deploy with Aspire
         working-directory: ./src
-        run: aspire deploy --non-interactive --environment ${{ secrets.AZURE_ENV_NAME }} --log-level debug
+        run: aspire deploy --non-interactive --environment ${{ secrets.AZURE_ENV_NAME }}
         env:
           # Azure provisioning config (IConfiguration-style)
           Azure__SubscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
