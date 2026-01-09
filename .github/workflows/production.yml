@@ -46,16 +46,10 @@ jobs:
 
       # Install Aspire CLI (dev channel) and add to PATH
       - name: Install Aspire CLI
-        run: curl -sSL https://aspire.dev/install.sh | bash -s -- -q dev
+        run: curl -sSL https://aspire.dev/install.sh | bash -s
 
       - name: Add Aspire CLI to PATH
         run: echo "$HOME/.aspire/bin" >> $GITHUB_PATH
-
-      - name: Show Aspire version
-        shell: bash
-        run: |
-          set -euxo pipefail
-          aspire --version
 
       - name: Install GitVersion
         uses: gittools/actions/gitversion/setup@v4.2.0
