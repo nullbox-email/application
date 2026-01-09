@@ -2,14 +2,20 @@ mode: ContinuousDeployment
 
 next-version: 1.0.0
 
+strategies:
+  - ConfiguredNextVersion
+  - Mainline
+  - Fallback
+
 branches:
   main:
     regex: ^main$
     increment: Patch
-    is-mainline: true
+    is-main-branch: true
+    label: ""
 
   feature:
-    regex: ^feature[/-]
+    regex: ^features?[/-]
     increment: Minor
 
   hotfix:
