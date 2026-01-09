@@ -245,8 +245,8 @@ gateway.WithExternalHttpEndpoints();
 
 // Nuxt Application configuration
 // [IntentIgnore]
-var application = builder.AddViteApp("application", "../../9 - application")
-    .WithWorkingDirectory("../../9 - application")
+var application = builder.AddViteApp("application", "../9 - application")
+    .WithWorkingDirectory("../9 - application")
     .WithReference(gateway)
     .WaitFor(gateway)
     .WithEnvironment("NUXT_PUBLIC_VERSION", versionParameter)
@@ -264,8 +264,8 @@ var application = builder.AddViteApp("application", "../../9 - application")
 
 // Nuxt Web configuration
 // [IntentIgnore]
-var web = builder.AddViteApp("web", "../../9 - web")
-    .WithWorkingDirectory("../../9 - web")
+var web = builder.AddViteApp("web", "../9 - web")
+    .WithWorkingDirectory("../9 - web")
     .WithEnvironment("NUXT_PUBLIC_VERSION", versionParameter)
     .WithEnvironment("NUXT_SESSION_PASSWORD", nuxtSessionPasswordParameter)
     .PublishAsDockerFile()
@@ -273,8 +273,8 @@ var web = builder.AddViteApp("web", "../../9 - web")
 
 // Nuxt Docs configuration
 // [IntentIgnore]
-var docs = builder.AddViteApp("docs", "../../9 - docs")
-    .WithWorkingDirectory("../../9 - docs")
+var docs = builder.AddViteApp("docs", "../9 - docs")
+    .WithWorkingDirectory("../9 - docs")
     .WithEnvironment("NUXT_PUBLIC_VERSION", versionParameter)
     .PublishAsDockerFile()
     .WithExternalHttpEndpoints();

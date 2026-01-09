@@ -63,7 +63,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nullbox.Fabric.Infrastructu
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Aspire", "0 - Aspire", "{EEBB2B2F-7A3D-4334-BC5B-D32DE75FC4D8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nullbox.AppHost", "0 - Aspire\Nullbox.AppHost\Nullbox.AppHost.csproj", "{B5985B2E-3E0D-4E96-B7ED-9C8E676803CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nullbox.AppHost", "0 - Aspire\Nullbox.AppHost.csproj", "{B5985B2E-3E0D-4E96-B7ED-9C8E676803CB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4A24C2EE-0068-46AF-ABF3-AF4626E3089C}"
 	ProjectSection(SolutionItems) = preProject
