@@ -8,7 +8,7 @@ import {
   Sparkles,
 } from "lucide-vue-next";
 
-import { useSidebar } from "@/components/ui/sidebar";
+import { useSidebar } from "../ui/sidebar";
 
 const { user } = useUserSession();
 

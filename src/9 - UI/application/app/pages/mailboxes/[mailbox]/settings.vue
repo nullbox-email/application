@@ -3,65 +3,87 @@ import { toast } from "vue-sonner";
 import { toTypedSchema } from "@vee-validate/zod";
 import { useForm } from "vee-validate";
 import * as z from "zod";
-import { Switch } from "@/components/ui/switch";
+import { Switch } from "../../../components/ui/switch";
+import type { GetResponse } from "~/types/dto/mailboxes/get-response";
 
 const { t } = useI18n({
   useScope: "local",
 });
 
-const { user } = useUserSession();
-const { create } = useMailboxes();
-const { refreshMailboxes } = useGlobalMailboxes();
-
 const formSchema = toTypedSchema(
   z.object({
-    name: z.string().trim().min(2, t("validation.name_min")),
-    forwarding_email: z.string().trim().email(t("validation.forwarding_email")),
+    name: z.string().min(2, t("validation.name_min")),
+    forwarding_email: z.string().email(t("validation.forwarding_email")),
     auto_create_alias: z.boolean().default(true),
   })
 );
 
+const route = useRoute();
+
+const { get, update } = useMailboxes();
+const { refreshMailboxes } = useGlobalMailboxes();
+const mailbox = (await get("v1", {
+  id: route.params.mailbox as string,
+})) as GetResponse;
+
+if (!mailbox) {
+  throw new Error("Mailbox not found");
+}
+
 const { handleSubmit } = useForm({
   validationSchema: formSchema,
   initialValues: {
-    forwarding_email: user.value.email,
+    name: mailbox.name,
+    forwarding_email: mailbox.emailAddress,
+    auto_create_alias: mailbox.autoCreateAlias,
   },
 });
 
 const saving = ref(false);
 
-const onSubmit = handleSubmit(async (formValues) => {
+const onSubmit = handleSubmit(async (values) => {
   saving.value = true;
 
   try {
-    const mailbox = await create(
+    await update(
       "v1",
+      mailbox.id as string,
       {
-        name: formValues.name,
-        autoCreateAlias: formValues.auto_create_alias,
-        emailAddress: formValues.forwarding_email,
+        id: mailbox.id,
+        name: values.name,
+        emailAddress: values.forwarding_email,
+        autoCreateAlias: values.auto_create_alias,
       },
       {
-        onResponse: async (ctx) => {
+        onResponse: async () => {
           toast.success(t("submit.success"));
-
-          await refreshMailboxes().catch(() => {});
-          await navigateTo(
-            `/mailboxes/${ctx.response._data.value}/getting-started`
-          );
+          await refreshMailboxes().catch(() => { });
         },
         onResponseError: async (ctx) => {
-          toast.error(ctx?.response?.data?.title ?? t("submit.error"));
+          toast.error(ctx?.response?._data?.detail ?? t("submit.error"));
           saving.value = false;
           return;
         },
       }
     );
-  } catch (error) {
+  } catch (_error: any) {
   } finally {
     saving.value = false;
   }
 });
+
+const copied = ref(false);
+
+async function copyRoutingHost() {
+  try {
+    // copy only the domain part (with @ for convenience)
+    await navigator.clipboard.writeText(`@${routingHost.value}`);
+    copied.value = true;
+    window.setTimeout(() => (copied.value = false), 2500);
+  } catch {
+    // optional: toast or fallback
+  }
+}
 </script>
 
 <template>
@@ -74,12 +96,7 @@ const onSubmit = handleSubmit(async (formValues) => {
           <FormItem>
             <FormLabel>{{ t("fields.name.label") }}</FormLabel>
             <FormControl>
-              <Input
-                type="text"
-                v-bind="componentField"
-                autofocus
-                autocomplete="off"
-              />
+              <Input type="text" v-bind="componentField" autocomplete="off" />
             </FormControl>
             <FormDescription>
               {{ t("fields.name.description") }}
@@ -92,7 +109,7 @@ const onSubmit = handleSubmit(async (formValues) => {
           <FormItem>
             <FormLabel>{{ t("fields.forwarding_email.label") }}</FormLabel>
             <FormControl>
-              <Input type="text" v-bind="componentField" disabled />
+              <Input type="text" v-bind="componentField" autocomplete="off" disabled />
             </FormControl>
             <FormDescription>
               {{ t("fields.forwarding_email.description") }}
@@ -102,9 +119,7 @@ const onSubmit = handleSubmit(async (formValues) => {
         </FormField>
 
         <FormField v-slot="{ value, handleChange }" name="auto_create_alias">
-          <FormItem
-            class="flex flex-row items-center justify-between rounded-lg border p-4"
-          >
+          <FormItem class="flex flex-row items-center justify-between rounded-lg border p-4">
             <div class="space-y-0.5">
               <FormLabel class="text-base">
                 {{ t("fields.auto_create_alias.label") }}
@@ -120,20 +135,13 @@ const onSubmit = handleSubmit(async (formValues) => {
             </div>
 
             <FormControl>
-              <Switch
-                :model-value="value"
-                @update:model-value="handleChange"
-              />
+              <Switch :model-value="value" @update:model-value="handleChange" />
             </FormControl>
           </FormItem>
         </FormField>
 
         <Button class="cursor-pointer" type="submit" :disabled="saving">
-          <icon
-            v-if="saving"
-            name="lucide:loader-circle"
-            class="animate-spin"
-          />
+          <icon v-if="saving" name="lucide:loader-circle" class="animate-spin" />
           <div>
             {{ t("submit.label") }}
           </div>
@@ -146,7 +154,7 @@ const onSubmit = handleSubmit(async (formValues) => {
 <i18n lang="yaml" scope="local">
 en:
   page:
-    title: Create mailbox
+    title: Mailbox settings
 
   intro:
     line1: "This is your private mailbox domain."
@@ -172,6 +180,7 @@ en:
     forwarding_email: Must be a valid email address
 
   submit:
-    label: Create mailbox
-    success: Your mailbox has been created successfully.
+    label: Save changes
+    success: Your mailbox has been updated successfully.
+    error: Something went wrong while updating the mailbox.
 </i18n>

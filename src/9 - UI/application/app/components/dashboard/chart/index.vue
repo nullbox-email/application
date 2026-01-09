@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import type { ChartConfig } from "@/components/ui/chart";
+import type { ChartConfig } from "../../ui/chart";
 
 import { VisArea, VisAxis, VisLine, VisXYContainer } from "@unovis/vue";
 import {
@@ -10,7 +10,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
   componentToString,
-} from "@/components/ui/chart";
+} from "../../ui/chart";
 
 export type SeriesSpec = {
   key: string;
