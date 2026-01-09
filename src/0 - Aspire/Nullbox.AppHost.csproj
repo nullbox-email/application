@@ -25,9 +25,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\1 - Security\Nullbox.Auth.EntraExternalId\Nullbox.Auth.EntraExternalId.Api\Nullbox.Auth.EntraExternalId.Api.csproj" />
-		<ProjectReference Include="..\..\1 - Security\Nullbox.Security\Nullbox.Security.Api\Nullbox.Security.Api.csproj" />
-		<ProjectReference Include="..\..\2 - Fabric\Nullbox.Fabric\Nullbox.Fabric.Api\Nullbox.Fabric.Api.csproj" />
+		<ProjectReference Include="..\1 - Security\Nullbox.Auth.EntraExternalId\Nullbox.Auth.EntraExternalId.Api\Nullbox.Auth.EntraExternalId.Api.csproj" />
+		<ProjectReference Include="..\1 - Security\Nullbox.Security\Nullbox.Security.Api\Nullbox.Security.Api.csproj" />
+		<ProjectReference Include="..\2 - Fabric\Nullbox.Fabric\Nullbox.Fabric.Api\Nullbox.Fabric.Api.csproj" />
 	</ItemGroup>
 
 </Project>
