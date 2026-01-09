@@ -51,6 +51,12 @@ jobs:
       - name: Add Aspire CLI to PATH
         run: echo "$HOME/.aspire/bin" >> $GITHUB_PATH
 
+      - name: Show Aspire version
+        shell: bash
+        run: |
+          set -euxo pipefail
+          aspire --version
+
       - name: Install GitVersion
         uses: gittools/actions/gitversion/setup@v4.2.0
         with:
