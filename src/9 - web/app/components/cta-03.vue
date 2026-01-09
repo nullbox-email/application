@@ -38,8 +38,8 @@ defineProps({learnMoreUrl: {type: String, required: true}})
 en:
   hero:
     title:
-      line1: Catch the unexpected
-      line2: Quarantine senders that do not match an alias.
+      line1: Catch phishing & look‑alike attacks
+      line2: Quarantine unknown or look‑alike senders after learning mode.
   cta:
     primary: Get started
     secondary: Learn more

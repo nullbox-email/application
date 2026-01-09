@@ -46,10 +46,14 @@ interface Point {
 
 interface Particle {
   x: number;
-  sx: number;
-  dx: number;
   y: number;
   vy: number;
+
+  x0: number;
+  xMid: number; // new: funnel entry point
+  x1: number;
+
+  phase: number;
   p: number;
   r: number;
   c: string;
@@ -135,6 +139,15 @@ function easeInExpo(p: number) {
   return p === 0 ? 0 : Math.pow(2, 10 * (p - 1));
 }
 
+function clamp(n: number, min: number, max: number) {
+  return Math.max(min, Math.min(max, n));
+}
+
+// Triangular distribution in [0,1] (dense in the middle)
+function tri01() {
+  return (Math.random() + Math.random()) / 2;
+}
+
 function tweenValue(
   start: number,
   end: number,
@@ -207,7 +220,9 @@ function setDiscs() {
     const clipPath = new Path2D();
     const disc = stateRef.value.clip.disc;
     clipPath.ellipse(disc.x, disc.y, disc.w, disc.h, 0, 0, Math.PI * 2);
-    clipPath.rect(disc.x - disc.w, 0, disc.w * 2, disc.y);
+    const { width } = stateRef.value.rect;
+    // allow particles to appear across the full width above the hole
+    clipPath.rect(0, 0, width, disc.y);
     stateRef.value.clip.path = clipPath;
   }
 }
@@ -277,23 +292,150 @@ function setLines() {
 function setParticles() {
   const { width, height } = stateRef.value.rect;
   stateRef.value.particles = [];
+
   const disc = stateRef.value.clip.disc;
-  if (!disc) return;
+  if (!disc || width <= 0 || height <= 0) return;
+
+  // Particles travel the full height, but "fall into" the hole near the disc center.
+  // You can tune endYFactor to make them disappear earlier/later.
+  const endYFactor = 0.92;
 
   stateRef.value.particleArea = {
-    sw: disc.w * 0.5,
-    ew: disc.w * 2,
-    h: height * 0.85,
+    h: height * endYFactor,
   };
-  stateRef.value.particleArea.sx =
-    (width - (stateRef.value.particleArea.sw || 0)) / 2;
-  stateRef.value.particleArea.ex =
-    (width - (stateRef.value.particleArea.ew || 0)) / 2;
 
-  const totalParticles = 100;
+  // Scale particle count with available width (smaller screens = fewer particles)
+  const w = stateRef.value.rect.width;
+
+  // 320px -> ~70, 768px -> ~140, 1280px -> ~200, 1920px -> ~260
+  const totalParticles = Math.round(clamp((w / 1280) * 200, 70, 260));
+
   for (let i = 0; i < totalParticles; i++) {
     stateRef.value.particles.push(initParticle(true));
   }
+}
+
+function initParticle(start: boolean = false): Particle {
+  const { width, height } = stateRef.value.rect;
+  const h = stateRef.value.particleArea.h || 0;
+
+  const disc = stateRef.value.clip.disc;
+  const cx = disc ? disc.x : width / 2;
+
+  // Spawn across (almost) full width
+  const spread = 0.98;
+  const usable = width * spread;
+  const left = (width - usable) / 2;
+  const x0 = left + tri01() * usable;
+
+  // Compute a "capture" height where particles should already be inside the funnel.
+  // Higher value = they start funneling sooner.
+  const captureY = height * 0.35;
+
+  // Approx funnel half-width at capture height (wide near top, narrows down).
+  // Tie to the outer disc size so it matches your drawn funnel.
+  const outer = stateRef.value.startDisc;
+  const topHalf = outer.w; // startDisc.w is already the radius used in line points
+  const midHalf = disc ? disc.w * 0.9 : topHalf * 0.4;
+
+  // Map captureY into 0..1 between outerDisc.y (top) and disc.y (hole area)
+  const y0 = outer.y;
+  const y1 = disc ? disc.y : height * 0.8;
+  const tt = clamp((captureY - y0) / Math.max(1, y1 - y0), 0, 1);
+
+  // Linear funnel width falloff (can swap to ease for different feel)
+  const funnelHalfAtCapture = topHalf + (midHalf - topHalf) * tt;
+
+  // xMid is the point on the funnel rim that corresponds to where you spawned
+  // (keeps symmetry: left spawns enter left side of funnel, etc.)
+  const side = x0 < cx ? -1 : 1;
+  // xMid must be closer to the center than x0 (otherwise you get outward motion)
+  const d0 = x0 - cx;
+  const d0abs = Math.abs(d0);
+
+  // How much closer to the center we move by the time we reach the "capture" phase.
+  // Smaller = stronger inward pull earlier.
+  const captureShrink = 0.35; // try 0.25 for even stronger inward flow
+
+  // Compute a mid-distance that is always < d0abs (so it always moves inward).
+  // Add a small minimum so it is still visible for near-center spawns.
+  let dMid = d0abs * captureShrink;
+  dMid = Math.max(6, Math.min(dMid, d0abs - 1)); // ensure strictly inward
+
+  // Preserve left/right side
+  const xMid = cx + Math.sign(d0 || 1) * dMid;
+
+  // Singularity target: very tight band
+  const targetHalfWidth = disc ? Math.max(3, disc.w * 0.06) : 12;
+  const x1 = cx + (Math.random() * 2 - 1) * targetHalfWidth;
+
+  const y = start ? h * Math.random() : -20 - Math.random() * 60;
+
+  const r = 0.5 + Math.random() * 1.5;
+  const vy = 0.6 + Math.random() * 1.4;
+
+  return {
+    x: x0,
+    y,
+    vy,
+
+    x0,
+    xMid,
+    x1,
+
+    phase: Math.random() * Math.PI * 2,
+    p: 0,
+    r,
+    c: `rgba(${props.particleRGBColor[0]}, ${props.particleRGBColor[1]}, ${
+      props.particleRGBColor[2]
+    }, ${0.15 + Math.random() * 0.65})`,
+  };
+}
+
+function moveParticles() {
+  const h = stateRef.value.particleArea.h || 1;
+  const disc = stateRef.value.clip.disc;
+
+  // phase split: first phase quickly gets them into the funnel
+  const tCapture = 0.5; // lower = later capture, higher = earlier capture
+
+  const easeOut = (t: number) => 1 - Math.pow(1 - clamp(t, 0, 1), 3);
+  const easeInHard = (t: number) => Math.pow(clamp(t, 0, 1), 6);
+
+  const swirlAmpMax = disc ? Math.max(4, disc.w * 0.02) : 6;
+  const swirlFreq = 7;
+
+  stateRef.value.particles.forEach((particle, idx) => {
+    particle.y += particle.vy;
+
+    const t = particle.y / h;
+    particle.p = t;
+
+    let x: number;
+
+    if (t < tCapture) {
+      // x0 -> xMid relatively quickly
+      const p1 = easeOut(t / tCapture);
+      x = particle.x0 + (particle.xMid - particle.x0) * p1;
+    } else {
+      // xMid -> x1 very tight at the bottom
+      const p2 = easeInHard((t - tCapture) / (1 - tCapture));
+      x = particle.xMid + (particle.x1 - particle.xMid) * p2;
+    }
+
+    // swirl, but fade it strongly near the end so the singularity stays tight
+    const swirlFade = Math.pow(1 - clamp(t, 0, 1), 4);
+    const swirl =
+      Math.sin(particle.phase + t * Math.PI * 2 * swirlFreq) *
+      swirlAmpMax *
+      swirlFade;
+
+    particle.x = x + swirl;
+
+    if (particle.y > h) {
+      stateRef.value.particles[idx] = initParticle(false);
+    }
+  });
 }
 
 function drawDiscs(ctx: CanvasRenderingContext2D) {
@@ -377,55 +519,6 @@ function moveDiscs() {
   stateRef.value.discs.forEach((disc: Disc) => {
     disc.p = (disc.p + 0.001) % 1;
     tweenDisc(disc);
-  });
-}
-
-function initParticle(start: boolean = false): Particle {
-  const sx =
-    (stateRef.value.particleArea.sx || 0) +
-    (stateRef.value.particleArea.sw || 0) * Math.random();
-
-  const ex =
-    (stateRef.value.particleArea.ex || 0) +
-    (stateRef.value.particleArea.ew || 0) * Math.random();
-
-  const dx = ex - sx;
-  const h = stateRef.value.particleArea.h || 0;
-
-  // Spawn near the top; if starting, scatter through the column.
-  const y = start ? h * Math.random() : 0;
-
-  const r = 0.5 + Math.random() * 1.5;
-  const vy = 0.5 + Math.random();
-
-  return {
-    x: sx,
-    sx,
-    dx,
-    y,
-    vy,
-    p: 0,
-    r,
-    c: `rgba(${props.particleRGBColor[0]}, ${props.particleRGBColor[1]}, ${props.particleRGBColor[2]}, ${Math.random()})`,
-  };
-}
-
-function moveParticles() {
-  const h = stateRef.value.particleArea.h || 1;
-
-  stateRef.value.particles.forEach((particle: Particle, idx: number) => {
-    // Progress goes 0 -> 1 as y goes 0 -> h
-    particle.p = particle.y / h;
-
-    particle.x = particle.sx + particle.dx * particle.p;
-
-    // Move DOWN into the hole
-    particle.y += particle.vy;
-
-    // When it reaches the "hole" end, respawn at the top
-    if (particle.y > h) {
-      stateRef.value.particles[idx] = initParticle();
-    }
   });
 }
 

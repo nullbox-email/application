@@ -139,7 +139,12 @@ async function loadDashboard(key: string, params: any) {
 }
 
 watch(
-  () => ({ active: props.active, key: requestKey.value, params: requestParams.value, scope: scope.value }),
+  () => ({
+    active: props.active,
+    key: requestKey.value,
+    params: requestParams.value,
+    scope: scope.value,
+  }),
   ({ active, key, params, scope }) => {
     if (!active) return;
 
@@ -186,16 +191,19 @@ const quarantinedMessages = computed(
     <template v-if="props.active || loadedKey">
       <div
         v-if="showChartSkeleton || showMessagesSkeleton"
-        class="flex space-x-4"
+        class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
       >
         <div
           v-for="n in 4"
           :key="n"
-          class="mt-6 h-32 w-full animate-pulse rounded bg-muted"
+          class="h-32 animate-pulse rounded bg-muted"
         ></div>
       </div>
 
-      <div v-else class="mt-6 flex space-x-4">
+      <div
+        v-else
+        class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
+      >
         <Card class="w-full">
           <CardHeader>
             <CardTitle class="text-2xl font-semibold tabular-nums">
@@ -203,10 +211,11 @@ const quarantinedMessages = computed(
             </CardTitle>
             <CardDescription>Total</CardDescription>
             <CardAction>
-              <icon name="lucide:mail" class="text-4xl text-indigo-500" />
+              <icon name="heroicons:envelope-solid" class="text-4xl text-indigo-500" />
             </CardAction>
           </CardHeader>
         </Card>
+
         <Card class="w-full">
           <CardHeader>
             <CardTitle class="text-2xl font-semibold tabular-nums">
@@ -214,10 +223,11 @@ const quarantinedMessages = computed(
             </CardTitle>
             <CardDescription>Forwarded</CardDescription>
             <CardAction>
-              <icon name="lucide:send" class="text-4xl text-blue-500" />
+              <icon name="heroicons:check-circle-solid" class="text-4xl text-emerald-500" />
             </CardAction>
           </CardHeader>
         </Card>
+
         <Card class="w-full">
           <CardHeader>
             <CardTitle class="text-2xl font-semibold tabular-nums">
@@ -225,10 +235,11 @@ const quarantinedMessages = computed(
             </CardTitle>
             <CardDescription>Dropped</CardDescription>
             <CardAction>
-              <icon name="lucide:mail-x" class="text-4xl text-red-500" />
+              <icon name="heroicons:x-circle-solid" class="text-4xl text-red-500" />
             </CardAction>
           </CardHeader>
         </Card>
+
         <Card class="w-full">
           <CardHeader>
             <CardTitle class="text-2xl font-semibold tabular-nums">
@@ -237,7 +248,7 @@ const quarantinedMessages = computed(
             <CardDescription>Quarantined</CardDescription>
             <CardAction>
               <icon
-                name="lucide:shield-alert"
+                name="heroicons:shield-exclamation-solid"
                 class="text-4xl text-amber-500"
               />
             </CardAction>

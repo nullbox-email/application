@@ -80,6 +80,8 @@ public static class MassTransitConfiguration
         cfg.AddConsumer<IntegrationEventConsumer<IIntegrationEventHandler<DeliveryActionCompleteStatisticsV1>, DeliveryActionCompleteStatisticsV1>>(typeof(IntegrationEventConsumerDefinition<IIntegrationEventHandler<DeliveryActionCompleteStatisticsV1>, DeliveryActionCompleteStatisticsV1>)).ExcludeFromConfigureEndpoints();
         cfg.AddConsumer<IntegrationEventConsumer<IIntegrationEventHandler<MailboxUpdateAliasMapV1>, MailboxUpdateAliasMapV1>>(typeof(IntegrationEventConsumerDefinition<IIntegrationEventHandler<MailboxUpdateAliasMapV1>, MailboxUpdateAliasMapV1>)).ExcludeFromConfigureEndpoints();
         cfg.AddConsumer<IntegrationEventConsumer<IIntegrationEventHandler<MailboxUpdateMailboxMapV1>, MailboxUpdateMailboxMapV1>>(typeof(IntegrationEventConsumerDefinition<IIntegrationEventHandler<MailboxUpdateMailboxMapV1>, MailboxUpdateMailboxMapV1>)).ExcludeFromConfigureEndpoints();
+
+        cfg.AddConsumer<IntegrationEventConsumer<IIntegrationEventHandler<CreateAliasMapV1>, CreateAliasMapV1>>(typeof(IntegrationEventConsumerDefinition<IIntegrationEventHandler<CreateAliasMapV1>, CreateAliasMapV1>)).ExcludeFromConfigureEndpoints();
     }
 
     private static void AddReceiveEndpoints(this IRabbitMqBusFactoryConfigurator cfg, IBusRegistrationContext context)

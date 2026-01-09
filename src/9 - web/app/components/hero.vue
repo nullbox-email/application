@@ -93,7 +93,7 @@ en:
   quote:
     options:
       - One alias per site. Shut it down anytime.
-      - Quarantine unexpected senders.
+      - Quarantine unknown or look‑alike senders to stop homoglyph phishing.
       - Stop spam at the source, not in the inbox.
       - Keep your real address off signup forms.
       - Rotate an address instead of cleaning spam.

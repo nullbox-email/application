@@ -80,25 +80,25 @@ const decisionRail = computed(() => [
   {
     key: "Dropped" as const,
     label: "Dropped",
-    icon: "lucide:mail-x",
+    icon: "heroicons:x-circle-solid",
     class: "text-red-500",
   },
   {
     key: "Forwarded" as const,
     label: "Forwarded",
-    icon: "lucide:send",
-    class: "text-blue-500",
+    icon: "heroicons:check-circle-solid",
+    class: "text-emerald-500",
   },
   {
     key: "Quarantined" as const,
     label: "Quarantined",
-    icon: "lucide:shield-alert",
+    icon: "heroicons:shield-exclamation-solid",
     class: "text-amber-500",
   },
   {
     key: "Delivered" as const,
     label: "Delivered",
-    icon: "lucide:mail-check",
+    icon: "heroicons:check-circle-solid",
     class: "text-emerald-500",
   },
 ]);
