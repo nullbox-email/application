@@ -1,10 +1,17 @@
 mode: ContinuousDeployment
 
-next-version: 1.0.0
-
 strategies:
-  - ConfiguredNextVersion
+  - TaggedCommit
+  - MergeMessage
   - Fallback
+
+tag-prefix: '[vV]'
+
+commit-message-incrementing: MergeMessageOnly
+major-version-bump-message: '\+semver:\s?(breaking|major)'
+minor-version-bump-message: '\+semver:\s?(feature|minor)'
+patch-version-bump-message: '\+semver:\s?(fix|patch)'
+no-bump-message: '\+semver:\s?(none|skip)'
 
 branches:
   main:
@@ -15,7 +22,9 @@ branches:
   feature:
     regex: ^features?[/-]
     increment: Minor
+    label: useBranchName
 
   hotfix:
     regex: ^hotfix[/-]
     increment: Patch
+    label: ""
