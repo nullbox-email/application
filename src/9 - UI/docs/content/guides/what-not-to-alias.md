@@ -50,3 +50,6 @@ Some accounts are so important that you should be deliberate:
 
 You *can* use an alias here, but only if you’ve verified you still have strong recovery options (2FA, backup codes, recovery email/phone).
 
+::alert{type="info" title="If you do alias high-risk accounts" icon="lucide:info"}
+See [Protect important accounts](/guides/protect-important-accounts) for a recommended settings checklist.
+::

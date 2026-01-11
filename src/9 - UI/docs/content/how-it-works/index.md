@@ -7,5 +7,6 @@ icon: lucide:settings
 ::card-group{cols="2"}
   ::card{title="Inbound email" icon="lucide:mail" to="/how-it-works/process-email" description="Decision pipeline for Forward / Drop / Quarantine."}
   ::
+  ::card{title="Sender protection internals" icon="lucide:shield-check" to="/how-it-works/sender-protection" description="How learning mode, passthrough, and sender rules affect delivery."}
+  ::
 ::
-
