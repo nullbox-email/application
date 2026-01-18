@@ -1,4 +1,4 @@
-mode: ContinuousDeployment
+mode: MainLine
 
 strategies:
   - TaggedCommit
@@ -16,15 +16,25 @@ no-bump-message: '\+semver:\s?(none|skip)'
 branches:
   main:
     regex: ^main$
+    mode: MainLine
     increment: Patch
-    label: ""
+    label: ''
+    track-merge-message: true
 
   feature:
     regex: ^features?[/-]
-    increment: Minor
+    mode: ContinuousDelivery
+    increment: Inherit
     label: useBranchName
+    track-merge-message: true
+    source-branches:
+      - main
 
   hotfix:
     regex: ^hotfix[/-]
+    mode: ContinuousDelivery
     increment: Patch
-    label: ""
+    label: ''
+    track-merge-message: true
+    source-branches:
+      - main
