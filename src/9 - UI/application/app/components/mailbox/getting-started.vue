@@ -414,7 +414,7 @@ const onCreateAlias = handleSubmit(async (formValues) => {
           :isLast="true"
         >
           <template #body>
-            {{ t("steps.3.body") }}
+            {{ t("steps.3.body", { email: mailbox.emailAddress }) }}
           </template>
         </timeline-step>
       </timeline>
@@ -445,7 +445,7 @@ en:
 
     "3":
       title: "Mail lands in your inbox"
-      body: "Valid emails arrive in your real inbox while junk stops at the door."
+      body: "Valid emails are forwarded to your real inbox ({email}) while junk stops at the door."
 
   fields:
     name:

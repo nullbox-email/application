@@ -125,6 +125,8 @@ const updateQuarantineAndChecks = async ($event: boolean) => {
     }
   ).catch(() => {});
 };
+
+const tab = ref<"hourly" | "daily">("daily");
 </script>
 
 <template>
@@ -315,34 +317,58 @@ const updateQuarantineAndChecks = async ($event: boolean) => {
       </div>
     </div>
 
-    <dashboard-activity
-      active
-      :alias-id="alias?.id"
-      :mailbox-id="alias?.mailboxId"
-      :number="30"
-      type="Daily"
-      :fallback-error="t('submit.error')"
-      :series="[
-        {
-          key: 'dropped',
-          label: t('chart.series.dropped'),
-          color: 'var(--destructive)',
-          fill: { id: 'fillDropped' },
-        },
-        {
-          key: 'quarantined',
-          label: t('chart.series.quarantined'),
-          color: 'var(--warning)',
-          fill: { id: 'fillQuarantined' },
-        },
-        {
-          key: 'forwarded',
-          label: t('chart.series.forwarded'),
-          color: 'var(--chart-2)',
-          fill: { id: 'fillForwarded' },
-        },
-      ]"
-    />
+    <Tabs v-model="tab" :unmount-on-hide="false" class="mt-6">
+      <TabsList>
+        <TabsTrigger value="daily"> Last 30 days </TabsTrigger>
+        <TabsTrigger value="hourly"> Last 24 hours </TabsTrigger>
+      </TabsList>
+      <TabsContent value="daily">
+        <dashboard-activity :active="tab === 'daily'" :mailbox-id="mailbox.id" :number="30" type="Daily"
+          :fallback-error="t('submit.error')" :series="[
+            {
+              key: 'dropped',
+              label: t('chart.series.dropped'),
+              color: 'var(--destructive)',
+              fill: { id: 'fillDropped' },
+            },
+            {
+              key: 'quarantined',
+              label: t('chart.series.quarantined'),
+              color: 'var(--warning)',
+              fill: { id: 'fillQuarantined' },
+            },
+            {
+              key: 'forwarded',
+              label: t('chart.series.forwarded'),
+              color: 'var(--chart-2)',
+              fill: { id: 'fillForwarded' },
+            },
+          ]" />
+      </TabsContent>
+      <TabsContent value="hourly">
+        <dashboard-activity :active="tab === 'hourly'" :mailbox-id="mailbox.id" :number="24" type="Hourly"
+          :fallback-error="t('submit.error')" :series="[
+            {
+              key: 'dropped',
+              label: t('chart.series.dropped'),
+              color: 'var(--destructive)',
+              fill: { id: 'fillDropped' },
+            },
+            {
+              key: 'quarantined',
+              label: t('chart.series.quarantined'),
+              color: 'var(--warning)',
+              fill: { id: 'fillQuarantined' },
+            },
+            {
+              key: 'forwarded',
+              label: t('chart.series.forwarded'),
+              color: 'var(--chart-2)',
+              fill: { id: 'fillForwarded' },
+            },
+          ]" />
+      </TabsContent>
+    </Tabs>
   </div>
 </template>
 
