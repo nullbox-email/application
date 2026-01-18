@@ -29,15 +29,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Cache Aspire deployment state
-        uses: actions/cache@v4
-        with:
-          path: ~/.aspire/deployments
-          key: aspire-deploy-${{ hashFiles('**/AppHost.csproj') }}-${{ github.ref }}
-          restore-keys: |
-            aspire-deploy-${{ hashFiles('**/AppHost.csproj') }}-
-            aspire-deploy-
-
       - name: Install .NET
         uses: actions/setup-dotnet@v4
         with:
