@@ -81,4 +81,4 @@ jobs:
           PARAMETERS__TURNSTILESECRETKEY: ${{ secrets.TURNSTILE_SECRET_KEY }}
           PARAMETERS__NUXTSESSIONPASSWORD: ${{ secrets.NUXT_SESSION_PASSWORD }}
 
-          PARAMETERS__VERSION: ${{ steps.gitversion.outputs.fullSemVer }}+${{ steps.gitversion.outputs.shortSha }}"
+          PARAMETERS__VERSION: ${{ steps.gitversion.outputs.fullSemVer }}+${{ steps.gitversion.outputs.shortSha }}
