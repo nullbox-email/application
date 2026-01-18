@@ -1,6 +1,7 @@
-mode: MainLine
+mode: Mainline
 
 strategies:
+  - Mainline
   - TaggedCommit
   - MergeMessage
   - Fallback
@@ -16,7 +17,7 @@ no-bump-message: '\+semver:\s?(none|skip)'
 branches:
   main:
     regex: ^main$
-    mode: MainLine
+    mode: Mainline
     increment: Patch
     label: ''
     track-merge-message: true
