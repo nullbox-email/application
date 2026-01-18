@@ -1,12 +1,13 @@
-mode: Mainline
-
-strategies:
-  - Mainline
-  - TaggedCommit
-  - MergeMessage
-  - Fallback
+workflow: TrunkBased/preview1
 
 tag-prefix: '[vV]?'
+
+strategies:
+  - ConfiguredNextVersion
+  - Mainline
+  - MergeMessage
+  - TaggedCommit
+  - Fallback
 
 commit-message-incrementing: MergeMessageOnly
 major-version-bump-message: '\+semver:\s?(breaking|major)'
@@ -17,25 +18,32 @@ no-bump-message: '\+semver:\s?(none|skip)'
 branches:
   main:
     regex: ^main$
-    mode: Mainline
-    increment: Patch
+    mode: ContinuousDeployment
     label: ''
+    increment: Patch
+    prevent-increment:
+      of-merged-branch: true
+    track-merge-target: false
     track-merge-message: true
 
   feature:
-    regex: ^features?[/-]
+    regex: ^features?[\/-](?<BranchName>.+)
     mode: ContinuousDelivery
-    increment: Inherit
-    label: useBranchName
+    label: '{BranchName}'
+    increment: Minor
+    prevent-increment:
+      when-current-commit-tagged: false
     track-merge-message: true
     source-branches:
       - main
 
   hotfix:
-    regex: ^hotfix[/-]
+    regex: ^hotfix[\/-](?<BranchName>.+)
     mode: ContinuousDelivery
-    increment: Patch
     label: ''
+    increment: Patch
+    prevent-increment:
+      when-current-commit-tagged: false
     track-merge-message: true
     source-branches:
       - main
