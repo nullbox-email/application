@@ -53,7 +53,7 @@ const tiers = computed(() => [
     features: [
       t("features.mailboxes_unlimited"),
       t("features.aliases_unlimited"),
-      t("features.bandwidth_gb", { count: 100 }),
+      t("features.bandwidth_gb", { count: 10 }),
       t("features.support_response_hours", { hours: 24 }),
     ],
     featured: false,

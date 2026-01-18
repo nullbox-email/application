@@ -30,7 +30,7 @@ defineProps<{
           </nuxt-link>
         </SidebarMenuButton>
       </SidebarMenuItem>
-      <SidebarMenuItem v-if="aliases && aliases.length > 0">
+      <SidebarMenuItem>
         <SidebarMenuButton as-child>
           <nuxt-link
             :to="`/mailboxes/${routingKey}.${domain}`"

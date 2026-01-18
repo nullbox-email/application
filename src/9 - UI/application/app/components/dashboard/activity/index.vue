@@ -256,7 +256,7 @@ const quarantinedMessages = computed(
         </Card>
       </div>
 
-      <div v-if="showChartSkeleton" class="mt-6">
+      <!-- <div v-if="showChartSkeleton" class="mt-6">
         <div class="mt-4 h-60 w-full animate-pulse rounded bg-muted"></div>
       </div>
 
@@ -266,7 +266,7 @@ const quarantinedMessages = computed(
         :data="chart"
         :grain="chartGrain"
         :series="props.series"
-      />
+      /> -->
 
       <div v-if="showMessagesSkeleton" class="mt-6">
         <div v-for="n in 10" :key="n" class="px-2 py-1">

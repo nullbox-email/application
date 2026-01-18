@@ -87,7 +87,7 @@ public class InitializeProductCatalogHandler : IRequestHandler<InitializeProduct
             maxMailboxes: null,
             maxAliases: null,
             maxAliasesPerMailbox: null,
-            maxBandwidthBytesPerPeriod: 100 * OneGigabyteInBytes,
+            maxBandwidthBytesPerPeriod: 10 * OneGigabyteInBytes,
             flags: new Dictionary<string, string>
             {
             },

@@ -203,33 +203,13 @@ const onCreateAlias = handleSubmit(async (formValues) => {
           class="pb-6"
         >
           <template #body>
-            {{ t("steps.1.body") }}
-          </template>
-        </timeline-step>
-
-        <!-- Step 2 -->
-        <timeline-step
-          :number="2"
-          :title="t('steps.2.title')"
-          lineFrom="md"
-          class="pb-6"
-        >
-          <template #body>
-            {{ t("steps.2.body") }}
-          </template>
-        </timeline-step>
-
-        <!-- Step 3 -->
-        <timeline-step
-          :number="3"
-          :title="t('steps.3.title')"
-          lineFrom="md"
-          class="pb-6"
-        >
-          <template #body>
             <div class="space-y-4">
               <p class="text-muted-foreground">
-                {{ autoCreateOn ? t("steps.3.body_on") : t("steps.3.body_off") }}
+                {{ t("steps.1.intro") }}
+              </p>
+
+              <p class="text-muted-foreground">
+                {{ autoCreateOn ? t("steps.1.body_on") : t("steps.1.body_off") }}
               </p>
 
               <!-- auto-create ON: example only -->
@@ -268,7 +248,7 @@ const onCreateAlias = handleSubmit(async (formValues) => {
               </div>
 
               <p v-if="autoCreateOn" class="text-muted-foreground/50">
-                {{ t("steps.3.hint_on") }}
+                {{ t("steps.1.hint_on") }}
               </p>
 
               <!-- auto-create OFF: embedded alias create -->
@@ -323,7 +303,7 @@ const onCreateAlias = handleSubmit(async (formValues) => {
                   </div>
 
                   <p class="text-muted-foreground/50 text-sm text-center">
-                    {{ t("steps.3.preview_hint") }}
+                    {{ t("steps.1.preview_hint") }}
                   </p>
                 </div>
 
@@ -407,38 +387,34 @@ const onCreateAlias = handleSubmit(async (formValues) => {
                 </form>
 
                 <p class="text-muted-foreground/50">
-                  {{ t("steps.3.hint_off") }}
+                  {{ t("steps.1.hint_off") }}
                 </p>
               </div>
             </div>
           </template>
         </timeline-step>
 
-        <!-- Step 4 -->
+        <!-- Step 2 -->
         <timeline-step
-          :number="4"
-          :title="t('steps.4.title')"
+          :number="2"
+          :title="t('steps.2.title')"
           lineFrom="md"
           class="pb-6"
         >
           <template #body>
-            {{ autoCreateOn ? t("steps.4.body_on") : t("steps.4.body_off") }}
+            {{ t("steps.2.body") }}
           </template>
         </timeline-step>
 
-        <!-- Step 5 -->
+        <!-- Step 3 -->
         <timeline-step
-          :number="5"
-          :title="t('steps.5.title')"
+          :number="3"
+          :title="t('steps.3.title')"
           lineFrom="md"
           :isLast="true"
         >
           <template #body>
-            {{
-              t("steps.5.body", {
-                email: mailbox.emailAddress,
-              })
-            }}
+            {{ t("steps.3.body") }}
           </template>
         </timeline-step>
       </timeline>
@@ -454,29 +430,22 @@ en:
 
   steps:
     "1":
-      title: "What to do next"
-      body: "Use Nullbox the next time you sign up for a service."
-    "2":
-      title: "Why this helps"
-      body: "Using a different address per service reduces tracking and makes it easy to cut off spam later."
-
-    "3":
-      title: "How to use it"
+      title: "Create an alias"
+      intro: "Create an alias when you sign up for a new service."
       body_on: "Make up a name for the service and add it before your mailbox domain."
       hint_on: "Change the name before the {'@'} for each service."
 
-      body_off: "Create an alias, then use it when you sign up."
+      body_off: "Create an alias here, then use it when you sign up."
       preview_hint: "This is the address you’ll use on the site."
       hint_off: "Create one alias per service."
 
-    "4":
-      title: "When Nullbox steps in"
-      body_on: "As soon as a message is sent to that address, we create the alias automatically and start forwarding."
-      body_off: "Forwarding starts after you’ve created the alias."
+    "2":
+      title: "Use it everywhere"
+      body: "Use the alias instead of your real email. Nullbox forwards messages safely and blocks spam and scams."
 
-    "5":
-      title: "Where your mail goes"
-      body: "Emails are forwarded to {email}. Nullbox doesn’t replace your inbox."
+    "3":
+      title: "Mail lands in your inbox"
+      body: "Valid emails arrive in your real inbox while junk stops at the door."
 
   fields:
     name:
