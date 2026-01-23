@@ -51,11 +51,11 @@ public class DeliveriesController : ControllerBase
     {
         // 1) Validate date format and freshness (prevents simple replay)
         if (!DateOnly.TryParse(signatureDate, out var date))
-            return Unauthorized();
+            return Unauthorized("Invalid signature date");
 
         var todayUtc = DateOnly.FromDateTime(DateTime.UtcNow);
         if (date < todayUtc.AddDays(-1) || date > todayUtc.AddDays(1))
-            return Unauthorized();
+            return Unauthorized("Signature date not in a valid range");
 
         // 2) Read raw body bytes (to hash exactly what was signed)
         // If you can’t easily get raw bytes here, sign a stable canonical JSON instead.
@@ -79,7 +79,7 @@ public class DeliveriesController : ControllerBase
         var expected = HmacBase64(secret, canonical);
 
         if (!FixedTimeEquals(expected, signature))
-            return Unauthorized();
+            return Unauthorized("Invalid signature");
 
         // 3) Process
         var result = await _mediator.Send(command, cancellationToken);
