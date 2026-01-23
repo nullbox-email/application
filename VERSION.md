@@ -168,4 +168,4 @@ Minor via merge message:
 +semver: minor
 ```
 
-Patch is automatic on main (no action needed).
+Patch is automatic on main (no action needed)
