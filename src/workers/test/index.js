@@ -97,7 +97,7 @@ const ALIASES = [
 ];
 
 const ROUTING_KEYS = [
-  "x92qvx",
+  "uztrex",
   // add more if you want
 ];
 

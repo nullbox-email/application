@@ -16,7 +16,7 @@ const tab = ref<"hourly" | "daily">("daily");
   <div>
     <page-heading :title="t('title', { name: user.name })" />
 
-    <mailbox-getting-started v-if="mailbox && ((mailbox.aliases ?? []).length === 0)" :mailbox="mailbox" class="mt-6" />
+    <mailbox-getting-started v-if="mailboxes[0] && ((mailboxes[0].aliases ?? []).length === 0)" :mailbox="mailbox" class="mt-6" />
 
     <Tabs v-else v-model="tab" :unmount-on-hide="false" class="mt-6">
       <TabsList>

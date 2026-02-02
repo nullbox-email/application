@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { toast } from "vue-sonner";
 const { t } = useI18n({ useScope: "local" });
-
 const route = useRoute();
 const aliasProperty = computed(() => route.params.alias as string);
 const mailboxProperty = computed(() => route.params.mailbox as string);
@@ -84,6 +83,8 @@ const updateAlias = async ($event: boolean) => {
       mailboxId: alias.value.mailboxId,
       name: alias.value.name,
       isEnabled: alias.value.isEnabled,
+      directPassthrough: alias.value.directPassthrough,
+      learningMode: alias.value.learningMode,
     },
     {
       onResponse: async () => {
@@ -113,7 +114,8 @@ const updateQuarantineAndChecks = async ($event: boolean) => {
       mailboxId: alias.value.mailboxId,
       name: alias.value.name,
       isEnabled: alias.value.isEnabled,
-      directPassthroughEnabled: alias.value.directPassthroughEnabled,
+      directPassthrough: alias.value.directPassthrough,
+      learningMode: alias.value.learningMode,
     },
     {
       onResponse: async () => {
@@ -323,7 +325,7 @@ const tab = ref<"hourly" | "daily">("daily");
         <TabsTrigger value="hourly"> Last 24 hours </TabsTrigger>
       </TabsList>
       <TabsContent value="daily">
-        <dashboard-activity :active="tab === 'daily'" :mailbox-id="mailbox.id" :number="30" type="Daily"
+        <dashboard-activity v-if="alias" :active="tab === 'daily'" :alias-id="alias.id" :mailbox-id="alias.mailboxId" :number="30" type="Daily"
           :fallback-error="t('submit.error')" :series="[
             {
               key: 'dropped',
@@ -346,7 +348,7 @@ const tab = ref<"hourly" | "daily">("daily");
           ]" />
       </TabsContent>
       <TabsContent value="hourly">
-        <dashboard-activity :active="tab === 'hourly'" :mailbox-id="mailbox.id" :number="24" type="Hourly"
+        <dashboard-activity v-if="alias" :active="tab === 'hourly'" :mailbox-id="alias.mailboxId" :number="24" type="Hourly"
           :fallback-error="t('submit.error')" :series="[
             {
               key: 'dropped',
