@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="ce73612f-f208-4c88-914e-9ebd7959db7d" type="Api Gateway Route" typeId="b09d7684-5dde-4d4b-9cb5-0707bfd8578f">
+  <name>DownloadQuarantinedEmlFileQueryGatewayRoute</name>
+  <display>DownloadQuarantinedEmlFileQueryGatewayRoute</display>
+  <isAbstract>false</isAbstract>
+  <sort-children>by-type-then-by-name</sort-children>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>64fccd19-d09e-42d5-8d36-dcfd955eb5a9</parentFolderId>
+  <packageId>64fccd19-d09e-42d5-8d36-dcfd955eb5a9</packageId>
+  <packageName>Nullbox.Fabric.Aliases.Gateway</packageName>
+  <stereotypes>
+    <stereotype stereotypeDefinitionId="b4581ed2-42ec-4ae2-83dd-dcdd5f0837b6" name="Http Settings">
+      <addedByDefault>false</addedByDefault>
+      <definitionPackageName>Intent.Metadata.WebApi</definitionPackageName>
+      <definitionPackageId>0011387a-b122-45d7-9cdb-8e21b315ab9f</definitionPackageId>
+      <properties>
+        <property name="801c3e61-4431-4d81-93fa-7e57d33cb3fa" display="Verb" value="GET" isActive="true" />
+        <property name="5dd3e07d-76eb-45d4-9956-4325fb068acc" display="Route" value="/{version}/mailboxes/{mailboxId}/aliases/{aliasId}/messages/{messageId}" isActive="true" />
+        <property name="4490e212-1e99-43ce-b3dd-048ed2a6bae8" display="Return Type Mediatype" value="Default" isActive="false" />
+        <property name="e3870725-34b3-4684-85f2-ec4a667207fb" display="Success Response Code" isActive="false" />
+      </properties>
+    </stereotype>
+  </stereotypes>
+  <metadata />
+  <childElements>
+    <childElement id="588c8aaf-038d-45a4-9313-fc1b48a14d1e" type="DTO-Field" typeId="7baed1fd-469b-4980-8fd9-4cefb8331eb2">
+      <name>AliasId</name>
+      <display>AliasId: string</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="ef16e9f7-8883-4cbc-a7cc-63f7abd5661c">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>ce73612f-f208-4c88-914e-9ebd7959db7d</parentFolderId>
+      <packageId>64fccd19-d09e-42d5-8d36-dcfd955eb5a9</packageId>
+      <packageName>Nullbox.Fabric.Aliases.Gateway</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="routeVar" value="aliasId" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="98932927-ac98-4adf-b304-bbf3c47c93fc" type="DTO-Field" typeId="7baed1fd-469b-4980-8fd9-4cefb8331eb2">
+      <name>MailboxId</name>
+      <display>MailboxId: string</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="de327091-7b43-4918-85a1-8457fc7960b0">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>ce73612f-f208-4c88-914e-9ebd7959db7d</parentFolderId>
+      <packageId>64fccd19-d09e-42d5-8d36-dcfd955eb5a9</packageId>
+      <packageName>Nullbox.Fabric.Aliases.Gateway</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="routeVar" value="mailboxId" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="f6c6025e-a6a4-4890-aca3-b904a5a74432" type="DTO-Field" typeId="7baed1fd-469b-4980-8fd9-4cefb8331eb2">
+      <name>MessageId</name>
+      <display>MessageId: string</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="d8fcf083-1f5c-40b2-83e5-130019d116df">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>ce73612f-f208-4c88-914e-9ebd7959db7d</parentFolderId>
+      <packageId>64fccd19-d09e-42d5-8d36-dcfd955eb5a9</packageId>
+      <packageName>Nullbox.Fabric.Aliases.Gateway</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="routeVar" value="messageId" />
+      </metadata>
+      <childElements />
+    </childElement>
+    <childElement id="1c09078b-7f86-49dd-825b-cb8f99541128" type="DTO-Field" typeId="7baed1fd-469b-4980-8fd9-4cefb8331eb2">
+      <name>Version</name>
+      <display>Version: string</display>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="b2419e96-aa7c-4792-bb26-36bed9eb331f">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <isRequired>true</isRequired>
+        <typePackageName>Intent.Common.Types</typePackageName>
+        <typePackageId>870ad967-cbd4-4ea9-b86d-9c3a5d55ea67</typePackageId>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <parentFolderId>ce73612f-f208-4c88-914e-9ebd7959db7d</parentFolderId>
+      <packageId>64fccd19-d09e-42d5-8d36-dcfd955eb5a9</packageId>
+      <packageName>Nullbox.Fabric.Aliases.Gateway</packageName>
+      <stereotypes />
+      <metadata>
+        <entry key="routeVar" value="version" />
+      </metadata>
+      <childElements />
+    </childElement>
+  </childElements>
+</class>

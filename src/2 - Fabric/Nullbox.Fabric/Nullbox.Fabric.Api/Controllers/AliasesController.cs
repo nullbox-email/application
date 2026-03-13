@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Nullbox.Fabric.Api.Controllers.ResponseTypes;
 using Nullbox.Fabric.Application.Aliases.CreateAlias;
+using Nullbox.Fabric.Application.Aliases.DownloadQuarantinedEmlFile;
 using Nullbox.Fabric.Application.Aliases.GetAliasById;
 using Nullbox.Fabric.Application.Aliases.GetAliases;
 using Nullbox.Fabric.Application.Aliases.UpdateAlias;
+using Nullbox.Fabric.Application.Common;
 using Nullbox.Fabric.Application.Mailboxes;
 
 [assembly: IntentTemplate("Intent.AspNetCore.Controllers.Controller", Version = "1.0")]
@@ -105,6 +107,35 @@ public class AliasesController : ControllerBase
 
         await _mediator.Send(command, cancellationToken);
         return NoContent();
+    }
+
+    /// <summary>
+    /// </summary>
+    /// <response code="200">Returns the specified byte[].</response>
+    /// <response code="400">One or more validation errors have occurred.</response>
+    /// <response code="401">Unauthorized request.</response>
+    /// <response code="403">Forbidden request.</response>
+    /// <response code="404">No byte[] could be found with the provided parameters.</response>
+    [HttpGet("/v{version:apiVersion}/mailboxes/{mailboxId}/aliases/{aliasId}/messages/{messageId}")]
+    [ProducesResponseType(typeof(byte[]), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status403Forbidden)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
+    [MapToApiVersion("1.0")]
+    public async Task<ActionResult<byte[]>> DownloadQuarantinedEmlFile(
+        [FromRoute] string mailboxId,
+        [FromRoute] string aliasId,
+        [FromRoute] string messageId,
+        CancellationToken cancellationToken = default)
+    {
+        var result = await _mediator.Send(new DownloadQuarantinedEmlFileQuery(mailboxId: mailboxId, aliasId: aliasId, messageId: messageId), cancellationToken);
+        if (result == null)
+        {
+            return NotFound();
+        }
+        return File(result.Content, result.ContentType ?? "application/octet-stream", result.Filename);
     }
 
     /// <summary>

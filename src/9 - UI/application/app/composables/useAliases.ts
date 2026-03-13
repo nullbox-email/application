@@ -5,6 +5,7 @@ import type { GetRequest } from "~/types/dto/aliases/get-request";
 import type { GetResponse } from "~/types/dto/aliases/get-response";
 import type { GetAllRequest } from "~/types/dto/aliases/get-all-request";
 import type { GetAllResponse } from "~/types/dto/aliases/get-all-response";
+import type { GetEmlResponse } from "~/types/dto/aliases/get-eml-response";
 
 export function useAliases() {
 
@@ -71,11 +72,29 @@ export function useAliases() {
             }
         );
     }
+    const downloadEmlFile = async (version: string, mailboxId: string, aliasId: string, messageId: string, options?: any) => {
+        const result = await useApi(
+            '/:version/mailboxes/:mailboxId/aliases/:aliasId/messages/:messageId',
+            {
+                ...(options || {}),
+                method: 'GET',
+                params: {
+                    version: version,
+                    mailboxId: mailboxId,
+                    aliasId: aliasId,
+                    messageId: messageId
+                },
+                scopes: ['nullbox.alias.read'],
+            }
+        );
+        return result.data.value;
+    }
 
     return {
         create,
         get,
         getAll,
         update,
+        downloadEmlFile
     }
 }

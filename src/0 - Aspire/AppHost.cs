@@ -232,6 +232,7 @@ gateway.WithConfiguration(yarp =>
     yarp.AddRoute("/{version}/email", nullboxFabricCluster);
     yarp.AddRoute("/{version}/mailboxes", nullboxFabricCluster);
     yarp.AddRoute("/{version}/mailboxes/{id}", nullboxFabricCluster);
+    yarp.AddRoute("/{version}/mailboxes/{mailboxId}/aliases/{aliasId}/messages/{messageId}", nullboxFabricCluster);
 
     var nullboxSecurityCluster = yarp.AddCluster(resource: nullboxSecurityApi);
     yarp.AddRoute("/{version}/tokens/access", nullboxSecurityCluster);

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <association id="d8c93cd0-8886-48d6-bd05-48c2327dfce2">
   <sourceEnd id="bcd199b7-f227-4f26-adaa-0bb0bf3def4c" type="Subscribe Integration Command Source End" typeId="cdc0ae0a-1199-4450-8e21-2da80e03bc26">
-    <display>handled by: Nullbox.Fabric.Services.DeliveryActionCompleteProcessAliasActivitiesV1Handler</display>
+    <display>handled by: Statistics.DeliveryActionCompleteProcessAliasActivitiesV1Handler</display>
     <order>0</order>
     <typeReference id="b8b9c84e-c782-4412-be91-3d5c0eb3eb34">
       <typeId>89ea1003-d012-4c62-b91b-767bd32afabe</typeId>
@@ -9,8 +9,8 @@
       <isNullable>false</isNullable>
       <isCollection>false</isCollection>
       <isRequired>true</isRequired>
-      <typePackageName>Nullbox.Fabric.Services</typePackageName>
-      <typePackageId>ff91dc2e-4eff-41be-8bd9-e3364f2d37b3</typePackageId>
+      <typePackageName>Nullbox.Fabric.Deliveries.Services</typePackageName>
+      <typePackageId>7ee06bb8-ef12-47d6-a86a-15d687075463</typePackageId>
       <stereotypes />
       <genericTypeParameters />
     </typeReference>

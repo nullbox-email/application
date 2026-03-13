@@ -39,7 +39,6 @@ const formSchema = toTypedSchema(
   })
 );
 
-debugger;
 const { handleSubmit, values, resetForm } = useForm({
   validationSchema: formSchema,
   initialValues: {

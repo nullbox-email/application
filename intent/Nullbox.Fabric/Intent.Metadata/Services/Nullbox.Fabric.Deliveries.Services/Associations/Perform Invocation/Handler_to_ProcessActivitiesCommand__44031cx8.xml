@@ -9,8 +9,8 @@
       <isNullable>false</isNullable>
       <isCollection>false</isCollection>
       <isRequired>true</isRequired>
-      <typePackageName>Nullbox.Fabric.Services</typePackageName>
-      <typePackageId>ff91dc2e-4eff-41be-8bd9-e3364f2d37b3</typePackageId>
+      <typePackageName>Nullbox.Fabric.Deliveries.Services</typePackageName>
+      <typePackageId>7ee06bb8-ef12-47d6-a86a-15d687075463</typePackageId>
       <stereotypes />
       <genericTypeParameters />
     </typeReference>

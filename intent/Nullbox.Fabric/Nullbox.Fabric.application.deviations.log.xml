@@ -29,7 +29,7 @@
       <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
       <updatedAt>2025-12-27T12:13:10.729234Z</updatedAt>
       <deviationsHash>CB556BDA12340C38A2DE3FB3928DCB573F51E95B627A7DA3E54DCA6AF41AD218</deviationsHash>
-      <fileHash>51B6B241A97B9509E1F9588EB99149DE9E4DF74549F93C8DD890E15620899547</fileHash>
+      <fileHash>C95247588FBF2A78A79CC706B2F170DB821C2F8FC2AC11AC88A354DF7B9A0474</fileHash>
     </file>
     <file>
       <correlationId>Intent.AspNetCore.Controllers.ExceptionFilter#9c35ef21-5775-4b46-91b1-941e3837b439</correlationId>
@@ -162,6 +162,16 @@
       <fileHash>F4C30612B03BD6B18BEF79E4635A8C45C772F5B9BA556E9CA84DE92379D5C5FB</fileHash>
     </file>
     <file>
+      <correlationId>Intent.Application.DependencyInjection.DependencyInjection#81b7e8a6-157c-405d-a9b6-fd723223b809</correlationId>
+      <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Application/DependencyInjection.cs</path>
+      <count>1</count>
+      <updatedByAccountName>kershia@aryzac.io</updatedByAccountName>
+      <updatedByDisplayName>Kershia</updatedByDisplayName>
+      <updatedAt>2026-03-09T11:15:40.3927479Z</updatedAt>
+      <deviationsHash>6E09F3CA968F1CFA552CD5C4AB46128A1B9CBCB84B9FC25BE5B8800EFC6D2E9B</deviationsHash>
+      <fileHash>33F3473FC5EE583F77CFCE196B297DBD825DB055192D027FEB6EB845979CCCFC</fileHash>
+    </file>
+    <file>
       <correlationId>Intent.Eventing.Contracts.IntegrationEventHandler#398869bd-e948-4dba-8e94-0336af810e80</correlationId>
       <path>2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Application/IntegrationEvents/EventHandlers/Aliases/AliasCreatedLearningModeScheduleV1Handler.cs</path>
       <count>1</count>
@@ -289,7 +299,7 @@
       <updatedByDisplayName>Stephan Johnson</updatedByDisplayName>
       <updatedAt>2026-01-01T12:03:49.3193371Z</updatedAt>
       <deviationsHash>603AB02B8EBA6736F4FBCF192F54F1076B468A79F4B7AB64F36CC66CDA86580C</deviationsHash>
-      <fileHash>27E83839BAEE104C1E2837D36B743853403D2A221518839DCFD2A42BE1009E08</fileHash>
+      <fileHash>BA26E2131AE4088C29365451CFCDBA6B5D1EE90875C1D4BD874DB431FFB299C2</fileHash>
     </file>
   </files>
 </deviationsLog>

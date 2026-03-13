@@ -2,5 +2,6 @@
 <outputFiles>
   <files>
     <file relativePath="2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Api/appsettings.json" state="ignored" />
+    <file relativePath="2 - Fabric/Nullbox.Fabric/Nullbox.Fabric.Infrastructure/Configuration/MassTransitConfiguration.cs" state="ignored" />
   </files>
 </outputFiles>

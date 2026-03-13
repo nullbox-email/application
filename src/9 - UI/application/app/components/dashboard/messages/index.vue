@@ -36,7 +36,6 @@ const props = withDefaults(
     showProviderStatus?: boolean;
     showTime?: boolean;
     subjectClamp?: 1 | 2;
-    to?: (m: RecentDeliveryMessage) => string | undefined;
   }>(),
   {
     showProviderStatus: true,
@@ -136,6 +135,20 @@ function hasAttach(m: RecentDeliveryMessage) {
   if (typeof m.attachmentsCount === "number") return m.attachmentsCount > 0;
   return false;
 }
+
+const route = useRoute();
+function isQuarantined(m: RecentDeliveryMessage) {
+  return (m.messageOutcome || "Unknown") === "Quarantined";
+}
+
+const to = (m: RecentDeliveryMessage) => {
+
+  if (isQuarantined(m) && route.params.mailbox && route.params.alias){
+    return `/mailboxes/${route.params.mailbox}/${route.params.alias}/${m.id}`;
+  }
+
+  return undefined;
+};
 </script>
 
 <template>
